@@ -1,0 +1,82 @@
+.overview {
+  width: 100vw;
+}
+
+.overview::-webkit-scrollbar {
+  display: none;
+}
+.overview {
+  padding-top: 20px;
+}
+.overview > h3 {
+  text-align: center;
+  color: #5e0060;
+  font-size: 24px;
+  margin:20px 0;
+}
+.overview > p {
+  width: 93vw;
+  margin: 5px auto;
+  line-height: 25px;
+}
+.overview > p::first-letter {
+  margin-left: 20px;
+}
+.overview > b {
+  margin-left: 100px;
+  color: #002c66;
+  font-size: 17px;
+}
+.overview > ol {
+  width: 80vw;
+  margin: 0px auto;
+}
+.overview > ol > li {
+  margin: 7px 0;
+  pointer-events: none;
+}
+.overview > ul {
+  width: 75vw;
+  margin: 0px auto;
+}
+.overview > ul > li {
+  margin: 7px 0;
+  list-style: square;
+  pointer-events: none;
+}
+.content__links {
+  color: blue;
+  text-decoration: none;
+}
+.thinking {
+  width: 100vw;
+  height: 500px;
+  text-align: center;
+}
+.thinking>img{
+    height: 100%;
+    width: 40%;
+}
+.important {
+  background-color: rgba(214, 212, 212, 0.425) !important;
+  width: 96vw !important;
+  padding: 10px 10px !important;
+  border-radius: 20px !important;
+  margin-top: 20px !important;
+  font-style: italic !important;
+  margin-bottom: 50px !important;
+}
+.important > b {
+  color: red;
+  font-size: 18px;
+}
+
+
+@media only screen and (max-width: 871px) {
+  .thinking>img{
+    width: 90vw;
+  }
+  .important{
+    width: 80vw !important;
+  }
+}

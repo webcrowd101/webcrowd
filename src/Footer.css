@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.footer{
+    width: 100vw;
+    background-color: #0a0453;
+}
+.footer__top{
+    width: 100vw;
+    display:flex;
+    justify-content:space-evenly;
+    padding-top: 30px;
+}
+
+.footer__titles{
+    margin: 10px 0;
+    color: white;
+    font-size: 20px;
+    font-weight:600;
+    width: fit-content;
+    /* border-bottom: 1.5px solid white; */
+}
+.footer__links{
+    text-decoration: none;
+}
+.footer__links>div{
+    margin-bottom: -10px !important;
+    color: white;
+    cursor: pointer;
+
+}
+.footer__links>div:hover{
+    transform:scale(1.05) !important;
+ }
+.icon-facebook{
+    color: #3b5998;
+    margin-right: 5px;
+    font-size:28px !important;
+    cursor: pointer;
+}
+.icon-facebook:hover{
+   transform:scale(1.3) !important;
+}
+.icon-instagram{
+    color: #8a3ab9;
+    margin-right: 5px;
+    font-size:28px !important;
+    cursor: pointer;
+}
+.icon-instagram:hover{
+    transform:scale(1.3) !important;
+ }
+
+.icon-twitter{
+    color: #00acee;
+    margin-right: 5px;
+    font-size:28px !important;
+    cursor: pointer;
+}
+.icon-twitter:hover{
+    transform:scale(1.3) !important;
+ }
+
+.icon-linkedin{
+    color: #0e76a8;
+    margin-right: 5px;
+    font-size:28px !important;
+    cursor: pointer;
+}
+.icon-linkedin:hover{
+    transform:scale(1.3) !important;
+ }
+
+.icon-youtube{
+    color: #FF0000;
+    margin-right: 5px;
+    font-size:28px !important;
+    cursor: pointer;
+}
+.icon-youtube:hover{
+    transform:scale(1.3) !important;
+ }
+.footer__bottom{
+    display:flex;
+    width: 95vw;
+    justify-content:space-between;
+    margin: 50px auto 0 auto;
+    padding: 20px 0;
+    color: white;
+
+}
+.terms__privacy{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.privacy,.terms{
+    color:white;
+    text-decoration: none;
+    cursor: pointer;
+}
+.footer__wave{
+    transform: rotateX(180deg);
+    margin-top:-5px;
+}
+
+@media only screen and (max-width:625px){
+    .footer__top{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-evenly;
+        width: fit-content;
+        margin: auto;
+    }
+    .footer__titles{
+        margin-top:40px;
+
+    }
+    .terms__privacy{
+        display: flex;
+        justify-content:space-evenly;
+
+    }
+    .privacy,.terms{
+        font-size:12px;
+    }
+
+    .footer__bottom>p{
+        font-size:12px;
+    }
+
+
+}
+@media only screen and (max-width:805px){
+    
+
+}
