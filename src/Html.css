@@ -1,18 +1,33 @@
 .html {
   display: flex;
   width: 100vw;
-  height: 90vh;
+  
+}
+.htmlModal{
+  width: 30%;
+  height: 40%;
+  background-color:blue;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  display: none;
+}
+.closeModal{
+  color: red !important;
+  font-size: 30px !important;
+  float: right;
+  cursor: pointer;
+  
+
 }
 .htmlSidebar {
-  width: 20%;
-  height: 90vh;
   background-color: purple;
 }
 .htmlSidebar > ul {
-  margin-top: 100px;
+  margin-top: 50px;
   background-color: aqua;
   text-align: center;
-  height: 70vh;
+  height: 80vh;
   overflow-y: scroll;
 }
 .htmlSidebar > ul::-webkit-scrollbar {
@@ -31,11 +46,11 @@
   flex: 1;
   height: 90vh;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 .htmlContent::-webkit-scrollbar {
   display: none;
 }
-
 .showSideBar {
   display: none !important;
   width: 50px !important;
@@ -43,7 +58,7 @@
   text-align: center !important;
   float: right !important;
   padding-right: 10px !important;
-  color: white;
+  color: aqua !important;
   cursor: pointer !important;
 }
 
@@ -53,7 +68,11 @@
 .links__code,
 .images__code,
 .lists__code,
-.inputs__code {
+.inputs__code,
+.selectOption__code,
+.fieldsetLegend__code,
+.tables__code,
+.forms__code {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -64,7 +83,11 @@
 .links__input,
 .images__input,
 .lists__input,
-.inputs__input {
+.inputs__input,
+.selectOption__input,
+.fieldsetLegend__input,
+.tables__input,
+.forms__input {
   width: 400px;
   height: 200px;
   outline: none;
@@ -79,7 +102,11 @@
 .links__input::-webkit-scrollbar,
 .images__input::-webkit-scrollbar,
 .lists__input::-webkit-scrollbar,
-.inputs__input::-webkit-scrollbar {
+.inputs__input::-webkit-scrollbar,
+.selectOption__input::-webkit-scrollbar,
+.fieldsetLegend__input::-webkit-scrollbar,
+.tables__input::-webkit-scrollbar,
+.forms__input::-webkit-scrollbar {
   display: none;
 }
 .heading__output,
@@ -88,7 +115,11 @@
 .links__output,
 .images__output,
 .lists__output,
-.inputs__output {
+.inputs__output,
+.selectOption__output,
+.fieldsetLegend__output,
+.tables__output,
+.forms__output {
   width: 400px;
   height: 200px;
   outline: none;
@@ -103,7 +134,11 @@
 .links__output::-webkit-scrollbar,
 .images__output::-webkit-scrollbar,
 .lists__output::-webkit-scrollbar,
-.inputs__output::-webkit-scrollbar {
+.inputs__output::-webkit-scrollbar,
+.selectOption__output::-webkit-scrollbar,
+.fieldsetLegend__output::-webkit-scrollbar,
+.tables__output::-webkit-scrollbar,
+.forms__output::-webkit-scrollbar {
   display: none;
 }
 
@@ -129,6 +164,25 @@
   color: blue;
 }
 
+.htmlExercises {
+  background-color: red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.html__exercise {
+  background-color: green;
+  width: 500px;
+  margin: 20px;
+  height: 300px;
+}
+
+.listofcustomers>tr>td{
+  padding-right: 10px;
+}
+.listofcustomers>tr>th{
+  padding-right: 10px;
+}
 @media only screen and (max-width: 871px) {
   .htmlSidebar {
     width: 60px;
