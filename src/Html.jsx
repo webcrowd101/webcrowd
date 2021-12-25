@@ -73,10 +73,12 @@ function Html() {
     if (document.querySelector(".htmlwrongOne1").checked) {
       document.querySelector(".htmlWrongAnswerOne1").style.backgroundColor =
         "red";
+      document.querySelector(".htmlAnswerOne").style.backgroundColor = "green";
     }
     if (document.querySelector(".htmlwrongOne2").checked) {
       document.querySelector(".htmlWrongAnswerOne2").style.backgroundColor =
         "red";
+      document.querySelector(".htmlAnswerTwo").style.backgroundColor = "green";
     }
     if (document.querySelector(".htmlQuestionTwo").checked) {
       htmlQuizScore++;
@@ -84,10 +86,12 @@ function Html() {
     if (document.querySelector(".htmlwrongTwo1").checked) {
       document.querySelector(".htmlWrongAnswerTwo1").style.backgroundColor =
         "red";
+      document.querySelector(".htmlAnswerTwo").style.backgroundColor = "green";
     }
     if (document.querySelector(".htmlwrongTwo2").checked) {
       document.querySelector(".htmlWrongAnswerTwo2").style.backgroundColor =
         "red";
+      document.querySelector(".htmlAnswerTwo").style.backgroundColor = "green";
     }
     if (document.querySelector(".htmlQuestionThree").checked) {
       htmlQuizScore++;
@@ -95,10 +99,14 @@ function Html() {
     if (document.querySelector(".htmlwrongThree1").checked) {
       document.querySelector(".htmlWrongAnswerThree1").style.backgroundColor =
         "red";
+      document.querySelector(".htmlAnswerThree").style.backgroundColor =
+        "green";
     }
     if (document.querySelector(".htmlwrongThree2").checked) {
       document.querySelector(".htmlWrongAnswerThree2").style.backgroundColor =
         "red";
+      document.querySelector(".htmlAnswerThree").style.backgroundColor =
+        "green";
     }
     if (document.querySelector(".htmlQuestionFour").checked) {
       htmlQuizScore++;
@@ -106,10 +114,12 @@ function Html() {
     if (document.querySelector(".htmlwrongFour1").checked) {
       document.querySelector(".htmlWrongAnswerFour1").style.backgroundColor =
         "red";
+      document.querySelector(".htmlAnswerFour").style.backgroundColor = "green";
     }
     if (document.querySelector(".htmlwrongFour2").checked) {
       document.querySelector(".htmlWrongAnswerFour2").style.backgroundColor =
         "red";
+      document.querySelector(".htmlAnswerFour").style.backgroundColor = "green";
     }
     if (document.querySelector(".htmlQuestionFive").checked) {
       htmlQuizScore++;
@@ -117,6 +127,7 @@ function Html() {
     if (document.querySelector(".htmlwrongFive").checked) {
       document.querySelector(".htmlWrongAnswerFive").style.backgroundColor =
         "red";
+      document.querySelector(".htmlAnswerFive").style.backgroundColor = "green";
     }
     if (document.querySelector(".htmlQuestionSix").checked) {
       htmlQuizScore++;
@@ -124,18 +135,23 @@ function Html() {
     if (document.querySelector(".htmlwrongSix").checked) {
       document.querySelector(".htmlWrongAnswerSix").style.backgroundColor =
         "red";
+      document.querySelector(".htmlAnswerSix").style.backgroundColor = "green";
     }
-    
+
     if (document.querySelector(".htmlQuestionSeven").checked) {
       htmlQuizScore++;
     }
     if (document.querySelector(".htmlwrongSeven1").checked) {
       document.querySelector(".htmlWrongAnswerSeven1").style.backgroundColor =
         "red";
+      document.querySelector(".htmlAnswerSeven").style.backgroundColor =
+        "green";
     }
     if (document.querySelector(".htmlwrongSeven2").checked) {
       document.querySelector(".htmlWrongAnswerSeven2").style.backgroundColor =
         "red";
+      document.querySelector(".htmlAnswerSeven").style.backgroundColor =
+        "green";
     }
     if (document.querySelector(".htmlQuestionEight").checked) {
       htmlQuizScore++;
@@ -143,6 +159,8 @@ function Html() {
     if (document.querySelector(".htmlwrongEight").checked) {
       document.querySelector(".htmlWrongAnswerEight").style.backgroundColor =
         "red";
+      document.querySelector(".htmlAnswerEight").style.backgroundColor =
+        "green";
     }
     if (document.querySelector(".htmlQuestionNine").checked) {
       htmlQuizScore++;
@@ -150,10 +168,12 @@ function Html() {
     if (document.querySelector(".htmlwrongNine1").checked) {
       document.querySelector(".htmlWrongAnswerNine1").style.backgroundColor =
         "red";
+      document.querySelector(".htmlAnswerNine").style.backgroundColor = "green";
     }
     if (document.querySelector(".htmlwrongNine2").checked) {
       document.querySelector(".htmlWrongAnswerNine2").style.backgroundColor =
         "red";
+      document.querySelector(".htmlAnswerNine").style.backgroundColor = "green";
     }
     if (document.querySelector(".htmlQuestionTen").checked) {
       htmlQuizScore++;
@@ -161,10 +181,12 @@ function Html() {
     if (document.querySelector(".htmlwrongTen1").checked) {
       document.querySelector(".htmlWrongAnswerTen1").style.backgroundColor =
         "red";
+      document.querySelector(".htmlAnswerTen").style.backgroundColor = "green";
     }
     if (document.querySelector(".htmlwrongTen2").checked) {
       document.querySelector(".htmlWrongAnswerTen2").style.backgroundColor =
         "red";
+      document.querySelector(".htmlAnswerTen").style.backgroundColor = "green";
     }
     $(".htmlScore").text("your score is " + htmlQuizScore);
     return $(".htmlModal").show();
@@ -172,7 +194,30 @@ function Html() {
 
   const hideModal = () => {
     $(".htmlModal").hide();
+    htmlQuizScore = 0;
   };
+
+  const refleshCurrentPage = () => {
+    $(".second").addClass("active");
+    if (show && window.innerWidth < 871) {
+      document.querySelector(".htmlSidebar").style.width = "60px";
+      document.querySelector(".htmlSidebar ul").style.display = "none";
+      document.querySelector(".htmlContent").style.opacity = "1";
+      hide(false);
+    }
+  };
+
+  window.history.pushState(null, "", window.location.href);
+  window.onpopstate = function () {
+    window.history.pushState(null, "", window.location.href);
+  };
+  useEffect(() => {
+    history.push("HTML5");
+    $(".second").addClass("active");
+    $(".first").removeClass("active");
+    $(".third").removeClass("active");
+    $(".fourth").removeClass("active");
+  }, []);
 
   return (
     <div className="html">
@@ -183,49 +228,49 @@ function Html() {
       <div className="htmlSidebar">
         <DehazeIcon onClick={ShowHide} className="showSideBar" />
         <ul>
-          <a href="#introduction">
+          <a href="#introduction" onClick={refleshCurrentPage}>
             <li>Introduction</li>
           </a>
-          <a href="#heading">
+          <a href="#heading" onClick={refleshCurrentPage}>
             <li>Headings</li>
           </a>
-          <a href="#formattingElements">
+          <a href="#formattingElements" onClick={refleshCurrentPage}>
             <li>Formatting Elements</li>
           </a>
-          <a href="#comments">
+          <a href="#comments" onClick={refleshCurrentPage}>
             <li>Comment</li>
           </a>
-          <a href="#links">
+          <a href="#links" onClick={refleshCurrentPage}>
             <li>Links</li>
           </a>
-          <a href="#images">
+          <a href="#images" onClick={refleshCurrentPage}>
             <li>Images</li>
           </a>
-          <a href="#lists">
+          <a href="#lists" onClick={refleshCurrentPage}>
             <li>Lists</li>
           </a>
-          <a href="#inputs">
+          <a href="#inputs" onClick={refleshCurrentPage}>
             <li>Inputs</li>
           </a>
-          <a href="#buttons">
+          <a href="#buttons" onClick={refleshCurrentPage}>
             <li>Button</li>
           </a>
-          <a href="#selectOption">
+          <a href="#selectOption" onClick={refleshCurrentPage}>
             <li>Select&Option</li>
           </a>
-          <a href="#fieldsetLegend">
+          <a href="#fieldsetLegend" onClick={refleshCurrentPage}>
             <li>Fieldset&Legend</li>
           </a>
-          <a href="#tables">
+          <a href="#tables" onClick={refleshCurrentPage}>
             <li>Tables</li>
           </a>
-          <a href="#forms">
+          <a href="#forms" onClick={refleshCurrentPage}>
             <li>Form</li>
           </a>
-          <a href="#htmlExercises">
+          <a href="#htmlExercises" onClick={refleshCurrentPage}>
             <li>Exercises</li>
           </a>
-          <a href="#htmlQuiz">
+          <a href="#htmlQuiz" onClick={refleshCurrentPage}>
             <li>Quiz</li>
           </a>
         </ul>
@@ -241,6 +286,10 @@ function Html() {
             Elements Colors or Position. <br /> So, HTML consists of a list of
             Elements (Tags) which can build the Structure of your Entire
             Website. Scroll down to figure out the most of these Elements.
+          </p>
+          <p>
+            <b>Instruction :</b> Here is how to create HTML file, and how to use{" "}
+            <i>"live server exetension"</i> <a href="">click here</a>
           </p>
           <span>
             <b>Important : </b>
@@ -973,12 +1022,13 @@ function Html() {
             value you Enter.
           </p>
         </div>
-        <p>
-          <b>Important! </b> before you start the following exercises, try
-          figure out the other types of input such{" "}
-          <b>radio,range,checkbox,number</b>.
-        </p>
+
         <div id="htmlExercises">
+          <p>
+            <b>Important! </b> before you start the following exercises, try
+            figure out the other types of input such{" "}
+            <b>radio,range,checkbox,number</b>.
+          </p>
           <div className="html__exercise">
             <h2>Exercise 1 : </h2>
             <h1>My Portfolio : </h1>
@@ -1140,7 +1190,7 @@ function Html() {
               name="firstQuestionName"
               className="htmlQuestionOne"
             />
-            <span>inside body tag</span>
+            <span className="htmlAnswerOne">inside body tag</span>
             <br />
             <input
               type="radio"
@@ -1168,7 +1218,7 @@ function Html() {
               name="secondQuestionName"
               className="htmlQuestionTwo"
             />
-            <span>to visit one particular link</span>
+            <span className="htmlAnswerTwo">to visit one particular link</span>
             <br />
             <input
               type="radio"
@@ -1185,7 +1235,7 @@ function Html() {
               name="thirdQuestionName"
               className="htmlQuestionThree"
             />
-            <span>h3</span>
+            <span className="htmlAnswerThree">h3</span>
             <br />
             <input
               type="radio"
@@ -1223,7 +1273,7 @@ function Html() {
               name="fourthQuestionName"
               className="htmlQuestionFour"
             />
-            <span>src</span>
+            <span className="htmlAnswerFour">src</span>
             <br />
             <hr />
             <h5>Question 5</h5>
@@ -1233,7 +1283,7 @@ function Html() {
               name="fifthQuestionName"
               className="htmlQuestionFive"
             />
-            <span>yes</span>
+            <span className="htmlAnswerFive">yes</span>
             <br />
             <input
               type="radio"
@@ -1250,7 +1300,7 @@ function Html() {
               name="sixthQuestionName"
               className="htmlQuestionSix"
             />
-            <span>yes</span>
+            <span className="htmlAnswerSix">yes</span>
             <br />
             <input
               type="radio"
@@ -1267,7 +1317,7 @@ function Html() {
               name="seventhQuestionName"
               className="htmlQuestionSeven"
             />
-            <span>href</span>
+            <span className="htmlAnswerSeven">href</span>
             <br />
             <input
               type="radio"
@@ -1291,12 +1341,11 @@ function Html() {
               name="eightQuestionName"
               className="htmlwrongEight"
             />
-            <span>yes</span>
+            <span className="htmlAnswerEight">yes</span>
             <br />
             <input
               type="radio"
               name="eightQuestionName"
-              
               className="htmlQuestionEight"
             />
             <span className="htmlWrongAnswerEight">no</span>
@@ -1309,7 +1358,9 @@ function Html() {
               name="ninthQuestionName"
               className="htmlQuestionNine"
             />
-            <span>to prevent html code from executing </span>
+            <span className="htmlAnswerNine">
+              to prevent html code from executing{" "}
+            </span>
             <br />
             <input
               type="radio"
@@ -1323,7 +1374,9 @@ function Html() {
               name="ninthQuestionName"
               className="htmlwrongNine2"
             />
-            <span className="htmlWrongAnswerNine2">to duplicate html code </span>
+            <span className="htmlWrongAnswerNine2">
+              to duplicate html code{" "}
+            </span>
             <br />
             <hr />
             <h5>Question 10</h5>
@@ -1340,7 +1393,7 @@ function Html() {
               name="tenthQuestionName"
               className="htmlQuestionTen"
             />
-            <span>input </span>
+            <span className="htmlAnswerTen">input </span>
             <br />
             <input
               type="radio"
@@ -1356,5 +1409,4 @@ function Html() {
     </div>
   );
 }
-
 export default Html;

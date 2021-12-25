@@ -83,15 +83,18 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     width: 100vw;
+    
   }
   .header > ul {
     display: flex;
     flex-direction: column;
     display: none;
+    
   }
   .sections {
     background-color: red;
     width: 100vw;
+    padding: 5px 0;
   }
   .list {
     float: right !important;

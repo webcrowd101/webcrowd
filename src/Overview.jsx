@@ -64,6 +64,11 @@ function Overview() {
     }
   });
 
+  window.history.pushState(null, "", window.location.href);
+  window.onpopstate = function () {
+    window.history.pushState(null, "", window.location.href);
+  };
+
   return (
     <div className="overview">
       <h3>Introduction :</h3>

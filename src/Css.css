@@ -1,67 +1,290 @@
-.css{
-    display: flex;
-    width:100vw;
-    height: 90vh;
-   
-    
+.css {
+  display: flex;
+  width: 100vw;
 }
-.cssSidebar{
-    background-color:purple; 
-    
+
+.cssModal {
+  width: 30%;
+  height: 40%;
+  background-color: blue;
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  display: none;
 }
-.cssSidebar>ul{
-    margin-top:100px;
+.closeModal {
+  color: red !important;
+  font-size: 30px !important;
+  float: right;
+  cursor: pointer;
+}
+.cssSidebar {
+  background-color: purple;
+  width: 200px;
+}
+.cssSidebar > ul {
+  margin-top: 50px;
+  background-color: aqua;
+  text-align: center;
+  height: 80vh;
+  overflow-y: scroll;
+  width: 100% !important;
+}
+.cssSidebar > ul::-webkit-scrollbar {
+  display: none;
+}
+.cssSidebar > ul > a {
+  text-decoration: none;
+}
+.cssSidebar > ul > a > li {
+  margin: 10px 0;
+  padding: 5px 30px;
+  text-align: start;
+  cursor: pointer;
+}
+.cssContent {
+  flex: 1;
+  height: 90vh;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.cssContent::-webkit-scrollbar {
+  display: none;
+}
+.showSideBar {
+  display: none !important;
+  width: 50px !important;
+  height: 70px !important;
+  text-align: center !important;
+  float: right !important;
+  padding-right: 10px !important;
+  color: aqua !important;
+  cursor: pointer !important;
+}
+.cssProperty {
+  color: purple;
+}
+.cssValue {
+  color: rgb(13, 10, 230);
+}
+.cssTag {
+  color: red;
+}
+
+.colors__code,
+.background__code,
+.width__code,
+.height__code,
+.margin__code,
+.padding__code,
+.border__code,
+.comment__code,
+.textAlign__code,
+.opacity__code,
+.font__code,
+.flexbox__code,
+.animation__code {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.colors__input,
+.background__input,
+.width__input,
+.height__input,
+.margin__input,
+.padding__input,
+.border__input,
+.comment__input,
+.textAlign__input,
+.opacity__input,
+.font__input,
+.flexbox__input,
+.animation__input {
+  display: flex;
+  width: 600px;
+  height: 200px;
+  outline: none;
+}
+.colors__output,
+.background__output,
+.width__output,
+.height__output,
+.margin__output,
+.padding__output,
+.border__output,
+.comment__output,
+.textAlign__output,
+.opacity__output,
+.font__output,
+.flexbox__output,
+.animation__output {
+  width: 300px;
+  height: 200px;
+  outline: none;
+  border: 1px solid gray;
+  background-color: rgb(228, 226, 226);
+  overflow-y: scroll;
+}
+.colors__output::-webkit-scrollbar,
+.background__output::-webkit-scrollbar,
+.width__output::-webkit-scrollbar,
+.height__output::-webkit-scrollbar,
+.margin__output::-webkit-scrollbar,
+.padding__output::-webkit-scrollbar,
+.border__output::-webkit-scrollbar,
+.comment__output::-webkit-scrollbar,
+.textAlign__output::-webkit-scrollbar,
+.opacity__output::-webkit-scrollbar,
+.font__output::-webkit-scrollbar,
+.flexbox__output::-webkit-scrollbar,
+.animation__output::-webkit-scrollbar {
+  display: none;
+}
+.html__code {
+  border-right: 1px solid black;
+  padding: 0 5px;
+  margin: 0 5px;
+  height: 200px;
+  width: 300px;
+  overflow-y: scroll;
+  background-color: rgb(228, 226, 226);
+  outline: none;
+  border: 1px solid gray;
+}
+.css__code {
+  margin: 0 5px;
+  padding: 0 5px;
+  height: 200px;
+  width: 300px;
+  overflow-y: scroll;
+  background-color: rgb(228, 226, 226);
+  outline: none;
+  border: 1px solid gray;
+}
+.html__code::-webkit-scrollbar,
+.css__code::-webkit-scrollbar {
+  display: none;
+}
+.html__code > h3 {
+  background-color: aqua;
+  text-align: center;
+  padding: 3px 0;
+  width: 100%;
+}
+.css__code > h3 {
+  background-color: aqua;
+  flex: 1;
+  text-align: center;
+  padding: 3px 0;
+}
+.classProperty {
+  color: blue;
+}
+.classValue {
+  color: green;
+}
+.idProperty {
+  color: blue;
+}
+.idValue {
+  color: green;
+}
+.containers {
+  width: 20vw;
+  height: 120px;
+  background-color: aqua;
+  position: relative;
+}
+.child {
+  width: 20px;
+  height: 30px;
+  background-color: red;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+}
+.h3Hover {
+  background-color: red;
+}
+.h3Hover:hover {
+  background-color: blue;
+}
+.h3Transition {
+  background-color: red;
+  transition: background-color 1s;
+}
+.h3Transition:hover {
+  background-color: blue;
+}
+.mediaQueryDiv{
+  background-color:red;
+  width: 150px;
+  height: 150px;
+}
+.cssExerciseButton:hover{
+  background-color:green !important;
+}
+
+#cssExercises {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.css__exercise {
+  background-color: rgb(255, 217, 0);
+  /* border:2px solid black; */
+  width: 500px;
+  margin: 10px;
+  height: 300px;
+  overflow-y: scroll;
+}
+.css__exercise::-webkit-scrollbar{
+  display: none;
+}
+.signupButton:hover{
+  background-color: green !important;
+}
+
+@media only screen and (max-width: 1000px) {
+  .mediaQueryDiv{
     background-color:aqua;
-    text-align:center;
-    height: 70vh;
-    overflow-y: scroll;
-    
-    
-
+  }
 }
-.cssSidebar>ul::-webkit-scrollbar{
+@media only screen and (max-width: 871px) {
+  .cssSidebar {
+    width: 60px;
+  }
+  .cssSidebar > ul {
     display: none;
+  }
+  .showSideBar {
+    display: block !important;
+  }
 }
-.cssSidebar>ul>li{
-    background-color:red;
-    padding: 15px 30px;
-    text-align: start;
-    cursor:pointer;
-    
-    
-
+.keyframes {
+  color: red;
 }
-.cssContent{
-    flex: 1;
-    height: 90vh;
-    background-color:green;
-    overflow-y: scroll;
+.animation__name {
+  color: rgb(17, 66, 202);
 }
-.cssContent::-webkit-scrollbar{
-    display: none;
+.keyframes__percent {
+  color: black;
 }
-
-.showSideBar{
-    display: none !important;
-    width: 50px !important;
-    height:70px !important;
-    text-align: center !important;
-    float: right !important;
-    padding-right: 10px !important;
-    color: white;
-    cursor: pointer !important;
+.animatedItem {
+  /* animation : animate 4s infinite; */
 }
-
-
-
-@media only screen and (max-width:871px){
-    .cssSidebar{
-        width: 60px;
-    }
-    .cssSidebar>ul{
-        display: none;
-    }
-    .showSideBar{
-        display: block !important;
-    }
+@keyframes animate {
+  25% {
+    transform: translate(0, 120px);
+  }
+  50% {
+    transform: translate(120px, 120px);
+  }
+  75% {
+    transform: translate(120px, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
