@@ -37,14 +37,10 @@ function Header() {
       $(".third").addClass("active");
     } else if (localStorage.getItem("current") === "JAVASCRIPT") {
       $(".fourth").addClass("active");
-    } else if (localStorage.getItem("current") === "BOOTSTRAP") {
-      $(".fifth").addClass("active");
     } else if (localStorage.getItem("current") === "JQUERY") {
+      $(".fifth").addClass("active");
+    } else if (localStorage.getItem("current") === "TEMPLATES") {
       $(".sixth").addClass("active");
-    } else if (localStorage.getItem("current") === "REACT%20JS") {
-      $(".seventh").addClass("active");
-    } else if (localStorage.getItem("current") === "DATABASE") {
-      $(".ten").addClass("active");
     } else {
     }
   }, []);
@@ -111,14 +107,9 @@ function Header() {
             JQUERY
           </li>
           <li className="sections sixth" onClick={hideHeader}>
-            REACT JS
-          </li>
-          <li className="sections seventh" onClick={hideHeader}>
             TEMPLATES
           </li>
-          <li className="sections eight" onClick={hideHeader}>
-            DATABASE
-          </li>
+         
         </ul>
       </Route>
     </div>
