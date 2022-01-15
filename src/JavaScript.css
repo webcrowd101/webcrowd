@@ -2,7 +2,7 @@
   display: flex;
   width: 100vw;
 }
-.javascriptModal {
+.javaScriptModal {
   width: 30%;
   height: 40%;
   background-color: blue;
@@ -67,7 +67,7 @@
   align-items: center;
 }
 .javascript__input {
-  width: 400px;
+  width: 520px;
   height: 200px;
   outline: none;
   border: 1px solid gray;
@@ -79,7 +79,7 @@
   display: none;
 }
 .javascript__output {
-  width: 400px;
+  width: 520px;
   height: 200px;
   outline: none;
   border: 1px solid gray;
@@ -89,6 +89,24 @@
 }
 .javascript__output::-webkit-scrollbar {
   display: none;
+}
+.javascript__html,
+.javascript__css,
+.javascript__javascript,
+.javascript__browser {
+  width: 520px;
+  height: 200px;
+  outline: none;
+  border: 1px solid gray;
+  background-color: rgb(228, 226, 226);
+  overflow-y: scroll;
+  padding: 10px;
+}
+.javascript__html::-webkit-scrollbar,
+.javascript__css::-webkit-scrollbar,
+.javascript__javascript::-webkit-scrollbar,
+.javascript__browser::-webkit-scrollbar{
+   display: none;
 }
 
 .declarationKey {
@@ -127,16 +145,22 @@
 }
 
 #javascriptExercises {
-  background-color: red;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 .javascript__exercise {
-  background-color: green;
+  background-color: rgb(223, 221, 221);
   width: 500px;
   margin: 10px;
   height: 300px;
+  display: flex;
+  flex-direction:column;
+  padding:5px;
+  overflow-y: scroll;
+}
+.javascript__exercise::-webkit-scrollbar{
+  display: none;
 }
 
 .listofcustomers > tr > td {
@@ -145,18 +169,18 @@
 .listofcustomers > tr > th {
   padding-right: 10px;
 }
-.assignmentOperatorsExplanation{
+.assignmentOperatorsExplanation {
   width: 100%;
   text-align: center;
 }
-.assignmentOperatorsExplanation>tr>th{
+.assignmentOperatorsExplanation > tr > th {
   padding: 20px;
-  background-color:aqua;
+  background-color: aqua;
 }
-.assignmentOperatorsExplanation>tr>td{
- padding: 15px;
- margin: 5px;
- background-color:gray;
+.assignmentOperatorsExplanation > tr > td {
+  padding: 15px;
+  margin: 5px;
+  background-color: gray;
 }
 @media only screen and (max-width: 871px) {
   .javascriptSidebar {

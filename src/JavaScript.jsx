@@ -229,7 +229,7 @@ function JavaScript() {
   };
 
   const refleshCurrentPage = () => {
-    $(".second").addClass("active");
+    $(".fourth").addClass("active");
     if (show && window.innerWidth < 871) {
       document.querySelector(".javascriptSidebar").style.width = "60px";
       document.querySelector(".javascriptSidebar ul").style.display = "none";
@@ -249,94 +249,350 @@ function JavaScript() {
     $(".third").removeClass("active");
     $(".second").removeClass("active");
   }, []);
+
+  //change web crowd color
+
+  const changeColor = () => {
+    let webCrowdTest = document.querySelector(".webCrowdTest");
+    webCrowdTest.style.color = "red";
+  };
+
+  //add items to ul using input
+  //  <input className="itemsInput" type="text" placeholder="type a new item..." />
+  //           <button onClick={addItemsToUl} style={{color:"white" , padding:"10px 15px" , backgroundColor:"blue" , border:"none"}}>add item</button>
+  //           <ul className="liContainer"></ul>
+  const addItemsToUl = () => {
+    let input = document.querySelector(".itemsInput");
+    let liContainer = document.querySelector(".liContainer");
+    let createdLi = document.createElement("li");
+    createdLi.style.color = "blue";
+    createdLi.textContent = input.value;
+    liContainer.append(createdLi);
+    input.value = "";
+  };
+
+  //Calculator
+  const calculator = () => {
+    let firstNumber = document.querySelector(".firstNumber");
+    let secondNumber = document.querySelector(".secondNumber");
+    let operation = document.querySelector(".operation");
+    let result = document.querySelector(".result");
+
+    switch (firstNumber.value) {
+      case "":
+        firstNumber.value = 0;
+        break;
+
+      default:
+        break;
+    }
+    switch (secondNumber.value) {
+      case "":
+        secondNumber.value = 0;
+        break;
+
+      default:
+        break;
+    }
+    switch (operation.value) {
+      case "addition":
+        result.value = Number(firstNumber.value) + Number(secondNumber.value);
+        break;
+      case "substraction":
+        result.value = Number(firstNumber.value) - Number(secondNumber.value);
+        break;
+
+      case "multiplication":
+        result.value = Number(firstNumber.value) * Number(secondNumber.value);
+        break;
+      case "division":
+        result.value = Number(firstNumber.value) / Number(secondNumber.value);
+        break;
+      case "selectOperation":
+        result.value = "";
+
+        break;
+
+      default:
+        break;
+    }
+  };
+  const resetInputs = () => {
+    document.querySelector(".firstNumber").value = "";
+    document.querySelector(".secondNumber").value = "";
+    document.querySelector(".operation").value = "selectOperation";
+    document.querySelector(".result").value = "";
+  };
+
+  //addItems
+  const addItems = () => {
+    let newItemsContainer = document.querySelector(".newItemsContainer");
+    let newItemsInput = document.querySelector(".newItemsInput");
+    if (newItemsInput.value !== "") {
+      let createdItem = document.createElement("li");
+      createdItem.style.padding = "10px";
+      createdItem.style.margin = "5px 0";
+      createdItem.style.listStyle = "none";
+      createdItem.style.backgroundColor = "rgb(189, 188, 188)";
+      createdItem.textContent = newItemsInput.value;
+      newItemsContainer.append(createdItem);
+      newItemsInput.value = "";
+    } else {
+    }
+  };
+
+  //timer
+  let myTimer;
+  let hours = 0;
+  let minutes = 0;
+  let seconds = 0;
+
+  const timer = () => {
+    let timeContainer = document.querySelector(".timeContainer");
+    let startTimerBtn = document.querySelector(".startTimerBtn");
+    if (startTimerBtn.textContent === "Start") {
+      hours = 0;
+      minutes = 0;
+      seconds = 0;
+
+      myTimer = setInterval(() => {
+        timeContainer.textContent = `${hours} : ${minutes} : ${seconds}`;
+        ++seconds;
+        startTimerBtn.textContent = "Stop";
+        if (seconds === 59) {
+          ++minutes;
+          seconds = 0;
+        }
+        if (minutes === 59 && seconds === 59) {
+          ++hours;
+          minutes = 0;
+          seconds = 0;
+        }
+      }, 1000);
+    } else {
+      clearInterval(myTimer);
+      startTimerBtn.textContent = "Start";
+    }
+  };
+  //reset timer
+  const resetTimer = () => {
+    let timeContainer = document.querySelector(".timeContainer");
+    let startTimerBtn = document.querySelector(".startTimerBtn");
+    startTimerBtn.textContent = "Start";
+    timeContainer.textContent = "--:--:--";
+    clearInterval(myTimer);
+  };
+
+  //generateNumbers 
+  const generateNumbers=()=>{
+    let numbersContainer = document.querySelector(".numbersContainer");
+    numbersContainer.textContent= Math.floor(Math.random()*10000);
+
+  }
+
+  //jsQuiz
+  let javaScriptQuizScore = 0;
+  const javaScriptCompletedQuiz = () => {
+    if (document.querySelector(".javaScriptQuestionOne").checked) {
+      javaScriptQuizScore++;
+    }
+    if (document.querySelector(".javaScriptwrongOne").checked) {
+      document.querySelector(".javaScriptWrongAnswerOne").style.backgroundColor =
+        "red";
+      document.querySelector(".javaScriptAnswerOne").style.backgroundColor = "green";
+    }
+
+    if (document.querySelector(".javaScriptQuestionTwo").checked) {
+      javaScriptQuizScore++;
+    }
+    if (document.querySelector(".javaScriptwrongTwo1").checked) {
+      document.querySelector(".javaScriptWrongAnswerTwo1").style.backgroundColor =
+        "red";
+      document.querySelector(".javaScriptAnswerTwo").style.backgroundColor = "green";
+    }
+    if (document.querySelector(".javaScriptwrongTwo2").checked) {
+      document.querySelector(".javaScriptWrongAnswerTwo2").style.backgroundColor =
+        "red";
+      document.querySelector(".javaScriptAnswerTwo").style.backgroundColor = "green";
+    }
+    if (document.querySelector(".javaScriptQuestionThree").checked) {
+      javaScriptQuizScore++;
+    }
+    if (document.querySelector(".javaScriptwrongThree1").checked) {
+      document.querySelector(".javaScriptWrongAnswerThree1").style.backgroundColor =
+        "red";
+      document.querySelector(".javaScriptAnswerThree").style.backgroundColor = "green";
+    }
+    if (document.querySelector(".javaScriptwrongThree2").checked) {
+      document.querySelector(".javaScriptWrongAnswerThree2").style.backgroundColor =
+        "red";
+      document.querySelector(".javaScriptAnswerThree").style.backgroundColor = "green";
+    }
+    if (document.querySelector(".javaScriptQuestionFour").checked) {
+      javaScriptQuizScore++;
+    }
+    if (document.querySelector(".javaScriptwrongFour1").checked) {
+      document.querySelector(".javaScriptWrongAnswerFour1").style.backgroundColor =
+        "red";
+      document.querySelector(".javaScriptAnswerFour").style.backgroundColor = "green";
+    }
+    if (document.querySelector(".javaScriptwrongFour2").checked) {
+      document.querySelector(".javaScriptWrongAnswerFour2").style.backgroundColor =
+        "red";
+      document.querySelector(".javaScriptAnswerFour").style.backgroundColor = "green";
+    }
+    if (document.querySelector(".javaScriptQuestionFive").checked) {
+      javaScriptQuizScore++;
+    }
+    if (document.querySelector(".javaScriptwrongFive").checked) {
+      document.querySelector(".javaScriptWrongAnswerFive").style.backgroundColor =
+        "red";
+      document.querySelector(".javaScriptAnswerFive").style.backgroundColor = "green";
+    }
+    if (document.querySelector(".javaScriptQuestionSix").checked) {
+      javaScriptQuizScore++;
+    }
+    if (document.querySelector(".javaScriptwrongSix").checked) {
+      document.querySelector(".javaScriptWrongAnswerSix").style.backgroundColor =
+        "red";
+      document.querySelector(".javaScriptAnswerSix").style.backgroundColor = "green";
+    }
+
+    if (document.querySelector(".javaScriptQuestionSeven").checked) {
+      javaScriptQuizScore++;
+    }
+    if (document.querySelector(".javaScriptwrongSeven1").checked) {
+      document.querySelector(".javaScriptWrongAnswerSeven1").style.backgroundColor =
+        "red";
+      document.querySelector(".javaScriptAnswerSeven").style.backgroundColor = "green";
+    }
+    if (document.querySelector(".javaScriptwrongSeven2").checked) {
+      document.querySelector(".javaScriptWrongAnswerSeven2").style.backgroundColor =
+        "red";
+      document.querySelector(".javaScriptAnswerSeven").style.backgroundColor = "green";
+    }
+    if (document.querySelector(".javaScriptQuestionEight").checked) {
+      javaScriptQuizScore++;
+    }
+    if (document.querySelector(".javaScriptwrongEight").checked) {
+      document.querySelector(".javaScriptWrongAnswerEight").style.backgroundColor =
+        "red";
+      document.querySelector(".javaScriptAnswerEight").style.backgroundColor = "green";
+    }
+    if (document.querySelector(".javaScriptQuestionNine").checked) {
+      javaScriptQuizScore++;
+    }
+    if (document.querySelector(".javaScriptwrongNine").checked) {
+      document.querySelector(".javaScriptWrongAnswerNine").style.backgroundColor =
+        "red";
+      document.querySelector(".javaScriptAnswerNine").style.backgroundColor = "green";
+    }
+
+    if (document.querySelector(".javaScriptQuestionTen").checked) {
+      javaScriptQuizScore++;
+    }
+    if (document.querySelector(".javaScriptwrongTen").checked) {
+      document.querySelector(".javaScriptWrongAnswerTen").style.backgroundColor =
+        "red";
+      document.querySelector(".javaScriptAnswerTen").style.backgroundColor = "green";
+    }
+
+    $(".javaScriptScore").text("your score is " + javaScriptQuizScore);
+     $(".javascriptContent *").prop("disabled" , true);    
+    return $(".javaScriptModal").show();
+  };
+
+  const JavaScriptHideModal = () => {
+    $(".javaScriptModal").hide();
+    javaScriptQuizScore = 0;
+      
+  };
+
+
+  
+
   return (
     <div className="javascript">
-      <div className="javascriptModal">
-        <CloseIcon className="closeModal" onClick={hideModal} />
-        <p className="javascriptScore"></p>
+      <div className="javaScriptModal">
+        <CloseIcon className="closeModal" onClick={JavaScriptHideModal} />
+        <p className="javaScriptScore"></p>
       </div>
       <div className="javascriptSidebar">
         <DehazeIcon onClick={ShowHide} className="showSideBar" />
         <ul>
-          <a href="#introduction">
+          <a onClick={refleshCurrentPage} href="#introduction">
             <li>Introduction</li>
           </a>
-          <a href="#variablesDeclaration">
+          <a onClick={refleshCurrentPage} href="#variablesDeclaration">
             <li>Variables Declaration</li>
           </a>
-          <a href="#jsComment">
+          <a onClick={refleshCurrentPage} href="#jsComment">
             <li>Comment</li>
           </a>
-          <a href="#dataTypes">
+          <a onClick={refleshCurrentPage} href="#dataTypes">
             <li>Data Types</li>
           </a>
-          <a href="#typesConversion">
+          <a onClick={refleshCurrentPage} href="#typesConversion">
             <li>Types Conversion</li>
           </a>
 
-          <a href="#ifElse">
+          <a onClick={refleshCurrentPage} href="#ifElse">
             <li>if/else Statement</li>
           </a>
-          <a href="#switch">
+          <a onClick={refleshCurrentPage} href="#switch">
             <li>Switch</li>
           </a>
-          <a href="#ternary">
+          <a onClick={refleshCurrentPage} href="#ternary">
             <li>Ternary</li>
           </a>
-          <a href="#expressionsOperators">
-            <li>Expressions & Operators</li>
-          </a>
-          <a href="#function">
-            <li>Function</li>
-          </a>
-          <a href="#scope">
-            <li>Scope</li>
-          </a>
-          <a href="#hoisting">
-            <li>Hoisting</li>
-          </a>
-          <a href="#object">
-            <li>Object</li>
-          </a>
-          <a href="#array">
-            <li>Array</li>
-          </a>
-          <a href="#arrayFunctions">
-            <li>Array Functions</li>
-          </a>
-          <a href="#stringMethods">
-            <li>String Methods</li>
-          </a>
-          <a href="#loops">
+          <a onClick={refleshCurrentPage} href="#loops">
             <li>Loops</li>
           </a>
-          <a href="#dates">
-            <li>Dates</li>
+          <a onClick={refleshCurrentPage} href="#expressionsOperators">
+            <li>Expressions & Operators</li>
           </a>
-          <a href="#dates">
-            <li>Math</li>
+          <a onClick={refleshCurrentPage} href="#function">
+            <li>Function</li>
           </a>
-          <a href="#selectors">
-            <li>Selectors</li>
+          <a onClick={refleshCurrentPage} href="#scope">
+            <li>Scope</li>
           </a>
-          <a href="#events">
-            <li>Events</li>
+          <a onClick={refleshCurrentPage} href="#hoisting">
+            <li>Hoisting</li>
           </a>
-          <a href="#setTimeout">
-            <li>SetTimeout</li>
+          <a onClick={refleshCurrentPage} href="#object">
+            <li>Object</li>
           </a>
-          <a href="#setIntervals">
-            <li>SetIntervals</li>
+          <a onClick={refleshCurrentPage} href="#array">
+            <li>Array</li>
+          </a>
+          <a onClick={refleshCurrentPage} href="#arrayFunctions">
+            <li>Array Functions</li>
+          </a>
+          <a onClick={refleshCurrentPage} href="#stringMethods">
+            <li>String Methods</li>
           </a>
 
-          <a href="#domManipulation">
+          <a onClick={refleshCurrentPage} href="#date">
+            <li>Dates</li>
+          </a>
+          <a onClick={refleshCurrentPage} href="#math">
+            <li>Math</li>
+          </a>
+          <a onClick={refleshCurrentPage} href="#setTimeout">
+            <li>SetTimeout</li>
+          </a>
+          <a onClick={refleshCurrentPage} href="#setInterval">
+            <li>SetIntervals</li>
+          </a>
+          <a onClick={refleshCurrentPage} href="#domManipulation">
             <li>DOM Manipulation</li>
           </a>
 
-          <a href="#">
+          <a onClick={refleshCurrentPage} href="#javascriptExercises">
             <li>Exercises</li>
           </a>
-          <a href="#">
+          <a onClick={refleshCurrentPage} href="#javascriptQuiz">
             <li>Quiz</li>
           </a>
         </ul>
@@ -809,6 +1065,57 @@ function JavaScript() {
             we will dive deep into ternary in <a href="">
               Array Functions
             </a> and <a href="">String Methods</a>.
+          </p>
+        </div>
+        <div id="loops">
+          <h3>loops</h3>
+          <p>
+            loops are very important in programming, through loops you can
+            rewrite your code as many times as you need in one line. there are
+            two types of loops, <b>for</b> loop and <b>while</b> loop. but it
+            will be better if you use the first one
+          </p>
+
+          <b>Example : </b>
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">var</span>
+              <span className="variableName"> str = </span>
+              <span>" my name is khalid "</span>; <br /> <br />
+              <span style={{ color: "purple" }}>
+                for(
+                <span className="declarationKey">let </span>
+                <span style={{ color: "blue" }}>i = 0 </span>;{" "}
+                <span style={{ color: "blue" }}>i &gt; 5 </span>;{" "}
+                <span style={{ color: "blue" }}>i++ </span>)
+              </span>{" "}
+              &#123; <br />
+              <span className="console">
+                console.log(
+                <span className="insideConsole"> str </span>)
+              </span>
+              <br /> &#125;
+            </div>
+            <div className="javascript__output">
+              <div>my name is mike</div>
+              <div>my name is mike</div>
+              <div>my name is mike</div>
+              <div>my name is mike</div>
+              <div>my name is mike</div>
+            </div>
+          </div>
+
+          <p>
+            So here are the steps of how <b>for</b> loop works : <br />
+            <ol style={{ marginLeft: "50px" }}>
+              <li>check if i &gt; 5</li>
+              <li>
+                if yes, <b>str</b> will get executed, if not the loop will stop.
+              </li>
+              <li>
+                if <b>str</b> get executed, then loop will do the same proccess.
+              </li>
+            </ol>
           </p>
         </div>
         <div id="expressionsOperators">
@@ -1302,7 +1609,7 @@ function JavaScript() {
                 console.log(
                 <span style={{ color: "purple" }}>
                   {" "}
-                  arr[<span style={{ color: "black" }}>2</span>]{" "}
+                  arr[<span style={{ color: "black" }}>2</span>]
                 </span>
                 ){" "}
               </span>
@@ -1329,8 +1636,3371 @@ function JavaScript() {
             you write <b>arr[3]</b> inside console, you only will get the sub
             array, but if you want to display <b>frank</b> you must add another
             square brackets in put 0 inside like this : <b>arr[3][0]</b>. <br />
-            for more examplesand exercises, <a href="">click here</a>
+            for more examples and exercises, <a href="">click here</a>
           </p>
+        </div>
+        <div id="arrayFunctions">
+          <h3>array functions</h3>
+          <p>
+            array functions help you to write less and do more, it's actually
+            amazing. you can handle arrays values easily with this functions,
+            before we dive into this functions, we want to mention to a useful
+            array property which is <b>length</b>. this property gives you the
+            number of elements inside an array.
+          </p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> arr = </span>[{" "}
+              <span style={{ color: "purple" }}>
+                "mike" <b>,</b> 22 <b>,</b> false
+              </span>{" "}
+              ]
+              <br />
+              <br />
+              <span className="console">
+                {" "}
+                console.log(
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  arr.<span style={{ color: "blue" }}>length</span>{" "}
+                </span>
+                ){" "}
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>3</div>
+            </div>
+          </div>
+          <p>
+            So now, let's talk about array functions. here is a list of the most
+            popular ones :
+          </p>
+
+          <b>push()</b>
+          <p>adds a new element to the end of the array</p>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> arr = </span>[{" "}
+              <span style={{ color: "purple" }}>
+                "mike" <b>,</b> 22 <b>,</b> false
+              </span>{" "}
+              ]
+              <br />
+              <br />
+              <span className="console">
+                console.log({" "}
+                <span style={{ color: "purple" }}>
+                  arr. <span style={{ color: "blue" }}>push( "frank"</span>
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>arr = [ "mike" , 22 , false , "frank" ]</div>
+            </div>
+          </div>
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <b>pop()</b>
+          <p>removes the last element of the array</p>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> arr = </span>[{" "}
+              <span style={{ color: "purple" }}>
+                "mike" <b>,</b> 22 <b>,</b> false
+              </span>{" "}
+              ]
+              <br />
+              <br />
+              <span className="console">
+                console.log({" "}
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  arr.<span style={{ color: "blue" }}>pop()</span>
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>arr = [ "mike" , 22 ]</div>
+            </div>
+          </div>
+
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <b>unshift()</b>
+          <p>adds a new element at the beginning of the array</p>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> arr = </span>[{" "}
+              <span style={{ color: "purple" }}>
+                "mike" <b>,</b> 22 <b>,</b> false
+              </span>{" "}
+              ]
+              <br />
+              <br />
+              <span className="console">
+                console.log({" "}
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  arr.<span style={{ color: "blue" }}>unshift( "frank"</span> )
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>arr = [ "frank" , "mike" , 22 , false ]</div>
+            </div>
+          </div>
+
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <b>shift()</b>
+          <p>removes the first element of the array</p>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> arr = </span>[{" "}
+              <span style={{ color: "purple" }}>
+                "mike" <b>,</b> 22 <b>,</b> false
+              </span>{" "}
+              ]
+              <br />
+              <br />
+              <span className="console">
+                console.log({" "}
+                <span style={{ color: "purple" }}>
+                  arr.<span style={{ color: "blue" }}>shift()</span>
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>arr = [ 22 , false ]</div>
+            </div>
+          </div>
+
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <b>reverse()</b>
+          <p>reverses the elements of the array</p>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> arr = </span>[{" "}
+              <span style={{ color: "purple" }}>
+                "mike" <b>,</b> 22 <b>,</b> false
+              </span>{" "}
+              ]
+              <br />
+              <br />
+              <span className="console">
+                console.log({" "}
+                <span style={{ color: "purple" }}>
+                  arr.<span style={{ color: "blue" }}>reverse()</span>
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>arr = [ false , 22 , "mike" ]</div>
+            </div>
+          </div>
+
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <b>concat()</b>
+          <p>
+            combine two arrays or more in one new array ( you can also combine
+            arrays with string, or string with another string ).
+          </p>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> arr1 = </span>[{" "}
+              <span style={{ color: "purple" }}>
+                "mike" <b>,</b> 20 <b>,</b> false
+              </span>{" "}
+              ]
+              <br />
+              <span className="declarationKey">const</span>
+              <span className="variableName"> arr2 = </span>[{" "}
+              <span style={{ color: "purple" }}>
+                1 <b>,</b> 2 <b>,</b> 3
+              </span>{" "}
+              ]
+              <br />
+              <br />
+              <span className="console">
+                console.log({" "}
+                <span style={{ color: "blue" }}>
+                  {" "}
+                  arr1.<span style={{ color: "purple" }}>concat</span>( arr2 ){" "}
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>[ false , 22 , "mike" , 1 , 2 , 3 ]</div>
+            </div>
+          </div>
+          <p>
+            you can assign the result to a new array like the following :
+            <b> let newArray = arr1,concat(arr2) </b>
+            and display <b>newArray</b> in console (console.log( newArray )).
+          </p>
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+          <b>Set()</b>
+          <p>allows you to delete the duplicated elements.</p>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> numbers = </span>[{" "}
+              <span style={{ color: "purple" }}>1 , 2 , 3 , 4 , 2 , 1 , 5</span>{" "}
+              ]
+              <br />
+              <br />
+              <span className="console">
+                console.log({" "}
+                <span style={{ color: "blue" }}>
+                  {" "}
+                  new <span style={{ color: "purple" }}>Set</span>( numbers ){" "}
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>numbers = [ 1 , 2 , 3 , 4 , 5 ]</div>
+            </div>
+          </div>
+
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <b>filter()</b>
+          <p>
+            allows you to filter elements from array according to a condition.
+          </p>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> numbers = </span>[{" "}
+              <span style={{ color: "purple" }}>
+                1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10
+              </span>{" "}
+              ]
+              <br />
+              <br />
+              <span className="console">
+                console.log({" "}
+                <span style={{ color: "blue" }}>
+                  {" "}
+                  <span style={{ color: "purple" }}>filter</span>( num =&gt; num
+                  &gt; 5 ){" "}
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>numbers = [ 6 , 7 , 8 , 9 , 10 ]</div>
+            </div>
+          </div>
+          <p>
+            we know you didn't get it, don't worry this's called{" "}
+            <a href="">arrow function</a>, it's another way of creating a
+            function. <br />
+            <a href="">click here</a> to learn this kind of functions.
+          </p>
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+          <b>reduce()</b>
+          <p>
+            if you have an array of numbers , So <b>reduce()</b> returns the sum
+            of those numbers.
+          </p>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> numbers = </span>[{" "}
+              <span style={{ color: "purple" }}>
+                1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10
+              </span>{" "}
+              ]
+              <br />
+              <br />
+              <span className="console">
+                console.log({' "the sum is : "'}
+                <span style={{ color: "blue" }}>
+                  {" "}
+                  + numbers.<span style={{ color: "purple" }}>reduce</span>( (a
+                  , b) =&gt; a + b )
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>the sum is : 55</div>
+            </div>
+          </div>
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <b>sort()</b>
+
+          <p>
+            this function allows you to sort array elements in ascending or
+            descending order. <br />
+            <b>Note : </b>sorting numbers is a bit defferent than sorting
+            strings or alphabet
+          </p>
+          <h3>Sorting Numbers :</h3>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> numbers = </span>[{" "}
+              <span style={{ color: "purple" }}>
+                78 , 12 , 3 , 56 , 5 , 60 , 17
+              </span>{" "}
+              ]
+              <br />
+              <br />
+              <span className="console">
+                console.log({'" numbers : "'}
+                <span style={{ color: "blue" }}>
+                  {" "}
+                  + numbers.<span style={{ color: "purple" }}>sort</span>( (a ,
+                  b) =&gt; a - b )
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>numbers = [ 3 , 5 , 12 , 17 , 56 , 60 , 78 ]</div>
+            </div>
+          </div>
+
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <h3>Sorting Strings and Alphabet :</h3>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> strings = </span>[{" "}
+              <span style={{ color: "purple" }}>
+                "mike" , "b" , "frank" , "d" , "john"
+              </span>{" "}
+              ]
+              <br />
+              <br />
+              <span className="console">
+                console.log({'" strings = "'}
+                <span style={{ color: "blue" }}>
+                  {" "}
+                  + numbers.<span style={{ color: "purple" }}>sort</span>()
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div> strings = [ "b" , "d" , "frank" , "john" , "mike" ]</div>
+            </div>
+          </div>
+
+          <b>map()</b>
+          <p>
+            map() allows you to loop through every element of the array. and do
+            whatever you want with that elements. <br />
+            So, in this example we will loop through the elements and take every
+            element and double it. <br />
+            <b>Note : </b> map() returns a new array.
+          </p>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> numbers = </span>[{" "}
+              <span style={{ color: "purple" }}>1 , 2 , 3 , 4 , 5</span> ]
+              <br />
+              <br />
+              <span className="console">
+                console.log({' "numbers :  "'}
+                <span style={{ color: "blue" }}>
+                  {" "}
+                  + numbers.<span style={{ color: "purple" }}>map</span>( a
+                  =&gt; a * 2 )
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>numbers = [2 , 4 , 6 , 8 , 10 ]</div>
+            </div>
+          </div>
+
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <b>forEach()</b>
+          <p>
+            forEach() is actually like map() , the defferences between them is
+            that : <br />
+            <ul>
+              <li>map() returns a new array. </li>
+              <li>forEach() returns each element of the array separatly</li>
+              <li>
+                map() can be followed by other array functions while forEach
+                can't
+              </li>
+            </ul>
+          </p>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> numbers = </span>[{" "}
+              <span style={{ color: "purple" }}>1 , 2 , 3 , 4 , 5</span> ]
+              <br />
+              <br />
+              <span className="console">
+                console.log({" "}
+                <span style={{ color: "blue" }}>
+                  {" "}
+                  + numbers.<span style={{ color: "purple" }}>forEach</span>( a
+                  =&gt; <span className="console">console.log</span>( a * 3 ) )
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>
+                {" "}
+                2 <br /> 4 <br /> 6 <br /> 8 <br /> 10{" "}
+              </div>
+            </div>
+          </div>
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <b>every()</b>
+          <p>
+            every() checks wheather all of the elements in the array accept the
+            condition or not. if so then it returns <b>true</b> if not then
+            returns <b>false</b>.
+          </p>
+          <b>Example : </b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> numbers = </span>[{" "}
+              <span style={{ color: "purple" }}>1 , 2 , 3 , 4 , 5</span> ]
+              <br />
+              <br />
+              <span className="console">
+                console.log({" "}
+                <span style={{ color: "blue" }}>
+                  {" "}
+                  numbers.<span style={{ color: "purple" }}>every</span>( a
+                  =&gt; a &gt; 3 )
+                </span>{" "}
+                )
+              </span>
+              <br />
+              <br />
+              <span className="console">
+                console.log({" "}
+                <span style={{ color: "blue" }}>
+                  {" "}
+                  numbers.<span style={{ color: "purple" }}>every</span>( a
+                  =&gt; a &lt; 8 )
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>false</div>
+              <div>true</div>
+            </div>
+          </div>
+
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <b>fill()</b>
+          <p>
+            every() loops through each element of the array and changes all of
+            them to a provided value.
+          </p>
+          <b>Example : </b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> numbers = </span>[{" "}
+              <span style={{ color: "purple" }}>1 , 2 , 3 , 4 , 5</span> ]
+              <br />
+              <br />
+              <span className="console">
+                console.log({'" numbers = "'}
+                <span style={{ color: "blue" }}>
+                  {" "}
+                  + numbers.<span style={{ color: "purple" }}>fill</span>( 0 )
+                </span>{" "}
+                )
+              </span>
+            </div>
+            <div className="javascript__output">
+              <div>numbers = [ 0 , 0 , 0 , 0 , 0 ]</div>
+            </div>
+          </div>
+
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <b>includes()</b>
+          <p>
+            includes() checks wheather the array contains a particular value. it
+            reatuns true if the given value is existed or false if not or you
+            can return any message.
+          </p>
+          <b>Example : </b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> arr = </span>[{" "}
+              <span style={{ color: "purple" }}>
+                "mike" , 22 , "canada" , false , 5
+              </span>{" "}
+              ]
+              <br />
+              <br />
+              <span className="console">
+                console.log(
+                <span style={{ color: "blue" }}>
+                  {" "}
+                  arr.<span style={{ color: "purple" }}>includes</span>(
+                  "canada" )
+                </span>{" "}
+                )
+              </span>
+            </div>
+            <div className="javascript__output">
+              <div>true</div>
+            </div>
+          </div>
+
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <b>findIndex()</b>
+          <p>
+            findIndex() returns the index of a given value if it exists,
+            otherwise returns -1.
+          </p>
+          <b>Example : </b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> arr = </span>[{" "}
+              <span style={{ color: "purple" }}>
+                "mike" , 22 , "canada" , false , 5
+              </span>{" "}
+              ]
+              <br />
+              <br />
+              <span className="console">
+                console.log(
+                <span style={{ color: "blue" }}>
+                  {" "}
+                  arr.<span style={{ color: "purple" }}>findIndex</span>( item
+                  =&gt; item === "canada" )
+                </span>{" "}
+                )
+              </span>
+            </div>
+            <div className="javascript__output">
+              <div>2</div>
+            </div>
+          </div>
+
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <b>indexOf()</b>
+          <p>
+            indexOf() is the same as <b>findIndex()</b> but it's much easier.
+          </p>
+          <b>Example : </b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> arr = </span>[{" "}
+              <span style={{ color: "purple" }}>
+                "mike" , 22 , "canada" , false , 5
+              </span>{" "}
+              ]
+              <br />
+              <br />
+              <span className="console">
+                console.log(
+                <span style={{ color: "blue" }}>
+                  {" "}
+                  arr.<span style={{ color: "purple" }}>indexOf</span>( "canada"
+                  )
+                </span>{" "}
+                )
+              </span>
+            </div>
+            <div className="javascript__output">
+              <div>2</div>
+            </div>
+          </div>
+
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <b>lastIndexOf()</b>
+          <p>
+            lastIndexOf() returns the index of the last duplicated item
+            according to the given value.
+          </p>
+          <b>Example : </b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> arr = </span>[{" "}
+              <span style={{ color: "purple" }}>
+                "mike" , 2 , false , "mike" , 5 , 7 , 2
+              </span>{" "}
+              ]
+              <br />
+              <br />
+              <span className="console">
+                console.log(
+                <span style={{ color: "blue" }}>
+                  {" "}
+                  arr.<span style={{ color: "purple" }}>lastIndexOf</span>(
+                  "mike" )
+                </span>{" "}
+                )
+              </span>
+            </div>
+            <div className="javascript__output">
+              <div>3</div>
+            </div>
+          </div>
+
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <b>some()</b>
+          <p>
+            some() check weather the given value is existed or no, if exists
+            then return true , if not then return false.
+          </p>
+          <b>Example : </b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> languages = </span>[{" "}
+              <span style={{ color: "purple" }}>
+                "c++" , "python" , "javascript" , "c#"
+              </span>{" "}
+              ]
+              <br />
+              <br />
+              <span className="console">
+                console.log(
+                <span style={{ color: "blue" }}>
+                  {" "}
+                  languages.<span style={{ color: "purple" }}>some</span>( lang
+                  =&gt; lang === "javascript" )
+                </span>{" "}
+                )
+              </span>
+              <br />
+              <span className="console">
+                console.log(
+                <span style={{ color: "blue" }}>
+                  {" "}
+                  languages.<span style={{ color: "purple" }}>some</span>( lang
+                  =&gt; lang === "swift" )
+                </span>{" "}
+                )
+              </span>
+            </div>
+            <div className="javascript__output">
+              <div>true</div>
+              <div>false</div>
+            </div>
+          </div>
+
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <b>slice()</b>
+          <p>
+            slice() allows you to display a part of an array according to
+            arguments you passed.
+          </p>
+          <b>Example : </b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> numbers = </span>[{" "}
+              <span style={{ color: "purple" }}>
+                1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10
+              </span>{" "}
+              ]
+              <br />
+              <br />
+              <span className="console">
+                console.log(
+                <span style={{ color: "blue" }}>
+                  {" "}
+                  + numbers.<span style={{ color: "purple" }}>slice</span>( 4 )
+                </span>{" "}
+                )
+              </span>
+              <br />
+              <span className="console">
+                console.log( {'" numbers = "'}
+                <span style={{ color: "blue" }}> numbers</span> )
+              </span>{" "}
+              <br />
+              <span className="console">
+                console.log(
+                <span style={{ color: "blue" }}>
+                  {" "}
+                  + numbers.<span style={{ color: "purple" }}>slice</span>( 1 ,
+                  4 )
+                </span>{" "}
+                )
+              </span>
+              <span className="console">
+                console.log( {'" numbers = "'}
+                <span style={{ color: "blue" }}> numbers</span> )
+              </span>
+            </div>
+            <div className="javascript__output">
+              <div> numbers = [ 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 ]</div>
+              <div> [ 5 , 6 , 7 , 8 , 9 , 10 ]</div>
+              <div> [ 2 , 3 , 4 ]</div>
+              <div> numbers = [ 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 ]</div>
+            </div>
+          </div>
+          <p>
+            So, when we passed one value inside slice(), this value representes
+            the number of the item you wanna slice till, so in this case the the
+            numbers 1,2,3,4 will get removed. <br />
+            when we passed two values inside slice(), we specify the items we
+            want to remove, so that first value is the index of the beginning
+            item you will remove , and the second value is the numbers of last
+            item you want to remove. <br />
+            <b>Note : </b> slice doesn't effect on the array. the array won't
+            get changed.
+          </p>
+
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <b>splice()</b>
+          <p>
+            splice() allows you to remove items from an array or you can change
+            them.
+          </p>
+          <b>Example : </b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> numbers = </span>[{" "}
+              <span style={{ color: "purple" }}>
+                1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10
+              </span>{" "}
+              ]
+              <br />
+              <br />
+              <span className="console">
+                console.log( {'" numbers = "'}
+                <span style={{ color: "blue" }}>
+                  {" "}
+                  + numbers.<span style={{ color: "purple" }}>splice</span>( 2 ,
+                  5 )
+                </span>{" "}
+                )
+              </span>
+              <br />
+              <span className="console">
+                console.log( {'" numbers = "'}
+                <span style={{ color: "blue" }}>
+                  {" "}
+                  + numbers.<span style={{ color: "purple" }}>splice</span>( 0 ,
+                  2 , 6 , 7 )
+                </span>{" "}
+                )
+              </span>
+            </div>
+            <div className="javascript__output">
+              <div>numbers = [ 1 , 2 , 8 ]</div>
+              <div>numbers = [ 6 , 7 , 8 ]</div>
+            </div>
+          </div>
+          <p>
+            in the first console, we only removed 5 items from index 2 ( from
+            index 2 to index 6 ). <br />
+            in the second console, we changed the first and second items with 6
+            and 7 digits.
+          </p>
+
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <b>join()</b>
+          <p>
+            join() returns a new string by concatinating array's elements. we
+            can join according the given value
+          </p>
+          <b>Example : </b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> arr = </span>[{" "}
+              <span style={{ color: "purple" }}>
+                "a" , "b" , "c" , "d" , "e"
+              </span>{" "}
+              ]
+              <br />
+              <br />
+              <span className="console">
+                console.log(
+                <span style={{ color: "blue" }}>
+                  {" "}
+                  arr.<span style={{ color: "purple" }}>join</span>( "" )
+                </span>{" "}
+                )
+              </span>
+            </div>
+            <div className="javascript__output">
+              <div>abcde</div>
+            </div>
+          </div>
+
+          <p>
+            in this example we joined all array items through enpty space (""),
+            you can do it according to any item in array, you can join them by
+            "c" or "b" or anything exists in array. <br />{" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+        </div>
+        <div id="stringMethods">
+          <h3>string methods</h3>
+          <p>
+            we can handle strings with a bunch of methods, there are many common
+            methods among array and string we will discuss about in this
+            section,{" "}
+            <h3>but keep in mind that spaces are counted in string.</h3> <br />
+            we can add <b>length</b> property to string as long as array.
+          </p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> str = </span>{" "}
+              <span style={{ color: "purple" }}>"welcome to web crowd" ;</span>{" "}
+              <br />
+              <br />
+              <span className="console">
+                {" "}
+                console.log( {'" the length is : "'}
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  + str.<span style={{ color: "blue" }}>length</span>{" "}
+                </span>
+                ){" "}
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>the length is : 20</div>
+            </div>
+          </div>
+          <p>spaces also get counted as alphbet.</p>
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <h3>slice()</h3>
+          <p>
+            you can also use <b>slice()</b> in string as long as arrays.
+            <a href="">click here</a> to figure out how it works.
+          </p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> str = </span>{" "}
+              <span style={{ color: "purple" }}>"web crowd" ;</span> <br />
+              <br />
+              <span className="console">
+                {" "}
+                console.log( {'" the length is : "'}
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  + str.<span style={{ color: "blue" }}>length</span>{" "}
+                </span>
+                ){" "}
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>the length is : 20</div>
+            </div>
+          </div>
+          <p>spaces also get counted as alphbet.</p>
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <h3>charAt()</h3>
+          <p>charAt() returns the character at the given index.</p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> str = </span>{" "}
+              <span style={{ color: "purple" }}>"web crowd" ;</span> <br />
+              <br />
+              <span className="console">
+                {" "}
+                console.log( {'" the char at index 5 is : "'}
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  + str.<span style={{ color: "blue" }}>charAt</span>({" "}
+                  <span style={{ color: "purple" }}>5</span>)
+                </span>
+                ){" "}
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div> the char at index 5 is : r</div>
+            </div>
+          </div>
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <h3>endsWith()</h3>
+          <p>
+            endsWith() returns true if the string ends with the given string of
+            character, and returns false if it does not end.
+          </p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> str = </span>{" "}
+              <span style={{ color: "purple" }}>"web crowd" ;</span> <br />
+              <br />
+              <span className="console">
+                {" "}
+                console.log(
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  str.<span style={{ color: "blue" }}>endsWith</span>({" "}
+                  <span style={{ color: "purple" }}>" wd "</span> )
+                </span>{" "}
+                )
+              </span>
+              <br />
+              <span className="console">
+                {" "}
+                console.log(
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  str.<span style={{ color: "blue" }}>endsWith</span>({" "}
+                  <span style={{ color: "purple" }}> "web" </span> )
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div> true</div>
+              <div> false</div>
+            </div>
+          </div>
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <h3>replace()</h3>
+          <p>
+            replace() allows you to replace string or character with another
+            one. but the original string will stay as it is.
+          </p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> str = </span>{" "}
+              <span style={{ color: "purple" }}>"web crowd" ;</span> <br />
+              <br />
+              <span className="console">
+                {" "}
+                console.log(
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  str.<span style={{ color: "blue" }}>replace</span>({" "}
+                  <span style={{ color: "purple" }}>
+                    "crowd" , "development"
+                  </span>{" "}
+                  )
+                </span>{" "}
+                )
+              </span>
+              <br />
+              <span className="console">
+                {" "}
+                console.log(
+                <span style={{ color: "purple" }}> str</span> )
+              </span>
+            </div>
+            <div className="javascript__output">
+              <div> web development</div>
+              <div> web crowd</div>
+            </div>
+          </div>
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <h3>includes()</h3>
+          <p>
+            includes() is the same as includes() in array,{" "}
+            <a href="">click here </a> to figure it out.
+          </p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> str = </span>{" "}
+              <span style={{ color: "purple" }}>"web crowd" ;</span> <br />
+              <br />
+              <span className="console">
+                {" "}
+                console.log(
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  str.<span style={{ color: "blue" }}>includes</span>({" "}
+                  <span style={{ color: "purple" }}>"b"</span> )
+                </span>{" "}
+                )
+              </span>
+              <br />
+              <br />
+              <span className="console">
+                {" "}
+                console.log(
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  str.<span style={{ color: "blue" }}>includes</span>({" "}
+                  <span style={{ color: "purple" }}>"website"</span> )
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div> true</div>
+              <div> false</div>
+            </div>
+          </div>
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <h3>includes()</h3>
+          <p>
+            includes() is the same as includes() in array,{" "}
+            <a href="">click here </a> to figure it out.
+          </p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> str = </span>{" "}
+              <span style={{ color: "purple" }}>"web crowd" ;</span> <br />
+              <br />
+              <span className="console">
+                {" "}
+                console.log(
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  str.<span style={{ color: "blue" }}>includes</span>({" "}
+                  <span style={{ color: "purple" }}>"b"</span> )
+                </span>{" "}
+                )
+              </span>
+              <br />
+              <br />
+              <span className="console">
+                {" "}
+                console.log(
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  str.<span style={{ color: "blue" }}>includes</span>({" "}
+                  <span style={{ color: "purple" }}>"website"</span> )
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div> true</div>
+              <div> false</div>
+            </div>
+          </div>
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <h3>indexOf()</h3>
+          <p>
+            indexOf() is also the same as indexOf() in array,{" "}
+            <a href="">click here </a> to figure it out.
+          </p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> str = </span>{" "}
+              <span style={{ color: "purple" }}>"web crowd" ;</span> <br />
+              <br />
+              <span className="console">
+                {" "}
+                console.log({'" index of b is : "'}
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  + str.<span style={{ color: "blue" }}>indexOf</span>({" "}
+                  <span style={{ color: "purple" }}>"b"</span> )
+                </span>{" "}
+                )
+              </span>
+              <br />
+              <br />
+              <span className="console">
+                {" "}
+                console.log({'" index of crowd is : "'}
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  + str.<span style={{ color: "blue" }}>indexOf</span>({" "}
+                  <span style={{ color: "purple" }}>"crowd"</span> )
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div> index of b is : 2</div>
+              <div> index of crowd is : 4</div>
+            </div>
+          </div>
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <h3>lastIndexOf()</h3>
+          <p>
+            lastIndexOf() is also the same as lastIndexOf() in array,{" "}
+            <a href="">click here </a> to figure it out.
+          </p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> str = </span>{" "}
+              <span style={{ color: "purple" }}>"web crowd" ;</span> <br />
+              <br />
+              <span className="console">
+                {" "}
+                console.log({'"last index of w is : "'}
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  + str.<span style={{ color: "blue" }}>lastIndexOf</span>({" "}
+                  <span style={{ color: "purple" }}>"w"</span> )
+                </span>{" "}
+                )
+              </span>
+              <br />
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>last index of w is : 7</div>
+            </div>
+          </div>
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <h3>toUpperCase()</h3>
+          <p>
+            toUpperCase() capitalizes all the alphabitic characters of your
+            string (a ==&gt; A).
+          </p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> str = </span>{" "}
+              <span style={{ color: "purple" }}>"web crowd" ;</span> <br />
+              <br />
+              <span className="console">
+                {" "}
+                console.log(
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  str.<span style={{ color: "blue" }}>toUpperCase</span>()
+                </span>{" "}
+                )
+              </span>
+              <br />
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>WEB CROWD</div>
+            </div>
+          </div>
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <h3>toLowerCase()</h3>
+          <p>
+            toLowerCase() is the opposite of toUpperCase() it lowers your string
+            (A ==&gt; a)
+          </p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> str = </span>{" "}
+              <span style={{ color: "purple" }}>"Web Crowd" ;</span> <br />
+              <br />
+              <span className="console">
+                {" "}
+                console.log(
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  str.<span style={{ color: "blue" }}>toLowerCase</span>()
+                </span>{" "}
+                )
+              </span>
+              <br />
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>web crowd</div>
+            </div>
+          </div>
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <h3>repeat()</h3>
+          <p>
+            repeat() allows you to repeat your string as many times as you need
+            by a given value.
+          </p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> str = </span>{" "}
+              <span style={{ color: "purple" }}>" Web Crowd " ;</span> <br />
+              <br />
+              <span className="console">
+                {" "}
+                console.log(
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  str.<span style={{ color: "blue" }}>repeat</span>(5)
+                </span>{" "}
+                )
+              </span>
+              <br />
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>Web Crowd Web Crowd Web Crowd Web Crowd Web Crowd</div>
+            </div>
+          </div>
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <h3>split()</h3>
+          <p>
+            split() converts your string into an array by a given value. that
+            value can be an empty string or an includes string or even
+            character.
+          </p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> str = </span>{" "}
+              <span style={{ color: "purple" }}>" web crowd " ;</span> <br />
+              <br />
+              <div style={{ color: "blue" }}>// split by empty string</div>
+              <span className="console">
+                {" "}
+                console.log(
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  str.<span style={{ color: "blue" }}>split</span>("")
+                </span>{" "}
+                )
+              </span>
+              <br />
+              <br />
+              <div style={{ color: "blue" }}>// split by string</div>
+              <span className="console">
+                {" "}
+                console.log(
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  str.<span style={{ color: "blue" }}>split</span>("eb")
+                </span>{" "}
+                )
+              </span>
+              <br />
+              <br />
+              <div style={{ color: "blue" }}>// split by character</div>
+              <span className="console">
+                {" "}
+                console.log(
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  str.<span style={{ color: "blue" }}>split</span>("c")
+                </span>{" "}
+                )
+              </span>
+              <br />
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>[ 'w' , 'e' , 'b' , ' ' , 'c' , 'r' , 'o' , 'w' , 'd' ]</div>
+              <div>[ 'w' , ' crowd' ]</div>
+              <div>[ 'web ' , 'rowd' ]</div>
+            </div>
+          </div>
+          <p>
+            {" "}
+            empty strings also counted.
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <h3>concat()</h3>
+          <p>
+            concat() is the same as concat() in array, <a href="">click here</a>{" "}
+            to figure it out.
+          </p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> str1 = </span>{" "}
+              <span style={{ color: "purple" }}>" web " ;</span> <br />
+              <span className="declarationKey">const</span>
+              <span className="variableName"> str2 = </span>{" "}
+              <span style={{ color: "purple" }}>"crowd " ;</span> <br />
+              <br />
+              <span className="console">
+                {" "}
+                console.log(
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  str1.<span style={{ color: "blue" }}>concat</span>( str2 )
+                </span>{" "}
+                )
+              </span>
+              <br />
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>web crowd</div>
+            </div>
+          </div>
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+
+          <h3>trim()</h3>
+          <p>
+            trim() remove the spaces at the beginning or the end of your string.
+          </p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> str = </span>{" "}
+              <span style={{ color: "purple" }}>
+                " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; web crowd
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" ;
+              </span>{" "}
+              <br />
+              <br />
+              <span className="console">
+                {" "}
+                console.log(
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  str.<span style={{ color: "blue" }}>trim</span>()
+                </span>{" "}
+                )
+              </span>
+              <br />
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>web crowd</div>
+            </div>
+          </div>
+          <p>
+            {" "}
+            <a href="">click here</a> for more examples and exercises{" "}
+          </p>
+        </div>
+        <div id="date">
+          <h3>date</h3>
+          <p>
+            we have a quick look on dates, you will figure out how to display
+            the current date on console, and when you learn{" "}
+            <a href="">Dom Manipulation</a> you will be able to display it
+            inside your website.
+          </p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> date = </span>{" "}
+              <span style={{ color: "purple" }}>
+                new <span style={{ color: "blue" }}>Date()</span> ;
+              </span>{" "}
+              <br />
+              <br />
+              <span className="console">
+                {" "}
+                console.log({" "}
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  + date.<span style={{ color: "blue" }}>getHours() </span> + "
+                  : " + date.
+                  <span style={{ color: "blue" }}>getMinutes() </span> + " : " +
+                  date.<span style={{ color: "blue" }}>getSeconds() </span>
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div> ( take a look on console )</div>
+            </div>
+          </div>
+
+          <p>
+            {" "}
+            there is a bunch of methods like
+            getMonth(),getFullYear(),getDate()...,
+            <a href="">click here</a> to see an example of this.
+          </p>
+        </div>
+        <div id="math">
+          <h3>Math</h3>
+          <p>
+            Math in an object that uses a bunch of methods to do mathematical
+            operations, here is the list of most of these methods.
+          </p>
+          <h3>Math.abs()</h3>
+          <p>this method adds the absolute value to a variable inside.</p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> number = </span>{" "}
+              <span style={{ color: "purple" }}>
+                <span style={{ color: "blue" }}>-6</span> ;
+              </span>{" "}
+              <br />
+              <br />
+              <span className="console">
+                {" "}
+                console.log({" "}
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  Math.<span style={{ color: "blue" }}>abs( number ) </span>
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div> 6</div>
+            </div>
+          </div>
+
+          <h3>Math.max()</h3>
+          <p>this method returns the bigger value among two numbers.</p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="console">
+                {" "}
+                console.log({" "}
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  Math.<span style={{ color: "blue" }}>max( 3 , 5 ) </span>
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div> 5</div>
+            </div>
+          </div>
+          <h3>Math.min()</h3>
+          <p>this method returns the smaller value among two numbers.</p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="console">
+                {" "}
+                console.log({" "}
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  Math.<span style={{ color: "blue" }}>max( 33 , 65 ) </span>
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div> 33</div>
+            </div>
+          </div>
+          <h3>Math.pow()</h3>
+          <p>
+            this method accepts two values, it power the first value as many as
+            the second value. .
+          </p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">let </span>
+              <span className="variableName">num1 = </span>
+              <span style={{ color: "purple" }}>5 </span>; <br />
+              <span className="declarationKey">let </span>
+              <span className="variableName">num2 = </span>
+              <span style={{ color: "purple" }}>3 </span>; <br />
+              <br />
+              <span className="console">
+                {" "}
+                console.log({" "}
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  Math.
+                  <span style={{ color: "blue" }}>pow( num1 , num2 ) </span>
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div style={{ color: "blue" }}>// 5 * 5 * 5</div>
+              <div> 125</div>
+            </div>
+          </div>
+          <p>
+            <a href="">click here</a> for more examples and exercises.
+          </p>
+
+          <h3>Math.sqrt()</h3>
+          <p>this method returns the square root of a given number .</p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="declarationKey">let </span>
+              <span className="variableName">num1 = </span>
+              <span style={{ color: "purple" }}>25 </span>; <br />
+              <span className="declarationKey">let </span>
+              <span className="variableName">num2 = </span>
+              <span style={{ color: "purple" }}>81 </span>; <br />
+              <br />
+              <span className="console">
+                {" "}
+                console.log({'" the square of 25 is : "'}{" "}
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  Math.
+                  <span style={{ color: "blue" }}>sqrt( num1 ) </span>
+                </span>{" "}
+                )
+              </span>
+              <br />
+              <span className="console">
+                {" "}
+                console.log({'" the square of 81 is : "'}
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  Math.
+                  <span style={{ color: "blue" }}>sqrt( num2 ) </span>
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div> the square of 25 is : 5</div>
+              <div> the square of 81 is : 9</div>
+            </div>
+          </div>
+          <p>
+            <a href="">click here</a> for more examples and exercises.
+          </p>
+
+          <h3>Math.random()</h3>
+          <p>
+            this method gives you a new random number whenever you reflesh you
+            page. by default it gives you numbers between 0 and 1
+          </p>
+          <b>Example :</b>
+
+          <div className="javascript__code">
+            <div className="javascript__input">
+              <span className="console">
+                {" "}
+                console.log({" "}
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  Math.
+                  <span style={{ color: "blue" }}>random() </span>
+                </span>{" "}
+                )
+              </span>
+              <br />
+              <span className="console">
+                {" "}
+                console.log(
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  Math.
+                  <span style={{ color: "blue" }}>random() </span>
+                </span>{" "}
+                )
+              </span>
+              <br />
+            </div>
+            <div className="javascript__output">
+              <div>( check out the console )</div>
+            </div>
+          </div>
+          <p>
+            you can also trap the random numbers among two numbers.
+            <a href=""> click here</a> to see examples and exercises of this.
+          </p>
+        </div>
+        <div id="setTimeout">
+          <h3>setTimeout()</h3>
+          <p>
+            setTimeout() is a function that accepts two parameters(function and
+            number of MiliSeconds), so the second function get executed after
+            this amount of time. we know this seems little confused. but don't
+            worry, <a href="">this video</a> will explain that.{" "}
+          </p>
+        </div>
+        <div id="setInterval">
+          <h3>setInterval()</h3>
+          <p>
+            setInterval() is the same as setTimeout(), but the deferrent between
+            them is the following : <br />
+            <ul>
+              <li>
+                setTimeout() : the callback function get executed once we reach
+                the given time (number of miliSeconds).{" "}
+              </li>
+              <li>
+                setInterval() : the callback function get executed repeatedly
+                after we reach the given time. <a href="">click here</a> to see
+                an example.
+              </li>
+            </ul>
+          </p>
+        </div>
+        <div id="domManipulation">
+          <h3>DOM Manipulation</h3>
+          <p>
+            DOM stands for <b>D</b>ocument <b>O</b>bject <b>M</b>odel, it
+            basically means everything you see in front of you once you get in
+            any particular website, it's HTML content. it's created by the
+            browser once the page gets loaded. <br />
+            programmatically, we can use JavaScript to read,add,remove or update
+            DOM elements using a bunch of methods. <br />
+            the first thing you must be aware of is how to select and get html
+            elements using JavaScript. in this case we use{" "}
+            <a href="">selectors</a>.
+          </p>
+          <h2>selectors</h2>
+          <p>
+            you can select html elements using a bunch of methods
+            (getElementById() , getElementByClassName() , getElementByTagName()
+            , querySelector()...etc), but the best of them is{" "}
+            <b>querySelector()</b>, So we will focus only on this method.
+          </p>
+          <h2>Add styling to html elements</h2>
+          <div
+            style={{ display: "flex", justifyContent: "space-evenly" }}
+            className="html__css"
+          >
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              HTML FILE
+            </h2>
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              CSS FILE
+            </h2>
+          </div>
+          <div className="javascript__code">
+            <div className="javascript__html">
+              &lt;<span className="tag">h2</span>&gt; web crowd &lt;
+              <span className="tag">/h2</span>&gt; <br />
+              &lt;
+              <span className="tag">div</span>{" "}
+              <span className="classProperty">class= </span>
+              <span className="classValue">"welcome" </span>
+              &gt; welcome to web crowd &lt;
+              <span className="tag">/div</span>&gt;
+            </div>
+            <div className="javascript__css">
+              <span className="cssTag">h2 </span>
+              &#123; <br />{" "}
+              <span className="cssProperty">&nbsp;&nbsp; font-size</span> :{" "}
+              <span className="cssValue">34px</span>; <br />
+              &#125;
+              <br />
+              <br />
+              <span className="cssTag">.welcome </span>
+              &#123; <br />{" "}
+              <span className="cssProperty">&nbsp;&nbsp; padding</span> :{" "}
+              <span className="cssValue">10px</span>; <br />
+              &#125;
+            </div>
+          </div>
+          <br />
+          <br />
+          <div
+            style={{ display: "flex", justifyContent: "space-evenly" }}
+            className="html__css"
+          >
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              JS FILE
+            </h2>
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              BROWSER
+            </h2>
+          </div>
+          <div className="javascript__code">
+            <div className="javascript__javascript">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> h2Variable = </span>{" "}
+              <span style={{ color: "purple" }}>
+                <span style={{ color: "blue" }}>document.</span>
+                <span style={{ color: "purple" }}>querySelector</span>(
+                <span style={{ color: "blue" }}> "h2" </span>) ;
+              </span>{" "}
+              <br />
+              <span className="variableName"> h2Variable.</span>
+              <span style={{ color: "blue" }}>style.</span>
+              <span style={{ color: "purple" }}>color</span> =
+              <span style={{ color: "blue" }}> "red"</span> ;
+              <br />
+              <br />
+              <span className="declarationKey">const</span>
+              <span className="variableName"> divVariable = </span>{" "}
+              <span style={{ color: "purple" }}>
+                <span style={{ color: "blue" }}>document.</span>
+                <span style={{ color: "purple" }}>querySelector</span>(
+                <span style={{ color: "blue" }}> ".welcome" </span>) ;
+              </span>{" "}
+              <br />
+              <span className="variableName"> divVariable.</span>
+              <span style={{ color: "blue" }}>style.</span>
+              <span style={{ color: "purple" }}>backgroundColor</span> =
+              <span style={{ color: "blue" }}> "blue"</span> ;
+              <br />
+              <span className="variableName"> divVariable.</span>
+              <span style={{ color: "blue" }}>style.</span>
+              <span style={{ color: "purple" }}>color</span> =
+              <span style={{ color: "blue" }}> "white"</span> ;
+            </div>
+            <div className="javascript__browser">
+              <h2 style={{ color: "red", fontSize: "34px" }}>web crowd</h2>
+              <div
+                style={{
+                  color: "white",
+                  backgroundColor: "blue",
+                  padding: "10px",
+                }}
+              >
+                welcome to web crowd
+              </div>
+            </div>
+          </div>
+          <p>
+            as you can see, we selected h2,div elements from HTML, then assigned
+            them to <b>h2Variable,divVariable</b>, then add styling to these
+            elements. <br />
+          </p>
+          <p>
+            <a href="">click here</a> for more examples and exercises.
+          </p>
+
+          <h2>change element's text</h2>
+          <div
+            style={{ display: "flex", justifyContent: "space-evenly" }}
+            className="html__css"
+          >
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              HTML FILE
+            </h2>
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              CSS FILE
+            </h2>
+          </div>
+          <div className="javascript__code">
+            <div className="javascript__html">
+              &lt;<span className="tag">h2</span>&gt; web crowd &lt;
+              <span className="tag">/h2</span>&gt; <br />
+              &lt;
+              <span className="tag">div</span>{" "}
+              <span className="classProperty">class= </span>
+              <span className="classValue">"welcome" </span>
+              &gt; welcome to web crowd &lt;
+              <span className="tag">/div</span>&gt;
+            </div>
+            <div className="javascript__css">
+              <span className="cssTag">h2 </span>
+              &#123; <br />{" "}
+              <span className="cssProperty">&nbsp;&nbsp; font-size</span> :{" "}
+              <span className="cssValue">34px</span>; <br />
+              &#125;
+              <br />
+            </div>
+          </div>
+          <br />
+          <br />
+          <div
+            style={{ display: "flex", justifyContent: "space-evenly" }}
+            className="html__css"
+          >
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              JS FILE
+            </h2>
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              BROWSER
+            </h2>
+          </div>
+          <div className="javascript__code">
+            <div className="javascript__javascript">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> h2Variable = </span>{" "}
+              <span style={{ color: "purple" }}>
+                <span style={{ color: "blue" }}>document.</span>
+                <span style={{ color: "purple" }}>querySelector</span>(
+                <span style={{ color: "blue" }}> "h2" </span>) ;
+              </span>{" "}
+              <br />
+              <span className="variableName"> h2Variable.</span>
+              <span style={{ color: "blue" }}>style.</span>
+              <span style={{ color: "purple" }}>color</span> =
+              <span style={{ color: "blue" }}> "red"</span> ;
+              <br />
+              <span className="variableName"> h2Variable.</span>
+              <span style={{ color: "blue" }}>textContent </span>=
+              <span style={{ color: "purple" }}>
+                "this is a new text of h2"
+              </span>{" "}
+              ;
+              <br />
+              <br />
+              <span className="declarationKey">const</span>
+              <span className="variableName"> divVariable = </span>{" "}
+              <span style={{ color: "purple" }}>
+                <span style={{ color: "blue" }}>document.</span>
+                <span style={{ color: "purple" }}>querySelector</span>(
+                <span style={{ color: "blue" }}> ".welcome" </span>) ;
+              </span>{" "}
+              <br />
+              <span className="variableName"> divVariable.</span>
+              <span style={{ color: "blue" }}>textContent </span>=
+              <span style={{ color: "purple" }}>
+                "this is a new text of div"
+              </span>{" "}
+              ;
+              <br />
+              <span className="variableName"> divVariable.</span>
+              <span style={{ color: "blue" }}>style.</span>
+              <span style={{ color: "purple" }}>color</span> =
+              <span style={{ color: "blue" }}> "blue"</span> ;
+            </div>
+            <div className="javascript__browser">
+              <h2 style={{ color: "red", fontSize: "34px" }}>
+                this is a new text of h2
+              </h2>
+              <div
+                style={{
+                  color: "blue",
+                }}
+              >
+                this is a new text of div
+              </div>
+            </div>
+          </div>
+          <p>
+            as you can see, we changed <b>h2</b> and <b>div</b>'s text using{" "}
+            <b>textContent</b> property in JavaScript. in addition that, css
+            file applied also.
+          </p>
+          <p>
+            <a href="">click here</a> for more examples and exercises.
+          </p>
+          <p>
+            <b>Important!</b> you can override css style using JavaScript.{" "}
+            <br /> let's assume we added <b>color</b> to html element and we
+            also set <b>color</b> in JavaScript file to the same element, So in
+            this case, the color in css will get <b>overridden</b>. then the
+            JavaScript one will get <b>applied</b>. <br />
+          </p>
+          <p>
+            <a href="">click here</a> to see examples and exercises of that.
+          </p>
+
+          <h2>add elements</h2>
+          <div
+            style={{ display: "flex", justifyContent: "space-evenly" }}
+            className="html__css"
+          >
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              HTML FILE
+            </h2>
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              CSS FILE
+            </h2>
+          </div>
+          <div className="javascript__code">
+            <div className="javascript__html">
+              &lt;<span className="tag">h2</span>&gt; web crowd &lt;
+              <span className="tag">/h2</span>&gt; <br />
+            </div>
+            <div className="javascript__css">
+              <span className="cssTag">h2 </span>
+              &#123; <br />{" "}
+              <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
+              <span className="cssValue">blue</span>; <br />
+              &#125;
+              <br />
+            </div>
+          </div>
+          <br />
+          <br />
+          <div
+            style={{ display: "flex", justifyContent: "space-evenly" }}
+            className="html__css"
+          >
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              JS FILE
+            </h2>
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              BROWSER
+            </h2>
+          </div>
+          <div className="javascript__code">
+            <div className="javascript__javascript">
+              <span style={{ color: "gray" }}>// create a new element</span>
+              <br />
+              <span className="declarationKey">const</span>
+              <span className="variableName"> newElement = </span>{" "}
+              <span style={{ color: "purple" }}>
+                <span style={{ color: "blue" }}>document.</span>
+                <span style={{ color: "purple" }}>createElement</span>(
+                <span style={{ color: "blue" }}> "h2" </span>) ;
+              </span>{" "}
+              <br />
+              <br />
+              <span style={{ color: "gray" }}>
+                // add text to the new element
+              </span>
+              <br />
+              <span className="variableName"> newElement.</span>
+              <span style={{ color: "blue" }}>textContent</span> =
+              <span style={{ color: "purple" }}>
+                "this is a new h2 element"
+              </span>{" "}
+              ;
+              <br />
+              <br />
+              <span style={{ color: "gray" }}>
+                // add the new element to web page
+              </span>
+              <br />
+              <span className="variableName"> newEelement.</span>{" "}
+              <span style={{ color: "purple" }}>
+                <span style={{ color: "purple" }}>append.</span>(
+                <span style={{ color: "blue" }}> newElement </span>) ;
+              </span>{" "}
+            </div>
+            <div className="javascript__browser">
+              <h2 style={{ color: "blue" }}>web crowd</h2>
+              <div>this is a new h2 element</div>
+            </div>
+          </div>
+          <p>
+            as you can see, we changed <b>h2</b> and <b>div</b>'s text using{" "}
+            <b>textContent</b> property in JavaScript. in addition that, css
+            file applied also.
+          </p>
+          <p>
+            <a href="">click here</a> for more examples and exercises.
+          </p>
+          <p>
+            <b>Important!</b> : in this exercise, we added the new paragraph in
+            our body. you can also add any html element whereever you want, s
+            let's make another example, in this example we will add new{" "}
+            <b>li</b> to our <b>ul</b>.
+          </p>
+          <h3>Add li to ul</h3>
+          <div
+            style={{ display: "flex", justifyContent: "space-evenly" }}
+            className="html__css"
+          >
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              HTML FILE
+            </h2>
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              CSS FILE
+            </h2>
+          </div>
+          <div className="javascript__code">
+            <div className="javascript__html">
+              &lt;<span className="tag">ul</span>&gt; <br />
+              &lt;<span className="tag">li</span>&gt; html5 &lt;
+              <span className="tag">/li</span>&gt; <br />
+              &lt;<span className="tag">li</span>&gt; css3 &lt;
+              <span className="tag">/li</span>&gt; <br />
+              &lt;
+              <span className="tag">/ul</span>&gt; <br />
+            </div>
+            <div className="javascript__css">
+              <span className="cssTag">li </span>
+              &#123; <br />{" "}
+              <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
+              <span className="cssValue">blue</span>; <br />
+              &#125;
+              <br />
+            </div>
+          </div>
+          <br />
+          <br />
+          <div
+            style={{ display: "flex", justifyContent: "space-evenly" }}
+            className="html__css"
+          >
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              JS FILE
+            </h2>
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              BROWSER
+            </h2>
+          </div>
+          <div className="javascript__code">
+            <div className="javascript__javascript">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> ul = </span>{" "}
+              <span style={{ color: "purple" }}>
+                <span style={{ color: "blue" }}>document.</span>
+                <span style={{ color: "purple" }}>querySelector</span>(
+                <span style={{ color: "blue" }}> "ul" </span>) ;
+              </span>{" "}
+              <br />
+              <br />
+              <span style={{ color: "gray" }}>// create a new li</span>
+              <br />
+              <span className="declarationKey">const</span>
+              <span className="variableName"> newLi = </span>{" "}
+              <span style={{ color: "purple" }}>
+                <span style={{ color: "blue" }}>document.</span>
+                <span style={{ color: "purple" }}>createElement</span>(
+                <span style={{ color: "blue" }}> "li" </span>) ;
+              </span>{" "}
+              <br />
+              <br />
+              <span style={{ color: "gray" }}>// add text to the new li</span>
+              <br />
+              <span className="variableName"> newLi.</span>
+              <span style={{ color: "blue" }}>textContent</span> =
+              <span style={{ color: "purple" }}>"javascript"</span> ;
+              <br />
+              <br />
+              <span style={{ color: "gray" }}>// add the new li to ul</span>
+              <br />
+              <span className="variableName"> ul.</span>
+              <span style={{ color: "purple" }}>
+                <span style={{ color: "blue" }}>append</span>(
+                <span style={{ color: "purple" }}> newLi </span>) ;
+              </span>{" "}
+            </div>
+            <div className="javascript__browser">
+              <ul style={{ marginLeft: "50px" }}>
+                <li style={{ color: "blue" }}>html5</li>
+                <li style={{ color: "blue" }}>css3</li>
+                <li style={{ color: "blue" }}>javascript</li>
+              </ul>
+            </div>
+          </div>
+          <p>
+            <a href="">click here</a> for more examples and exercises.
+          </p>
+
+          <h3>Add items using input value</h3>
+          <div
+            style={{ display: "flex", justifyContent: "space-evenly" }}
+            className="html__css"
+          >
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              HTML FILE
+            </h2>
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              CSS FILE
+            </h2>
+          </div>
+          <div className="javascript__code">
+            <div className="javascript__html">
+              &lt;<span className="tag">input</span>{" "}
+              <span style={{ color: "blue" }}>placeholder=</span>
+              <span style={{ color: "purple" }}> "type a new item..."</span>
+              /&gt; &lt;<span className="tag">button</span>&gt; add item &lt;
+              <span className="tag">/button</span>&gt; <br />
+              &lt;<span className="tag">ul</span>&gt; &lt;
+              <span className="tag">/ul</span>&gt;
+              <br />
+            </div>
+            <div className="javascript__css">
+              <span className="cssTag">li </span>
+              &#123; <br />{" "}
+              <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
+              <span className="cssValue">blue</span>; <br />
+              &#125;
+              <span className="cssTag">input </span>
+              &#123; <br />{" "}
+              <span className="cssProperty">&nbsp;&nbsp; padding</span> :{" "}
+              <span className="cssValue">10px 15px</span>; <br />
+              <span className="cssProperty">&nbsp;&nbsp; border</span> :{" "}
+              <span className="cssValue">none</span>; <br />
+              <span className="cssProperty">&nbsp;&nbsp; outline</span> :{" "}
+              <span className="cssValue">none</span>; <br />
+              &#125;
+              <br />
+              <span className="cssTag">button </span>
+              &#123; <br />{" "}
+              <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
+              <span className="cssValue">white</span>; <br />
+              <span className="cssProperty">
+                &nbsp;&nbsp; background-color
+              </span>{" "}
+              : <span className="cssValue">blue</span>; <br />
+              <span className="cssProperty">&nbsp;&nbsp; padding</span> :{" "}
+              <span className="cssValue">10px 15px</span>; <br />
+              <span className="cssProperty">&nbsp;&nbsp; border</span> :{" "}
+              <span className="cssValue">none</span>; <br />
+              <span className="cssProperty">&nbsp;&nbsp; cursor</span> :{" "}
+              <span className="cssValue">pointer</span>; <br />
+              &#125;
+              <br />
+            </div>
+          </div>
+          <br />
+          <br />
+          <div
+            style={{ display: "flex", justifyContent: "space-evenly" }}
+            className="html__css"
+          >
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              JS FILE
+            </h2>
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              BROWSER
+            </h2>
+          </div>
+          <div className="javascript__code">
+            <div className="javascript__javascript">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> input = </span>{" "}
+              <span style={{ color: "blue" }}>document.</span>
+              <span style={{ color: "purple" }}>querySelector</span>(
+              <span style={{ color: "blue" }}> "input" </span>) ; <br />
+              <span className="declarationKey">const</span>
+              <span className="variableName"> ul = </span>{" "}
+              <span style={{ color: "purple" }}>
+                <span style={{ color: "blue" }}>document.</span>
+                <span style={{ color: "purple" }}>querySelector</span>(
+                <span style={{ color: "blue" }}> "ul" </span>) ;
+              </span>{" "}
+              <br />
+              <span className="declarationKey">const</span>
+              <span className="variableName"> addItem = </span>{" "}
+              <span style={{ color: "purple" }}>
+                <span style={{ color: "blue" }}>document.</span>
+                <span style={{ color: "purple" }}>querySelector</span>(
+                <span style={{ color: "blue" }}> "button" </span>) ;
+              </span>{" "}
+              <br />
+              <br />
+              <span className="variableName"> addItem.</span>
+              <span style={{ color: "blue" }}>addEventListener</span>(
+              <span style={{ color: "purple" }}> "click" </span>,{" "}
+              <span>function()</span> &#123; <br />
+              <span style={{ color: "gray" }}>// create a new li</span>
+              <br />
+              <span className="declarationKey">const</span>
+              <span className="variableName"> newLi = </span>{" "}
+              <span style={{ color: "purple" }}>
+                <span style={{ color: "blue" }}>document.</span>
+                <span style={{ color: "purple" }}>createElement</span>(
+                <span style={{ color: "blue" }}> "li" </span>) ;
+              </span>{" "}
+              <br />
+              <br />
+              <span style={{ color: "gray" }}>// add text to the new li</span>
+              <br />
+              <span className="variableName"> newLi.</span>
+              <span style={{ color: "blue" }}>textContent</span> =
+              <span style={{ color: "purple" }}>input.</span>
+              <span>value</span> ;
+              <br />
+              <br />
+              <span style={{ color: "gray" }}>// add the new li to ul</span>
+              <br />
+              <span className="variableName"> ul.</span>
+              <span style={{ color: "purple" }}>
+                <span style={{ color: "blue" }}>append</span>(
+                <span style={{ color: "purple" }}> newLi </span>) ;
+              </span>{" "}
+              <br />
+              <span className="variableName"> input.</span>
+              <span style={{ color: "purple" }}>
+                <span style={{ color: "blue" }}>value =</span>
+                <span style={{ color: "purple" }}> "" </span> ;
+              </span>{" "}
+              <br />
+              <br />
+              &#125; )
+            </div>
+            <div className="javascript__browser">
+              <input
+                style={{
+                  padding: "10px 15px",
+                  border: "none",
+                  outline: "none",
+                }}
+                className="itemsInput"
+                type="text"
+                placeholder="type a new item..."
+              />
+              <button
+                onClick={addItemsToUl}
+                style={{
+                  color: "white",
+                  padding: "10px 15px",
+                  backgroundColor: "blue",
+                  border: "none",
+                  cursor: "pointer",
+                }}
+              >
+                add item
+              </button>
+              <ul style={{ marginLeft: "50px" }} className="liContainer"></ul>
+            </div>
+          </div>
+
+          <p>
+            As you can see, when we added a new <b>item</b>, the input value
+            became an empty string, that happened becouse of the{" "}
+            <b>last line </b>in javascript file. <br />
+            <a href="">click here</a> for more examples and exercises.
+          </p>
+
+          <h3>remove items</h3>
+          <div
+            style={{ display: "flex", justifyContent: "space-evenly" }}
+            className="html__css"
+          >
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              HTML FILE
+            </h2>
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              CSS FILE
+            </h2>
+          </div>
+          <div className="javascript__code">
+            <div className="javascript__html">
+              &lt;<span className="tag">ul</span>&gt; <br />
+              &lt;<span className="tag">li</span>&gt; html5 &lt;
+              <span className="tag">/li</span>&gt; <br />
+              &lt;<span className="tag">li</span>{" "}
+              <span className="idProperty">id</span> ={" "}
+              <span className="idValue">"cssLi" </span>&gt; css3 &lt;
+              <span className="tag">/li</span>&gt; <br />
+              &lt;<span className="tag">li</span>&gt; javascript &lt;
+              <span className="tag">/li</span>&gt; <br />
+              &lt;
+              <span className="tag">/ul</span>&gt; <br />
+            </div>
+            <div className="javascript__css">
+              <span className="cssTag">li </span>
+              &#123; <br />{" "}
+              <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
+              <span className="cssValue">blue</span>; <br />
+              &#125;
+              <br />
+            </div>
+          </div>
+          <br />
+          <br />
+          <div
+            style={{ display: "flex", justifyContent: "space-evenly" }}
+            className="html__css"
+          >
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              JS FILE
+            </h2>
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              BROWSER
+            </h2>
+          </div>
+          <div className="javascript__code">
+            <div className="javascript__javascript">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> cssLi = </span>{" "}
+              <span style={{ color: "purple" }}>
+                <span style={{ color: "blue" }}>document.</span>
+                <span style={{ color: "purple" }}>querySelector</span>(
+                <span style={{ color: "blue" }}> "#cssLi" </span>) ;
+              </span>{" "}
+              <br />
+              <br />
+              <span style={{ color: "gray" }}>// remove cssLi</span>
+              <br />
+              <span className="variableName"> document.</span>body.
+              <span style={{ color: "purple" }}>
+                <span style={{ color: "blue" }}>remove</span>(
+                <span style={{ color: "purple" }}> cssLi </span>) ;
+              </span>{" "}
+            </div>
+            <div className="javascript__browser">
+              <ul style={{ marginLeft: "50px" }}>
+                <li style={{ color: "blue" }}>html5</li>
+                <li style={{ color: "blue" }}>javascript</li>
+              </ul>
+            </div>
+          </div>
+          <p>
+            in this example, we just deleted the second li using its id, if you
+            want to remove all <b>li</b>s, you can just write <b>li</b> instead
+            of <b>cssLi</b> inside <b>remove()</b> function.
+          </p>
+          <p>
+            <a href="">click here</a> for more examples and exercises.
+          </p>
+
+          <h3>JavaScript Events</h3>
+          <p>
+            we use JavaScript events when we want to jump to another page, there
+            are a bunch of JavaScript Events, but the most famous is{" "}
+            <b>click event</b>, So in this section we will only have an example
+            of <b>click</b> events. <br /> if you want to see examples of other
+            events <a href="">click here</a>.
+          </p>
+          <div
+            style={{ display: "flex", justifyContent: "space-evenly" }}
+            className="html__css"
+          >
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              HTML FILE
+            </h2>
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              CSS FILE
+            </h2>
+          </div>
+          <div className="javascript__code">
+            <div className="javascript__html">
+              &lt;<span className="tag">h2</span>&gt; web crowd &lt;
+              <span className="tag">/h2</span>&gt; <br />
+              &lt;<span className="tag">button</span>&gt; click here &lt;
+              <span className="tag">/button</span>&gt; <br />
+            </div>
+            <div className="javascript__css">
+              <span className="cssTag">button </span>
+              &#123; <br />{" "}
+              <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
+              <span className="cssValue">white</span>; <br />
+              <span className="cssProperty">&nbsp;&nbsp; padding</span> :{" "}
+              <span className="cssValue">10px 15px</span>; <br />
+              <span className="cssProperty">&nbsp;&nbsp; border</span> :{" "}
+              <span className="cssValue">none</span>; <br />
+              <span className="cssProperty">
+                &nbsp;&nbsp; background-color
+              </span>{" "}
+              : <span className="cssValue">blue</span>; <br />
+              &#125;
+              <br />
+            </div>
+          </div>
+          <br />
+          <br />
+          <div
+            style={{ display: "flex", justifyContent: "space-evenly" }}
+            className="html__css"
+          >
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              JS FILE
+            </h2>
+            <h2
+              style={{
+                width: "520px",
+                padding: "10px",
+                textAlign: "center",
+                backgroundColor: "aqua",
+              }}
+            >
+              BROWSER
+            </h2>
+          </div>
+          <div className="javascript__code">
+            <div className="javascript__javascript">
+              <span className="declarationKey">const</span>
+              <span className="variableName"> btn = </span>{" "}
+              <span style={{ color: "purple" }}>
+                <span style={{ color: "blue" }}>document.</span>
+                <span style={{ color: "purple" }}>querySelector</span>(
+                <span style={{ color: "blue" }}> "button" </span>) ;
+              </span>{" "}
+              <br />
+              <span className="declarationKey">const</span>
+              <span className="variableName"> h2 = </span>{" "}
+              <span style={{ color: "purple" }}>
+                <span style={{ color: "blue" }}>document.</span>
+                <span style={{ color: "purple" }}>querySelector</span>(
+                <span style={{ color: "blue" }}> "h2" </span>) ;
+              </span>{" "}
+              <br />
+              <br />
+              <br />
+              <span className="variableName"> btn.</span>
+              <span style={{ color: "purple" }}>
+                <span style={{ color: "blue" }}>addEventListener</span>(
+                <span style={{ color: "purple" }}> "click" </span>,{" "}
+                <span>function()</span> &#123; <br />
+                <span style={{ color: "purple" }}>h2.</span>
+                <span style={{ color: "blue" }}>style</span>
+                <span style={{ color: "black" }}>.color = </span>
+                <span style={{ color: "purple" }}>"red"</span> <br /> &#125; ) ;
+              </span>{" "}
+            </div>
+            <div className="javascript__browser">
+              <h2 className="webCrowdTest">web crowd</h2>
+              <button
+                style={{
+                  color: "white",
+                  padding: "10px 15px",
+                  border: "none",
+                  backgroundColor: "blue",
+                }}
+                onClick={changeColor}
+              >
+                click here
+              </button>
+            </div>
+          </div>
+          <p>
+            As you can see, when you click on the button you will see that the
+            color of h2 will get changed.
+          </p>
+          <p>
+            <a href="">click here</a> for more examples and exercises.
+          </p>
+        </div>
+        <div id="javascriptExercises">
+          <div className="javascript__exercise">
+            <h3
+              style={{
+                textAlign: "center",
+                padding: "10px",
+                fontSize: "30px",
+                color: "blue",
+              }}
+            >
+              Calculator
+            </h3>
+            <table style={{ margin: "auto" }}>
+              <tr>
+                <td>
+                  {" "}
+                  <span style={{ padding: "5px" }}>First number</span>
+                </td>
+
+                <td>
+                  :
+                  <input
+                    style={{
+                      padding: "5px",
+                      border: "none",
+                      outline: "none",
+                      margin: "5px 8px",
+                      width: "150px",
+                    }}
+                    type="number"
+                    placeholder="First number..."
+                    className="firstNumber"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {" "}
+                  <span style={{ padding: "5px" }}>Second number</span>
+                </td>
+
+                <td>
+                  :
+                  <input
+                    style={{
+                      padding: "5px",
+                      border: "none",
+                      outline: "none",
+                      margin: "5px 8px",
+                      width: "150px",
+                    }}
+                    type="number"
+                    placeholder="Second number..."
+                    className="secondNumber"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  {" "}
+                  <span style={{ padding: "5px" }}>Operation</span>
+                </td>
+
+                <td>
+                  :
+                  <select
+                    name=""
+                    id=""
+                    style={{
+                      padding: "5px",
+                      border: "none",
+                      outline: "none",
+                      margin: "5px 8px",
+                      width: "160px",
+                    }}
+                    className="operation"
+                  >
+                    <option value="selectOperation">Select Operation</option>
+                    <option value="addition">Addition (+)</option>
+                    <option value="substraction">Substraction (-)</option>
+                    <option value="multiplication">Multiplication (*)</option>
+                    <option value="division">Division (/)</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  {" "}
+                  <span style={{ padding: "5px" }}>Result</span>
+                </td>
+
+                <td>
+                  :
+                  <input
+                    style={{
+                      padding: "5px",
+                      border: "none",
+                      outline: "none",
+                      margin: "5px 8px",
+                      width: "150px",
+                    }}
+                    type="text"
+                    placeholder="Result"
+                    className="result"
+                    readOnly
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td> </td>
+
+                <td>
+                  <button
+                    style={{
+                      color: "white",
+                      padding: "10px",
+                      margin: "5px",
+                      border: "none",
+                      outline: "none",
+                      cursor: "pointer",
+                      borderRadius: "5px",
+                      backgroundColor: "green",
+                    }}
+                    onClick={calculator}
+                  >
+                    Calculate
+                  </button>
+                  <button
+                    style={{
+                      color: "white",
+                      padding: "10px",
+                      margin: "5px",
+                      border: "none",
+                      outline: "none",
+                      cursor: "pointer",
+                      borderRadius: "5px",
+                      backgroundColor: "black",
+                    }}
+                    onClick={resetInputs}
+                  >
+                    Reset
+                  </button>
+                </td>
+              </tr>
+            </table>
+            <a
+              href=""
+              style={{
+                color: "blue",
+                cursor: "pointer",
+                display: "block",
+                width: "500px",
+                textAlign: "center",
+              }}
+            >
+              Solution
+            </a>
+          </div>
+          <div className="javascript__exercise">
+            <div style={{ textAlign: "center", flex: "1" }}>
+              <h3 style={{ padding: "10px", fontSize: "30px", color: "blue" }}>
+                Todo-List
+              </h3>
+              <input
+                type="text"
+                placeholder="Type a task..."
+                style={{
+                  padding: "10px 15px",
+                  marginLeft: "20px",
+                  border: "none",
+                  outline: "none",
+                }}
+                className="newItemsInput"
+              />
+              <button
+                style={{
+                  padding: "10px 15px",
+                  border: "none",
+                  outline: "none",
+                  cursor: "pointer",
+                  backgroundColor: "rgb(189, 188, 188)",
+                }}
+                onClick={addItems}
+              >
+                Add to List
+              </button>
+              <ul
+                className="newItemsContainer"
+                style={{
+                  width: "400px",
+                  textAlign: "start",
+                  margin: "auto",
+                  marginTop: "20px",
+                }}
+              ></ul>
+            </div>
+            <a
+              href=""
+              style={{
+                color: "blue",
+                cursor: "pointer",
+                display: "block",
+                width: "500px",
+                textAlign: "center",
+              }}
+            >
+              Solution
+            </a>
+          </div>
+          <div className="javascript__exercise">
+            <div style={{ textAlign: "center", flex: "1" }}>
+              <h3 style={{ padding: "10px", fontSize: "30px", color: "blue" }}>
+                Timer
+              </h3>
+              <div
+                className="timeContainer"
+                style={{ padding: "10px", margin: "10px", fontSize: "40px" }}
+              >
+                --:--:--
+              </div>
+              <button
+                onClick={timer}
+                className="startTimerBtn"
+                style={{
+                  padding: "10px 15px",
+                  margin: "5px",
+                  border: "none",
+                  outline: "none",
+                  cursor: "pointer",
+                  borderRadius: "3px",
+                  backgroundColor: "blue",
+                  color: "white",
+                }}
+              >
+                Start
+              </button>
+              <button
+                style={{
+                  padding: "10px 15px",
+                  margin: "5px",
+                  border: "none",
+                  outline: "none",
+                  cursor: "pointer",
+                  borderRadius: "3px",
+                  backgroundColor: "black",
+                  color: "white",
+                }}
+                onClick={resetTimer}
+              >
+                Reset
+              </button>
+            </div>
+            <a
+              href=""
+              style={{
+                color: "blue",
+                cursor: "pointer",
+                display: "block",
+                width: "500px",
+                textAlign: "center",
+              }}
+            >
+              Solution
+            </a>
+          </div>
+          <div className="javascript__exercise">
+            <div style={{ textAlign: "center", flex: "1" }}>
+              <h3
+                style={{
+                  padding: "10px",
+                  fontSize: "30px",
+                  color: "blue",
+                  marginBottom: "30px",
+                }}
+              >
+                Numbers Generator
+              </h3>
+              <span
+                style={{
+                  color: "purple",
+                  fontSize: "30px",
+                  margin: "30px 10px",
+                }}
+              >
+                Result :{" "}
+              </span>
+              <span
+                className="numbersContainer"
+                style={{
+                  textAlign: "center",
+                  margin: "30px 10px",
+                  fontSize: "30px",
+                  color: "blue",
+                }}
+              >
+                0
+              </span>
+              <br />
+              <br />
+              <button
+                style={{
+                  padding: "10px 15px",
+                  margin: "5px",
+                  border: "none",
+                  outline: "none",
+                  cursor: "pointer",
+                  borderRadius: "3px",
+                  backgroundColor: "blue",
+                  color: "white",
+                }}
+                onClick={generateNumbers}
+              >
+                Generate
+              </button>
+            </div>
+            <a
+              href=""
+              style={{
+                color: "blue",
+                cursor: "pointer",
+                display: "block",
+                width: "500px",
+                textAlign: "center",
+              }}
+            >
+              Solution
+            </a>
+          </div>
+        </div>
+        <p>
+          <a href="">click here</a> for more examples and exercises.
+        </p>
+        <div id="javascriptQuiz">
+          <p>
+            <b>Note : </b> Make sure that you have read the introduction of
+            every Concept we discussed about above before you start this Quiz.
+          </p>
+          <p>
+            So, when you complete all of these questions, click on{" "}
+            <b>i'm Done</b> button to display the result immediately.
+          </p>
+          <div className="javascriptQuiz__content">
+            <h5>Question 1</h5>
+            <p>JavaScript is a </p>
+            <input
+              type="radio"
+              name="firstQuestionName"
+              className="javaScriptwrongOne"
+            />
+            <span className="javaScriptWrongAnswerOne">markup language</span>
+            <br />
+            <input
+              type="radio"
+              name="firstQuestionName"
+              className="javaScriptQuestionOne"
+            />
+            <span className="javaScriptAnswerOne">programming language</span>
+
+            <br />
+            <hr />
+            <h5>Question 2</h5>
+            <p>which of the these we use to select html elements ?</p>
+            <input
+              type="radio"
+              name="secondQuestionName"
+              className="javaScriptwrongTwo1"
+            />
+            <span className="javaScriptWrongAnswerTwo1">select()</span>
+            <br />
+            <input
+              type="radio"
+              name="secondQuestionName"
+              className="javaScriptQuestionTwo"
+            />
+            <span className="javaScriptAnswerTwo">querySelector();</span>
+            <br />
+            <input
+              type="radio"
+              name="secondQuestionName"
+              className="javaScriptwrongTwo2"
+            />
+            <span className="javaScriptWrongAnswerTwo2">map()</span>
+            <br />
+            <hr />
+            <h5>Question 3</h5>
+            <p>which of the folowwing is an Array function ?</p>
+            <input
+              type="radio"
+              name="thirdQuestionName"
+              className="javaScriptQuestionThree"
+            />
+            <span className="javaScriptAnswerThree">push()</span>
+            <br />
+            <input
+              type="radio"
+              name="thirdQuestionName"
+              className="javaScriptwrongThree1"
+            />
+            <span className="javaScriptWrongAnswerThree1">lastIndexOf()</span>
+            <br />
+            <input
+              type="radio"
+              name="thirdQuestionName"
+              className="javaScriptwrongThree2"
+            />
+            <span className="javaScriptWrongAnswerThree2">split()</span>
+            <br />
+            <hr />
+            <h5>Question 4</h5>
+            <p>which of the following is a string function ?</p>
+            <input
+              type="radio"
+              name="fourthQuestionName"
+              className="javaScriptwrongFour1"
+            />
+            <span className="javaScriptWrongAnswerFour1">join()</span>
+            <br />
+            <input
+              type="radio"
+              name="fourthQuestionName"
+              className="javaScriptwrongFour2"
+            />
+            <span className="javaScriptWrongAnswerFour2">shift()</span>
+            <br />
+            <input
+              type="radio"
+              name="fourthQuestionName"
+              className="javaScriptQuestionFour"
+            />
+            <span className="javaScriptAnswerFour">endsWith()</span>
+            <br />
+            <hr />
+            <h5>Question 5</h5>
+            <p>can we add style to html elements using JavaScript ?</p>
+            <input
+              type="radio"
+              name="fifthQuestionName"
+              className="javaScriptQuestionFive"
+            />
+            <span className="javaScriptAnswerFive">yes</span>
+            <br />
+            <input
+              type="radio"
+              name="fifthQuestionName"
+              className="javaScriptwrongFive"
+            />
+            <span className="javaScriptWrongAnswerFive">no</span>
+            <br />
+
+            <hr />
+            <h5>Question 6</h5>
+            <p>is it possible to change elements text using JavaScript ?</p>
+            <input
+              type="radio"
+              name="sixthQuestionName"
+              className="javaScriptQuestionSix"
+            />
+            <span className="javaScriptAnswerSix">yes</span>
+            <br />
+            <input
+              type="radio"
+              name="sixthQuestionName"
+              className="javaScriptwrongSix"
+            />
+            <span className="javaScriptWrongAnswerSix">no</span>
+            <br />
+            <hr />
+            <h5>Question 7</h5>
+            <p>which of the following is a JavaScript Event ?</p>
+            <input
+              type="radio"
+              name="seventhQuestionName"
+              className="javaScriptQuestionSeven"
+            />
+            <span className="javaScriptAnswerSeven">click</span>
+            <br />
+            <input
+              type="radio"
+              name="seventhQuestionName"
+              className="javaScriptwrongSeven1"
+            />
+            <span className="javaScriptWrongAnswerSeven1">type</span>
+            <br />
+            <input
+              type="radio"
+              name="seventhQuestionName"
+              className="javaScriptwrongSeven2"
+            />
+            <span className="javaScriptWrongAnswerSeven2">mouseHover</span>
+            <br />
+            <hr />
+            <h5>Question 8</h5>
+            <p> is array a data type ?</p>
+            <input
+              type="radio"
+              name="eightQuestionName"
+              className="javaScriptQuestionEight"
+            />
+            <span className="javaScriptAnswerEight">yes </span>
+            <br />
+            <input
+              type="radio"
+              name="eightQuestionName"
+              className="javaScriptwrongEight"
+            />
+            <span className="javaScriptWrongAnswerEight">no </span>
+            <br />
+            <hr />
+            <h5>Question 9</h5>
+            <p>how to transform array to string ?</p>
+            <input
+              type="radio"
+              name="ninthQuestionName"
+              className="javaScriptQuestionNine"
+            />
+            <span className="javaScriptAnswerNine">using join() fuction </span>
+            <br />
+            <input
+              type="radio"
+              name="ninthQuestionName"
+              className="javaScriptwrongNine"
+            />
+            <span className="javaScriptWrongAnswerNine">
+              using split() fuction{" "}
+            </span>
+            <br />
+
+            <hr />
+            <h5>Question 10</h5>
+            <p>
+              which of these helps us to remove the duplicated elements in array
+              ?
+            </p>
+            <input
+              type="radio"
+              name="tenthQuestionName"
+              className="javaScriptQuestionTen"
+            />
+            <span className="javaScriptAnswerTen">Set() </span>
+            <br />
+            <input
+              type="radio"
+              name="tenthQuestionName"
+              className="javaScriptwrongTen"
+            />
+            <span className="javaScriptWrongAnswerTen">pop() </span>
+            <br />
+            <button onClick={javaScriptCompletedQuiz}>i'm Done</button>
+          </div>
         </div>
       </div>
     </div>
