@@ -23,38 +23,37 @@ function App() {
     <Router>
       <div className="app">
         <Switch>
-          <Route exact path="/">    
+          <Route exact path="/">
             <Main />
           </Route>
-          <Route exact path="/CONTACT">    
+          <Route exact path="/CONTACT">
             <Contact />
           </Route>
-          <Route exact path="/OVERVIEW"> 
-            <Header/>   
+          <Route exact path="/OVERVIEW">
+            <Header />
             <Overview />
             {/* <Footer/> */}
           </Route>
-          
+
           <Route exact path="/HTML5">
-          <Header/>  
+            <Header />
             <Html />
           </Route>
           <Route exact path="/CSS3">
-          <Header/>  
+            <Header />
             <Css />
           </Route>
           <Route exact path="/JAVASCRIPT">
-          <Header/>
+            <Header />
             <JavaScript />
           </Route>
-          <Route exact path="/JQUERY">    
+          <Route exact path="/JQUERY">
+            <Header />
             <Jquery />
           </Route>
         </Switch>
       </div>
     </Router>
-
-    
   );
   
 }

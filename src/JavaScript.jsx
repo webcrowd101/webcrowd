@@ -33,7 +33,7 @@ function JavaScript() {
 
   window.addEventListener("resize", function () {
     if (window.innerWidth > 871) {
-      if (history.push(localStorage.getItem("current")) === "javascript5") {
+      if (history.push(localStorage.getItem("current")) === "JAVASCRIPT") {
         document.querySelector(".javascriptSidebar").style.width = "200px";
         document.querySelector(".javascriptSidebar ul").style.display = "block";
       }
@@ -383,12 +383,11 @@ function JavaScript() {
     clearInterval(myTimer);
   };
 
-  //generateNumbers 
-  const generateNumbers=()=>{
+  //generateNumbers
+  const generateNumbers = () => {
     let numbersContainer = document.querySelector(".numbersContainer");
-    numbersContainer.textContent= Math.floor(Math.random()*10000);
-
-  }
+    numbersContainer.textContent = Math.floor(Math.random() * 10000);
+  };
 
   //jsQuiz
   let javaScriptQuizScore = 0;
@@ -397,119 +396,143 @@ function JavaScript() {
       javaScriptQuizScore++;
     }
     if (document.querySelector(".javaScriptwrongOne").checked) {
-      document.querySelector(".javaScriptWrongAnswerOne").style.backgroundColor =
-        "red";
-      document.querySelector(".javaScriptAnswerOne").style.backgroundColor = "green";
+      document.querySelector(
+        ".javaScriptWrongAnswerOne"
+      ).style.backgroundColor = "red";
+      document.querySelector(".javaScriptAnswerOne").style.backgroundColor =
+        "green";
     }
 
     if (document.querySelector(".javaScriptQuestionTwo").checked) {
       javaScriptQuizScore++;
     }
     if (document.querySelector(".javaScriptwrongTwo1").checked) {
-      document.querySelector(".javaScriptWrongAnswerTwo1").style.backgroundColor =
-        "red";
-      document.querySelector(".javaScriptAnswerTwo").style.backgroundColor = "green";
+      document.querySelector(
+        ".javaScriptWrongAnswerTwo1"
+      ).style.backgroundColor = "red";
+      document.querySelector(".javaScriptAnswerTwo").style.backgroundColor =
+        "green";
     }
     if (document.querySelector(".javaScriptwrongTwo2").checked) {
-      document.querySelector(".javaScriptWrongAnswerTwo2").style.backgroundColor =
-        "red";
-      document.querySelector(".javaScriptAnswerTwo").style.backgroundColor = "green";
+      document.querySelector(
+        ".javaScriptWrongAnswerTwo2"
+      ).style.backgroundColor = "red";
+      document.querySelector(".javaScriptAnswerTwo").style.backgroundColor =
+        "green";
     }
     if (document.querySelector(".javaScriptQuestionThree").checked) {
       javaScriptQuizScore++;
     }
     if (document.querySelector(".javaScriptwrongThree1").checked) {
-      document.querySelector(".javaScriptWrongAnswerThree1").style.backgroundColor =
-        "red";
-      document.querySelector(".javaScriptAnswerThree").style.backgroundColor = "green";
+      document.querySelector(
+        ".javaScriptWrongAnswerThree1"
+      ).style.backgroundColor = "red";
+      document.querySelector(".javaScriptAnswerThree").style.backgroundColor =
+        "green";
     }
     if (document.querySelector(".javaScriptwrongThree2").checked) {
-      document.querySelector(".javaScriptWrongAnswerThree2").style.backgroundColor =
-        "red";
-      document.querySelector(".javaScriptAnswerThree").style.backgroundColor = "green";
+      document.querySelector(
+        ".javaScriptWrongAnswerThree2"
+      ).style.backgroundColor = "red";
+      document.querySelector(".javaScriptAnswerThree").style.backgroundColor =
+        "green";
     }
     if (document.querySelector(".javaScriptQuestionFour").checked) {
       javaScriptQuizScore++;
     }
     if (document.querySelector(".javaScriptwrongFour1").checked) {
-      document.querySelector(".javaScriptWrongAnswerFour1").style.backgroundColor =
-        "red";
-      document.querySelector(".javaScriptAnswerFour").style.backgroundColor = "green";
+      document.querySelector(
+        ".javaScriptWrongAnswerFour1"
+      ).style.backgroundColor = "red";
+      document.querySelector(".javaScriptAnswerFour").style.backgroundColor =
+        "green";
     }
     if (document.querySelector(".javaScriptwrongFour2").checked) {
-      document.querySelector(".javaScriptWrongAnswerFour2").style.backgroundColor =
-        "red";
-      document.querySelector(".javaScriptAnswerFour").style.backgroundColor = "green";
+      document.querySelector(
+        ".javaScriptWrongAnswerFour2"
+      ).style.backgroundColor = "red";
+      document.querySelector(".javaScriptAnswerFour").style.backgroundColor =
+        "green";
     }
     if (document.querySelector(".javaScriptQuestionFive").checked) {
       javaScriptQuizScore++;
     }
     if (document.querySelector(".javaScriptwrongFive").checked) {
-      document.querySelector(".javaScriptWrongAnswerFive").style.backgroundColor =
-        "red";
-      document.querySelector(".javaScriptAnswerFive").style.backgroundColor = "green";
+      document.querySelector(
+        ".javaScriptWrongAnswerFive"
+      ).style.backgroundColor = "red";
+      document.querySelector(".javaScriptAnswerFive").style.backgroundColor =
+        "green";
     }
     if (document.querySelector(".javaScriptQuestionSix").checked) {
       javaScriptQuizScore++;
     }
     if (document.querySelector(".javaScriptwrongSix").checked) {
-      document.querySelector(".javaScriptWrongAnswerSix").style.backgroundColor =
-        "red";
-      document.querySelector(".javaScriptAnswerSix").style.backgroundColor = "green";
+      document.querySelector(
+        ".javaScriptWrongAnswerSix"
+      ).style.backgroundColor = "red";
+      document.querySelector(".javaScriptAnswerSix").style.backgroundColor =
+        "green";
     }
 
     if (document.querySelector(".javaScriptQuestionSeven").checked) {
       javaScriptQuizScore++;
     }
     if (document.querySelector(".javaScriptwrongSeven1").checked) {
-      document.querySelector(".javaScriptWrongAnswerSeven1").style.backgroundColor =
-        "red";
-      document.querySelector(".javaScriptAnswerSeven").style.backgroundColor = "green";
+      document.querySelector(
+        ".javaScriptWrongAnswerSeven1"
+      ).style.backgroundColor = "red";
+      document.querySelector(".javaScriptAnswerSeven").style.backgroundColor =
+        "green";
     }
     if (document.querySelector(".javaScriptwrongSeven2").checked) {
-      document.querySelector(".javaScriptWrongAnswerSeven2").style.backgroundColor =
-        "red";
-      document.querySelector(".javaScriptAnswerSeven").style.backgroundColor = "green";
+      document.querySelector(
+        ".javaScriptWrongAnswerSeven2"
+      ).style.backgroundColor = "red";
+      document.querySelector(".javaScriptAnswerSeven").style.backgroundColor =
+        "green";
     }
     if (document.querySelector(".javaScriptQuestionEight").checked) {
       javaScriptQuizScore++;
     }
     if (document.querySelector(".javaScriptwrongEight").checked) {
-      document.querySelector(".javaScriptWrongAnswerEight").style.backgroundColor =
-        "red";
-      document.querySelector(".javaScriptAnswerEight").style.backgroundColor = "green";
+      document.querySelector(
+        ".javaScriptWrongAnswerEight"
+      ).style.backgroundColor = "red";
+      document.querySelector(".javaScriptAnswerEight").style.backgroundColor =
+        "green";
     }
     if (document.querySelector(".javaScriptQuestionNine").checked) {
       javaScriptQuizScore++;
     }
     if (document.querySelector(".javaScriptwrongNine").checked) {
-      document.querySelector(".javaScriptWrongAnswerNine").style.backgroundColor =
-        "red";
-      document.querySelector(".javaScriptAnswerNine").style.backgroundColor = "green";
+      document.querySelector(
+        ".javaScriptWrongAnswerNine"
+      ).style.backgroundColor = "red";
+      document.querySelector(".javaScriptAnswerNine").style.backgroundColor =
+        "green";
     }
 
     if (document.querySelector(".javaScriptQuestionTen").checked) {
       javaScriptQuizScore++;
     }
     if (document.querySelector(".javaScriptwrongTen").checked) {
-      document.querySelector(".javaScriptWrongAnswerTen").style.backgroundColor =
-        "red";
-      document.querySelector(".javaScriptAnswerTen").style.backgroundColor = "green";
+      document.querySelector(
+        ".javaScriptWrongAnswerTen"
+      ).style.backgroundColor = "red";
+      document.querySelector(".javaScriptAnswerTen").style.backgroundColor =
+        "green";
     }
 
     $(".javaScriptScore").text("your score is " + javaScriptQuizScore);
-     $(".javascriptContent *").prop("disabled" , true);    
+    $(".javascriptContent *").prop("disabled", true);
     return $(".javaScriptModal").show();
   };
 
   const JavaScriptHideModal = () => {
     $(".javaScriptModal").hide();
     javaScriptQuizScore = 0;
-      
   };
-
-
-  
 
   return (
     <div className="javascript">
@@ -1708,7 +1731,7 @@ function JavaScript() {
           </div>
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <b>pop()</b>
@@ -1741,7 +1764,7 @@ function JavaScript() {
 
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <b>unshift()</b>
@@ -1774,7 +1797,7 @@ function JavaScript() {
 
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <b>shift()</b>
@@ -1806,7 +1829,7 @@ function JavaScript() {
 
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <b>reverse()</b>
@@ -1838,7 +1861,7 @@ function JavaScript() {
 
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <b>concat()</b>
@@ -1885,7 +1908,7 @@ function JavaScript() {
           </p>
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
           <b>Set()</b>
           <p>allows you to delete the duplicated elements.</p>
@@ -1915,7 +1938,7 @@ function JavaScript() {
 
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <b>filter()</b>
@@ -1956,7 +1979,7 @@ function JavaScript() {
           </p>
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
           <b>reduce()</b>
           <p>
@@ -1991,7 +2014,7 @@ function JavaScript() {
           </div>
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <b>sort()</b>
@@ -2032,7 +2055,7 @@ function JavaScript() {
 
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <h3>Sorting Strings and Alphabet :</h3>
@@ -2096,7 +2119,7 @@ function JavaScript() {
 
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <b>forEach()</b>
@@ -2140,7 +2163,7 @@ function JavaScript() {
           </div>
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <b>every()</b>
@@ -2188,7 +2211,7 @@ function JavaScript() {
 
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <b>fill()</b>
@@ -2221,7 +2244,7 @@ function JavaScript() {
 
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <b>includes()</b>
@@ -2259,7 +2282,7 @@ function JavaScript() {
 
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <b>findIndex()</b>
@@ -2296,7 +2319,7 @@ function JavaScript() {
 
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <b>indexOf()</b>
@@ -2332,7 +2355,7 @@ function JavaScript() {
 
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <b>lastIndexOf()</b>
@@ -2369,7 +2392,7 @@ function JavaScript() {
 
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <b>some()</b>
@@ -2417,7 +2440,7 @@ function JavaScript() {
 
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <b>slice()</b>
@@ -2486,7 +2509,7 @@ function JavaScript() {
 
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <b>splice()</b>
@@ -2540,7 +2563,7 @@ function JavaScript() {
 
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <b>join()</b>
@@ -2577,8 +2600,8 @@ function JavaScript() {
           <p>
             in this example we joined all array items through enpty space (""),
             you can do it according to any item in array, you can join them by
-            "c" or "b" or anything exists in array. <br />{" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            "c" or "b" or anything exists in array. <br /> for more examples and
+            exercises <a href="">click here</a>
           </p>
         </div>
         <div id="stringMethods">
@@ -2617,7 +2640,7 @@ function JavaScript() {
           <p>spaces also get counted as alphbet.</p>
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <h3>slice()</h3>
@@ -2651,7 +2674,7 @@ function JavaScript() {
           <p>spaces also get counted as alphbet.</p>
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <h3>charAt()</h3>
@@ -2682,7 +2705,7 @@ function JavaScript() {
           </div>
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <h3>endsWith()</h3>
@@ -2728,7 +2751,7 @@ function JavaScript() {
           </div>
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <h3>replace()</h3>
@@ -2771,7 +2794,7 @@ function JavaScript() {
           </div>
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <h3>includes()</h3>
@@ -2818,7 +2841,7 @@ function JavaScript() {
           </div>
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <h3>includes()</h3>
@@ -2865,7 +2888,7 @@ function JavaScript() {
           </div>
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <h3>indexOf()</h3>
@@ -2912,7 +2935,7 @@ function JavaScript() {
           </div>
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <h3>lastIndexOf()</h3>
@@ -2947,7 +2970,7 @@ function JavaScript() {
           </div>
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <h3>toUpperCase()</h3>
@@ -2981,7 +3004,7 @@ function JavaScript() {
           </div>
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <h3>toLowerCase()</h3>
@@ -3015,7 +3038,7 @@ function JavaScript() {
           </div>
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <h3>repeat()</h3>
@@ -3049,7 +3072,7 @@ function JavaScript() {
           </div>
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <h3>split()</h3>
@@ -3111,8 +3134,8 @@ function JavaScript() {
           </div>
           <p>
             {" "}
-            empty strings also counted.
-            <a href="">click here</a> for more examples and exercises{" "}
+            empty strings also counted. for more examples and exercises{" "}
+            <a href="">click here</a>
           </p>
 
           <h3>concat()</h3>
@@ -3149,7 +3172,7 @@ function JavaScript() {
           </div>
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
 
           <h3>trim()</h3>
@@ -3186,7 +3209,7 @@ function JavaScript() {
           </div>
           <p>
             {" "}
-            <a href="">click here</a> for more examples and exercises{" "}
+            for more examples and exercises <a href="">click here</a>.
           </p>
         </div>
         <div id="date">
@@ -3231,7 +3254,7 @@ function JavaScript() {
             {" "}
             there is a bunch of methods like
             getMonth(),getFullYear(),getDate()...,
-            <a href="">click here</a> to see an example of this.
+           to see an example of this <a href="">click here</a>.
           </p>
         </div>
         <div id="math">
@@ -4012,7 +4035,7 @@ function JavaScript() {
             className="html__css"
           >
             <h2
-              style={{
+              style={{ 
                 width: "520px",
                 padding: "10px",
                 textAlign: "center",

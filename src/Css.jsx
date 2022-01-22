@@ -302,6 +302,7 @@ function Css() {
             read them one by one in examples. Good Luck
           </p>
         </div>
+
         <div id="color">
           <h3>color</h3>
           <p>
@@ -443,6 +444,9 @@ function Css() {
             </p>
           </p>
         </div>
+        <p>
+          <a href="">click here</a> for more exercises and examples.
+        </p>
         <div id="background">
           <h3>background</h3>
           <p>
@@ -499,6 +503,9 @@ function Css() {
             </div>
           </div>
         </div>
+        <p>
+          <a href="">click here</a> for more exercises and examples.
+        </p>
         <div id="width">
           <h3>width</h3>
           <p>
@@ -587,6 +594,9 @@ function Css() {
             of the container.
           </p>
         </div>
+        <p>
+          <a href="">click here</a> for more exercises and examples.
+        </p>
         <div id="height">
           <h3>height</h3>
           <p>
@@ -676,6 +686,9 @@ function Css() {
             </div>
           </div>
         </div>
+        <p>
+          <a href="">click here</a> for more exercises and examples.
+        </p>
         <div id="margin">
           <h3>margin</h3>
           <p>
@@ -797,6 +810,9 @@ function Css() {
             </ul>
           </p>
         </div>
+        <p>
+          <a href="">click here</a> for more exercises and examples.
+        </p>
         <div id="padding">
           <h3>padding</h3>
           <p>
@@ -897,6 +913,9 @@ function Css() {
             element when padding scale the element's area.
           </p>
         </div>
+        <p>
+          <a href="">click here</a> for more exercises and examples.
+        </p>
         <div id="border">
           <h3>border</h3>
           <p>
@@ -988,6 +1007,9 @@ function Css() {
             color.
           </p>
         </div>
+        <p>
+          <a href="">click here</a> for more exercises and examples.
+        </p>
         <div id="comment">
           <h3>comment</h3>
           <p>
@@ -1040,6 +1062,9 @@ function Css() {
             comment token (/* property */), it's no longer applied.
           </p>
         </div>
+        <p>
+          <a href="">click here</a> for more exercises and examples.
+        </p>
         <div id="textAlign">
           <h3>text-align</h3>
           <p>
@@ -1143,6 +1168,9 @@ function Css() {
             because this is the default value of text-align.
           </p>
         </div>
+        <p>
+          <a href="">click here</a> for more exercises and examples.
+        </p>
         <div id="position">
           <h3>position</h3>
           <p>
@@ -1154,6 +1182,9 @@ function Css() {
             </a>
           </p>
         </div>
+        <p>
+          <a href="">click here</a> for more exercises and examples.
+        </p>
         <div id="opacity">
           <h3>opacity</h3>
           <p>
@@ -1227,6 +1258,9 @@ function Css() {
             disapeared, actually it's existed but not visual.
           </p>
         </div>
+        <p>
+          <a href="">click here</a> for more exercises and examples.
+        </p>
         <div id="font">
           <h3>font</h3>
           <p>
@@ -1293,6 +1327,9 @@ function Css() {
             typing <b>google fonts</b> in search bar.
           </p>
         </div>
+        <p>
+          <a href="">click here</a> for more exercises and examples.
+        </p>
         <div id="hover">
           <h3>hover</h3>
           <p>
@@ -1335,6 +1372,9 @@ function Css() {
             background-color changes to blue.
           </p>
         </div>
+        <p>
+          <a href="">click here</a> for more exercises and examples.
+        </p>
         <div id="transition">
           <h3>transition</h3>
           <p>
@@ -1393,6 +1433,9 @@ function Css() {
             </b>
           </p>
         </div>
+        <p>
+          <a href="">click here</a> for more exercises and examples.
+        </p>
         <br />
         <div id="flexbox">
           <h3>flexbox</h3>
@@ -1711,6 +1754,9 @@ function Css() {
             the right side elements get pushed completely to the right
           </p>
         </div>
+        <p>
+          <a href="">click here</a> for more exercises and examples.
+        </p>
         <div id="grid">
           <h3>grid</h3>
           <p>
@@ -1840,6 +1886,9 @@ function Css() {
             if you didn't understand click <a href="">here</a>.
           </p>
         </div>
+        <p>
+          <a href="">click here</a> for more exercises and examples.
+        </p>
         <div id="mediaQuery">
           <h3>media Query</h3>
           <p>
@@ -2072,6 +2121,9 @@ function Css() {
             </form>
           </div>
         </div>
+        <p>
+          <a href="">click here</a> for more exercises and examples.
+        </p>
         <div id="cssQuiz">
           <p>
             <b>Note : </b> Make sure that you have read the introduction of
