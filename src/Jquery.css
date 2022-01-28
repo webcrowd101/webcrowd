@@ -50,16 +50,7 @@
 .jqueryContent::-webkit-scrollbar {
   display: none;
 }
-.showSideBar {
-  display: none !important;
-  width: 50px !important;
-  height: 70px !important;
-  text-align: center !important;
-  float: right !important;
-  padding-right: 10px !important;
-  color: aqua !important;
-  cursor: pointer !important;
-}
+
 
 .jquery__code {
   display: flex;

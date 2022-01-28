@@ -12,6 +12,7 @@ body::-webkit-scrollbar {
   align-items: center;
   background-color: #0a0453;
   justify-content: space-between;
+  height: 70px;
 }
 .header__logo {
 
@@ -83,6 +84,7 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     width: 100vw;
+    height: 10vh !important;
     
   }
   .header > ul {
@@ -107,6 +109,6 @@ body::-webkit-scrollbar {
     color: white !important;
   }
   .list:hover {
-    color: white !important;
+    color: aqua !important;
   }
 }

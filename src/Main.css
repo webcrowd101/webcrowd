@@ -83,7 +83,8 @@ body{
     font-weight:700;
     color:white;
     width: fit-content;
-    font-weight: 400;
+    font-weight: 600;
+    font-family: "Arial";
 
 }
 .main__top__left>hr{

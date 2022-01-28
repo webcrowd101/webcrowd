@@ -3,45 +3,22 @@
   width: 100vw;
 }
 
-.cssModal {
-  width: 30%;
-  height: 40%;
-  background-color: blue;
-  position: absolute;
-  top: 30%;
-  left: 35%;
-  display: none;
-}
 .closeModal {
   color: red !important;
   font-size: 30px !important;
   float: right;
   cursor: pointer;
 }
-.cssSidebar {
-  background-color: purple;
-  width: 200px;
+
+::-webkit-scrollbar {
+  width: 13px;
 }
-.cssSidebar > ul {
-  margin-top: 50px;
-  background-color: aqua;
-  text-align: center;
-  height: 80vh;
-  overflow-y: scroll;
-  width: 100% !important;
+::-webkit-scrollbar-corner {
+  background: #000;
 }
-.cssSidebar > ul::-webkit-scrollbar {
-  display: none;
-}
-.cssSidebar > ul > a {
-  text-decoration: none;
-}
-.cssSidebar > ul > a > li {
-  margin: 10px 0;
-  padding: 5px 30px;
-  text-align: start;
-  cursor: pointer;
-}
+
+
+
 .cssContent {
   flex: 1;
   height: 90vh;
@@ -51,7 +28,7 @@
 .cssContent::-webkit-scrollbar {
   display: none;
 }
-.showSideBar {
+/* .showSideBar {
   display: none !important;
   width: 50px !important;
   height: 70px !important;
@@ -60,7 +37,7 @@
   padding-right: 10px !important;
   color: aqua !important;
   cursor: pointer !important;
-}
+} */
 .cssProperty {
   color: purple;
 }
@@ -85,7 +62,7 @@
 .flexbox__code,
 .animation__code {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 .colors__input,
@@ -102,7 +79,7 @@
 .flexbox__input,
 .animation__input {
   display: flex;
-  width: 600px;
+  width: 700px;
   height: 200px;
   outline: none;
 }
@@ -143,40 +120,43 @@
 }
 .html__code {
   border-right: 1px solid black;
-  padding: 0 5px;
   margin: 0 5px;
   height: 200px;
-  width: 300px;
+  width: 350px;
   overflow-y: scroll;
+  border: 1px solid gray;
   background-color: rgb(228, 226, 226);
   outline: none;
-  border: 1px solid gray;
+  line-height: 25px;
 }
 .css__code {
   margin: 0 5px;
-  padding: 0 5px;
+
   height: 200px;
-  width: 300px;
+  width: 350px;
   overflow-y: scroll;
+  border: 1px solid gray;
   background-color: rgb(228, 226, 226);
   outline: none;
-  border: 1px solid gray;
+  line-height: 25px;
 }
 .html__code::-webkit-scrollbar,
 .css__code::-webkit-scrollbar {
   display: none;
 }
-.html__code > h3 {
-  background-color: aqua;
-  text-align: center;
-  padding: 3px 0;
-  width: 100%;
+#flexbox > h4 {
+  margin: 20px;
+  font-size: 24px;
 }
-.css__code > h3 {
-  background-color: aqua;
-  flex: 1;
+.inHtmlCssFile {
+  background-color: rgb(212, 214, 214);
   text-align: center;
-  padding: 3px 0;
+  padding: 5px;
+  margin-bottom: 10px;
+  color: rgb(50, 50, 153);
+}
+.linked {
+  word-break: break-all;
 }
 .classProperty {
   color: blue;
@@ -190,6 +170,13 @@
 .idValue {
   color: green;
 }
+.cssTag {
+  margin-left: 5px;
+}
+.cssComment {
+  color: gray;
+}
+
 .containers {
   width: 20vw;
   height: 120px;
@@ -217,51 +204,41 @@
 .h3Transition:hover {
   background-color: blue;
 }
-.mediaQueryDiv{
-  background-color:red;
+.mediaQueryDiv {
+  background-color: red;
   width: 150px;
   height: 150px;
 }
-.cssExerciseButton:hover{
-  background-color:green !important;
+.cssExerciseButton:hover {
+  background-color: green !important;
 }
 
-#cssExercises {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.responsiveNavBarItemsHover {
+  text-align: center;
+  flex: 1;
+  color: white;
+  font-size: 18px;
+  line-height: 70px;
+  list-style: none;
+  cursor: pointer;
 }
-.css__exercise {
-  background-color: rgb(255, 217, 0);
-  /* border:2px solid black; */
-  width: 500px;
-  margin: 10px;
-  height: 300px;
-  overflow-y: scroll;
+.responsiveNavBarItemsHover:hover {
+  background-color: blue;
 }
-.css__exercise::-webkit-scrollbar{
+
+.css__exercise::-webkit-scrollbar {
   display: none;
 }
-.signupButton:hover{
+.signupButton:hover {
   background-color: green !important;
 }
 
 @media only screen and (max-width: 1000px) {
-  .mediaQueryDiv{
-    background-color:aqua;
+  .mediaQueryDiv {
+    background-color: aqua;
   }
 }
-@media only screen and (max-width: 871px) {
-  .cssSidebar {
-    width: 60px;
-  }
-  .cssSidebar > ul {
-    display: none;
-  }
-  .showSideBar {
-    display: block !important;
-  }
-}
+
 .keyframes {
   color: red;
 }
@@ -272,7 +249,6 @@
   color: black;
 }
 .animatedItem {
-  /* animation : animate 4s infinite; */
 }
 @keyframes animate {
   25% {

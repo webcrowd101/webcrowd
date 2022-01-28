@@ -82,7 +82,7 @@ function Header() {
         <div className="header__logo__list">
           <Link className="header__logo" to="/">
             <img src="logo.png" alt="" />
-            <h3>WEB CROWD</h3>
+            
           </Link>
           <DehazeIcon
             className="list"

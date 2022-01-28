@@ -31,40 +31,40 @@ function Jquery() {
     }
   };
 
-  window.addEventListener("resize", function () {
-    if (window.innerWidth > 871) {
-      if (history.push(localStorage.getItem("current")) === "JQUERY") {
-        document.querySelector(".jquerySidebar").style.width = "200px";
-        document.querySelector(".jquerySidebar ul").style.display = "block";
-      }
-      if (show) {
-        try {
-          document.querySelector(".jquerySidebar").style.width = "200px";
-          document.querySelector(".jquerySidebar ul").style.display = "block";
-        } catch (error) {}
-      }
-      if (show && window.innerWidth >= 871) {
-        try {
-          document.querySelector(".jqueryContent").style.opacity = "1";
-          hide(false);
-        } catch (error) {}
-      }
-    } else if (window.innerWidth <= 871) {
-      if (history.push(localStorage.getItem("current")) === "jquery5") {
-        document.querySelector(".jquerySidebar").style.width = "60px";
-        document.querySelector(".jquerySidebar ul").style.display = "none";
-      }
-      if (show && window.innerWidth <= 871) {
-        try {
-          document.querySelector(".jqueryContent").style.opacity = "1";
-          document.querySelector(".jquerySidebar").style.width = "60px";
-          document.querySelector(".jquerySidebar ul").style.display = "none";
-          hide(false);
-        } catch (error) {}
-      }
-    } else {
-    }
-  });
+  // window.addEventListener("resize", function () {
+  //   if (window.innerWidth > 871) {
+  //     if (history.push(localStorage.getItem("current")) === "JQUERY") {
+  //       document.querySelector(".jquerySidebar").style.width = "200px";
+  //       document.querySelector(".jquerySidebar ul").style.display = "block";
+  //     }
+  //     if (show) {
+  //       try {
+  //         document.querySelector(".jquerySidebar").style.width = "200px";
+  //         document.querySelector(".jquerySidebar ul").style.display = "block";
+  //       } catch (error) {}
+  //     }
+  //     if (show && window.innerWidth >= 871) {
+  //       try {
+  //         document.querySelector(".jqueryContent").style.opacity = "1";
+  //         hide(false);
+  //       } catch (error) {}
+  //     }
+  //   } else if (window.innerWidth <= 871) {
+  //     if (history.push(localStorage.getItem("current")) === "jquery5") {
+  //       document.querySelector(".jquerySidebar").style.width = "60px";
+  //       document.querySelector(".jquerySidebar ul").style.display = "none";
+  //     }
+  //     if (show && window.innerWidth <= 871) {
+  //       try {
+  //         document.querySelector(".jqueryContent").style.opacity = "1";
+  //         document.querySelector(".jquerySidebar").style.width = "60px";
+  //         document.querySelector(".jquerySidebar ul").style.display = "none";
+  //         hide(false);
+  //       } catch (error) {}
+  //     }
+  //   } else {
+  //   }
+  // });
   let jqueryQuizScore = 0;
   const jqueryCompletedQuiz = () => {
     if (document.querySelector(".jqueryQuestionOne").checked) {
