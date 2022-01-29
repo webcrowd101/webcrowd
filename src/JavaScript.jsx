@@ -744,7 +744,7 @@ function JavaScript() {
           <p className="clickHere">
             there is a bunch of data types in javascript. here is the list of
             them :
-            <ul style={{ marginLeft: "50px" }}>
+            <ul style={{ marginLeft: "50px" , pointerEvents: "none" }}>
               <li>string</li>
               <li>number</li>
               <li>boolean</li>
@@ -1103,7 +1103,7 @@ function JavaScript() {
             <div className="inputSection">
               <span className="declarationKey">var</span>
               <span className="variableName"> str = </span>
-              <span>" my name is khalid "</span>; <br /> <br />
+              <span>" my name is mike "</span>; <br /> 
               <span style={{ color: "purple" }}>
                 for(
                 <span className="declarationKey">let </span>
@@ -1159,7 +1159,7 @@ function JavaScript() {
           </p>
           <div className="codeSection">
             <div className="inputSection">
-              <span style={{ color: "orange" }}>// Addition</span> <br />
+              <span style={{ color: "gray" }}>// Addition</span> <br />
               <span className="declarationKey">var</span>
               <span className="variableName"> num1 = </span>
               <span>2</span>; <br />
@@ -1171,7 +1171,7 @@ function JavaScript() {
                 <span className="insideConsole">num1 + num2</span>)
               </span>{" "}
               <br />
-              <span style={{ color: "orange" }}>// Substraction</span> <br />
+              <span style={{ color: "gray" }}>// Substraction</span> <br />
               <span className="declarationKey">var</span>
               <span className="variableName"> num3 = </span>
               <span>10</span>; <br />
@@ -1183,7 +1183,7 @@ function JavaScript() {
                 <span className="insideConsole">num3 - num4</span>)
               </span>{" "}
               <br />
-              <span style={{ color: "orange" }}>// Multiplication</span> <br />
+              <span style={{ color: "gray" }}>// Multiplication</span> <br />
               <span className="declarationKey">var</span>
               <span className="variableName"> num5 = </span>
               <span>4</span>; <br />
@@ -1195,7 +1195,7 @@ function JavaScript() {
                 <span className="insideConsole">num5 * num6</span>)
               </span>{" "}
               <br />
-              <span style={{ color: "orange" }}>// Division</span> <br />
+              <span style={{ color: "gray" }}>// Division</span> <br />
               <span className="declarationKey">var</span>
               <span className="variableName"> num7 = </span>
               <span>21</span>; <br />
@@ -1207,7 +1207,7 @@ function JavaScript() {
                 <span className="insideConsole">num7 / num8</span>)
               </span>{" "}
               <br />
-              <span style={{ color: "orange" }}>
+              <span style={{ color: "gray" }}>
                 // Modulus (the rest of division oparation)
               </span>{" "}
               <br />
@@ -1222,7 +1222,7 @@ function JavaScript() {
                 <span className="insideConsole">num9 % num10</span>)
               </span>{" "}
               <br />
-              <span style={{ color: "orange" }}>// Increment</span> <br />
+              <span style={{ color: "gray" }}>// Increment</span> <br />
               <span className="declarationKey">var</span>
               <span className="variableName"> num11 = </span>
               <span>21</span>; <br />
@@ -1231,7 +1231,7 @@ function JavaScript() {
                 <span className="insideConsole">++num11</span>)
               </span>{" "}
               <br />
-              <span style={{ color: "orange" }}>// Decrement</span> <br />
+              <span style={{ color: "gray" }}>// Decrement</span> <br />
               <span className="declarationKey">var</span>
               <span className="variableName"> num12 = </span>
               <span>14</span>; <br />
@@ -1420,7 +1420,7 @@ function JavaScript() {
           <p className="clickHere">
             <b className="importants">Important! </b>: in the examples above we
             didn't use <b>return</b> key inside the function. this key is very
-            important in function. <a href="">click here</a> to figure it out,
+            important in function. <br /> <a href="">click here</a> to figure it out,
             and you will find a bunch of examples.
           </p>
         </div>
@@ -2188,7 +2188,7 @@ function JavaScript() {
           <p className="clickHere">
             forEach() is actually like map() , the defferences between them is
             that : <br />
-            <ul style={{ marginLeft: "50px" }}>
+            <ul style={{ marginLeft: "50px" , pointerEvents: "none" }}>
               <li style={{ pointerEvents: "none" }}>
                 map() returns a new array.{" "}
               </li>
@@ -2890,54 +2890,6 @@ function JavaScript() {
             {" "}
             for more examples and exercises <a href="">click here</a>.
           </p>
-
-          <h4 className="subTittles">includes()</h4>
-          <p className="clickHere">
-            includes() is the same as includes() in array,{" "}
-            <a href="">click here </a> to figure it out.
-          </p>
-
-          <div className="codeSection">
-            <div className="inputSection">
-              <span className="declarationKey">const</span>
-              <span className="variableName"> str = </span>{" "}
-              <span style={{ color: "purple" }}>"web crowd" ;</span> <br />
-              <span className="console">
-                {" "}
-                console.log(
-                <span style={{ color: "purple" }}>
-                  {" "}
-                  str.<span style={{ color: "blue" }}>includes</span>({" "}
-                  <span style={{ color: "purple" }}>"b"</span> )
-                </span>{" "}
-                )
-              </span>
-              <br />
-              <span className="console">
-                {" "}
-                console.log(
-                <span style={{ color: "purple" }}>
-                  {" "}
-                  str.<span style={{ color: "blue" }}>includes</span>({" "}
-                  <span style={{ color: "purple" }}>"website"</span> )
-                </span>{" "}
-                )
-              </span>
-              <br />
-            </div>
-            <div>
-              <ArrowRightAltIcon className="arrow" />
-            </div>
-            <div className="outputSection">
-              <div> true</div>
-              <div> false</div>
-            </div>
-          </div>
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
-
           <h4 className="subTittles">includes()</h4>
           <p className="clickHere">
             includes() is the same as includes() in array,{" "}
@@ -3181,7 +3133,7 @@ function JavaScript() {
               <span className="declarationKey">const</span>
               <span className="variableName"> str = </span>{" "}
               <span style={{ color: "purple" }}>"web crowd" ;</span> <br />
-              <div style={{ color: "blue" }}>// split by empty string</div>
+              <div style={{ color: "gray" }}>// split by empty string</div>
               <span className="console">
                 {" "}
                 console.log(
@@ -3192,7 +3144,7 @@ function JavaScript() {
                 )
               </span>
               <br />
-              <div style={{ color: "blue" }}>// split by string</div>
+              <div style={{ color: "gray" }}>// split by string</div>
               <span className="console">
                 {" "}
                 console.log(
@@ -3203,7 +3155,7 @@ function JavaScript() {
                 )
               </span>
               <br />
-              <div style={{ color: "blue" }}>// split by character</div>
+              <div style={{ color: "gray" }}>// split by character</div>
               <span className="console">
                 {" "}
                 console.log(
@@ -3468,7 +3420,7 @@ function JavaScript() {
               <ArrowRightAltIcon className="arrow" />
             </div>
             <div className="outputSection">
-              <div style={{ color: "blue" }}>// 5 * 5 * 5</div>
+              <div style={{ color: "gray" }}>// 5 * 5 * 5</div>
               <div> 125</div>
             </div>
           </div>
@@ -3981,7 +3933,7 @@ function JavaScript() {
               </span>{" "}
             </div>
             <div className="inputSection">
-              <ul style={{ marginLeft: "50px" }}>
+              <ul style={{ marginLeft: "50px" , pointerEvents: "none" }}>
                 <li style={{ color: "blue" }}>html5</li>
                 <li style={{ color: "blue" }}>css3</li>
                 <li style={{ color: "blue" }}>javascript</li>
@@ -4207,7 +4159,7 @@ function JavaScript() {
               </span>{" "}
             </div>
             <div className="inputSection">
-              <ul style={{ marginLeft: "50px" }}>
+              <ul style={{ marginLeft: "50px" , pointerEvents: "none" }}>
                 <li style={{ color: "blue" }}>html5</li>
                 <li style={{ color: "blue" }}>javascript</li>
               </ul>

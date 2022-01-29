@@ -1494,8 +1494,8 @@ function Jquery() {
             <b className="importants">Important!</b> : you can't apply animation
             on all css properties, here is the list of CSS properties that you
             can apply animations on. <br />
-            <b className="note">the list :</b>
-            <ul style={{ marginLeft: "50px" }}>
+            <b className="importants">the list :</b>
+            <ul style={{ marginLeft: "50px", pointerEvents: "none" }}>
               <li disabled="true">backgroundPositionX</li>
               <li disabled="true">backgroundPositionY</li>
               <li disabled="true">borderWidth</li>
@@ -1534,8 +1534,8 @@ function Jquery() {
             </ul>
           </p>
           <p className="clickHere">
-            <b>Note : </b> you can also add a callback function after animation
-            duration like <a href="">this</a>
+            <b className="note">Note : </b> you can also add a callback function
+            after animation duration like <a href="">this</a>
           </p>
           <p className="clickHere">
             for more examples and exercises <a href="">click here</a>.
@@ -1789,18 +1789,23 @@ function Jquery() {
           </div>
         </div>
         <div id="jqueryQuiz" className="addPaddingToSection">
+          <h3 className="sectionTittle">Quiz</h3>
           <p className="clickHere">
-            <b>Note : </b> Make sure that you have read the introduction of
-            every Concept we discussed about above before you start this Quiz.
-          </p>
-          <p className="clickHere">
+            <b className="note">Note : </b> Make sure that you have read the
+            introduction of every Concept we discussed about above before you
+            start this Quiz. <br />
             So, when you complete all of these questions, click on{" "}
-            <b>i'm Done</b> button to display the result immediately.
+            <b className="note">i'm Done</b> button to display the result
+            immediately.
           </p>
+
           <div className="jqueryQuiz__content">
-            <h5>Question 1</h5>
+            <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
+              Question 1
+            </h5>
             <p className="clickHere">Jquery is a programming language </p>
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="firstQuestionName"
               className="jquerywrongOne"
@@ -1808,6 +1813,7 @@ function Jquery() {
             <span className="jqueryWrongAnswerOne1">yes</span>
             <br />
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="firstQuestionName"
               className="jqueryQuestionOne"
@@ -1815,12 +1821,15 @@ function Jquery() {
             <span className="jqueryAnswerOne">no</span>
 
             <br />
-            <hr />
-            <h5>Question 2</h5>
+            <hr style={{ color: "gray", margin: "5px" }} />
+            <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
+              Question 2
+            </h5>
             <p className="clickHere">
               which jquery function we use to change element's property value ?
             </p>
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="secondQuestionName"
               className="jquerywrongTwo1"
@@ -1828,6 +1837,7 @@ function Jquery() {
             <span className="jqueryWrongAnswerTwo1">slideIn()</span>
             <br />
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="secondQuestionName"
               className="jqueryQuestionTwo"
@@ -1835,18 +1845,22 @@ function Jquery() {
             <span className="jqueryAnswerTwo">prop()</span>
             <br />
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="secondQuestionName"
               className="jquerywrongTwo2"
             />
             <span className="jqueryWrongAnswerTwo2">html()</span>
             <br />
-            <hr />
-            <h5>Question 3</h5>
+            <hr style={{ color: "gray", margin: "5px" }} />
+            <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
+              Question 3
+            </h5>
             <p className="clickHere">
               which jquery function we use to switch hide() and show() ?
             </p>
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="thirdQuestionName"
               className="jqueryQuestionThree"
@@ -1854,6 +1868,7 @@ function Jquery() {
             <span className="jqueryAnswerThree">toggle()</span>
             <br />
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="thirdQuestionName"
               className="jquerywrongThree1"
@@ -1861,18 +1876,22 @@ function Jquery() {
             <span className="jqueryWrongAnswerThree1">fadeToggle()</span>
             <br />
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="thirdQuestionName"
               className="jquerywrongThree2"
             />
             <span className="jqueryWrongAnswerThree2">slideToggle()</span>
             <br />
-            <hr />
-            <h5>Question 4</h5>
+            <hr style={{ color: "gray", margin: "5px" }} />
+            <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
+              Question 4
+            </h5>
             <p className="clickHere">
               which of the following used to change element's text ?
             </p>
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="fourthQuestionName"
               className="jquerywrongFour1"
@@ -1880,6 +1899,7 @@ function Jquery() {
             <span className="jqueryWrongAnswerFour1">animate()</span>
             <br />
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="fourthQuestionName"
               className="jquerywrongFour2"
@@ -1887,16 +1907,20 @@ function Jquery() {
             <span className="jqueryWrongAnswerFour2">shift()</span>
             <br />
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="fourthQuestionName"
               className="jqueryQuestionFour"
             />
             <span className="jqueryAnswerFour">html()</span>
             <br />
-            <hr />
-            <h5>Question 5</h5>
+            <hr style={{ color: "gray", margin: "5px" }} />
+            <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
+              Question 5
+            </h5>
             <p className="clickHere">can we animate elements using jquery ?</p>
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="fifthQuestionName"
               className="jqueryQuestionFive"
@@ -1904,6 +1928,7 @@ function Jquery() {
             <span className="jqueryAnswerFive">yes</span>
             <br />
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="fifthQuestionName"
               className="jquerywrongFive"
@@ -1911,10 +1936,13 @@ function Jquery() {
             <span className="jqueryWrongAnswerFive">no</span>
             <br />
 
-            <hr />
-            <h5>Question 6</h5>
+            <hr style={{ color: "gray", margin: "5px" }} />
+            <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
+              Question 6
+            </h5>
             <p className="clickHere">is fadeIn() a jquery function ?</p>
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="sixthQuestionName"
               className="jqueryQuestionSix"
@@ -1922,16 +1950,20 @@ function Jquery() {
             <span className="jqueryAnswerSix">yes</span>
             <br />
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="sixthQuestionName"
               className="jquerywrongSix"
             />
             <span className="jqueryWrongAnswerSix">no</span>
             <br />
-            <hr />
-            <h5>Question 7</h5>
+            <hr style={{ color: "gray", margin: "5px" }} />
+            <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
+              Question 7
+            </h5>
             <p className="clickHere">we can disappears html element using </p>
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="seventhQuestionName"
               className="jqueryQuestionSeven"
@@ -1939,6 +1971,7 @@ function Jquery() {
             <span className="jqueryAnswerSeven">hide() function</span>
             <br />
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="seventhQuestionName"
               className="jquerywrongSeven1"
@@ -1946,18 +1979,22 @@ function Jquery() {
             <span className="jqueryWrongAnswerSeven1">click() function</span>
             <br />
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="seventhQuestionName"
               className="jquerywrongSeven2"
             />
             <span className="jqueryWrongAnswerSeven2">html() function</span>
             <br />
-            <hr />
-            <h5>Question 8</h5>
+            <hr style={{ color: "gray", margin: "5px" }} />
+            <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
+              Question 8
+            </h5>
             <p className="clickHere">
               it's not possible to change element's color using animate().
             </p>
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="eightQuestionName"
               className="jqueryQuestionEight"
@@ -1965,18 +2002,22 @@ function Jquery() {
             <span className="jqueryAnswerEight">yes </span>
             <br />
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="eightQuestionName"
               className="jquerywrongEight"
             />
             <span className="jqueryWrongAnswerEight">no </span>
             <br />
-            <hr />
-            <h5>Question 9</h5>
+            <hr style={{ color: "gray", margin: "5px" }} />
+            <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
+              Question 9
+            </h5>
             <p className="clickHere">
               can we apply as many animation as we want to html element.
             </p>
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="ninthQuestionName"
               className="jqueryQuestionNine"
@@ -1984,6 +2025,7 @@ function Jquery() {
             <span className="jqueryAnswerNine">yes </span>
             <br />
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="ninthQuestionName"
               className="jquerywrongNine1"
@@ -1991,10 +2033,13 @@ function Jquery() {
             <span className="jqueryWrongAnswerNine1">no</span>
             <br />
 
-            <hr />
-            <h5>Question 10</h5>
+            <hr style={{ color: "gray", margin: "5px" }} />
+            <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
+              Question 10
+            </h5>
             <p className="clickHere">is jquery a jquery library ?</p>
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="tenthQuestionName"
               className="jqueryQuestionTen"
@@ -2002,13 +2047,28 @@ function Jquery() {
             <span className="jqueryAnswerTen">yes </span>
             <br />
             <input
+              style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="tenthQuestionName"
               className="jquerywrongTen1"
             />
             <span className="jqueryWrongAnswerTen1">no </span>
             <br />
-            <button onClick={jqueryCompletedQuiz}>i'm Done</button>
+            <button
+              style={{
+                padding: "5px 10px",
+                margin: "10px 25px",
+                color: "white",
+                backgroundColor: "blue",
+                borderRadius: "5px",
+                cursor: "pointer",
+                border: "none",
+                outline: "none",
+              }}
+              onClick={jqueryCompletedQuiz}
+            >
+              i'm Done
+            </button>
           </div>
         </div>
       </div>
