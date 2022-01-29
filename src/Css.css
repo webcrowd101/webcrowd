@@ -17,8 +17,6 @@
   background: #000;
 }
 
-
-
 .cssContent {
   flex: 1;
   height: 90vh;
@@ -48,54 +46,18 @@
   color: red;
 }
 
-.colors__code,
-.background__code,
-.width__code,
-.height__code,
-.margin__code,
-.padding__code,
-.border__code,
-.comment__code,
-.textAlign__code,
-.opacity__code,
-.font__code,
-.flexbox__code,
-.animation__code {
+.css__code {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.colors__input,
-.background__input,
-.width__input,
-.height__input,
-.margin__input,
-.padding__input,
-.border__input,
-.comment__input,
-.textAlign__input,
-.opacity__input,
-.font__input,
-.flexbox__input,
-.animation__input {
+.cssInput {
   display: flex;
   width: 700px;
   height: 200px;
   outline: none;
 }
-.colors__output,
-.background__output,
-.width__output,
-.height__output,
-.margin__output,
-.padding__output,
-.border__output,
-.comment__output,
-.textAlign__output,
-.opacity__output,
-.font__output,
-.flexbox__output,
-.animation__output {
+.cssoutput {
   width: 300px;
   height: 200px;
   outline: none;
@@ -103,22 +65,10 @@
   background-color: rgb(228, 226, 226);
   overflow-y: scroll;
 }
-.colors__output::-webkit-scrollbar,
-.background__output::-webkit-scrollbar,
-.width__output::-webkit-scrollbar,
-.height__output::-webkit-scrollbar,
-.margin__output::-webkit-scrollbar,
-.padding__output::-webkit-scrollbar,
-.border__output::-webkit-scrollbar,
-.comment__output::-webkit-scrollbar,
-.textAlign__output::-webkit-scrollbar,
-.opacity__output::-webkit-scrollbar,
-.font__output::-webkit-scrollbar,
-.flexbox__output::-webkit-scrollbar,
-.animation__output::-webkit-scrollbar {
+.cssoutput::-webkit-scrollbar {
   display: none;
 }
-.html__code {
+.htmlCode {
   border-right: 1px solid black;
   margin: 0 5px;
   height: 200px;
@@ -129,7 +79,7 @@
   outline: none;
   line-height: 25px;
 }
-.css__code {
+.cssCode {
   margin: 0 5px;
 
   height: 200px;

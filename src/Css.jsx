@@ -176,7 +176,7 @@ function Css() {
     }
 
     $(".cssScore").text("your score is " + cssQuizScore);
-    $(".cssQuiz__content input").prop("disabled" , "false");
+    $(".cssQuiz__content input").prop("disabled", "false");
     return $(".Modal").show();
   };
 
@@ -316,16 +316,18 @@ function Css() {
             color is the most useful css Property in every website, So here is
             how to add color to a particular html element.
           </p>
-          <div className="colors__code">
-            <div readOnly className="colors__input" name="" id="">
-              <div className="html__code">
+          <div className="css__code">
+            {" "}
+            <div className="cssInput">
+              {" "}
+              <div className="htmlCode">
                 <h3 className="inHtmlCssFile">in html file</h3>
                 &nbsp; &lt;<span className="tag">h1</span>&gt; this is h1 &lt;
                 <span className="tag">/h1</span>&gt; <br />
                 &nbsp; &lt;<span className="tag">p</span>&gt; this is p &lt;
                 <span className="tag">/p</span>&gt; <br />
               </div>
-              <div className="css__code">
+              <div className="cssCode">
                 <h3 className="inHtmlCssFile">in css file</h3>
                 <span className="cssTag">h1</span>&#123; <br />{" "}
                 <span className="cssProperty">&nbsp;&nbsp;color</span>:{" "}
@@ -340,7 +342,8 @@ function Css() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="colors__output">
+            <div className="cssoutput">
+              {" "}
               <h1 style={{ color: "red" }}>this is h1</h1>
               <p style={{ color: "blue" }}>this is p</p>
             </div>
@@ -349,9 +352,11 @@ function Css() {
             but if you have a bunch of &lt;h2&gt; tags in your web page, So,
             this style will be executed on all of them. as you can see below.
           </p>
-          <div className="colors__code">
-            <div readOnly className="colors__input" name="" id="">
-              <div className="html__code">
+          <div className="css__code">
+            {" "}
+            <div className="cssInput">
+              {" "}
+              <div className="htmlCode">
                 <h3 className="inHtmlCssFile">in html file</h3>
                 &nbsp; &lt;<span className="tag">h1</span>&gt; this is h1 &lt;
                 <span className="tag">/h1</span>&gt; <br />
@@ -362,7 +367,7 @@ function Css() {
                 &nbsp; &lt;<span className="tag">p</span>&gt; this is p &lt;
                 <span className="tag">/p</span>&gt; <br />
               </div>
-              <div className="css__code">
+              <div className="cssCode">
                 <h3 className="inHtmlCssFile">in css file</h3>
                 <span className="cssTag">h1</span>&#123; <br />{" "}
                 <span className="cssProperty">&nbsp;&nbsp;color</span>:{" "}
@@ -377,7 +382,8 @@ function Css() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="colors__output">
+            <div className="cssoutput">
+              {" "}
               <h1 style={{ color: "red" }}>this is h1</h1>
               <h1 style={{ color: "red" }}>this is h1</h1>
               <h1 style={{ color: "red" }}>this is h1</h1>
@@ -390,9 +396,11 @@ function Css() {
             is called <b>class</b> or <b>id</b> or you can use both of them.{" "}
             let's try it out.
           </p>
-          <div className="colors__code">
-            <div readOnly className="colors__input" name="" id="">
-              <div className="html__code">
+          <div className="css__code">
+            {" "}
+            <div className="cssInput">
+              {" "}
+              <div className="htmlCode">
                 <h3 className="inHtmlCssFile">in html file</h3>
                 &nbsp; &lt;<span className="tag">h1</span>{" "}
                 <span className="classProperty">class</span>=
@@ -413,7 +421,7 @@ function Css() {
                 <span className="idValue">secondP</span>&gt; this is p &lt;
                 <span className="tag">/p</span>&gt; <br />
               </div>
-              <div className="css__code">
+              <div className="cssCode">
                 <h3 className="inHtmlCssFile">in css file</h3>
                 <span className="cssTag">.firstH1</span>&#123; <br />{" "}
                 <span className="cssProperty">&nbsp;&nbsp;color</span>:{" "}
@@ -440,7 +448,8 @@ function Css() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="colors__output">
+            <div className="cssoutput">
+              {" "}
               <h1 style={{ color: "red" }}>this is h1</h1>
               <h1 style={{ color: "green" }}>this is h1</h1>
               <h1 style={{ color: "purple" }}>this is h1</h1>
@@ -472,9 +481,11 @@ function Css() {
             we often use background property in headear to highlight it, to make
             your website's sections more clearly for users.
           </p>
-          <div className="background__code">
-            <div readOnly className="background__input" name="" id="">
-              <div className="html__code">
+          <div className="css__code">
+            {" "}
+            <div className="cssInput">
+              {" "}
+              <div className="htmlCode">
                 <h3 className="inHtmlCssFile">in html file</h3>
                 &nbsp; &lt;<span className="tag">h3</span>
                 &gt; this is h3 &lt;
@@ -487,7 +498,7 @@ function Css() {
                 &gt; this is div &lt;
                 <span className="tag">/div</span>&gt; <br />
               </div>
-              <div className="css__code">
+              <div className="cssCode">
                 <h3 className="inHtmlCssFile">in css file</h3>
                 <span className="cssTag">h3</span>&#123; <br />{" "}
                 <span className="cssProperty">&nbsp;&nbsp;color</span>:{" "}
@@ -516,7 +527,8 @@ function Css() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="background__output">
+            <div className="cssoutput">
+              {" "}
               <h3 style={{ color: "red", backgroundColor: "orange" }}>
                 this is h3
               </h3>
@@ -536,9 +548,11 @@ function Css() {
             will discuss about three ways
           </p>
 
-          <div className="width__code">
-            <div readOnly className="width__input" name="" id="">
-              <div className="html__code">
+          <div className="css__code">
+            {" "}
+            <div className="cssInput">
+              {" "}
+              <div className="htmlCode">
                 <h3 className="inHtmlCssFile">in html file</h3>
                 &nbsp; &lt;<span className="tag">h3</span>
                 &gt; this is h3 &lt;
@@ -552,7 +566,7 @@ function Css() {
                 &gt; this is div2 &lt;
                 <span className="tag">/div</span>&gt; <br />
               </div>
-              <div className="css__code">
+              <div className="cssCode">
                 <h3 className="inHtmlCssFile">in css file</h3>
                 <span className="cssTag">h3</span>&#123; <br />{" "}
                 <span className="cssProperty">&nbsp;&nbsp;color</span>:{" "}
@@ -587,7 +601,8 @@ function Css() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="width__output">
+            <div className="cssoutput">
+              {" "}
               <h3
                 style={{
                   color: "red",
@@ -625,9 +640,11 @@ function Css() {
         <div className="addPaddingToSection" id="height">
           <h3 className="sectionTittle">height</h3>
           <p className="clickHere">height is the same way as width.</p>
-          <div className="height__code">
-            <div readOnly className="height__input" name="" id="">
-              <div className="html__code">
+          <div className="css__code">
+            {" "}
+            <div className="cssInput">
+              {" "}
+              <div className="htmlCode">
                 <h3 className="inHtmlCssFile">in html file</h3>
                 &nbsp; &lt;<span className="tag">h3</span>
                 &gt; this is h3 &lt;
@@ -641,7 +658,7 @@ function Css() {
                 &gt; this is div2 &lt;
                 <span className="tag">/div</span>&gt; <br />
               </div>
-              <div className="css__code">
+              <div className="cssCode">
                 <h3 className="inHtmlCssFile">in css file</h3>
                 <span className="cssTag">h3</span>&#123; <br />{" "}
                 <span className="cssProperty">&nbsp;&nbsp;color</span>:{" "}
@@ -678,7 +695,8 @@ function Css() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="height__output">
+            <div className="cssoutput">
+              {" "}
               <h3
                 style={{
                   color: "red",
@@ -719,9 +737,11 @@ function Css() {
             we can use margin to separate between elements iwth space. <br />
             we will apply margin on the same html elements above.
           </p>
-          <div className="margin__code">
-            <div readOnly className="margin__input" name="" id="">
-              <div className="html__code">
+          <div className="css__code">
+            {" "}
+            <div className="cssInput">
+              {" "}
+              <div className="htmlCode">
                 <h3 className="inHtmlCssFile">in html file</h3>
                 &nbsp; &lt;<span className="tag">h3</span>
                 &gt; this is h3 &lt;
@@ -735,7 +755,7 @@ function Css() {
                 &gt; this is div2 &lt;
                 <span className="tag">/div</span>&gt; <br />
               </div>
-              <div className="css__code">
+              <div className="cssCode">
                 <h3 className="inHtmlCssFile">in css file</h3>
                 <span className="cssTag">h3</span>&#123; <br />{" "}
                 <span className="cssProperty">&nbsp;&nbsp;color</span>:{" "}
@@ -779,7 +799,8 @@ function Css() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="margin__output">
+            <div className="cssoutput">
+              {" "}
               <h3
                 style={{
                   color: "red",
@@ -825,7 +846,7 @@ function Css() {
             margin : 10px 20px 30px 40px; <br /> So that : <br />
           </p>
 
-          <ul style={{ marginLeft: "50px" }}>
+          <ul style={{ marginLeft: "50px" , pointerEvents: "none" }}>
             <li>10px represents margin-top</li>
             <li>20px represents margin-right</li>
             <li>30px represents margin-bottom</li>
@@ -836,7 +857,7 @@ function Css() {
             that : <br />
           </p>
 
-          <ul style={{ marginLeft: "50px" }}>
+          <ul style={{ marginLeft: "50px" , pointerEvents: "none" }}>
             <li>10px represents margin-top and margin-bottom</li>
             <li>20px represents margin-right and margin-left</li>
           </ul>
@@ -851,9 +872,11 @@ function Css() {
             padding property allows you to scale your element area, and you can
             write it the exact same as margin (padding-top,padding-right....)
           </p>
-          <div className="padding__code">
-            <div readOnly className="padding__input" name="" id="">
-              <div className="html__code">
+          <div className="css__code">
+            {" "}
+            <div className="cssInput">
+              {" "}
+              <div className="htmlCode">
                 <h3 className="inHtmlCssFile">in html file</h3>
                 &nbsp; &lt;<span className="tag">h3</span>
                 &gt; this is h3 &lt;
@@ -867,7 +890,7 @@ function Css() {
                 &gt; this is div2 &lt;
                 <span className="tag">/div</span>&gt; <br />
               </div>
-              <div className="css__code">
+              <div className="cssCode">
                 <h3 className="inHtmlCssFile">in css file</h3>
                 <span className="cssTag">h3</span>&#123; <br />{" "}
                 <span className="cssProperty">&nbsp;&nbsp;color</span>:{" "}
@@ -910,7 +933,8 @@ function Css() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="padding__output">
+            <div className="cssoutput">
+              {" "}
               <h3
                 style={{
                   color: "red",
@@ -958,9 +982,11 @@ function Css() {
             you can also specify wich side you want to add border to
             (border-top,border-left,border-bottom,border-right)
           </p>
-          <div className="border__code">
-            <div readOnly className="border__input" name="" id="">
-              <div className="html__code">
+          <div className="css__code">
+            {" "}
+            <div className="cssInput">
+              {" "}
+              <div className="htmlCode">
                 <h3 className="inHtmlCssFile">in html file</h3>
                 &nbsp; &lt;<span className="tag">h3</span>
                 &gt; this is h3 &lt;
@@ -974,7 +1000,7 @@ function Css() {
                 &gt; this is div2 &lt;
                 <span className="tag">/div</span>&gt; <br />
               </div>
-              <div className="css__code">
+              <div className="cssCode">
                 <h3 className="inHtmlCssFile">in css file</h3>
                 <span className="cssTag">h3</span>&#123; <br />{" "}
                 <span className="cssProperty">&nbsp;&nbsp;color</span>:{" "}
@@ -1008,7 +1034,8 @@ function Css() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="border__output">
+            <div className="cssoutput">
+              {" "}
               <h3
                 style={{
                   color: "red",
@@ -1053,9 +1080,11 @@ function Css() {
           <p className="clickHere">
             As i mentioned before in HTML section, comments don't get executed.
           </p>
-          <div className="comment__code">
-            <div readOnly className="comment__input" name="" id="">
-              <div className="html__code">
+          <div className="css__code">
+            {" "}
+            <div className="cssInput">
+              {" "}
+              <div className="htmlCode">
                 <h3 className="inHtmlCssFile">in html file</h3>
                 &nbsp; &lt;<span className="tag">h3</span>
                 &gt; this is h3 &lt;
@@ -1069,7 +1098,7 @@ function Css() {
                 &gt; this is div2 &lt;
                 <span className="tag">/div</span>&gt; <br />
               </div>
-              <div className="css__code">
+              <div className="cssCode">
                 <h3 className="inHtmlCssFile">in css file</h3>
                 <span className="cssTag">.secondDiv</span>&#123; <br />{" "}
                 <span className="cssProperty">&nbsp;color</span>:{" "}
@@ -1087,7 +1116,8 @@ function Css() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="comment__output">
+            <div className="cssoutput">
+              {" "}
               <h3>this is h3</h3>
               <div>this is div1</div>
               <div
@@ -1114,9 +1144,11 @@ function Css() {
             We can take controle of element's text position, through align-text
             property.
           </p>
-          <div className="textAlign__code">
-            <div readOnly className="textAlign__input" name="" id="">
-              <div className="html__code">
+          <div className="css__code">
+            {" "}
+            <div className="cssInput">
+              {" "}
+              <div className="htmlCode">
                 <h3 className="inHtmlCssFile">in html file</h3>
                 &nbsp; &lt;<span className="tag">h3</span>
                 &gt; this is h3 &lt;
@@ -1130,7 +1162,7 @@ function Css() {
                 &gt; this is div2 &lt;
                 <span className="tag">/div</span>&gt; <br />
               </div>
-              <div className="css__code">
+              <div className="cssCode">
                 <h3 className="inHtmlCssFile">in css file</h3>
                 <span className="cssTag">h3</span>&#123; <br />{" "}
                 <span className="cssProperty">&nbsp;&nbsp;color</span>:{" "}
@@ -1178,7 +1210,8 @@ function Css() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="textAlign__output">
+            <div className="cssoutput">
+              {" "}
               <h3
                 style={{
                   color: "blue",
@@ -1238,9 +1271,11 @@ function Css() {
             of html element. opacity property can take value from 0 to 1
             (includes 0.1,0.2,...,0.9)
           </p>
-          <div className="opacity__code">
-            <div readOnly className="opacity__input" name="" id="">
-              <div className="html__code">
+          <div className="css__code">
+            {" "}
+            <div className="cssInput">
+              {" "}
+              <div className="htmlCode">
                 <h3 className="inHtmlCssFile">in html file</h3>
                 &nbsp; &lt;<span className="tag">h3</span>
                 &gt; this is h3 &lt;
@@ -1254,7 +1289,7 @@ function Css() {
                 </span>
                 <span className="tag">/</span>&gt; <br />
               </div>
-              <div className="css__code">
+              <div className="cssCode">
                 <h3 className="inHtmlCssFile">in css file</h3>
                 <span className="cssTag">div</span>&#123; <br />{" "}
                 <span className="cssProperty">&nbsp;&nbsp;color</span>:{" "}
@@ -1282,7 +1317,8 @@ function Css() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="opacity__output">
+            <div className="cssoutput">
+              {" "}
               <h3>this is h3</h3>
               <div
                 style={{
@@ -1315,9 +1351,11 @@ function Css() {
             font means the element's text, we can add a bunch of effects to this
             font in addition to color.
           </p>
-          <div className="font__code">
-            <div readOnly className="font__input" name="" id="">
-              <div className="html__code">
+          <div className="css__code">
+            {" "}
+            <div className="cssInput">
+              {" "}
+              <div className="htmlCode">
                 <h3 className="inHtmlCssFile">in html file</h3>
                 &nbsp; &lt;<span className="tag">h3</span>
                 &gt; this is h3 &lt;
@@ -1330,7 +1368,7 @@ function Css() {
                 div2 &lt;
                 <span className="tag">/div</span>&gt; <br />
               </div>
-              <div className="css__code">
+              <div className="cssCode">
                 <h3 className="inHtmlCssFile">in css file</h3>
                 <span className="cssTag">h3</span>&#123; <br />{" "}
                 <span className="cssProperty">&nbsp;&nbsp;font-style</span>:{" "}
@@ -1354,7 +1392,8 @@ function Css() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="font__output">
+            <div className="cssoutput">
+              {" "}
               <h3 style={{ fontStyle: "italic" }}>this is h3</h3>
               <div
                 style={{
@@ -1386,15 +1425,17 @@ function Css() {
             we use hover, when the mouses hover over an element, So that we can
             add an effect to the element.
           </p>
-          <div className="font__code">
-            <div readOnly className="font__input" name="" id="">
-              <div className="html__code">
+          <div className="css__code">
+            {" "}
+            <div className="cssInput">
+              {" "}
+              <div className="htmlCode">
                 <h3 className="inHtmlCssFile">in html file</h3>
                 &nbsp; &lt;<span className="tag">h3</span>
                 &gt; this is h3 &lt;
                 <span className="tag">/h3</span>&gt; <br />
               </div>
-              <div className="css__code">
+              <div className="cssCode">
                 <h3 className="inHtmlCssFile">in css file</h3>
                 <span className="cssTag">h3</span>
                 &#123; <br />{" "}
@@ -1415,7 +1456,8 @@ function Css() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="font__output">
+            <div className="cssoutput">
+              {" "}
               <h3 className="h3Hover">this is h3</h3>
             </div>
           </div>
@@ -1434,15 +1476,17 @@ function Css() {
             element, we can take controle of effect duration through transition
             property.
           </p>
-          <div className="font__code">
-            <div readOnly className="font__input" name="" id="">
-              <div className="html__code">
+          <div className="css__code">
+            {" "}
+            <div className="cssInput">
+              {" "}
+              <div className="htmlCode">
                 <h3 className="inHtmlCssFile">in html file</h3>
                 &nbsp; &lt;<span className="tag">h3</span>
                 &gt; this is h3 &lt;
                 <span className="tag">/h3</span>&gt; <br />
               </div>
-              <div className="css__code">
+              <div className="cssCode">
                 <h3 className="inHtmlCssFile">in css file</h3>
                 <span className="cssTag">h3</span>
                 &#123; <br />{" "}
@@ -1467,7 +1511,8 @@ function Css() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="font__output">
+            <div className="cssoutput">
+              {" "}
               <h3 className="h3Transition">this is h3</h3>
             </div>
           </div>
@@ -1503,9 +1548,11 @@ function Css() {
             following.
           </p>
           <h4 className="flexboxProperties">display property :</h4>
-          <div className="flexbox__code">
-            <div readOnly className="flexbox__input" name="" id="">
-              <div className="html__code">
+          <div className="css__code">
+            {" "}
+            <div className="cssInput">
+              {" "}
+              <div className="htmlCode">
                 <h3 className="inHtmlCssFile">in html file</h3>
                 &nbsp; &lt;<span className="tag">div</span>
                 <span className="classProperty"> class=</span>
@@ -1525,7 +1572,7 @@ function Css() {
                 <br />
                 &lt;<span className="tag">/div</span>&gt;
               </div>
-              <div className="css__code">
+              <div className="cssCode">
                 <h3 className="inHtmlCssFile">in css file</h3>
                 <span className="cssTag">.container</span>&#123; <br />{" "}
                 <span className="cssProperty">
@@ -1555,7 +1602,8 @@ function Css() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="flexbox__output">
+            <div className="cssoutput">
+              {" "}
               <div style={{ display: "flex", backgroundColor: "gray" }}>
                 <h3 style={{ fontStyle: "italic" }}>this is h3</h3>
                 <div
@@ -1576,9 +1624,11 @@ function Css() {
             concatenates all the elements inside this container in one line.{" "}
           </p>
           <h4 className="flexboxProperties">justify-content property :</h4>
-          <div className="flexbox__code">
-            <div readOnly className="flexbox__input" name="" id="">
-              <div className="html__code">
+          <div className="css__code">
+            {" "}
+            <div className="cssInput">
+              {" "}
+              <div className="htmlCode">
                 <h3 className="inHtmlCssFile">in html file</h3>
                 &nbsp; &lt;<span className="tag">div</span>
                 <span className="classProperty"> class=</span>
@@ -1598,7 +1648,7 @@ function Css() {
                 <br />
                 &lt;<span className="tag">/div</span>&gt;
               </div>
-              <div className="css__code">
+              <div className="cssCode">
                 <h3 className="inHtmlCssFile">in css file</h3>
                 <span className="cssTag">.container</span>&#123; <br />{" "}
                 <span className="cssProperty">
@@ -1630,7 +1680,8 @@ function Css() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="flexbox__output">
+            <div className="cssoutput">
+              {" "}
               <div
                 style={{
                   display: "flex",
@@ -1657,9 +1708,11 @@ function Css() {
             values. try it out to see the difference.{" "}
           </p>
           <h4 className="flexboxProperties">align-items property :</h4>
-          <div className="flexbox__code">
-            <div readOnly className="flexbox__input" name="" id="">
-              <div className="html__code">
+          <div className="css__code">
+            {" "}
+            <div className="cssInput">
+              {" "}
+              <div className="htmlCode">
                 <h3 className="inHtmlCssFile">in html file</h3>
                 &nbsp; &lt;<span className="tag">div</span>
                 <span className="classProperty"> class=</span>
@@ -1679,7 +1732,7 @@ function Css() {
                 <br />
                 &lt;<span className="tag">/div</span>&gt;
               </div>
-              <div className="css__code">
+              <div className="cssCode">
                 <h3 className="inHtmlCssFile">in css file</h3>
                 <span className="cssTag">.container</span>&#123; <br />{" "}
                 <span className="cssProperty">
@@ -1720,7 +1773,8 @@ function Css() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="flexbox__output">
+            <div className="cssoutput">
+              {" "}
               <div
                 style={{
                   display: "flex",
@@ -1752,9 +1806,11 @@ function Css() {
             value of align-items, then you will figure out the difference.
           </p>
           <h4 className="flexboxProperties">flex property :</h4>
-          <div className="flexbox__code">
-            <div readOnly className="flexbox__input" name="" id="">
-              <div className="html__code">
+          <div className="css__code">
+            {" "}
+            <div className="cssInput">
+              {" "}
+              <div className="htmlCode">
                 <h3 className="inHtmlCssFile">in html file</h3>
                 &nbsp; &lt;<span className="tag">div</span>
                 <span className="classProperty"> class=</span>
@@ -1774,7 +1830,7 @@ function Css() {
                 <br />
                 &lt;<span className="tag">/div</span>&gt;
               </div>
-              <div className="css__code">
+              <div className="cssCode">
                 <h3 className="inHtmlCssFile">in css file</h3>
                 <span className="cssTag">.container</span>&#123; <br />{" "}
                 <span className="cssProperty">
@@ -1796,7 +1852,8 @@ function Css() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="flexbox__output">
+            <div className="cssoutput">
+              {" "}
               <div
                 style={{
                   display: "flex",
@@ -1825,7 +1882,7 @@ function Css() {
             Grid is very similar to flexbox, but it's more confused that's why
             we prefer to explain that in a video, to make things much clear for
             you. <br />
-            So, click <a href="">here</a> and good luck.
+            So, <a href="">click here</a> and good luck.
           </p>
         </div>
         <div className="addPaddingToSection" id="animation">
@@ -1837,9 +1894,11 @@ function Css() {
             <b>keyframes</b> <br /> don't worry, everything will be easy for you
             in this example.
           </p>
-          <div className="animation__code">
-            <div readOnly className="animation__input" name="" id="">
-              <div className="html__code">
+          <div className="css__code">
+            {" "}
+            <div className="cssInput">
+              {" "}
+              <div className="htmlCode">
                 <h3 className="inHtmlCssFile">in html file</h3>
                 &nbsp; &lt;<span className="tag">div</span>
                 <span className="classProperty"> class=</span>
@@ -1852,7 +1911,7 @@ function Css() {
                 &lt;
                 <span className="tag">/div</span>&gt; <br />
               </div>
-              <div className="css__code">
+              <div className="cssCode">
                 <h3 className="inHtmlCssFile">in css file</h3>
                 <span className="cssTag">.container</span>
                 &#123; <br />{" "}
@@ -1907,7 +1966,8 @@ function Css() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="animation__output">
+            <div className="cssoutput">
+              {" "}
               <div
                 style={{
                   backgroundColor: "red",
@@ -1945,9 +2005,9 @@ function Css() {
               <span style={{ color: "red" }}>4s</span> represents the animation
               duration <br />
               <span style={{ color: "red" }}>infinite</span> makes our animation
-              unstoppable <br />
-            </b>
-            <br />
+              unstoppable 
+            </b><br />
+            
             <a href="">click here</a> for more exercises and examples.
           </p>
         </div>
@@ -1960,7 +2020,7 @@ function Css() {
             google adsense, your website must be responsive. this is where{" "}
             <b>Media Query</b> comes in. So, we can't explain that here, you may
             get confused here. <br />
-            this is why a made a video explains that. click <a href="">here</a>.
+            this is why a made a video explains that. <a href="">click here</a>.
           </p>
         </div>
 

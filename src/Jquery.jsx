@@ -18,53 +18,53 @@ function Jquery() {
   //show and hide
   const ShowHide = () => {
     if (!show) {
-      document.querySelector(".jquerySidebar").style.width = "200px";
-      document.querySelector(".jquerySidebar ul").style.display = "block";
-      document.querySelector(".jqueryContent").style.opacity = "0.5";
+      document.querySelector(".Sidebar").style.width = "200px";
+      document.querySelector(".Sidebar ul").style.display = "block";
+      document.querySelector(".Content").style.opacity = "0.5";
       hide(true);
     } else if (show) {
-      document.querySelector(".jquerySidebar").style.width = "60px";
-      document.querySelector(".jquerySidebar ul").style.display = "none";
-      document.querySelector(".jqueryContent").style.opacity = "1";
+      document.querySelector(".Sidebar").style.width = "60px";
+      document.querySelector(".Sidebar ul").style.display = "none";
+      document.querySelector(".Content").style.opacity = "1";
       hide(false);
     } else {
     }
   };
 
-  // window.addEventListener("resize", function () {
-  //   if (window.innerWidth > 871) {
-  //     if (history.push(localStorage.getItem("current")) === "JQUERY") {
-  //       document.querySelector(".jquerySidebar").style.width = "200px";
-  //       document.querySelector(".jquerySidebar ul").style.display = "block";
-  //     }
-  //     if (show) {
-  //       try {
-  //         document.querySelector(".jquerySidebar").style.width = "200px";
-  //         document.querySelector(".jquerySidebar ul").style.display = "block";
-  //       } catch (error) {}
-  //     }
-  //     if (show && window.innerWidth >= 871) {
-  //       try {
-  //         document.querySelector(".jqueryContent").style.opacity = "1";
-  //         hide(false);
-  //       } catch (error) {}
-  //     }
-  //   } else if (window.innerWidth <= 871) {
-  //     if (history.push(localStorage.getItem("current")) === "jquery5") {
-  //       document.querySelector(".jquerySidebar").style.width = "60px";
-  //       document.querySelector(".jquerySidebar ul").style.display = "none";
-  //     }
-  //     if (show && window.innerWidth <= 871) {
-  //       try {
-  //         document.querySelector(".jqueryContent").style.opacity = "1";
-  //         document.querySelector(".jquerySidebar").style.width = "60px";
-  //         document.querySelector(".jquerySidebar ul").style.display = "none";
-  //         hide(false);
-  //       } catch (error) {}
-  //     }
-  //   } else {
-  //   }
-  // });
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 871) {
+      if (history.push(localStorage.getItem("current")) === "JQUERY") {
+        document.querySelector(".Sidebar").style.width = "200px";
+        document.querySelector(".Sidebar ul").style.display = "block";
+      }
+      if (show) {
+        try {
+          document.querySelector(".Sidebar").style.width = "200px";
+          document.querySelector(".Sidebar ul").style.display = "block";
+        } catch (error) {}
+      }
+      if (show && window.innerWidth >= 871) {
+        try {
+          document.querySelector(".Content").style.opacity = "1";
+          hide(false);
+        } catch (error) {}
+      }
+    } else if (window.innerWidth <= 871) {
+      if (history.push(localStorage.getItem("current")) === "jquery5") {
+        document.querySelector(".Sidebar").style.width = "60px";
+        document.querySelector(".Sidebar ul").style.display = "none";
+      }
+      if (show && window.innerWidth <= 871) {
+        try {
+          document.querySelector(".Content").style.opacity = "1";
+          document.querySelector(".Sidebar").style.width = "60px";
+          document.querySelector(".Sidebar ul").style.display = "none";
+          hide(false);
+        } catch (error) {}
+      }
+    } else {
+    }
+  });
   let jqueryQuizScore = 0;
   const jqueryCompletedQuiz = () => {
     if (document.querySelector(".jqueryQuestionOne").checked) {
@@ -186,16 +186,16 @@ function Jquery() {
     }
 
     $(".jqueryScore").text("your score is " + jqueryQuizScore);
-    $(".jqueryContent *").prop("disabled", true);
-    return $(".jqueryModal").show();
+    $(".jqueryQuiz__content input").prop("disabled", true);
+    return $(".Modal").show();
   };
 
   const refleshCurrentPage = () => {
     $(".fifth").addClass("active");
     if (show && window.innerWidth < 871) {
-      document.querySelector(".jquerySidebar").style.width = "60px";
-      document.querySelector(".jquerySidebar ul").style.display = "none";
-      document.querySelector(".jqueryContent").style.opacity = "1";
+      document.querySelector(".Sidebar").style.width = "60px";
+      document.querySelector(".Sidebar ul").style.display = "none";
+      document.querySelector(".Content").style.opacity = "1";
       hide(false);
     }
   };
@@ -218,7 +218,7 @@ function Jquery() {
   //jsQuiz
 
   const jqueryHideModal = () => {
-    $(".jqueryModal").hide();
+    $(".Modal").hide();
     jqueryQuizScore = 0;
   };
 
@@ -342,12 +342,12 @@ function Jquery() {
 
   return (
     <div className="jquery">
-      <div className="jqueryModal">
+      <div className="Modal">
         <CloseIcon className="closeModal" onClick={jqueryHideModal} />
         <p className="jqueryScore"></p>
       </div>
-      <div className="jquerySidebar">
-        <DehazeIcon onClick={ShowHide} className="showSideBar" />
+      <div className="Sidebar">
+        <DehazeIcon onClick={ShowHide} className="OpenSideBar" />
         <ul>
           <a onClick={refleshCurrentPage} href="#introduction">
             <li>Introduction</li>
@@ -403,10 +403,10 @@ function Jquery() {
           </a>
         </ul>
       </div>
-      <div className="jqueryContent">
-        <div id="introduction">
-          <h3>introdution</h3>
-          <p>
+      <div className="Content">
+        <div id="introduction" className="addPaddingToSection">
+          <h3 className="sectionTittle">introdution</h3>
+          <p className="clickHere">
             Jquery is a JavaScript library that allows us to{" "}
             <b>write less and do more</b>. all of things you do with jquery, it
             can be done also using JavaScript, but Jquery seems shorter and more
@@ -414,9 +414,10 @@ function Jquery() {
             this example shows you how to change element's color using
             JavaScript and Jquery.
           </p>
-          <p>
-            <b>important!</b> : JQUERY code won't get applied unless you add
-            this following script inside <b>head</b> tag in html file : <br />
+          <p className="clickHere">
+            <b className="importants">important!</b> : JQUERY code won't get
+            applied unless you add this following script inside <b>head</b> tag
+            in html file : <br />
             the script :{" "}
             <b style={{ color: "purple" }}>
               &lt;script
@@ -425,7 +426,7 @@ function Jquery() {
             <br />
             to watch a video explains that <a href="">click here</a>.
           </p>
-          <p>
+          <p className="clickHere">
             {" "}
             let'sassume we have &lt;<span className="variableName">h2</span>&gt;
             web crowd &lt;<span className="variableName">/h2</span>&gt; in html.
@@ -433,39 +434,21 @@ function Jquery() {
           </p>
 
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JQUERY
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JAVASCRIPT
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">JQUERY</h4>
+            <h4 className="inhtmlcssjsbroSections">JAVASCRIPT</h4>
           </div>
-          <div className="jquery__code">
-            <div className="jquery__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "h2" </span>).
               <span className="declarationKey">css</span>(
               <span className="variableName"> "color" </span> ,{" "}
               <span className="variableName"> "red" </span> ) ;
             </div>
-            <div className="jquery__output">
+            <div className="outputSection">
               <span className="declarationKey">document</span>.
               <span style={{ color: "purple" }}>querySelector</span>(
               <span className="variableName"> "h2" </span>).
@@ -473,7 +456,7 @@ function Jquery() {
               <span className="variableName"> "red" </span> ;{" "}
             </div>
           </div>
-          <p>
+          <p className="clickHere">
             the Jquery code does the same as JavaScript, but Jquery sounds
             shorter. but this doesn't mean that we need to give up on
             JavaScript, because it can do many thing that Jquery can't. <br />
@@ -481,46 +464,26 @@ function Jquery() {
             in Jqeury which help us write less and do more.
           </p>
         </div>
-        <div id="htmlFunction">
-          <h3>html()</h3>
-
-          <p>
+        <div id="htmlFunction" className="addPaddingToSection">
+          <h3 className="sectionTittle">html()</h3>
+          <p className="clickHere">
             this fuction does the same as <b>textContent</b> in JavaScript, it
             changes the element text.
           </p>
-          <b>Example :</b>
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              HTML FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              CSS FILE
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__html">
+          <div className="codeSection">
+            <div className="inputSection">
               &lt;<span className="tag">h2</span>&gt;
               <span> web crowd </span>
               &lt;<span className="tag">h2</span>&gt;
             </div>
-            <div className="javascript__css">
+            <div className="inputSection">
               <span className="cssTag">h2 </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
@@ -530,79 +493,43 @@ function Jquery() {
             </div>
           </div>
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JQUERY
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              BROWSER
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">JQUERY</h4>
+            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
-          <div className="jquery__code">
-            <div className="jquery__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "h2" </span>).
               <span className="declarationKey">html</span>(
               <span className="variableName"> "this is new h2 text" </span> ) ;
             </div>
-            <div className="jquery__output">
+            <div className="outputSection">
               <h2>this is new h2 text</h2>
             </div>
           </div>
-          <p>
+          <p className="clickHere">
             for more examples and exercises <a href="">click here</a>.
           </p>
         </div>
-        <div id="propFunction">
-          <h3>prop()</h3>
+        <div id="propFunction" className="addPaddingToSection">
+          <h3 className="sectionTittle">prop()</h3>
 
-          <p>
+          <p className="clickHere">
             this fuction allows you to change the element's properties value.
           </p>
-          <b>Example :</b>
+
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              HTML FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              CSS FILE
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__html">
+          <div className="codeSection">
+            <div className="inputSection">
               &lt;<span className="tag">input</span>
               {"   "}
               <span className="cssProperty">type</span> ={" "}
@@ -611,7 +538,7 @@ function Jquery() {
               <span className="cssValue">"enter your name" </span>
               <span className="tag"> /</span>&gt;
             </div>
-            <div className="javascript__css">
+            <div className="inputSection">
               <span className="cssTag">input </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; border</span> :{" "}
@@ -625,32 +552,14 @@ function Jquery() {
             </div>
           </div>
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JQUERY
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              BROWSER
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">JQUERY</h4>
+            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
-          <div className="jquery__code">
-            <div className="jquery__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "h2" </span>).
               <span className="declarationKey">prop</span>(
@@ -661,7 +570,7 @@ function Jquery() {
               </span>{" "}
               ) ;
             </div>
-            <div className="jquery__output">
+            <div className="outputSection">
               <input
                 style={{
                   border: "1px solid black",
@@ -673,45 +582,27 @@ function Jquery() {
               />
             </div>
           </div>
-          <p>
+          <p className="clickHere">
             for more examples and exercises <a href="">click here</a>.
           </p>
         </div>
-        <div id="clickFunction">
-          <h3>click()</h3>
+        <div id="clickFunction" className="addPaddingToSection">
+          <h3 className="sectionTittle">click()</h3>
 
-          <p>
+          <p className="clickHere">
             this fuction accepts another function (callback function) that runs
             once we click on element that we assign <b>click()</b> to.
           </p>
-          <b>Example :</b>
+
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              HTML FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              CSS FILE
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__html">
+          <div className="codeSection">
+            <div className="inputSection">
               &lt;<span className="tag">h3</span>&gt;
               <span> web crowd </span>
               &lt;<span className="tag">/h3</span>&gt; <br />
@@ -720,7 +611,7 @@ function Jquery() {
               <span> click me </span>
               &lt;<span className="tag">/button</span>&gt;
             </div>
-            <div className="javascript__css">
+            <div className="inputSection">
               <span className="cssTag">h3 </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
@@ -730,32 +621,14 @@ function Jquery() {
             </div>
           </div>
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JQUERY
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              BROWSER
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">JQUERY</h4>
+            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
-          <div className="jquery__code">
-            <div className="jquery__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
               <span className="declarationKey">click</span>(
@@ -767,52 +640,34 @@ function Jquery() {
               <br />
               &#125; )
             </div>
-            <div className="jquery__output">
+            <div className="outputSection">
               <h3 className="h3Element" style={{ color: "blue" }}>
                 web crowd
               </h3>
               <button onClick={changeH3Color}>click me</button>
             </div>
           </div>
-          <p>
+          <p className="clickHere">
             for more examples and exercises <a href="">click here</a>.
           </p>
         </div>
-        <div id="dblclickFunction">
-          <h3>dblclick()</h3>
+        <div id="dblclickFunction" className="addPaddingToSection">
+          <h3 className="sectionTittle">dblclick()</h3>
 
-          <p>
+          <p className="clickHere">
             this fuction accepts another function (callback function) that runs
             once we click on element that we assign <b>click()</b> to.
           </p>
-          <b>Example :</b>
+
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              HTML FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              CSS FILE
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__html">
+          <div className="codeSection">
+            <div className="inputSection">
               &lt;<span className="tag">p</span>&gt;
               <span> web crowd </span>
               &lt;<span className="tag">/p</span>&gt; <br />
@@ -821,7 +676,7 @@ function Jquery() {
               <span> click me </span>
               &lt;<span className="tag">/button</span>&gt;
             </div>
-            <div className="javascript__css">
+            <div className="inputSection">
               <span className="cssTag">p </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
@@ -831,32 +686,14 @@ function Jquery() {
             </div>
           </div>
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JQUERY
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              BROWSER
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">JQUERY</h4>
+            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
-          <div className="jquery__code">
-            <div className="jquery__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
               <span className="declarationKey">dblclick</span>(
@@ -868,7 +705,7 @@ function Jquery() {
               <br />
               &#125; )
             </div>
-            <div className="jquery__output">
+            <div className="outputSection">
               <p className="para" style={{ color: "purple" }}>
                 web crowd
               </p>
@@ -877,45 +714,27 @@ function Jquery() {
               </button>
             </div>
           </div>
-          <p>
+          <p className="clickHere">
             for more examples and exercises <a href="">click here</a>.
           </p>
         </div>
-        <div id="hideFunction">
-          <h3>hide()</h3>
+        <div id="hideFunction" className="addPaddingToSection">
+          <h3 className="sectionTittle">hide()</h3>
 
-          <p>
+          <p className="clickHere">
             this fuction does the same as <b>display = "none"</b> in JavaScript.
             it disappears the element.
           </p>
-          <b>Example :</b>
+
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              HTML FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              CSS FILE
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__html">
+          <div className="codeSection">
+            <div className="inputSection">
               &lt;<span className="tag">button</span>&gt;
               <span> click me </span>
               &lt;<span className="tag">/button</span>&gt;
@@ -924,7 +743,7 @@ function Jquery() {
               <span> web crowd </span>
               &lt;<span className="tag">/p</span>&gt; <br />
             </div>
-            <div className="javascript__css">
+            <div className="inputSection">
               <span className="cssTag">p </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
@@ -934,32 +753,14 @@ function Jquery() {
             </div>
           </div>
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JQUERY
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              BROWSER
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">JQUERY</h4>
+            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
-          <div className="jquery__code">
-            <div className="jquery__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
               <span className="declarationKey">click</span>(
@@ -968,52 +769,34 @@ function Jquery() {
               <span className="variableName"> "p" </span>).
               <span className="declarationKey">hide</span>() ;<br /> &#125; )
             </div>
-            <div className="jquery__output">
+            <div className="outputSection">
               <button onClick={hideElement}>click me</button>
               <p className="paragraph" style={{ color: "purple" }}>
                 web crowd
               </p>
             </div>
           </div>
-          <p>
+          <p className="clickHere">
             for more examples and exercises <a href="">click here</a>.
           </p>
         </div>
-        <div id="showFunction">
-          <h3>show()</h3>
+        <div id="showFunction" className="addPaddingToSection">
+          <h3 className="sectionTittle">show()</h3>
 
-          <p>
+          <p className="clickHere">
             this fuction is the opposite of hide(), it appears the element, but
             the element must be hidden (display: none in css).
           </p>
-          <b>Example :</b>
+
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              HTML FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              CSS FILE
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__html">
+          <div className="codeSection">
+            <div className="inputSection">
               &lt;<span className="tag">button</span>&gt;
               <span> click me </span>
               &lt;<span className="tag">/button</span>&gt;
@@ -1022,7 +805,7 @@ function Jquery() {
               <span> web crowd </span>
               &lt;<span className="tag">/div</span>&gt; <br />
             </div>
-            <div className="javascript__css">
+            <div className="inputSection">
               <span className="cssTag">div </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
@@ -1034,32 +817,14 @@ function Jquery() {
             </div>
           </div>
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JQUERY
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              BROWSER
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">JQUERY</h4>
+            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
-          <div className="jquery__code">
-            <div className="jquery__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
               <span className="declarationKey">click</span>(
@@ -1068,7 +833,7 @@ function Jquery() {
               <span className="variableName"> "div" </span>).
               <span className="declarationKey">show</span>() ; <br /> &#125; )
             </div>
-            <div className="jquery__output">
+            <div className="outputSection">
               <button onClick={showElement}>click me</button>
               <div
                 className="hiddenPara"
@@ -1078,45 +843,27 @@ function Jquery() {
               </div>
             </div>
           </div>
-          <p>
+          <p className="clickHere">
             for more examples and exercises <a href="">click here</a>.
           </p>
         </div>
-        <div id="toggleFunction">
-          <h3>toggle()</h3>
+        <div id="toggleFunction" className="addPaddingToSection">
+          <h3 className="sectionTittle">toggle()</h3>
 
-          <p>
+          <p className="clickHere">
             this fuction combines between show() and hide() functions. it
             switches between them at every click on button.
           </p>
-          <b>Example :</b>
+
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              HTML FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              CSS FILE
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__html">
+          <div className="codeSection">
+            <div className="inputSection">
               &lt;<span className="tag">button</span>&gt;
               <span> click me </span>
               &lt;<span className="tag">/button</span>&gt;
@@ -1125,7 +872,7 @@ function Jquery() {
               <span> web crowd </span>
               &lt;<span className="tag">/div</span>&gt; <br />
             </div>
-            <div className="javascript__css">
+            <div className="inputSection">
               <span className="cssTag">div </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
@@ -1135,32 +882,14 @@ function Jquery() {
             </div>
           </div>
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JQUERY
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              BROWSER
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">JQUERY</h4>
+            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
-          <div className="jquery__code">
-            <div className="jquery__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
               <span className="declarationKey">click</span>(
@@ -1169,53 +898,35 @@ function Jquery() {
               <span className="variableName"> "div" </span>).
               <span className="declarationKey">toggle</span>() ; <br /> &#125; )
             </div>
-            <div className="jquery__output">
+            <div className="outputSection">
               <button onClick={toggleElement}>click me</button>
               <div className="toggledDiv" style={{ color: "purple" }}>
                 web crowd
               </div>
             </div>
           </div>
-          <p>
+          <p className="clickHere">
             for more examples and exercises <a href="">click here</a>.
           </p>
         </div>
-        <div id="slideUpFunction">
-          <h3>slideUp()</h3>
+        <div id="slideUpFunction" className="addPaddingToSection">
+          <h3 className="sectionTittle">slideUp()</h3>
 
-          <p>
+          <p className="clickHere">
             this fuction disappears a particular element smoothly from the
             bottom to the top. you can also specify the sliding duration =&gt;
             slideUp(speed in milliseconds).
           </p>
-          <b>Example :</b>
+
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              HTML FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              CSS FILE
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__html">
+          <div className="codeSection">
+            <div className="inputSection">
               &lt;<span className="tag">h1</span>&gt;
               <span> web crowd </span>
               &lt;<span className="tag">/h1</span>&gt;
@@ -1225,7 +936,7 @@ function Jquery() {
               &lt;<span className="tag">/button</span>&gt;
               <br />
             </div>
-            <div className="javascript__css">
+            <div className="inputSection">
               <span className="cssTag">h1 </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
@@ -1239,32 +950,14 @@ function Jquery() {
             </div>
           </div>
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JQUERY
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              BROWSER
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">JQUERY</h4>
+            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
-          <div className="jquery__code">
-            <div className="jquery__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
               <span className="declarationKey">click</span>(
@@ -1274,7 +967,7 @@ function Jquery() {
               <span className="declarationKey">slideUp</span>(2000) ; <br />{" "}
               &#125; )
             </div>
-            <div className="jquery__output">
+            <div className="outputSection">
               <h1
                 className="slideUpDiv"
                 style={{ color: "purple", backgroundColor: "gray" }}
@@ -1284,50 +977,32 @@ function Jquery() {
               <button onClick={slideUpElement}>click me</button>
             </div>
           </div>
-          <p>
+          <p className="clickHere">
             2000 representes the amount of milliseconds that sliding takes to
             finish.
           </p>
-          <p>
+          <p className="clickHere">
             for more examples and exercises <a href="">click here</a>.
           </p>
         </div>
 
-        <div id="slideDownFunction">
-          <h3>slideDown()</h3>
+        <div id="slideDownFunction" className="addPaddingToSection">
+          <h3 className="sectionTittle">slideDown()</h3>
 
-          <p>
+          <p className="clickHere">
             this fuction is the opposite of slideUp(). but you should first
             apply <b>slideUp()</b> on the element.
           </p>
-          <b>Example :</b>
+
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              HTML FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              CSS FILE
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__html">
+          <div className="codeSection">
+            <div className="inputSection">
               &lt;<span className="tag">h1</span>&gt;
               <span> web crowd </span>
               &lt;<span className="tag">/h1</span>&gt;
@@ -1343,7 +1018,7 @@ function Jquery() {
               &lt;<span className="tag">/button</span>&gt;
               <br />
             </div>
-            <div className="javascript__css">
+            <div className="inputSection">
               <span className="cssTag">h1 </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
@@ -1364,32 +1039,14 @@ function Jquery() {
             </div>
           </div>
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JQUERY
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              BROWSER
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">JQUERY</h4>
+            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
-          <div className="jquery__code">
-            <div className="jquery__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
               <span className="declarationKey">click</span>(
@@ -1408,7 +1065,7 @@ function Jquery() {
               <span className="declarationKey">slideDown</span>(2000) ; <br />{" "}
               &#125; )
             </div>
-            <div className="jquery__output">
+            <div className="outputSection">
               <h1
                 className="slidedH1"
                 style={{
@@ -1427,46 +1084,30 @@ function Jquery() {
               </button>
             </div>
           </div>
-          <p>
+          <p className="clickHere">
             As you can see, when we click on slideUp button it takes 3000ms (3s)
             to finish the sliding. while slideDown takes 2000ms.
           </p>
-          <p>
+          <p className="clickHere">
             for more examples and exercises <a href="">click here</a>.
           </p>
         </div>
-        <div id="slideToggleFunction">
-          <h3>slideToggle()</h3>
+        <div id="slideToggleFunction" className="addPaddingToSection">
+          <h3 className="sectionTittle">slideToggle()</h3>
 
-          <p>this fuction combines between slideUp and slideDown functions.</p>
-          <b>Example :</b>
+          <p className="clickHere">
+            this fuction combines between slideUp and slideDown functions.
+          </p>
+
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              HTML FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              CSS FILE
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__html">
+          <div className="codeSection">
+            <div className="inputSection">
               &lt;<span className="tag">h1</span>&gt;
               <span> web crowd </span>
               &lt;<span className="tag">/h1</span>&gt;
@@ -1476,7 +1117,7 @@ function Jquery() {
               &lt;<span className="tag">/button</span>&gt;
               <br />
             </div>
-            <div className="javascript__css">
+            <div className="inputSection">
               <span className="cssTag">h1 </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
@@ -1490,32 +1131,14 @@ function Jquery() {
             </div>
           </div>
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JQUERY
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              BROWSER
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">JQUERY</h4>
+            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
-          <div className="jquery__code">
-            <div className="jquery__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
               <span className="declarationKey">click</span>(
@@ -1525,7 +1148,7 @@ function Jquery() {
               <span className="declarationKey">slideToggle</span>(2000) ; <br />{" "}
               &#125; )
             </div>
-            <div className="jquery__output">
+            <div className="outputSection">
               <h1
                 className="slideToggleH1"
                 style={{ color: "purple", backgroundColor: "gray" }}
@@ -1535,45 +1158,27 @@ function Jquery() {
               <button onClick={slideToggleElement}>click me</button>
             </div>
           </div>
-          <p>
+          <p className="clickHere">
             for more examples and exercises <a href="">click here</a>.
           </p>
         </div>
-        <div id="fadeOutFunction">
-          <h3>fadeOut()</h3>
+        <div id="fadeOutFunction" className="addPaddingToSection">
+          <h3 className="sectionTittle">fadeOut()</h3>
 
-          <p>
+          <p className="clickHere">
             this fuction makes the element fades out (disappears). and it also
             accepts the fading duration (time in miliseconds).
           </p>
-          <b>Example :</b>
+
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              HTML FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              CSS FILE
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__html">
+          <div className="codeSection">
+            <div className="inputSection">
               &lt;<span className="tag">h1</span>&gt;
               <span> web crowd </span>
               &lt;<span className="tag">/h1</span>&gt;
@@ -1583,7 +1188,7 @@ function Jquery() {
               &lt;<span className="tag">/button</span>&gt;
               <br />
             </div>
-            <div className="javascript__css">
+            <div className="inputSection">
               <span className="cssTag">h1 </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
@@ -1597,32 +1202,14 @@ function Jquery() {
             </div>
           </div>
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JQUERY
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              BROWSER
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">JQUERY</h4>
+            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
-          <div className="jquery__code">
-            <div className="jquery__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
               <span className="declarationKey">click</span>(
@@ -1632,7 +1219,7 @@ function Jquery() {
               <span className="declarationKey">fadeOut</span>(2000) ; <br />{" "}
               &#125; )
             </div>
-            <div className="jquery__output">
+            <div className="outputSection">
               <h1
                 className="fadeOutH1"
                 style={{ color: "purple", backgroundColor: "gray" }}
@@ -1642,45 +1229,27 @@ function Jquery() {
               <button onClick={fadeOutElement}>click me</button>
             </div>
           </div>
-          <p>
+          <p className="clickHere">
             for more examples and exercises <a href="">click here</a>.
           </p>
         </div>
-        <div id="fadeInFunction">
-          <h3>fadeIn()</h3>
+        <div id="fadeInFunction" className="addPaddingToSection">
+          <h3 className="sectionTittle">fadeIn()</h3>
 
-          <p>
+          <p className="clickHere">
             this fuction is the opposite of fadeOut(). but you should first
             apply <b>fadeOut()</b> on the element.
           </p>
-          <b>Example :</b>
+
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              HTML FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              CSS FILE
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__html">
+          <div className="codeSection">
+            <div className="inputSection">
               &lt;<span className="tag">h1</span>&gt;
               <span> web crowd </span>
               &lt;<span className="tag">/h1</span>&gt;
@@ -1696,7 +1265,7 @@ function Jquery() {
               &lt;<span className="tag">/button</span>&gt;
               <br />
             </div>
-            <div className="javascript__css">
+            <div className="inputSection">
               <span className="cssTag">h1 </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
@@ -1717,32 +1286,14 @@ function Jquery() {
             </div>
           </div>
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JQUERY
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              BROWSER
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">JQUERY</h4>
+            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
-          <div className="jquery__code">
-            <div className="jquery__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
               <span className="declarationKey">click</span>(
@@ -1761,7 +1312,7 @@ function Jquery() {
               <span className="declarationKey">fadeIn</span>(2000) ; <br />{" "}
               &#125; )
             </div>
-            <div className="jquery__output">
+            <div className="outputSection">
               <h1
                 className="fadedH1"
                 style={{
@@ -1781,42 +1332,26 @@ function Jquery() {
             </div>
           </div>
 
-          <p>
+          <p className="clickHere">
             for more examples and exercises <a href="">click here</a>.
           </p>
         </div>
-        <div id="fadeToggleFunction">
-          <h3>fadeToggle()</h3>
+        <div id="fadeToggleFunction" className="addPaddingToSection">
+          <h3 className="sectionTittle">fadeToggle()</h3>
 
-          <p>this fuction combines between fadeIn and fadeOut functions.</p>
-          <b>Example :</b>
+          <p className="clickHere">
+            this fuction combines between fadeIn and fadeOut functions.
+          </p>
+
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              HTML FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              CSS FILE
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__html">
+          <div className="codeSection">
+            <div className="inputSection">
               &lt;<span className="tag">h1</span>&gt;
               <span> web crowd </span>
               &lt;<span className="tag">/h1</span>&gt;
@@ -1826,7 +1361,7 @@ function Jquery() {
               &lt;<span className="tag">/button</span>&gt;
               <br />
             </div>
-            <div className="javascript__css">
+            <div className="inputSection">
               <span className="cssTag">h1 </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
@@ -1842,32 +1377,14 @@ function Jquery() {
             </div>
           </div>
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JQUERY
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              BROWSER
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">JQUERY</h4>
+            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
-          <div className="jquery__code">
-            <div className="jquery__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
               <span className="declarationKey">click</span>(
@@ -1877,7 +1394,7 @@ function Jquery() {
               <span className="declarationKey">fadeToggle</span>(2000) ; <br />{" "}
               &#125; )
             </div>
-            <div className="jquery__output">
+            <div className="outputSection">
               <h1
                 className="fadeToggleH1"
                 style={{
@@ -1891,44 +1408,26 @@ function Jquery() {
               <button onClick={fadeToggleElement}>click me</button>
             </div>
           </div>
-          <p>
+          <p className="clickHere">
             for more examples and exercises <a href="">click here</a>.
           </p>
         </div>
-        <div id="animateFunction">
-          <h3>animate()</h3>
+        <div id="animateFunction" className="addPaddingToSection">
+          <h3 className="sectionTittle">animate()</h3>
 
-          <p>
+          <p className="clickHere">
             this fuction allows you to add some animations in your web page.
           </p>
-          <b>Example :</b>
+
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              HTML FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              CSS FILE
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__html">
+          <div className="codeSection">
+            <div className="inputSection">
               &lt;<span className="tag">div</span>&gt;
               <span> web crowd </span>
               &lt;<span className="tag">/div</span>&gt;
@@ -1938,7 +1437,7 @@ function Jquery() {
               &lt;<span className="tag">/button</span>&gt;
               <br />
             </div>
-            <div className="javascript__css">
+            <div className="inputSection">
               <span className="cssTag">div </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
@@ -1954,32 +1453,14 @@ function Jquery() {
             </div>
           </div>
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JQUERY
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              BROWSER
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">JQUERY</h4>
+            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
-          <div className="jquery__code">
-            <div className="jquery__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
               <span className="declarationKey">click</span>(
@@ -1995,7 +1476,7 @@ function Jquery() {
               <span className="cssValue">"30px"</span> <br /> &#125; ,{" "}
               <span style={{ color: "purple" }}>2000</span> ) ; <br /> &#125; )
             </div>
-            <div className="jquery__output">
+            <div className="outputSection">
               <div
                 className="animatedDiv"
                 style={{
@@ -2009,57 +1490,58 @@ function Jquery() {
               <button onClick={animateElement}>start animation</button>
             </div>
           </div>
-          <p>
-            <b>Important!</b> : you can't apply animation on all css properties,
-            here is the list of CSS properties that you can apply animations on.
+          <p className="clickHere">
+            <b className="importants">Important!</b> : you can't apply animation
+            on all css properties, here is the list of CSS properties that you
+            can apply animations on. <br />
+            <b className="note">the list :</b>
+            <ul style={{ marginLeft: "50px" }}>
+              <li disabled="true">backgroundPositionX</li>
+              <li disabled="true">backgroundPositionY</li>
+              <li disabled="true">borderWidth</li>
+              <li disabled="true">borderBottomWidth</li>
+              <li disabled="true">borderLeftWidth</li>
+              <li disabled="true">borderRightWidth</li>
+              <li disabled="true">borderTopWidth</li>
+              <li disabled="true">borderSpacing</li>
+              <li disabled="true">margin</li>
+              <li disabled="true">marginBottom</li>
+              <li disabled="true">marginLeft</li>
+              <li disabled="true">marginRight</li>
+              <li disabled="true">marginTop</li>
+              <li disabled="true">opacity</li>
+              <li disabled="true">outlineWidth</li>
+              <li disabled="true">padding</li>
+              <li disabled="true">paddingBottom</li>
+              <li disabled="true">paddingLeft</li>
+              <li disabled="true">paddingRight</li>
+              <li disabled="true">paddingTop</li>
+              <li disabled="true">height</li>
+              <li disabled="true">width</li>
+              <li disabled="true">maxHeight</li>
+              <li disabled="true">maxWidth</li>
+              <li disabled="true">minHeight</li>
+              <li disabled="true">minWidth</li>
+              <li disabled="true">fontSize</li>
+              <li disabled="true">bottom</li>
+              <li disabled="true">left</li>
+              <li disabled="true">right</li>
+              <li disabled="true">top</li>
+              <li disabled="true">letterSpecing</li>
+              <li disabled="true">wordSpacing</li>
+              <li disabled="true">lineHeight</li>
+              <li disabled="true">textIndent</li>
+            </ul>
           </p>
-          <b>the list :</b>
-          <ul style={{ marginLeft: "50px" }}>
-            <li>backgroundPositionX</li>
-            <li>backgroundPositionY</li>
-            <li>borderWidth</li>
-            <li>borderBottomWidth</li>
-            <li>borderLeftWidth</li>
-            <li>borderRightWidth</li>
-            <li>borderTopWidth</li>
-            <li>borderSpacing</li>
-            <li>margin</li>
-            <li>marginBottom</li>
-            <li>marginLeft</li>
-            <li>marginRight</li>
-            <li>marginTop</li>
-            <li>opacity</li>
-            <li>outlineWidth</li>
-            <li>padding</li>
-            <li>paddingBottom</li>
-            <li>paddingLeft</li>
-            <li>paddingRight</li>
-            <li>paddingTop</li>
-            <li>height</li>
-            <li>width</li>
-            <li>maxHeight</li>
-            <li>maxWidth</li>
-            <li>minHeight</li>
-            <li>minWidth</li>
-            <li>fontSize</li>
-            <li>bottom</li>
-            <li>left</li>
-            <li>right</li>
-            <li>top</li>
-            <li>letterSpecing</li>
-            <li>wordSpacing</li>
-            <li>lineHeight</li>
-            <li>textIndent</li>
-          </ul>
-          <p>
+          <p className="clickHere">
             <b>Note : </b> you can also add a callback function after animation
             duration like <a href="">this</a>
           </p>
-          <p>
+          <p className="clickHere">
             for more examples and exercises <a href="">click here</a>.
           </p>
         </div>
-        <div id="jqueryExercises">
+        <div id="jqueryExercises" className="addPaddingToSection">
           <div className="jquery__exercise">
             <h3
               style={{
@@ -2080,7 +1562,7 @@ function Jquery() {
                     height: "100%",
                     display: "flex",
                     flexDirection: "column",
-                    justifyContent: "space-evenly",
+                    justifyContent: "space-around",
                     padding: "0 10px",
                   }}
                 >
@@ -2306,18 +1788,18 @@ function Jquery() {
             </a>
           </div>
         </div>
-        <div id="jqueryQuiz">
-          <p>
+        <div id="jqueryQuiz" className="addPaddingToSection">
+          <p className="clickHere">
             <b>Note : </b> Make sure that you have read the introduction of
             every Concept we discussed about above before you start this Quiz.
           </p>
-          <p>
+          <p className="clickHere">
             So, when you complete all of these questions, click on{" "}
             <b>i'm Done</b> button to display the result immediately.
           </p>
           <div className="jqueryQuiz__content">
             <h5>Question 1</h5>
-            <p>Jquery is a programming language </p>
+            <p className="clickHere">Jquery is a programming language </p>
             <input
               type="radio"
               name="firstQuestionName"
@@ -2335,7 +1817,7 @@ function Jquery() {
             <br />
             <hr />
             <h5>Question 2</h5>
-            <p>
+            <p className="clickHere">
               which jquery function we use to change element's property value ?
             </p>
             <input
@@ -2361,7 +1843,9 @@ function Jquery() {
             <br />
             <hr />
             <h5>Question 3</h5>
-            <p>which jquery function we use to switch hide() and show() ?</p>
+            <p className="clickHere">
+              which jquery function we use to switch hide() and show() ?
+            </p>
             <input
               type="radio"
               name="thirdQuestionName"
@@ -2385,7 +1869,9 @@ function Jquery() {
             <br />
             <hr />
             <h5>Question 4</h5>
-            <p>which of the following used to change element's text ?</p>
+            <p className="clickHere">
+              which of the following used to change element's text ?
+            </p>
             <input
               type="radio"
               name="fourthQuestionName"
@@ -2409,7 +1895,7 @@ function Jquery() {
             <br />
             <hr />
             <h5>Question 5</h5>
-            <p>can we animate elements using jquery ?</p>
+            <p className="clickHere">can we animate elements using jquery ?</p>
             <input
               type="radio"
               name="fifthQuestionName"
@@ -2427,7 +1913,7 @@ function Jquery() {
 
             <hr />
             <h5>Question 6</h5>
-            <p>is fadeIn() a jquery function ?</p>
+            <p className="clickHere">is fadeIn() a jquery function ?</p>
             <input
               type="radio"
               name="sixthQuestionName"
@@ -2444,7 +1930,7 @@ function Jquery() {
             <br />
             <hr />
             <h5>Question 7</h5>
-            <p>we can disappears html element using </p>
+            <p className="clickHere">we can disappears html element using </p>
             <input
               type="radio"
               name="seventhQuestionName"
@@ -2468,7 +1954,9 @@ function Jquery() {
             <br />
             <hr />
             <h5>Question 8</h5>
-            <p>it's not possible to change element's color using animate().</p>
+            <p className="clickHere">
+              it's not possible to change element's color using animate().
+            </p>
             <input
               type="radio"
               name="eightQuestionName"
@@ -2485,7 +1973,9 @@ function Jquery() {
             <br />
             <hr />
             <h5>Question 9</h5>
-            <p>can we apply as many animation as we want to html element.</p>
+            <p className="clickHere">
+              can we apply as many animation as we want to html element.
+            </p>
             <input
               type="radio"
               name="ninthQuestionName"
@@ -2503,7 +1993,7 @@ function Jquery() {
 
             <hr />
             <h5>Question 10</h5>
-            <p>is jquery a jquery library ?</p>
+            <p className="clickHere">is jquery a jquery library ?</p>
             <input
               type="radio"
               name="tenthQuestionName"

@@ -3,6 +3,8 @@ import $ from "jquery";
 import "./JavaScript.css";
 import DehazeIcon from "@mui/icons-material/Dehaze";
 import CloseIcon from "@mui/icons-material/Close";
+import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -659,22 +661,20 @@ function JavaScript() {
             don't, <a href="">click here</a>.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">var</span>
               <span className="variableName"> name = </span>
               <span>"mike"</span>;
               <div className="console">
                 console.log(<span className="insideConsole">name</span>)
               </div>
-              <br />
               <span className="declarationKey">let</span>
               <span className="variableName"> age = </span>
               <span>22</span>;
               <div className="console">
                 console.log(<span className="insideConsole">age</span>)
               </div>
-              <br />
               <span className="declarationKey">const</span>
               <span className="variableName"> country = </span>
               <span>"canada"</span>;
@@ -682,7 +682,10 @@ function JavaScript() {
                 console.log(<span className="insideConsole">country</span>)
               </div>
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>mike</div>
               <div>22</div>
               <div>canada</div>
@@ -701,8 +704,8 @@ function JavaScript() {
             back slashes at the beginning of line.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">var</span>
               <span className="variableName"> name = </span>
               <span>"mike"</span>;
@@ -710,14 +713,12 @@ function JavaScript() {
                 <span style={{ color: "black" }}>//</span> console.log(
                 <span className="insideConsole">name</span>)
               </div>
-              <br />
               <span className="declarationKey">let</span>
               <span className="variableName"> age = </span>
               <span>22</span>;
               <div className="console">
                 console.log(<span className="insideConsole">age</span>)
               </div>
-              <br />
               <span className="declarationKey">const</span>
               <span className="variableName"> country = </span>
               <span>"canada"</span>;
@@ -725,7 +726,10 @@ function JavaScript() {
                 console.log(<span className="insideConsole">country</span>)
               </div>
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>22</div>
               <div>canada</div>
             </div>
@@ -738,9 +742,8 @@ function JavaScript() {
         <div className="addPaddingToSection" id="dataTypes">
           <h3 className="sectionTittle">Data Types</h3>
           <p className="clickHere">
-            there is a bunch of data types in javascript.
-            <br />
-            here is the list of them :
+            there is a bunch of data types in javascript. here is the list of
+            them :
             <ul style={{ marginLeft: "50px" }}>
               <li>string</li>
               <li>number</li>
@@ -752,45 +755,40 @@ function JavaScript() {
           </p>
           <p className="clickHere">
             <b className="importants">Important : </b> before you see the
-            example bellow, you need to know how to work with the console.{" "}
-            <br />
-            if don't, <a href="">click here</a>
+            example bellow, you need to know how to work with the console. if
+            don't, <a href="">click here</a>
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
-              <div>// string</div>
+          <div className="codeSection">
+            <div className="inputSection">
+              <div style={{color:"gray"}}>// string</div>
               <span className="declarationKey">var</span>
               <span className="variableName"> name = </span>
               <span>"mike"</span>;
               <div className="console">
                 console.log(<span className="insideConsole">name</span>)
               </div>
-              <br />
-              <div>// number</div>
+              <div style={{color:"gray"}}>// number</div>
               <span className="declarationKey">let</span>
               <span className="variableName"> age = </span>
               <span>22</span>;
               <div className="console">
                 console.log(<span className="insideConsole">age</span>)
               </div>
-              <br />
-              <div>// boolean</div>
+              <div style={{color:"gray"}}>// boolean</div>
               <span className="declarationKey">const</span>
               <span className="variableName"> isWorking = </span>
               <span>false</span>;
               <div className="console">
                 console.log(<span className="insideConsole">isworking</span>)
               </div>
-              <br />
-              <div>// undefined</div>
+              <div style={{color:"gray"}}>// undefined</div>
               <span className="declarationKey">const</span>
               <span className="variableName"> country </span>;
               <div className="console">
                 console.log(<span className="insideConsole">country</span>)
               </div>
-              <br />
-              <div>// null</div>
+              <div style={{color:"gray"}}>// null</div>
               <span className="declarationKey">const</span>
               <span className="variableName"> city =</span>
               <span>null</span>;
@@ -798,7 +796,10 @@ function JavaScript() {
                 console.log(<span className="insideConsole">city</span>)
               </div>
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>mike</div>
               <div>22</div>
               <div>false</div>
@@ -812,7 +813,7 @@ function JavaScript() {
           <p className="clickHere">
             we can convert data from current type to another type using two
             types of conversion.
-            <ol style={{ marginLeft: "50px" }}>
+            <ol style={{ marginLeft: "50px" , pointerEvents: "none" }}>
               <li>
                 Implicit conversion :{" "}
                 <span style={{ color: "purple" }}>
@@ -826,9 +827,9 @@ function JavaScript() {
             </ol>
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
-              <div>// Implicit conversion</div> <br />
+          <div className="codeSection">
+            <div className="inputSection">
+              <div style={{color:"gray"}}>// Implicit conversion</div> <br />
               <span className="declarationKey">var</span>
               <span className="variableName"> number1 = </span>
               <span>2</span>; <br />
@@ -839,10 +840,7 @@ function JavaScript() {
                 console.log(
                 <span className="insideConsole">number1 + number2</span>)
               </div>
-              <br />
-              <div>
-                // Explicit conversion (convert from string to number){" "}
-              </div>{" "}
+              <div style={{color:"gray"}}>// Explicit conversion (convert from string to number) </div>{" "}
               <br />
               <span className="declarationKey">let</span>
               <span className="variableName"> age = </span>
@@ -854,10 +852,7 @@ function JavaScript() {
                 </span>
                 )
               </div>
-              <br />
-              <div>
-                // Explicit conversion (convert from number to string)
-              </div>{" "}
+              <div style={{color:"gray"}}>// Explicit conversion (convert from number to string)</div>{" "}
               <br />
               <span className="declarationKey">const</span>
               <span className="variableName"> languages = </span>
@@ -870,7 +865,10 @@ function JavaScript() {
                 )
               </div>
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>23 &nbsp; &nbsp;&nbsp; &nbsp; // "23"</div>
               <div>"20" &nbsp; &nbsp;&nbsp;// 20</div>
               <div>3 &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;// "3"</div>
@@ -903,8 +901,8 @@ function JavaScript() {
             if(condition===true) then do some stuff.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">var</span>
               <span className="variableName"> name = </span>
               <span>"mike"</span>; <br /> <br />
@@ -925,7 +923,10 @@ function JavaScript() {
               &#125;
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>his name is mike</div>
             </div>
           </div>
@@ -936,8 +937,8 @@ function JavaScript() {
             else statement.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">var</span>
               <span className="variableName"> name = </span>
               <span>"frank"</span>; <br /> <br />
@@ -967,7 +968,10 @@ function JavaScript() {
               &#125;
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>his name is frank</div>
             </div>
           </div>
@@ -981,8 +985,8 @@ function JavaScript() {
             switch is the same as <b>if/else</b>.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">var</span>
               <span className="variableName"> name = </span>
               <span>"frank"</span>; <br /> <br />
@@ -1027,7 +1031,10 @@ function JavaScript() {
               &#125;
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>his name is frank</div>
             </div>
           </div>
@@ -1047,8 +1054,8 @@ function JavaScript() {
             one. because it still useful. <br />
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">var</span>
               <span className="variableName"> name = </span>
               <span>"mike"</span>; <br /> <br />
@@ -1067,7 +1074,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>his name is mike</div>
             </div>
           </div>
@@ -1089,8 +1099,8 @@ function JavaScript() {
             will be better if you use the first one
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">var</span>
               <span className="variableName"> str = </span>
               <span>" my name is khalid "</span>; <br /> <br />
@@ -1108,7 +1118,10 @@ function JavaScript() {
               </span>
               <br /> &#125;
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>my name is mike</div>
               <div>my name is mike</div>
               <div>my name is mike</div>
@@ -1119,7 +1132,7 @@ function JavaScript() {
 
           <p className="clickHere">
             So here are the steps of how <b>for</b> loop works : <br />
-            <ol style={{ marginLeft: "50px" }}>
+            <ol style={{ marginLeft: "50px" , pointerEvents: "none" }}>
               <li>check if i &gt; 5</li>
               <li>
                 if yes, <b>str</b> will get executed, if not... the loop will
@@ -1144,8 +1157,8 @@ function JavaScript() {
             popular operations such as addition, subtraction, multiplication and
             division. in addtion to Modulus.
           </p>
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span style={{ color: "orange" }}>// Addition</span> <br />
               <span className="declarationKey">var</span>
               <span className="variableName"> num1 = </span>
@@ -1157,7 +1170,6 @@ function JavaScript() {
                 console.log(
                 <span className="insideConsole">num1 + num2</span>)
               </span>{" "}
-              <br />
               <br />
               <span style={{ color: "orange" }}>// Substraction</span> <br />
               <span className="declarationKey">var</span>
@@ -1171,7 +1183,6 @@ function JavaScript() {
                 <span className="insideConsole">num3 - num4</span>)
               </span>{" "}
               <br />
-              <br />
               <span style={{ color: "orange" }}>// Multiplication</span> <br />
               <span className="declarationKey">var</span>
               <span className="variableName"> num5 = </span>
@@ -1184,7 +1195,6 @@ function JavaScript() {
                 <span className="insideConsole">num5 * num6</span>)
               </span>{" "}
               <br />
-              <br />
               <span style={{ color: "orange" }}>// Division</span> <br />
               <span className="declarationKey">var</span>
               <span className="variableName"> num7 = </span>
@@ -1196,7 +1206,6 @@ function JavaScript() {
                 console.log(
                 <span className="insideConsole">num7 / num8</span>)
               </span>{" "}
-              <br />
               <br />
               <span style={{ color: "orange" }}>
                 // Modulus (the rest of division oparation)
@@ -1213,7 +1222,6 @@ function JavaScript() {
                 <span className="insideConsole">num9 % num10</span>)
               </span>{" "}
               <br />
-              <br />
               <span style={{ color: "orange" }}>// Increment</span> <br />
               <span className="declarationKey">var</span>
               <span className="variableName"> num11 = </span>
@@ -1222,7 +1230,6 @@ function JavaScript() {
                 console.log(
                 <span className="insideConsole">++num11</span>)
               </span>{" "}
-              <br />
               <br />
               <span style={{ color: "orange" }}>// Decrement</span> <br />
               <span className="declarationKey">var</span>
@@ -1233,9 +1240,11 @@ function JavaScript() {
                 <span className="insideConsole">--num12</span>)
               </span>{" "}
               <br />
-              <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>5</div>
               <div>6</div>
               <div>12</div>
@@ -1307,15 +1316,15 @@ function JavaScript() {
             code will get executed. <br />
             <b className="note">Note : </b> ther are two types of functions.{" "}
             <br />
-            <ol style={{ marginLeft: "50px" }}>
+            <ol style={{ marginLeft: "50px" , pointerEvents: "none" }}>
               <li>function without parameters</li>
               <li>function with parameters</li>
             </ol>
           </p>
 
           <h4 className="subTittles">function without parameters : </h4>
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">function</span>
               <span className="variableName"> ShowInConsole () </span>
               &#123;
@@ -1327,7 +1336,6 @@ function JavaScript() {
               <br />
               &#125;
               <br />
-              <br />
               <span className="variableName"> ShowInConsole() </span>
               <br />
               <span className="variableName"> ShowInConsole() </span>
@@ -1335,7 +1343,10 @@ function JavaScript() {
               <span className="variableName"> ShowInConsole() </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>hello</div>
               <div>hello</div>
               <div>hello</div>
@@ -1352,8 +1363,8 @@ function JavaScript() {
             get entered. in this case we need to pass parameters to the function
             like the following :
           </p>
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">function</span>
               <span className="variableName">
                 {" "}
@@ -1370,7 +1381,6 @@ function JavaScript() {
               </span>{" "}
               <br />
               &#125;
-              <br />
               <br />
               <span className="variableName">
                 {" "}
@@ -1392,7 +1402,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>6</div>
               <div>12</div>
               <div>48</div>
@@ -1415,7 +1428,7 @@ function JavaScript() {
           <h3 className="sectionTittle">scope</h3>
           <p className="clickHere">
             there are three types of scope :
-            <ol style={{ marginLeft: "50px" }}>
+            <ol style={{ marginLeft: "50px" , pointerEvents: "none" }}>
               <li className="unclickAble" style={{ pointerEvents: "none" }}>
                 Global Scope
               </li>
@@ -1431,8 +1444,8 @@ function JavaScript() {
             in global scope you can create a variables and get access them
             anywhere in your code. it's like a global varibale.
           </p>
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">let</span>
               <span className="variableName"> age = </span>
               <span>22</span>; <br /> <br />
@@ -1443,14 +1456,16 @@ function JavaScript() {
                 &#125;
               </span>{" "}
               <br />
-              <br />
               <div className="console">
                 console.log(<span style={{ color: "blue" }}> showAge() </span>){" "}
                 <br />
                 <br />
               </div>
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>22</div>
             </div>
           </div>
@@ -1466,8 +1481,8 @@ function JavaScript() {
             in function scope you can create a variables inside a function and
             get access them only inside that function.
           </p>
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span style={{ color: "blue" }}>
                 <span style={{ color: "purple" }}>function</span> showAge()
                 &#123; <br />
@@ -1476,7 +1491,6 @@ function JavaScript() {
                 <span className="variableValue"> "Morocco"; </span> <br />
                 &#125;
               </span>{" "}
-              <br />
               <br />
               <div className="console">
                 console.log(<span style={{ color: "blue" }}> country </span>){" "}
@@ -1498,8 +1512,8 @@ function JavaScript() {
             block scope is like if/elese , switch , loop...,and it's very
             similar to function scope.
           </p>
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span style={{ color: "blue" }}>
                 <span style={{ color: "purple" }}>if </span>
                 &#123; <br />
@@ -1508,7 +1522,6 @@ function JavaScript() {
                 <span className="variableValue"> "khalid"; </span> <br />
                 &#125;
               </span>{" "}
-              <br />
               <br />
               <div className="console">
                 console.log(<span style={{ color: "blue" }}> name </span>){" "}
@@ -1549,8 +1562,8 @@ function JavaScript() {
             and focus on the new way.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> Person = </span>
               &#123;
@@ -1569,7 +1582,6 @@ function JavaScript() {
               <br />
               &#125;
               <br />
-              <br />
               <span className="console">
                 {" "}
                 console.log(<span className="insideConsole"> Person.name </span>
@@ -1585,7 +1597,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>khalid</div>
               <div>20</div>
             </div>
@@ -1605,8 +1620,8 @@ function JavaScript() {
             Array can also include another array. like the following :
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> arr = </span>[{" "}
               <span style={{ color: "purple" }}>
@@ -1614,7 +1629,6 @@ function JavaScript() {
                 true ]
               </span>{" "}
               ]
-              <br />
               <br />
               <span className="console">
                 {" "}
@@ -1647,7 +1661,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>mike</div>
               <div>false</div>
               <div>frank</div>
@@ -1671,15 +1688,14 @@ function JavaScript() {
             number of elements inside an array.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> arr = </span>[{" "}
               <span style={{ color: "purple" }}>
                 "mike" <b>,</b> 22 <b>,</b> false
               </span>{" "}
               ]
-              <br />
               <br />
               <span className="console">
                 {" "}
@@ -1692,7 +1708,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>3</div>
             </div>
           </div>
@@ -1707,15 +1726,14 @@ function JavaScript() {
             adds a new element to the end of the array
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> arr = </span>[{" "}
               <span style={{ color: "purple" }}>
                 "mike" <b>,</b> 22 <b>,</b> false
               </span>{" "}
               ]
-              <br />
               <br />
               <span className="console">
                 console.log({" "}
@@ -1726,7 +1744,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>arr = [ "mike" , 22 , false , "frank" ]</div>
             </div>
           </div>
@@ -1739,15 +1760,14 @@ function JavaScript() {
 
           <p className="clickHere">removes the last element of the array</p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> arr = </span>[{" "}
               <span style={{ color: "purple" }}>
                 "mike" <b>,</b> 22 <b>,</b> false
               </span>{" "}
               ]
-              <br />
               <br />
               <span className="console">
                 console.log({" "}
@@ -1759,7 +1779,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>arr = [ "mike" , 22 ]</div>
             </div>
           </div>
@@ -1775,15 +1798,14 @@ function JavaScript() {
             adds a new element at the beginning of the array.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> arr = </span>[{" "}
               <span style={{ color: "purple" }}>
                 "mike" <b>,</b> 22 <b>,</b> false
               </span>{" "}
               ]
-              <br />
               <br />
               <span className="console">
                 console.log({" "}
@@ -1795,7 +1817,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>arr = [ "frank" , "mike" , 22 , false ]</div>
             </div>
           </div>
@@ -1809,15 +1834,14 @@ function JavaScript() {
 
           <p className="clickHere">removes the first element of the array.</p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> arr = </span>[{" "}
               <span style={{ color: "purple" }}>
                 "mike" <b>,</b> 22 <b>,</b> false
               </span>{" "}
               ]
-              <br />
               <br />
               <span className="console">
                 console.log({" "}
@@ -1828,7 +1852,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>arr = [ 22 , false ]</div>
             </div>
           </div>
@@ -1842,15 +1869,14 @@ function JavaScript() {
 
           <p className="clickHere">reverses the elements of the array.</p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> arr = </span>[{" "}
               <span style={{ color: "purple" }}>
                 "mike" <b>,</b> 22 <b>,</b> false
               </span>{" "}
               ]
-              <br />
               <br />
               <span className="console">
                 console.log({" "}
@@ -1861,7 +1887,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>arr = [ false , 22 , "mike" ]</div>
             </div>
           </div>
@@ -1878,8 +1907,8 @@ function JavaScript() {
             arrays with string, or string with another string ).
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> arr1 = </span>[{" "}
               <span style={{ color: "purple" }}>
@@ -1894,7 +1923,6 @@ function JavaScript() {
               </span>{" "}
               ]
               <br />
-              <br />
               <span className="console">
                 console.log({" "}
                 <span style={{ color: "blue" }}>
@@ -1905,7 +1933,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>[ false , 22 , "mike" , 1 , 2 , 3 ]</div>
             </div>
           </div>
@@ -1924,13 +1955,12 @@ function JavaScript() {
             allows you to delete the duplicated elements.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> numbers = </span>[{" "}
               <span style={{ color: "purple" }}>1 , 2 , 3 , 4 , 2 , 1 , 5</span>{" "}
               ]
-              <br />
               <br />
               <span className="console">
                 console.log({" "}
@@ -1942,7 +1972,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>numbers = [ 1 , 2 , 3 , 4 , 5 ]</div>
             </div>
           </div>
@@ -1958,15 +1991,14 @@ function JavaScript() {
             allows you to filter elements from array according to a condition.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> numbers = </span>[{" "}
               <span style={{ color: "purple" }}>
                 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10
               </span>{" "}
               ]
-              <br />
               <br />
               <span className="console">
                 console.log({" "}
@@ -1979,7 +2011,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>numbers = [ 6 , 7 , 8 , 9 , 10 ]</div>
             </div>
           </div>
@@ -2000,15 +2035,14 @@ function JavaScript() {
             of those numbers.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> numbers = </span>[{" "}
               <span style={{ color: "purple" }}>
                 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10
               </span>{" "}
               ]
-              <br />
               <br />
               <span className="console">
                 console.log({' "the sum is : "'}
@@ -2021,7 +2055,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>the sum is : 55</div>
             </div>
           </div>
@@ -2042,15 +2079,14 @@ function JavaScript() {
             Sorting Numbers :
           </h4>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> numbers = </span>[{" "}
               <span style={{ color: "purple" }}>
                 78 , 12 , 3 , 56 , 5 , 60 , 17
               </span>{" "}
               ]
-              <br />
               <br />
               <span className="console">
                 console.log({'" numbers : "'}
@@ -2063,7 +2099,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>numbers = [ 3 , 5 , 12 , 17 , 56 , 60 , 78 ]</div>
             </div>
           </div>
@@ -2077,15 +2116,14 @@ function JavaScript() {
             Sorting Strings and Alphabet :
           </h4>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> strings = </span>[{" "}
               <span style={{ color: "purple" }}>
                 "mike" , "b" , "frank" , "d" , "john"
               </span>{" "}
               ]
-              <br />
               <br />
               <span className="console">
                 console.log({'" strings = "'}
@@ -2097,7 +2135,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div> strings = [ "b" , "d" , "frank" , "john" , "mike" ]</div>
             </div>
           </div>
@@ -2112,12 +2153,11 @@ function JavaScript() {
             <b className="note">Note : </b> map() returns a new array.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> numbers = </span>[{" "}
               <span style={{ color: "purple" }}>1 , 2 , 3 , 4 , 5</span> ]
-              <br />
               <br />
               <span className="console">
                 console.log({' "numbers :  "'}
@@ -2130,7 +2170,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>numbers = [2 , 4 , 6 , 8 , 10 ]</div>
             </div>
           </div>
@@ -2159,12 +2202,11 @@ function JavaScript() {
             </ul>
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> numbers = </span>[{" "}
               <span style={{ color: "purple" }}>1 , 2 , 3 , 4 , 5</span> ]
-              <br />
               <br />
               <span className="console">
                 console.log({" "}
@@ -2177,7 +2219,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>
                 {" "}
                 2 <br /> 4 <br /> 6 <br /> 8 <br /> 10{" "}
@@ -2197,12 +2242,11 @@ function JavaScript() {
             returns <b>false</b>.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> numbers = </span>[{" "}
               <span style={{ color: "purple" }}>1 , 2 , 3 , 4 , 5</span> ]
-              <br />
               <br />
               <span className="console">
                 console.log({" "}
@@ -2213,7 +2257,6 @@ function JavaScript() {
                 </span>{" "}
                 )
               </span>
-              <br />
               <br />
               <span className="console">
                 console.log({" "}
@@ -2226,7 +2269,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>false</div>
               <div>true</div>
             </div>
@@ -2244,12 +2290,11 @@ function JavaScript() {
             them to a provided value.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> numbers = </span>[{" "}
               <span style={{ color: "purple" }}>1 , 2 , 3 , 4 , 5</span> ]
-              <br />
               <br />
               <span className="console">
                 console.log({'" numbers = "'}
@@ -2260,7 +2305,10 @@ function JavaScript() {
                 )
               </span>
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>numbers = [ 0 , 0 , 0 , 0 , 0 ]</div>
             </div>
           </div>
@@ -2278,15 +2326,14 @@ function JavaScript() {
             can return any message.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> arr = </span>[{" "}
               <span style={{ color: "purple" }}>
                 "mike" , 22 , "canada" , false , 5
               </span>{" "}
               ]
-              <br />
               <br />
               <span className="console">
                 console.log(
@@ -2298,7 +2345,10 @@ function JavaScript() {
                 )
               </span>
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>true</div>
             </div>
           </div>
@@ -2315,15 +2365,14 @@ function JavaScript() {
             otherwise returns -1.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> arr = </span>[{" "}
               <span style={{ color: "purple" }}>
                 "mike" , 22 , "canada" , false , 5
               </span>{" "}
               ]
-              <br />
               <br />
               <span className="console">
                 console.log(
@@ -2335,7 +2384,10 @@ function JavaScript() {
                 )
               </span>
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>2</div>
             </div>
           </div>
@@ -2351,15 +2403,14 @@ function JavaScript() {
             indexOf() is the same as <b>findIndex()</b> but it's much easier.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> arr = </span>[{" "}
               <span style={{ color: "purple" }}>
                 "mike" , 22 , "canada" , false , 5
               </span>{" "}
               ]
-              <br />
               <br />
               <span className="console">
                 console.log(
@@ -2371,7 +2422,10 @@ function JavaScript() {
                 )
               </span>
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>2</div>
             </div>
           </div>
@@ -2388,15 +2442,14 @@ function JavaScript() {
             according to the given value.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> arr = </span>[{" "}
               <span style={{ color: "purple" }}>
                 "mike" , 2 , false , "mike" , 5 , 7 , 2
               </span>{" "}
               ]
-              <br />
               <br />
               <span className="console">
                 console.log(
@@ -2408,7 +2461,10 @@ function JavaScript() {
                 )
               </span>
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>3</div>
             </div>
           </div>
@@ -2425,15 +2481,14 @@ function JavaScript() {
             then return true , if not then return false.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> languages = </span>[{" "}
               <span style={{ color: "purple" }}>
                 "c++" , "python" , "javascript" , "c#"
               </span>{" "}
               ]
-              <br />
               <br />
               <span className="console">
                 console.log(
@@ -2455,7 +2510,10 @@ function JavaScript() {
                 )
               </span>
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>true</div>
               <div>false</div>
             </div>
@@ -2473,15 +2531,14 @@ function JavaScript() {
             arguments you passed.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> numbers = </span>[{" "}
               <span style={{ color: "purple" }}>
                 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10
               </span>{" "}
               ]
-              <br />
               <br />
               <span className="console">
                 console.log(
@@ -2511,7 +2568,10 @@ function JavaScript() {
                 <span style={{ color: "blue" }}> numbers</span> )
               </span>
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div> numbers = [ 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 ]</div>
               <div> [ 5 , 6 , 7 , 8 , 9 , 10 ]</div>
               <div> [ 2 , 3 , 4 ]</div>
@@ -2542,15 +2602,14 @@ function JavaScript() {
             them.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> numbers = </span>[{" "}
               <span style={{ color: "purple" }}>
                 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10
               </span>{" "}
               ]
-              <br />
               <br />
               <span className="console">
                 console.log( {'" numbers = "'}
@@ -2572,7 +2631,10 @@ function JavaScript() {
                 )
               </span>
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>numbers = [ 1 , 2 , 8 ]</div>
               <div>numbers = [ 6 , 7 , 8 ]</div>
             </div>
@@ -2596,15 +2658,14 @@ function JavaScript() {
             can join according the given value.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> arr = </span>[{" "}
               <span style={{ color: "purple" }}>
                 "a" , "b" , "c" , "d" , "e"
               </span>{" "}
               ]
-              <br />
               <br />
               <span className="console">
                 console.log(
@@ -2615,7 +2676,10 @@ function JavaScript() {
                 )
               </span>
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>abcde</div>
             </div>
           </div>
@@ -2637,12 +2701,11 @@ function JavaScript() {
             We can add <b>length</b> property to string as long as array.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> str = </span>{" "}
               <span style={{ color: "purple" }}>"welcome to web crowd" ;</span>{" "}
-              <br />
               <br />
               <span className="console">
                 {" "}
@@ -2655,7 +2718,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>the length is : 20</div>
             </div>
           </div>
@@ -2671,12 +2737,11 @@ function JavaScript() {
             <a href="">click here</a> to figure out how it works.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> str = </span>{" "}
               <span style={{ color: "purple" }}>"web crowd" ;</span> <br />
-              <br />
               <span className="console">
                 {" "}
                 console.log( {'" the length is : "'}
@@ -2688,7 +2753,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>the length is : 20</div>
             </div>
           </div>
@@ -2703,12 +2771,11 @@ function JavaScript() {
             charAt() returns the character at the given index.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> str = </span>{" "}
               <span style={{ color: "purple" }}>"web crowd" ;</span> <br />
-              <br />
               <span className="console">
                 {" "}
                 console.log( {'" the char at index 5 is : "'}
@@ -2721,7 +2788,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div> the char at index 5 is : r</div>
             </div>
           </div>
@@ -2736,12 +2806,11 @@ function JavaScript() {
             character, and returns false if it does not end.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> str = </span>{" "}
               <span style={{ color: "purple" }}>"web crowd" ;</span> <br />
-              <br />
               <span className="console">
                 {" "}
                 console.log(
@@ -2765,7 +2834,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div> true</div>
               <div> false</div>
             </div>
@@ -2781,12 +2853,11 @@ function JavaScript() {
             one. but the original string will stay as it is.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> str = </span>{" "}
               <span style={{ color: "purple" }}>"web crowd" ;</span> <br />
-              <br />
               <span className="console">
                 {" "}
                 console.log(
@@ -2807,7 +2878,10 @@ function JavaScript() {
                 <span style={{ color: "purple" }}> str</span> )
               </span>
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div> web development</div>
               <div> web crowd</div>
             </div>
@@ -2823,12 +2897,11 @@ function JavaScript() {
             <a href="">click here </a> to figure it out.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> str = </span>{" "}
               <span style={{ color: "purple" }}>"web crowd" ;</span> <br />
-              <br />
               <span className="console">
                 {" "}
                 console.log(
@@ -2839,7 +2912,6 @@ function JavaScript() {
                 </span>{" "}
                 )
               </span>
-              <br />
               <br />
               <span className="console">
                 {" "}
@@ -2853,7 +2925,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div> true</div>
               <div> false</div>
             </div>
@@ -2869,12 +2944,11 @@ function JavaScript() {
             <a href="">click here </a> to figure it out.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> str = </span>{" "}
               <span style={{ color: "purple" }}>"web crowd" ;</span> <br />
-              <br />
               <span className="console">
                 {" "}
                 console.log(
@@ -2885,7 +2959,6 @@ function JavaScript() {
                 </span>{" "}
                 )
               </span>
-              <br />
               <br />
               <span className="console">
                 {" "}
@@ -2899,7 +2972,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div> true</div>
               <div> false</div>
             </div>
@@ -2915,12 +2991,11 @@ function JavaScript() {
             <a href="">click here </a> to figure it out.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> str = </span>{" "}
               <span style={{ color: "purple" }}>"web crowd" ;</span> <br />
-              <br />
               <span className="console">
                 {" "}
                 console.log({'" index of b is : "'}
@@ -2931,7 +3006,6 @@ function JavaScript() {
                 </span>{" "}
                 )
               </span>
-              <br />
               <br />
               <span className="console">
                 {" "}
@@ -2945,7 +3019,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div> index of b is : 2</div>
               <div> index of crowd is : 4</div>
             </div>
@@ -2961,12 +3038,11 @@ function JavaScript() {
             <a href="">click here </a> to figure it out.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> str = </span>{" "}
               <span style={{ color: "purple" }}>"web crowd" ;</span> <br />
-              <br />
               <span className="console">
                 {" "}
                 console.log({'"last index of w is : "'}
@@ -2978,9 +3054,11 @@ function JavaScript() {
                 )
               </span>
               <br />
-              <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>last index of w is : 7</div>
             </div>
           </div>
@@ -2995,12 +3073,11 @@ function JavaScript() {
             string (a ==&gt; A).
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> str = </span>{" "}
               <span style={{ color: "purple" }}>"web crowd" ;</span> <br />
-              <br />
               <span className="console">
                 {" "}
                 console.log(
@@ -3011,9 +3088,11 @@ function JavaScript() {
                 )
               </span>
               <br />
-              <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>WEB CROWD</div>
             </div>
           </div>
@@ -3028,12 +3107,11 @@ function JavaScript() {
             (A ==&gt; a).
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> str = </span>{" "}
               <span style={{ color: "purple" }}>"Web Crowd" ;</span> <br />
-              <br />
               <span className="console">
                 {" "}
                 console.log(
@@ -3044,9 +3122,11 @@ function JavaScript() {
                 )
               </span>
               <br />
-              <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>web crowd</div>
             </div>
           </div>
@@ -3061,12 +3141,11 @@ function JavaScript() {
             by a given value.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> str = </span>{" "}
               <span style={{ color: "purple" }}>" Web Crowd " ;</span> <br />
-              <br />
               <span className="console">
                 {" "}
                 console.log(
@@ -3077,9 +3156,11 @@ function JavaScript() {
                 )
               </span>
               <br />
-              <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>Web Crowd Web Crowd Web Crowd Web Crowd Web Crowd</div>
             </div>
           </div>
@@ -3095,12 +3176,11 @@ function JavaScript() {
             character.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> str = </span>{" "}
               <span style={{ color: "purple" }}>"web crowd" ;</span> <br />
-              <br />
               <div style={{ color: "blue" }}>// split by empty string</div>
               <span className="console">
                 {" "}
@@ -3111,7 +3191,6 @@ function JavaScript() {
                 </span>{" "}
                 )
               </span>
-              <br />
               <br />
               <div style={{ color: "blue" }}>// split by string</div>
               <span className="console">
@@ -3124,7 +3203,6 @@ function JavaScript() {
                 )
               </span>
               <br />
-              <br />
               <div style={{ color: "blue" }}>// split by character</div>
               <span className="console">
                 {" "}
@@ -3136,9 +3214,11 @@ function JavaScript() {
                 )
               </span>
               <br />
-              <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>[ 'w' , 'e' , 'b' , ' ' , 'c' , 'r' , 'o' , 'w' , 'd' ]</div>
               <div>[ 'w' , ' crowd' ]</div>
               <div>[ 'web ' , 'rowd' ]</div>
@@ -3156,15 +3236,14 @@ function JavaScript() {
             to figure it out.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> str1 = </span>{" "}
               <span style={{ color: "purple" }}>" web " ;</span> <br />
               <span className="declarationKey">const</span>
               <span className="variableName"> str2 = </span>{" "}
               <span style={{ color: "purple" }}>"crowd " ;</span> <br />
-              <br />
               <span className="console">
                 {" "}
                 console.log(
@@ -3175,9 +3254,11 @@ function JavaScript() {
                 )
               </span>
               <br />
-              <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>web crowd</div>
             </div>
           </div>
@@ -3191,15 +3272,14 @@ function JavaScript() {
             trim() remove the spaces at the beginning or the end of your string.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> str = </span>{" "}
               <span style={{ color: "purple" }}>
                 " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; web crowd
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" ;
               </span>{" "}
-              <br />
               <br />
               <span className="console">
                 {" "}
@@ -3211,9 +3291,11 @@ function JavaScript() {
                 )
               </span>
               <br />
-              <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>web crowd</div>
             </div>
           </div>
@@ -3231,14 +3313,13 @@ function JavaScript() {
             inside your website.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> date = </span>{" "}
               <span style={{ color: "purple" }}>
                 new <span style={{ color: "blue" }}>Date()</span> ;
               </span>{" "}
-              <br />
               <br />
               <span className="console">
                 {" "}
@@ -3254,7 +3335,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div> ( take a look on console )</div>
             </div>
           </div>
@@ -3277,14 +3361,13 @@ function JavaScript() {
             this method adds the absolute value to a variable inside.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> number = </span>{" "}
               <span style={{ color: "purple" }}>
                 <span style={{ color: "blue" }}>-6</span> ;
               </span>{" "}
-              <br />
               <br />
               <span className="console">
                 {" "}
@@ -3297,7 +3380,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div> 6</div>
             </div>
           </div>
@@ -3307,8 +3393,8 @@ function JavaScript() {
             this method returns the bigger value among two numbers.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="console">
                 {" "}
                 console.log({" "}
@@ -3320,7 +3406,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div> 5</div>
             </div>
           </div>
@@ -3329,8 +3418,8 @@ function JavaScript() {
             this method returns the smaller value among two numbers.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="console">
                 {" "}
                 console.log({" "}
@@ -3342,7 +3431,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div> 33</div>
             </div>
           </div>
@@ -3352,15 +3444,14 @@ function JavaScript() {
             the second value. .
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">let </span>
               <span className="variableName">num1 = </span>
               <span style={{ color: "purple" }}>5 </span>; <br />
               <span className="declarationKey">let </span>
               <span className="variableName">num2 = </span>
               <span style={{ color: "purple" }}>3 </span>; <br />
-              <br />
               <span className="console">
                 {" "}
                 console.log({" "}
@@ -3373,7 +3464,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div style={{ color: "blue" }}>// 5 * 5 * 5</div>
               <div> 125</div>
             </div>
@@ -3387,15 +3481,14 @@ function JavaScript() {
             this method returns the square root of a given number .
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">let </span>
               <span className="variableName">num1 = </span>
               <span style={{ color: "purple" }}>25 </span>; <br />
               <span className="declarationKey">let </span>
               <span className="variableName">num2 = </span>
               <span style={{ color: "purple" }}>81 </span>; <br />
-              <br />
               <span className="console">
                 {" "}
                 console.log({'" the square of 25 is : "'}{" "}
@@ -3419,7 +3512,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div> the square of 25 is : 5</div>
               <div> the square of 81 is : 9</div>
             </div>
@@ -3434,8 +3530,8 @@ function JavaScript() {
             page. by default it gives you numbers between 0 and 1.
           </p>
 
-          <div className="javascript__code">
-            <div className="javascript__input">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="console">
                 {" "}
                 console.log({" "}
@@ -3459,7 +3555,10 @@ function JavaScript() {
               </span>
               <br />
             </div>
-            <div className="javascript__output">
+            <div>
+              <ArrowRightAltIcon className="arrow" />
+            </div>
+            <div className="outputSection">
               <div>( check out the console )</div>
             </div>
           </div>
@@ -3519,32 +3618,14 @@ function JavaScript() {
           <h2 className=" subTittles">Add styling to html elements :</h2>
 
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              HTML FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              CSS FILE
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__html">
+          <div className="codeSection">
+            <div className="inputSection">
               &lt;<span className="tag">h2</span>&gt; web crowd &lt;
               <span className="tag">/h2</span>&gt; <br />
               &lt;
@@ -3554,13 +3635,12 @@ function JavaScript() {
               &gt; welcome to web crowd &lt;
               <span className="tag">/div</span>&gt;
             </div>
-            <div className="javascript__css">
+            <div className="inputSection">
               <span className="cssTag">h2 </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; font-size</span> :{" "}
               <span className="cssValue">34px</span>; <br />
               &#125;
-              <br />
               <br />
               <span className="cssTag">.welcome </span>
               &#123; <br />{" "}
@@ -3572,32 +3652,14 @@ function JavaScript() {
           <br />
           <br />
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JS FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              BROWSER
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">JS FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__javascript">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> h2Variable = </span>{" "}
               <span style={{ color: "purple" }}>
@@ -3610,7 +3672,6 @@ function JavaScript() {
               <span style={{ color: "blue" }}>style.</span>
               <span style={{ color: "purple" }}>color</span> =
               <span style={{ color: "blue" }}> "red"</span> ;
-              <br />
               <br />
               <span className="declarationKey">const</span>
               <span className="variableName"> divVariable = </span>{" "}
@@ -3630,7 +3691,7 @@ function JavaScript() {
               <span style={{ color: "purple" }}>color</span> =
               <span style={{ color: "blue" }}> "white"</span> ;
             </div>
-            <div className="javascript__browser">
+            <div className="inputSection">
               <h2 style={{ color: "red", fontSize: "34px" }}>web crowd</h2>
               <div
                 style={{
@@ -3655,32 +3716,14 @@ function JavaScript() {
           <h2 className=" subTittles">change element's text :</h2>
 
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              HTML FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              CSS FILE
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__html">
+          <div className="codeSection">
+            <div className="inputSection">
               &lt;<span className="tag">h2</span>&gt; web crowd &lt;
               <span className="tag">/h2</span>&gt; <br />
               &lt;
@@ -3690,7 +3733,7 @@ function JavaScript() {
               &gt; welcome to web crowd &lt;
               <span className="tag">/div</span>&gt;
             </div>
-            <div className="javascript__css">
+            <div className="inputSection">
               <span className="cssTag">h2 </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; font-size</span> :{" "}
@@ -3702,32 +3745,14 @@ function JavaScript() {
           <br />
           <br />
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JS FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              BROWSER
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">JS FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__javascript">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> h2Variable = </span>{" "}
               <span style={{ color: "purple" }}>
@@ -3747,7 +3772,6 @@ function JavaScript() {
                 "this is a new text of h2"
               </span>{" "}
               ;
-              <br />
               <br />
               <span className="declarationKey">const</span>
               <span className="variableName"> divVariable = </span>{" "}
@@ -3769,7 +3793,7 @@ function JavaScript() {
               <span style={{ color: "purple" }}>color</span> =
               <span style={{ color: "blue" }}> "blue"</span> ;
             </div>
-            <div className="javascript__browser">
+            <div className="inputSection">
               <h2 style={{ color: "red", fontSize: "34px" }}>
                 this is a new text of h2
               </h2>
@@ -3791,11 +3815,12 @@ function JavaScript() {
             <a href="">click here</a> for more examples and exercises.
           </p>
           <p className="clickHere">
-            <b>Important!</b> you can override css style using JavaScript.{" "}
-            <br /> let's assume we added <b>color</b> to html element and we
-            also set <b>color</b> in JavaScript file to the same element, So in
-            this case, the color in css will get <b>overridden</b>. then the
-            JavaScript one will get <b>applied</b>. <br />
+            <b className="importants">Important!</b> you can override css style
+            using JavaScript. <br /> let's assume we added <b>color</b> to html
+            element and we also set <b>color</b> in JavaScript file to the same
+            element, So in this case, the color in css will get{" "}
+            <b>overridden</b>. then the JavaScript one will get <b>applied</b>.{" "}
+            <br />
           </p>
           <p className="clickHere">
             <a href="">click here</a> to see examples and exercises of that.
@@ -3804,36 +3829,18 @@ function JavaScript() {
           <h2 className=" subTittles">add elements :</h2>
 
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              HTML FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              CSS FILE
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__html">
+          <div className="codeSection">
+            <div className="inputSection">
               &lt;<span className="tag">h2</span>&gt; web crowd &lt;
               <span className="tag">/h2</span>&gt; <br />
             </div>
-            <div className="javascript__css">
+            <div className="inputSection">
               <span className="cssTag">h2 </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
@@ -3845,32 +3852,14 @@ function JavaScript() {
           <br />
           <br />
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JS FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              BROWSER
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">JS FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__javascript">
+          <div className="codeSection">
+            <div className="inputSection">
               <span style={{ color: "gray" }}>// create a new element</span>
               <br />
               <span className="declarationKey">const</span>
@@ -3880,7 +3869,6 @@ function JavaScript() {
                 <span style={{ color: "purple" }}>createElement</span>(
                 <span style={{ color: "blue" }}> "h2" </span>) ;
               </span>{" "}
-              <br />
               <br />
               <span style={{ color: "gray" }}>
                 // add text to the new element
@@ -3893,7 +3881,6 @@ function JavaScript() {
               </span>{" "}
               ;
               <br />
-              <br />
               <span style={{ color: "gray" }}>
                 // add the new element to web page
               </span>
@@ -3904,7 +3891,7 @@ function JavaScript() {
                 <span style={{ color: "blue" }}> newElement </span>) ;
               </span>{" "}
             </div>
-            <div className="javascript__browser">
+            <div className="inputSection">
               <h2 style={{ color: "blue" }}>web crowd</h2>
               <div>this is a new h2 element</div>
             </div>
@@ -3923,34 +3910,16 @@ function JavaScript() {
             let's make another example, in this example we will add new{" "}
             <b>li</b> to our <b>ul</b>.
           </p>
-          <h4 className="subTittles">Add li to ul</h4>
+          <h4 className="subTittles">Add li to ul :</h4>
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              HTML FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              CSS FILE
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__html">
+          <div className="codeSection">
+            <div className="inputSection">
               &lt;<span className="tag">ul</span>&gt; <br />
               &lt;<span className="tag">li</span>&gt; html5 &lt;
               <span className="tag">/li</span>&gt; <br />
@@ -3959,7 +3928,7 @@ function JavaScript() {
               &lt;
               <span className="tag">/ul</span>&gt; <br />
             </div>
-            <div className="javascript__css">
+            <div className="inputSection">
               <span className="cssTag">li </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
@@ -3971,32 +3940,14 @@ function JavaScript() {
           <br />
           <br />
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JS FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              BROWSER
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">JS FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__javascript">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> ul = </span>{" "}
               <span style={{ color: "purple" }}>
@@ -4004,7 +3955,6 @@ function JavaScript() {
                 <span style={{ color: "purple" }}>querySelector</span>(
                 <span style={{ color: "blue" }}> "ul" </span>) ;
               </span>{" "}
-              <br />
               <br />
               <span style={{ color: "gray" }}>// create a new li</span>
               <br />
@@ -4016,13 +3966,11 @@ function JavaScript() {
                 <span style={{ color: "blue" }}> "li" </span>) ;
               </span>{" "}
               <br />
-              <br />
               <span style={{ color: "gray" }}>// add text to the new li</span>
               <br />
               <span className="variableName"> newLi.</span>
               <span style={{ color: "blue" }}>textContent</span> =
               <span style={{ color: "purple" }}>"javascript"</span> ;
-              <br />
               <br />
               <span style={{ color: "gray" }}>// add the new li to ul</span>
               <br />
@@ -4032,7 +3980,7 @@ function JavaScript() {
                 <span style={{ color: "purple" }}> newLi </span>) ;
               </span>{" "}
             </div>
-            <div className="javascript__browser">
+            <div className="inputSection">
               <ul style={{ marginLeft: "50px" }}>
                 <li style={{ color: "blue" }}>html5</li>
                 <li style={{ color: "blue" }}>css3</li>
@@ -4044,34 +3992,16 @@ function JavaScript() {
             <a href="">click here</a> for more examples and exercises.
           </p>
 
-          <h4 className="subTittles">Add items using input value</h4>
+          <h4 className="subTittles">Add items using input value :</h4>
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              HTML FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              CSS FILE
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__html">
+          <div className="codeSection">
+            <div className="inputSection">
               &lt;<span className="tag">input</span>{" "}
               <span style={{ color: "blue" }}>placeholder=</span>
               <span style={{ color: "purple" }}> "type a new item..."</span>
@@ -4081,7 +4011,7 @@ function JavaScript() {
               <span className="tag">/ul</span>&gt;
               <br />
             </div>
-            <div className="javascript__css">
+            <div className="inputSection">
               <span className="cssTag">li </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
@@ -4118,32 +4048,14 @@ function JavaScript() {
           <br />
           <br />
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JS FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              BROWSER
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">JS FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__javascript">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> input = </span>{" "}
               <span style={{ color: "blue" }}>document.</span>
@@ -4165,7 +4077,6 @@ function JavaScript() {
                 <span style={{ color: "blue" }}> "button" </span>) ;
               </span>{" "}
               <br />
-              <br />
               <span className="variableName"> addItem.</span>
               <span style={{ color: "blue" }}>addEventListener</span>(
               <span style={{ color: "purple" }}> "click" </span>,{" "}
@@ -4180,14 +4091,12 @@ function JavaScript() {
                 <span style={{ color: "blue" }}> "li" </span>) ;
               </span>{" "}
               <br />
-              <br />
               <span style={{ color: "gray" }}>// add text to the new li</span>
               <br />
               <span className="variableName"> newLi.</span>
               <span style={{ color: "blue" }}>textContent</span> =
               <span style={{ color: "purple" }}>input.</span>
               <span>value</span> ;
-              <br />
               <br />
               <span style={{ color: "gray" }}>// add the new li to ul</span>
               <br />
@@ -4203,10 +4112,9 @@ function JavaScript() {
                 <span style={{ color: "purple" }}> "" </span> ;
               </span>{" "}
               <br />
-              <br />
               &#125; )
             </div>
-            <div className="javascript__browser">
+            <div className="inputSection">
               <input
                 style={{
                   padding: "10px 15px",
@@ -4240,34 +4148,16 @@ function JavaScript() {
             <a href="">click here</a> for more examples and exercises.
           </p>
 
-          <h4 className="subTittles">remove items</h4>
+          <h4 className="subTittles">remove items :</h4>
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              HTML FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              CSS FILE
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__html">
+          <div className="codeSection">
+            <div className="inputSection">
               &lt;<span className="tag">ul</span>&gt; <br />
               &lt;<span className="tag">li</span>&gt; html5 &lt;
               <span className="tag">/li</span>&gt; <br />
@@ -4280,7 +4170,7 @@ function JavaScript() {
               &lt;
               <span className="tag">/ul</span>&gt; <br />
             </div>
-            <div className="javascript__css">
+            <div className="inputSection">
               <span className="cssTag">li </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
@@ -4292,32 +4182,14 @@ function JavaScript() {
           <br />
           <br />
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JS FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              BROWSER
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">JS FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__javascript">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> cssLi = </span>{" "}
               <span style={{ color: "purple" }}>
@@ -4325,7 +4197,6 @@ function JavaScript() {
                 <span style={{ color: "purple" }}>querySelector</span>(
                 <span style={{ color: "blue" }}> "#cssLi" </span>) ;
               </span>{" "}
-              <br />
               <br />
               <span style={{ color: "gray" }}>// remove cssLi</span>
               <br />
@@ -4335,7 +4206,7 @@ function JavaScript() {
                 <span style={{ color: "purple" }}> cssLi </span>) ;
               </span>{" "}
             </div>
-            <div className="javascript__browser">
+            <div className="inputSection">
               <ul style={{ marginLeft: "50px" }}>
                 <li style={{ color: "blue" }}>html5</li>
                 <li style={{ color: "blue" }}>javascript</li>
@@ -4351,7 +4222,7 @@ function JavaScript() {
             <a href="">click here</a> for more examples and exercises.
           </p>
 
-          <h4 className="subTittles">JavaScript Events</h4>
+          <h4 className="subTittles">JavaScript Events :</h4>
           <p className="clickHere">
             we use JavaScript events when we want to jump to another page, there
             are a bunch of JavaScript Events, but the most famous is{" "}
@@ -4360,38 +4231,20 @@ function JavaScript() {
             events <a href="">click here</a>.
           </p>
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              HTML FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              CSS FILE
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__html">
+          <div className="codeSection">
+            <div className="inputSection">
               &lt;<span className="tag">h2</span>&gt; web crowd &lt;
               <span className="tag">/h2</span>&gt; <br />
               &lt;<span className="tag">button</span>&gt; click here &lt;
               <span className="tag">/button</span>&gt; <br />
             </div>
-            <div className="javascript__css">
+            <div className="inputSection">
               <span className="cssTag">button </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
@@ -4411,32 +4264,14 @@ function JavaScript() {
           <br />
           <br />
           <div
-            style={{ display: "flex", justifyContent: "space-evenly" }}
+            style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              JS FILE
-            </h2>
-            <h2
-              style={{
-                width: "520px",
-                padding: "10px",
-                textAlign: "center",
-                backgroundColor: "aqua",
-              }}
-            >
-              BROWSER
-            </h2>
+            <h4 className="inhtmlcssjsbroSections">JS FILE</h4>
+            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
-          <div className="javascript__code">
-            <div className="javascript__javascript">
+          <div className="codeSection">
+            <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> btn = </span>{" "}
               <span style={{ color: "purple" }}>
@@ -4454,7 +4289,6 @@ function JavaScript() {
               </span>{" "}
               <br />
               <br />
-              <br />
               <span className="variableName"> btn.</span>
               <span style={{ color: "purple" }}>
                 <span style={{ color: "blue" }}>addEventListener</span>(
@@ -4466,7 +4300,7 @@ function JavaScript() {
                 <span style={{ color: "purple" }}>"red"</span> <br /> &#125; ) ;
               </span>{" "}
             </div>
-            <div className="javascript__browser">
+            <div className="inputSection">
               <h2 className="webCrowdTest">web crowd</h2>
               <button
                 style={{
@@ -4490,7 +4324,7 @@ function JavaScript() {
           </p>
         </div>
         <div className="addPaddingToSection" id="javascriptExercises">
-          <di className="sectionTittle" v className="javascript__exercise">
+          <di className="sectionTittle" className="javascript__exercise">
             <h3
               style={{
                 textAlign: "center",
@@ -4788,7 +4622,7 @@ function JavaScript() {
                 0
               </span>
               <br />
-              <br />
+
               <button
                 style={{
                   padding: "10px 15px",

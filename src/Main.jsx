@@ -52,7 +52,6 @@ function Main() {
         <Link className="cover__Pic" to="/">
           <div className="main__header__left">
             <img src="logo.png" className="main__logo" alt="" />
-            
           </div>
         </Link>
         <ul className="">
@@ -72,8 +71,16 @@ function Main() {
       </div>
       <div className="main__top">
         <div className="main__top__left">
-          <div className="main__top__left__title">WEB CROWD</div>
-          <hr />
+          <font
+            className="main__top__left__title"
+            color="white"
+            size="6"
+            face=" a astro space"
+          >
+            web crowd
+          </font>
+          {/* <div className="main__top__left__title">WEB CROWD</div> */}
+          <hr/>
           <div>Your Path to be a Full Stack Web Developer</div>
           <div>With Our Community. fucking indian Guy </div>
           <div>Write Less, Do More.</div>

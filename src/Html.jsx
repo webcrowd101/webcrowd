@@ -309,8 +309,9 @@ function Html() {
             </b>{" "}
             tags:
           </p>
-          <div className="heading__code">
-            <div readOnly className="heading__input" name="" id="">
+          <div className="codeSection">
+            {" "}
+            <div className="inputSection">
               &lt;<span className="tag">h1</span>&gt; welcome to web crowd &lt;
               <span className="tag">/h1</span>&gt; <br />
               &lt;
@@ -332,7 +333,8 @@ function Html() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="heading__output">
+            <div className="outputSection">
+              {" "}
               <h1>welcome to web crowd</h1>
               <h2>welcome to web crowd</h2>
               <h3>welcome to web crowd</h3>
@@ -353,8 +355,9 @@ function Html() {
           <p className="clickHere">
             you can change the format of any element using the followinhg tags :
           </p>
-          <div className="formatting__code">
-            <div readOnly className="formatting__input">
+          <div className="codeSection">
+            {" "}
+            <div className="inputSection">
               &lt;<span className="tag">b</span>&gt; this is bold &lt;
               <span className="tag">/b</span>&gt; <br /> &lt;
               <span className="tag">i</span>&gt; this is btalic &lt;
@@ -371,7 +374,8 @@ function Html() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="formatting__output">
+            <div className="outputSection">
+              {" "}
               this is <b>bold</b>
               <br />
               this is <i>italic</i>
@@ -396,8 +400,9 @@ function Html() {
             Everything you write inside Comments token (&lt;!-- Code Or text
             --&gt;) will not be executed.
           </p>
-          <div className="comments__code">
-            <div readOnly className="comments__input">
+          <div className="codeSection">
+            {" "}
+            <div className="inputSection">
               &lt;<span className="tag">div</span>&gt; First Line &lt;
               <span className="tag">/div</span>&gt; <br />
               &lt;<span className="comment__tag">!-- </span>
@@ -416,7 +421,8 @@ function Html() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="comments__output">
+            <div className="outputSection">
+              {" "}
               <div>First line</div>
               <div>Third line</div>
               <div>strong</div>
@@ -436,8 +442,9 @@ function Html() {
             use <b>a</b> tag to visit one particular website. inside <b>a</b>{" "}
             tag we write <b>href</b> property, to put the particular link into.
           </p>
-          <div className="links__code">
-            <div readOnly className="links__input">
+          <div className="codeSection">
+            {" "}
+            <div className="inputSection">
               &lt;
               <span className="tag">
                 a <span className="hrefColor">href=</span>{" "}
@@ -466,7 +473,8 @@ function Html() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="links__output">
+            <div className="outputSection">
+              {" "}
               <a href="https://www.youtube.com/">Go to YouTube</a> <br />
               <a href="https://www.amazon.com/" target="_blank">
                 Go to Amazon
@@ -496,15 +504,19 @@ function Html() {
             We use <b>&lt;img&gt;</b> tag to display the images inside our
             websites.
           </p>
-          <div className="images__code">
-            <div readOnly className="images__input">
+          <div className="codeSection">
+            {" "}
+            <div className="inputSection">
               &lt;<span className="tag">h2</span>&gt; the picture will display
               bellow &lt;
               <span className="tag">/h2</span>&gt; <br />
               &lt;
               <span className="tag">
                 img <span className="property">src="</span>
-                <span className="propertyValue">image adress</span>"
+                <span className="propertyValue linked">
+                  https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500
+                </span>
+                "
               </span>
               <span className="tag"> /</span>&gt;
               <br />
@@ -512,7 +524,8 @@ function Html() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="images__output">
+            <div className="outputSection">
+              {" "}
               <h2>the picture will display bellow</h2>
               <img
                 src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
@@ -538,8 +551,9 @@ function Html() {
             usually used in the Header (the top part of your page). ans the
             Sidebar (the left or right side of your page).
           </p>
-          <div className="lists__code">
-            <div readOnly className="lists__input">
+          <div className="codeSection">
+            {" "}
+            <div className="inputSection">
               &lt;
               <span className="tag">h4</span>&gt; the First type of Lists &lt;
               <span className="tag">/h4</span>&gt; <br />
@@ -582,16 +596,17 @@ function Html() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="lists__output">
+            <div className="outputSection">
+              {" "}
               <h4>the First type of Lists</h4>
-              <ul style={{ marginLeft: "50px" }}>
+              <ul style={{ marginLeft: "50px", pointerEvents: "none" }}>
                 <li>item 1</li>
                 <li>item 2</li>
                 <li>item 3</li>
                 <li>item 4</li>
               </ul>
               <h4>the Second type of Lists</h4>
-              <ol style={{ marginLeft: "50px" }}>
+              <ol style={{ marginLeft: "50px", pointerEvents: "none" }}>
                 <li>item 1</li>
                 <li>item 2</li>
                 <li>item 3</li>
@@ -608,8 +623,9 @@ function Html() {
             Password...etc. we can integrat multiple attributes to this tag, but
             the most popular are <b>type & placeholder</b>
           </p>
-          <div className="inputs__code">
-            <div readOnly className="inputs__input">
+          <div className="codeSection">
+            {" "}
+            <div className="inputSection">
               &lt;<span className="tag">h4</span>&gt; Enter your full name&lt;
               <span className="tag">/h4</span>&gt; <br />
               &lt;
@@ -647,7 +663,8 @@ function Html() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="inputs__output">
+            <div className="outputSection">
+              {" "}
               <h4>Enter your full name</h4>
               <input type="text" placeholder="Enter your full name" />
               <h4>Enter your Email</h4>
@@ -682,8 +699,9 @@ function Html() {
             in this example we will pop up an alert with{" "}
             <i>the button is clicked</i> message.
           </p>
-          <div className="formatting__code">
-            <div readOnly className="formatting__input">
+          <div className="codeSection">
+            {" "}
+            <div className="inputSection">
               &lt;<span className="tag">b</span>&gt; click on this button to pop
               up a message &lt;
               <span className="tag">/b</span>&gt; <br /> &lt;
@@ -699,7 +717,8 @@ function Html() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="formatting__output">
+            <div className="outputSection">
+              {" "}
               <b>click on this button to pop up a message</b>
               <br />
               <button onClick={() => alert("the button is clicked")}>
@@ -718,8 +737,9 @@ function Html() {
             we often use <b>&lt;select&gt; & &lt;option&gt;</b> tag to filter
             the results in our website.
           </p>
-          <div className="selectOption__code">
-            <div readOnly className="selectOption__input">
+          <div className="codeSection">
+            {" "}
+            <div className="inputSection">
               &lt;
               <span className="tag">h4</span>&gt; select your country : &lt;
               <span className="tag">/h4</span>&gt; <br />
@@ -743,7 +763,8 @@ function Html() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="selectOption__output">
+            <div className="outputSection">
+              {" "}
               <h4>select your country :</h4>
               <select>
                 <option>Morocco</option>
@@ -760,43 +781,41 @@ function Html() {
             we usually use <b>&lt;fieldset&gt; & &lt;legend&gt;</b> tag to group
             related elements in a form.
           </p>
-          <div className="fieldsetLegend__code">
-            <div readOnly className="fieldsetLegend__input">
+          <div className="codeSection">
+            {" "}
+            <div className="inputSection">
               &lt;
               <span className="tag">fieldset</span>&gt; <br />
               &lt;
               <span className="tag">legend</span>&gt; My Skills &lt;
               <span className="tag">/legend</span>&gt; <br />
               &lt;
-              <span className="tag">ul</span>&gt; <br /> &lt;
-              <span className="tag">li</span>&gt; HTML5 &lt;
-              <span className="tag">/li</span>&gt; <br />
+              <span className="tag">div</span>&gt; HTML5 &lt;
+              <span className="tag">/div</span>&gt; <br />
               &lt;
-              <span className="tag">li</span>&gt; CSS3 &lt;
-              <span className="tag">/li</span>&gt; <br />
+              <span className="tag">div</span>&gt; CSS3 &lt;
+              <span className="tag">/div</span>&gt; <br />
               &lt;
-              <span className="tag">li</span>&gt; JAVASCRIPT &lt;
-              <span className="tag">/li</span>&gt; <br />
+              <span className="tag">div</span>&gt; JAVASCRIPT &lt;
+              <span className="tag">/div</span>&gt; <br />
               &lt;
-              <span className="tag">li</span>&gt; JQUERY &lt;
-              <span className="tag">/li</span>&gt; <br />
-              &lt;
-              <span className="tag">/ul</span>&gt; <br />
+              <span className="tag">div</span>&gt; JQUERY &lt;
+              <span className="tag">/div</span>&gt; <br />
               &lt;
               <span className="tag">/fieldset</span>&gt; <br />
             </div>
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="fieldsetLegend__output">
+            <div className="outputSection">
+              {" "}
               <fieldset>
-                <legend> Web development Languages</legend>
-                <ul>
-                  <li> HTML5 </li>
-                  <li> CSS3 </li>
-                  <li> JAVASCRIPT </li>
-                  <li> JQUERY </li>
-                </ul>
+                <legend>My Skills</legend>
+
+                <div> HTML5 </div>
+                <div> CSS3 </div>
+                <div> JAVASCRIPT </div>
+                <div> JQUERY </div>
               </fieldset>
             </div>
           </div>
@@ -810,8 +829,9 @@ function Html() {
             and when you want to display a list of Customers and their
             information.
           </p>
-          <div className="tables__code">
-            <div readOnly className="tables__input">
+          <div className="codeSection">
+            {" "}
+            <div className="inputSection">
               &lt;
               <span className="tag">h4</span>&gt; this is the list of Customers
               : &lt;
@@ -867,7 +887,8 @@ function Html() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="tables__output">
+            <div className="outputSection">
+              {" "}
               <h4>this is the list of Customers :</h4>
               <table>
                 <tr>
@@ -907,8 +928,9 @@ function Html() {
             can send the users's information to the Server once Click on Sign up
             button.
           </p>
-          <div className="forms__code">
-            <div readOnly className="forms__input">
+          <div className="codeSection">
+            {" "}
+            <div className="inputSection">
               <span className="tag">h4</span>&gt; Sign up to Facebook : &lt;
               <span className="tag">/h4</span>&gt; <br />
               &lt;<span className="tag">form</span>&gt; <br />
@@ -995,49 +1017,48 @@ function Html() {
             <div>
               <ArrowRightAltIcon className="arrow" />
             </div>
-            <div className="forms__output">
+            <div className="outputSection">
+              {" "}
               <h4>Sign up to Facebook :</h4>
-              <form>
-                <table>
-                  <tr>
-                    <td>Full Name : </td>
-                    <td>
-                      <input
-                        type="text"
-                        name="FullName"
-                        placeholder="Full Name"
-                      />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Email : </td>
-                    <td>
-                      <input type="email" name="Email" placeholder="Email" />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Password : </td>
-                    <td>
-                      <input
-                        type="password"
-                        name="Password"
-                        placeholder="Password"
-                      />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>Verify Password : </td>
-                    <td>
-                      <input
-                        type="password"
-                        name="VerifyPassword"
-                        placeholder="Verify Password"
-                      />
-                    </td>
-                  </tr>
-                </table>
-                <button type="submit">Sign up</button>
-              </form>
+              <table>
+                <tr>
+                  <td>Full Name : </td>
+                  <td>
+                    <input
+                      type="text"
+                      name="FullName"
+                      placeholder="Full Name"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Email : </td>
+                  <td>
+                    <input type="email" name="Email" placeholder="Email" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Password : </td>
+                  <td>
+                    <input
+                      type="password"
+                      name="Password"
+                      placeholder="Password"
+                    />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Verify Password : </td>
+                  <td>
+                    <input
+                      type="password"
+                      name="VerifyPassword"
+                      placeholder="Verify Password"
+                    />
+                  </td>
+                </tr>
+              </table>
+              <button type="submit">Sign up</button>
             </div>
           </div>
           <p className="clickHere">
@@ -1045,6 +1066,8 @@ function Html() {
             wrote displayed in the URL. that's because we add <b>name</b>{" "}
             property to each input, So the value of this property Equals the
             value you Enter.
+            <b className="note">Note : </b>we prevented that from happening in
+            this page, but if you copy this code and paste it will work.
           </p>
         </div>
 
@@ -1067,7 +1090,7 @@ function Html() {
                   <b>Web Developer</b>. <br />
                   So, these are the Languages i've learned.
                 </p>
-                <ul style={{ marginLeft: "50px" }}>
+                <ul style={{ marginLeft: "50px", pointerEvents: "none" }}>
                   <li>HTML5</li>
                   <li>CSS3</li>
                   <li>JAVASCRIPT</li>
@@ -1129,32 +1152,30 @@ function Html() {
             <div className="exercise">
               <h3>Login form : </h3>
               <div style={{ flex: "1" }}>
-                <form>
-                  <table>
-                    <tr>
-                      <td>Email :</td>
-                      <td>
-                        <input type="email" placeholder="Email" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Password :</td>
-                      <td>
-                        <input type="password" placeholder="Password" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td>forgot Password?</td>
-                    </tr>
-                    <tr>
-                      <td></td>
-                      <td>
-                        <button>Log in</button>
-                      </td>
-                    </tr>
-                  </table>
-                </form>
+                <table>
+                  <tr>
+                    <td>Email :</td>
+                    <td>
+                      <input type="email" placeholder="Email" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Password :</td>
+                    <td>
+                      <input type="password" placeholder="Password" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>forgot Password?</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <button>Log in</button>
+                    </td>
+                  </tr>
+                </table>
               </div>
               <a
                 href=""
@@ -1172,67 +1193,65 @@ function Html() {
             <div className="exercise">
               <h3>Sign up form : </h3>
               <div style={{ flex: "1" }}>
-                <form>
-                  <table>
-                    <tr>
-                      <td>First Name :</td>
-                      <td>
-                        <input type="text" placeholder="First Name" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Last Name :</td>
-                      <td>
-                        <input type="text" placeholder="Last Name" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Email :</td>
-                      <td>
-                        <input type="email" placeholder="Email" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Password :</td>
-                      <td>
-                        <input type="password" placeholder="Password" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Verfiy Password :</td>
-                      <td>
-                        <input type="password" placeholder="Verify Password" />
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Country :</td>
-                      <td>
-                        <select name="" id="">
-                          <option value="">Select Country</option>
-                          <option value="">United States</option>
-                          <option value="">Canada</option>
-                          <option value="">Morocco</option>
-                        </select>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>Gender :</td>
-                      <td>
-                        <input type="radio" name="firstQuestionName" />{" "}
-                        <span>Man</span>{" "}
-                        <input type="radio" name="firstQuestionName" />{" "}
-                        <span>Woman</span>
-                      </td>
-                    </tr>
+                <table>
+                  <tr>
+                    <td>First Name :</td>
+                    <td>
+                      <input type="text" placeholder="First Name" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Last Name :</td>
+                    <td>
+                      <input type="text" placeholder="Last Name" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Email :</td>
+                    <td>
+                      <input type="email" placeholder="Email" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Password :</td>
+                    <td>
+                      <input type="password" placeholder="Password" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Verfiy Password :</td>
+                    <td>
+                      <input type="password" placeholder="Verify Password" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Country :</td>
+                    <td>
+                      <select name="" id="">
+                        <option value="">Select Country</option>
+                        <option value="">United States</option>
+                        <option value="">Canada</option>
+                        <option value="">Morocco</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Gender :</td>
+                    <td>
+                      <input type="radio" name="firstQuestionName" />{" "}
+                      <span>Man</span>{" "}
+                      <input type="radio" name="firstQuestionName" />{" "}
+                      <span>Woman</span>
+                    </td>
+                  </tr>
 
-                    <tr>
-                      <td></td>
-                      <td>
-                        <button>Sign up</button>
-                      </td>
-                    </tr>
-                  </table>
-                </form>
+                  <tr>
+                    <td></td>
+                    <td>
+                      <button>Sign up</button>
+                    </td>
+                  </tr>
+                </table>
               </div>
               <a
                 href=""
