@@ -16,21 +16,24 @@ function Jquery() {
   let history = useHistory();
 
   //show and hide
-  const ShowHide = () => {
-    if (!show) {
-      document.querySelector(".Sidebar").style.width = "200px";
-      document.querySelector(".Sidebar ul").style.display = "block";
-      document.querySelector(".Content").style.opacity = "0.5";
-      hide(true);
-    } else if (show) {
-      document.querySelector(".Sidebar").style.width = "60px";
-      document.querySelector(".Sidebar ul").style.display = "none";
-      document.querySelector(".Content").style.opacity = "1";
-      hide(false);
-    } else {
-    }
-  };
+    const ShowHide = () => {
+      if (!show) {
+        document.querySelector(".Sidebar").style.width = "250px";
+        document.querySelector(".Sidebar ul").style.display = "block";
+        document.querySelector(".Content").style.opacity = "0.5";
+        document.querySelector(".OpenSideBar").style.float = "right";
+        document.querySelector(".OpenSideBar").style.margin = "3px";
+        hide(true);
+      } else if (show) {
+        document.querySelector(".Sidebar").style.width = "40px";
+        document.querySelector(".Sidebar ul").style.display = "none";
+        document.querySelector(".Content").style.opacity = "1";
+        document.querySelector(".OpenSideBar").style.margin = "0px";
 
+        hide(false);
+      } else {
+      }
+    };
   window.addEventListener("resize", function () {
     if (window.innerWidth > 871) {
       if (history.push(localStorage.getItem("current")) === "JQUERY") {
@@ -51,13 +54,13 @@ function Jquery() {
       }
     } else if (window.innerWidth <= 871) {
       if (history.push(localStorage.getItem("current")) === "jquery5") {
-        document.querySelector(".Sidebar").style.width = "60px";
+        document.querySelector(".Sidebar").style.width = "40px";
         document.querySelector(".Sidebar ul").style.display = "none";
       }
       if (show && window.innerWidth <= 871) {
         try {
           document.querySelector(".Content").style.opacity = "1";
-          document.querySelector(".Sidebar").style.width = "60px";
+          document.querySelector(".Sidebar").style.width = "40px";
           document.querySelector(".Sidebar ul").style.display = "none";
           hide(false);
         } catch (error) {}
@@ -193,9 +196,10 @@ function Jquery() {
   const refleshCurrentPage = () => {
     $(".fifth").addClass("active");
     if (show && window.innerWidth < 871) {
-      document.querySelector(".Sidebar").style.width = "60px";
+      document.querySelector(".Sidebar").style.width = "40px";
       document.querySelector(".Sidebar ul").style.display = "none";
       document.querySelector(".Content").style.opacity = "1";
+      document.querySelector(".OpenSideBar").style.margin = "0px";
       hide(false);
     }
   };
@@ -441,6 +445,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">JAVASCRIPT</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">JQUERY</h4>
             <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "h2" </span>).
@@ -448,6 +453,7 @@ function Jquery() {
               <span className="variableName"> "color" </span> ,{" "}
               <span className="variableName"> "red" </span> ) ;
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">JAVASCRIPT</h4>
             <div className="outputSection">
               <span className="declarationKey">document</span>.
               <span style={{ color: "purple" }}>querySelector</span>(
@@ -478,11 +484,13 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
               &lt;<span className="tag">h2</span>&gt;
               <span> web crowd </span>
               &lt;<span className="tag">h2</span>&gt;
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
             <div className="inputSection">
               <span className="cssTag">h2 </span>
               &#123; <br />{" "}
@@ -500,12 +508,14 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">JQUERY</h4>
             <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "h2" </span>).
               <span className="declarationKey">html</span>(
               <span className="variableName"> "this is new h2 text" </span> ) ;
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="outputSection">
               <h2>this is new h2 text</h2>
             </div>
@@ -529,6 +539,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
               &lt;<span className="tag">input</span>
               {"   "}
@@ -538,6 +549,7 @@ function Jquery() {
               <span className="cssValue">"enter your name" </span>
               <span className="tag"> /</span>&gt;
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
             <div className="inputSection">
               <span className="cssTag">input </span>
               &#123; <br />{" "}
@@ -559,6 +571,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">JQUERY</h4>
             <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "h2" </span>).
@@ -570,6 +583,7 @@ function Jquery() {
               </span>{" "}
               ) ;
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="outputSection">
               <input
                 style={{
@@ -602,6 +616,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
               &lt;<span className="tag">h3</span>&gt;
               <span> web crowd </span>
@@ -611,6 +626,7 @@ function Jquery() {
               <span> click me </span>
               &lt;<span className="tag">/button</span>&gt;
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
             <div className="inputSection">
               <span className="cssTag">h3 </span>
               &#123; <br />{" "}
@@ -628,6 +644,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">JQUERY</h4>
             <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
@@ -640,6 +657,7 @@ function Jquery() {
               <br />
               &#125; )
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="outputSection">
               <h3 className="h3Element" style={{ color: "blue" }}>
                 web crowd
@@ -667,6 +685,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
               &lt;<span className="tag">p</span>&gt;
               <span> web crowd </span>
@@ -676,6 +695,7 @@ function Jquery() {
               <span> click me </span>
               &lt;<span className="tag">/button</span>&gt;
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
             <div className="inputSection">
               <span className="cssTag">p </span>
               &#123; <br />{" "}
@@ -693,6 +713,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">JQUERY</h4>
             <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
@@ -705,6 +726,7 @@ function Jquery() {
               <br />
               &#125; )
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="outputSection">
               <p className="para" style={{ color: "purple" }}>
                 web crowd
@@ -734,6 +756,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
               &lt;<span className="tag">button</span>&gt;
               <span> click me </span>
@@ -743,6 +766,7 @@ function Jquery() {
               <span> web crowd </span>
               &lt;<span className="tag">/p</span>&gt; <br />
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
             <div className="inputSection">
               <span className="cssTag">p </span>
               &#123; <br />{" "}
@@ -760,6 +784,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">JQUERY</h4>
             <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
@@ -769,6 +794,7 @@ function Jquery() {
               <span className="variableName"> "p" </span>).
               <span className="declarationKey">hide</span>() ;<br /> &#125; )
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="outputSection">
               <button onClick={hideElement}>click me</button>
               <p className="paragraph" style={{ color: "purple" }}>
@@ -796,6 +822,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
               &lt;<span className="tag">button</span>&gt;
               <span> click me </span>
@@ -805,6 +832,7 @@ function Jquery() {
               <span> web crowd </span>
               &lt;<span className="tag">/div</span>&gt; <br />
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
             <div className="inputSection">
               <span className="cssTag">div </span>
               &#123; <br />{" "}
@@ -824,6 +852,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">JQUERY</h4>
             <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
@@ -833,6 +862,7 @@ function Jquery() {
               <span className="variableName"> "div" </span>).
               <span className="declarationKey">show</span>() ; <br /> &#125; )
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="outputSection">
               <button onClick={showElement}>click me</button>
               <div
@@ -863,6 +893,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
               &lt;<span className="tag">button</span>&gt;
               <span> click me </span>
@@ -872,6 +903,7 @@ function Jquery() {
               <span> web crowd </span>
               &lt;<span className="tag">/div</span>&gt; <br />
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
             <div className="inputSection">
               <span className="cssTag">div </span>
               &#123; <br />{" "}
@@ -889,6 +921,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">JQUERY</h4>
             <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
@@ -898,6 +931,7 @@ function Jquery() {
               <span className="variableName"> "div" </span>).
               <span className="declarationKey">toggle</span>() ; <br /> &#125; )
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="outputSection">
               <button onClick={toggleElement}>click me</button>
               <div className="toggledDiv" style={{ color: "purple" }}>
@@ -926,6 +960,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
               &lt;<span className="tag">h1</span>&gt;
               <span> web crowd </span>
@@ -936,6 +971,7 @@ function Jquery() {
               &lt;<span className="tag">/button</span>&gt;
               <br />
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
             <div className="inputSection">
               <span className="cssTag">h1 </span>
               &#123; <br />{" "}
@@ -957,6 +993,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">JQUERY</h4>
             <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
@@ -967,6 +1004,7 @@ function Jquery() {
               <span className="declarationKey">slideUp</span>(2000) ; <br />{" "}
               &#125; )
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="outputSection">
               <h1
                 className="slideUpDiv"
@@ -1002,6 +1040,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
               &lt;<span className="tag">h1</span>&gt;
               <span> web crowd </span>
@@ -1018,6 +1057,7 @@ function Jquery() {
               &lt;<span className="tag">/button</span>&gt;
               <br />
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
             <div className="inputSection">
               <span className="cssTag">h1 </span>
               &#123; <br />{" "}
@@ -1046,6 +1086,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">JQUERY</h4>
             <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
@@ -1065,6 +1106,7 @@ function Jquery() {
               <span className="declarationKey">slideDown</span>(2000) ; <br />{" "}
               &#125; )
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="outputSection">
               <h1
                 className="slidedH1"
@@ -1107,6 +1149,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
               &lt;<span className="tag">h1</span>&gt;
               <span> web crowd </span>
@@ -1117,6 +1160,7 @@ function Jquery() {
               &lt;<span className="tag">/button</span>&gt;
               <br />
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
             <div className="inputSection">
               <span className="cssTag">h1 </span>
               &#123; <br />{" "}
@@ -1138,6 +1182,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">JQUERY</h4>
             <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
@@ -1148,6 +1193,7 @@ function Jquery() {
               <span className="declarationKey">slideToggle</span>(2000) ; <br />{" "}
               &#125; )
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="outputSection">
               <h1
                 className="slideToggleH1"
@@ -1178,6 +1224,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
               &lt;<span className="tag">h1</span>&gt;
               <span> web crowd </span>
@@ -1188,6 +1235,7 @@ function Jquery() {
               &lt;<span className="tag">/button</span>&gt;
               <br />
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
               <span className="cssTag">h1 </span>
               &#123; <br />{" "}
@@ -1209,6 +1257,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">JQUERY</h4>
             <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
@@ -1219,6 +1268,7 @@ function Jquery() {
               <span className="declarationKey">fadeOut</span>(2000) ; <br />{" "}
               &#125; )
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="outputSection">
               <h1
                 className="fadeOutH1"
@@ -1249,6 +1299,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
               &lt;<span className="tag">h1</span>&gt;
               <span> web crowd </span>
@@ -1265,6 +1316,7 @@ function Jquery() {
               &lt;<span className="tag">/button</span>&gt;
               <br />
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
             <div className="inputSection">
               <span className="cssTag">h1 </span>
               &#123; <br />{" "}
@@ -1293,6 +1345,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">JQUERY</h4>
             <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
@@ -1312,6 +1365,7 @@ function Jquery() {
               <span className="declarationKey">fadeIn</span>(2000) ; <br />{" "}
               &#125; )
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="outputSection">
               <h1
                 className="fadedH1"
@@ -1351,6 +1405,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
               &lt;<span className="tag">h1</span>&gt;
               <span> web crowd </span>
@@ -1361,6 +1416,7 @@ function Jquery() {
               &lt;<span className="tag">/button</span>&gt;
               <br />
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
             <div className="inputSection">
               <span className="cssTag">h1 </span>
               &#123; <br />{" "}
@@ -1384,6 +1440,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">JQUERY</h4>
             <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
@@ -1394,6 +1451,7 @@ function Jquery() {
               <span className="declarationKey">fadeToggle</span>(2000) ; <br />{" "}
               &#125; )
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="outputSection">
               <h1
                 className="fadeToggleH1"
@@ -1427,6 +1485,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
               &lt;<span className="tag">div</span>&gt;
               <span> web crowd </span>
@@ -1437,6 +1496,7 @@ function Jquery() {
               &lt;<span className="tag">/button</span>&gt;
               <br />
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
             <div className="inputSection">
               <span className="cssTag">div </span>
               &#123; <br />{" "}
@@ -1460,6 +1520,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">JQUERY</h4>
             <div className="inputSection">
               <span className="declarationKey">$</span>(
               <span className="variableName"> "button" </span>).
@@ -1476,6 +1537,7 @@ function Jquery() {
               <span className="cssValue">"30px"</span> <br /> &#125; ,{" "}
               <span style={{ color: "purple" }}>2000</span> ) ; <br /> &#125; )
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="outputSection">
               <div
                 className="animatedDiv"

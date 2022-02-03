@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import $ from "jquery";
 import "./Html.css";
+import Footer from "./Footer";
 import DehazeIcon from "@mui/icons-material/Dehaze";
 import CloseIcon from "@mui/icons-material/Close";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
@@ -29,6 +30,8 @@ function Html() {
       document.querySelector(".Sidebar").style.width = "40px";
       document.querySelector(".Sidebar ul").style.display = "none";
       document.querySelector(".Content").style.opacity = "1";
+      document.querySelector(".OpenSideBar").style.margin = "0px";
+
 
       hide(false);
     } else {
@@ -208,6 +211,7 @@ function Html() {
       document.querySelector(".Sidebar").style.width = "40px";
       document.querySelector(".Sidebar ul").style.display = "none";
       document.querySelector(".Content").style.opacity = "1";
+      document.querySelector(".OpenSideBar").style.margin = "0px";
       hide(false);
     }
   };

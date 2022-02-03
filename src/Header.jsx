@@ -47,15 +47,23 @@ function Header() {
 
   const showHeader = () => {
     document.querySelector(".items").style.display = "flex";
+    document.querySelectorAll(".sections").forEach(section => {
+      section.style.margin = "12px 0";
+    
+    })
     setSituation(false);
   };
   const hideHeader = (e) => {
     history.push(`${e.target.textContent}`);
     document.querySelector(".items").style.display = "none";
+
     setSituation(true);
     if (window.innerWidth > 1000) {
       document.querySelector(".items").style.display = "flex";
     }
+    document.querySelectorAll(".sections").forEach((section) => {
+      section.style.margin = "0";
+    });
   };
   const hideHeaderFromIcon = () => {
     document.querySelector(".items").style.display = "none";
@@ -63,6 +71,9 @@ function Header() {
     if (window.innerWidth > 1000) {
       document.querySelector(".items").style.display = "flex";
     }
+    document.querySelectorAll(".sections").forEach((section) => {
+      section.style.margin = "0";
+    });
   };
 
   $(window).resize(function () {

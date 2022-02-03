@@ -18,22 +18,24 @@ function Css() {
   let history = useHistory();
 
   //show and hide
-  const ShowHide = () => {
-    if (!show) {
-      document.querySelector(".Sidebar").style.width = "250px";
-      document.querySelector(".Sidebar ul").style.display = "block";
-      document.querySelector(".Content").style.opacity = "0.5";
-      document.querySelector(".OpenSideBar").style.float = "right";
-      document.querySelector(".OpenSideBar").style.margin = "3px";
-      hide(true);
-    } else if (show) {
-      document.querySelector(".Sidebar").style.width = "40px";
-      document.querySelector(".Sidebar ul").style.display = "none";
-      document.querySelector(".Content").style.opacity = "1";
-      hide(false);
-    } else {
-    }
-  };
+    const ShowHide = () => {
+      if (!show) {
+        document.querySelector(".Sidebar").style.width = "250px";
+        document.querySelector(".Sidebar ul").style.display = "block";
+        document.querySelector(".Content").style.opacity = "0.5";
+        document.querySelector(".OpenSideBar").style.float = "right";
+        document.querySelector(".OpenSideBar").style.margin = "3px";
+        hide(true);
+      } else if (show) {
+        document.querySelector(".Sidebar").style.width = "40px";
+        document.querySelector(".Sidebar ul").style.display = "none";
+        document.querySelector(".Content").style.opacity = "1";
+        document.querySelector(".OpenSideBar").style.margin = "0px";
+
+        hide(false);
+      } else {
+      }
+    };
 
   window.addEventListener("resize", function () {
     if (window.innerWidth > 871) {
@@ -191,6 +193,7 @@ function Css() {
       document.querySelector(".Sidebar").style.width = "40px";
       document.querySelector(".Sidebar ul").style.display = "none";
       document.querySelector(".Content").style.opacity = "1";
+      document.querySelector(".OpenSideBar").style.margin = "0px";
       hide(false);
     }
     document.querySelectorAll(".sectionTittle").forEach(function (section) {

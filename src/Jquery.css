@@ -2,53 +2,6 @@
   display: flex;
   width: 100vw;
 }
-.jqueryModal {
-  width: 30%;
-  height: 40%;
-  background-color: blue;
-  position: absolute;
-  top: 30%;
-  left: 35%;
-  display: none;
-}
-.closeModal {
-  color: red !important;
-  font-size: 30px !important;
-  float: right;
-  cursor: pointer;
-}
-
-
-
-.jquery__code {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.jquery__input {
-  width: 520px;
-  height: 200px;
-  outline: none;
-  border: 1px solid gray;
-  background-color: rgb(228, 226, 226);
-  overflow-y: scroll;
-  padding: 10px;
-}
-.jquery__input::-webkit-scrollbar {
-  display: none;
-}
-.jquery__output {
-  width: 520px;
-  height: 200px;
-  outline: none;
-  border: 1px solid gray;
-  background-color: rgb(228, 226, 226);
-  overflow-y: scroll;
-  padding: 10px;
-}
-.jquery__output::-webkit-scrollbar {
-  display: none;
-}
 
 .fullAnimatedSideBar {
   display: flex;
@@ -58,25 +11,6 @@
   width: 150px;
   height: 200px;
   background-color: rgb(78, 26, 70);
-}
-
-#jqueryExercises {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.jquery__exercise {
-  background-color: rgb(223, 221, 221);
-  width: 500px;
-  margin: 10px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-  overflow-y: scroll;
-}
-.jquery__exercise::-webkit-scrollbar {
-  display: none;
 }
 
 .headerContainer {

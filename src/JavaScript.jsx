@@ -18,22 +18,24 @@ function JavaScript() {
   let history = useHistory();
 
   //show and hide
-  const ShowHide = () => {
-    if (!show) {
-      document.querySelector(".Sidebar").style.width = "250px";
-      document.querySelector(".Sidebar ul").style.display = "block";
-      document.querySelector(".Content").style.opacity = "0.5";
-      document.querySelector(".OpenSideBar").style.float = "right";
-      document.querySelector(".OpenSideBar").style.margin = "3px";
-      hide(true);
-    } else if (show) {
-      document.querySelector(".Sidebar").style.width = "40px";
-      document.querySelector(".Sidebar ul").style.display = "none";
-      document.querySelector(".Content").style.opacity = "1";
-      hide(false);
-    } else {
-    }
-  };
+    const ShowHide = () => {
+      if (!show) {
+        document.querySelector(".Sidebar").style.width = "250px";
+        document.querySelector(".Sidebar ul").style.display = "block";
+        document.querySelector(".Content").style.opacity = "0.5";
+        document.querySelector(".OpenSideBar").style.float = "right";
+        document.querySelector(".OpenSideBar").style.margin = "3px";
+        hide(true);
+      } else if (show) {
+        document.querySelector(".Sidebar").style.width = "40px";
+        document.querySelector(".Sidebar ul").style.display = "none";
+        document.querySelector(".Content").style.opacity = "1";
+        document.querySelector(".OpenSideBar").style.margin = "0px";
+
+        hide(false);
+      } else {
+      }
+    };
   const unclickAble = () => {
     $(".unclickAble").off("click", "li");
   };
@@ -237,9 +239,11 @@ function JavaScript() {
   const refleshCurrentPage = () => {
     $(".fourth").addClass("active");
     if (show && window.innerWidth < 871) {
-      document.querySelector(".Sidebar").style.width = "60px";
-      document.querySelector(".Sidebar ul").style.display = "none";
-      document.querySelector(".Content").style.opacity = "1";
+       document.querySelector(".Sidebar").style.width = "40px";
+       document.querySelector(".Sidebar ul").style.display = "none";
+       document.querySelector(".Content").style.opacity = "1";
+       document.querySelector(".OpenSideBar").style.margin = "0px";
+
       hide(false);
     }
   };
@@ -744,7 +748,7 @@ function JavaScript() {
           <p className="clickHere">
             there is a bunch of data types in javascript. here is the list of
             them :
-            <ul style={{ marginLeft: "50px" , pointerEvents: "none" }}>
+            <ul style={{ marginLeft: "50px", pointerEvents: "none" }}>
               <li>string</li>
               <li>number</li>
               <li>boolean</li>
@@ -761,34 +765,34 @@ function JavaScript() {
 
           <div className="codeSection">
             <div className="inputSection">
-              <div style={{color:"gray"}}>// string</div>
+              <div style={{ color: "gray" }}>// string</div>
               <span className="declarationKey">var</span>
               <span className="variableName"> name = </span>
               <span>"mike"</span>;
               <div className="console">
                 console.log(<span className="insideConsole">name</span>)
               </div>
-              <div style={{color:"gray"}}>// number</div>
+              <div style={{ color: "gray" }}>// number</div>
               <span className="declarationKey">let</span>
               <span className="variableName"> age = </span>
               <span>22</span>;
               <div className="console">
                 console.log(<span className="insideConsole">age</span>)
               </div>
-              <div style={{color:"gray"}}>// boolean</div>
+              <div style={{ color: "gray" }}>// boolean</div>
               <span className="declarationKey">const</span>
               <span className="variableName"> isWorking = </span>
               <span>false</span>;
               <div className="console">
                 console.log(<span className="insideConsole">isworking</span>)
               </div>
-              <div style={{color:"gray"}}>// undefined</div>
+              <div style={{ color: "gray" }}>// undefined</div>
               <span className="declarationKey">const</span>
               <span className="variableName"> country </span>;
               <div className="console">
                 console.log(<span className="insideConsole">country</span>)
               </div>
-              <div style={{color:"gray"}}>// null</div>
+              <div style={{ color: "gray" }}>// null</div>
               <span className="declarationKey">const</span>
               <span className="variableName"> city =</span>
               <span>null</span>;
@@ -813,7 +817,7 @@ function JavaScript() {
           <p className="clickHere">
             we can convert data from current type to another type using two
             types of conversion.
-            <ol style={{ marginLeft: "50px" , pointerEvents: "none" }}>
+            <ol style={{ marginLeft: "50px", pointerEvents: "none" }}>
               <li>
                 Implicit conversion :{" "}
                 <span style={{ color: "purple" }}>
@@ -829,7 +833,7 @@ function JavaScript() {
 
           <div className="codeSection">
             <div className="inputSection">
-              <div style={{color:"gray"}}>// Implicit conversion</div> <br />
+              <div style={{ color: "gray" }}>// Implicit conversion</div> <br />
               <span className="declarationKey">var</span>
               <span className="variableName"> number1 = </span>
               <span>2</span>; <br />
@@ -840,7 +844,9 @@ function JavaScript() {
                 console.log(
                 <span className="insideConsole">number1 + number2</span>)
               </div>
-              <div style={{color:"gray"}}>// Explicit conversion (convert from string to number) </div>{" "}
+              <div style={{ color: "gray" }}>
+                // Explicit conversion (convert from string to number){" "}
+              </div>{" "}
               <br />
               <span className="declarationKey">let</span>
               <span className="variableName"> age = </span>
@@ -852,7 +858,9 @@ function JavaScript() {
                 </span>
                 )
               </div>
-              <div style={{color:"gray"}}>// Explicit conversion (convert from number to string)</div>{" "}
+              <div style={{ color: "gray" }}>
+                // Explicit conversion (convert from number to string)
+              </div>{" "}
               <br />
               <span className="declarationKey">const</span>
               <span className="variableName"> languages = </span>
@@ -1103,7 +1111,7 @@ function JavaScript() {
             <div className="inputSection">
               <span className="declarationKey">var</span>
               <span className="variableName"> str = </span>
-              <span>" my name is mike "</span>; <br /> 
+              <span>" my name is mike "</span>; <br />
               <span style={{ color: "purple" }}>
                 for(
                 <span className="declarationKey">let </span>
@@ -1132,7 +1140,7 @@ function JavaScript() {
 
           <p className="clickHere">
             So here are the steps of how <b>for</b> loop works : <br />
-            <ol style={{ marginLeft: "50px" , pointerEvents: "none" }}>
+            <ol style={{ marginLeft: "50px", pointerEvents: "none" }}>
               <li>check if i &gt; 5</li>
               <li>
                 if yes, <b>str</b> will get executed, if not... the loop will
@@ -1316,7 +1324,7 @@ function JavaScript() {
             code will get executed. <br />
             <b className="note">Note : </b> ther are two types of functions.{" "}
             <br />
-            <ol style={{ marginLeft: "50px" , pointerEvents: "none" }}>
+            <ol style={{ marginLeft: "50px", pointerEvents: "none" }}>
               <li>function without parameters</li>
               <li>function with parameters</li>
             </ol>
@@ -1420,15 +1428,15 @@ function JavaScript() {
           <p className="clickHere">
             <b className="importants">Important! </b>: in the examples above we
             didn't use <b>return</b> key inside the function. this key is very
-            important in function. <br /> <a href="">click here</a> to figure it out,
-            and you will find a bunch of examples.
+            important in function. <br /> <a href="">click here</a> to figure it
+            out, and you will find a bunch of examples.
           </p>
         </div>
         <div className="addPaddingToSection" id="scope">
           <h3 className="sectionTittle">scope</h3>
           <p className="clickHere">
             there are three types of scope :
-            <ol style={{ marginLeft: "50px" , pointerEvents: "none" }}>
+            <ol style={{ marginLeft: "50px", pointerEvents: "none" }}>
               <li className="unclickAble" style={{ pointerEvents: "none" }}>
                 Global Scope
               </li>
@@ -2188,7 +2196,7 @@ function JavaScript() {
           <p className="clickHere">
             forEach() is actually like map() , the defferences between them is
             that : <br />
-            <ul style={{ marginLeft: "50px" , pointerEvents: "none" }}>
+            <ul style={{ marginLeft: "50px", pointerEvents: "none" }}>
               <li style={{ pointerEvents: "none" }}>
                 map() returns a new array.{" "}
               </li>
@@ -3573,10 +3581,11 @@ function JavaScript() {
             style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
-            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">CSS FILE</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
               &lt;<span className="tag">h2</span>&gt; web crowd &lt;
               <span className="tag">/h2</span>&gt; <br />
@@ -3587,6 +3596,7 @@ function JavaScript() {
               &gt; welcome to web crowd &lt;
               <span className="tag">/div</span>&gt;
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
             <div className="inputSection">
               <span className="cssTag">h2 </span>
               &#123; <br />{" "}
@@ -3607,10 +3617,11 @@ function JavaScript() {
             style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h4 className="inhtmlcssjsbroSections">JS FILE</h4>
-            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">JS FILE</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">BROWSER</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">JS FILE</h4>
             <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> h2Variable = </span>{" "}
@@ -3643,6 +3654,7 @@ function JavaScript() {
               <span style={{ color: "purple" }}>color</span> =
               <span style={{ color: "blue" }}> "white"</span> ;
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="inputSection">
               <h2 style={{ color: "red", fontSize: "34px" }}>web crowd</h2>
               <div
@@ -3671,10 +3683,11 @@ function JavaScript() {
             style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
-            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">CSS FILE</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
               &lt;<span className="tag">h2</span>&gt; web crowd &lt;
               <span className="tag">/h2</span>&gt; <br />
@@ -3685,6 +3698,7 @@ function JavaScript() {
               &gt; welcome to web crowd &lt;
               <span className="tag">/div</span>&gt;
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
             <div className="inputSection">
               <span className="cssTag">h2 </span>
               &#123; <br />{" "}
@@ -3700,10 +3714,11 @@ function JavaScript() {
             style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h4 className="inhtmlcssjsbroSections">JS FILE</h4>
-            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">JS FILE</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">BROWSER</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">JS FILE</h4>
             <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> h2Variable = </span>{" "}
@@ -3745,6 +3760,7 @@ function JavaScript() {
               <span style={{ color: "purple" }}>color</span> =
               <span style={{ color: "blue" }}> "blue"</span> ;
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="inputSection">
               <h2 style={{ color: "red", fontSize: "34px" }}>
                 this is a new text of h2
@@ -3784,15 +3800,17 @@ function JavaScript() {
             style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
-            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">CSS FILE</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
               &lt;<span className="tag">h2</span>&gt; web crowd &lt;
               <span className="tag">/h2</span>&gt; <br />
             </div>
             <div className="inputSection">
+              <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
               <span className="cssTag">h2 </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
@@ -3807,10 +3825,11 @@ function JavaScript() {
             style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h4 className="inhtmlcssjsbroSections">JS FILE</h4>
-            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">JS FILE</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">BROWSER</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">JS FILE</h4>
             <div className="inputSection">
               <span style={{ color: "gray" }}>// create a new element</span>
               <br />
@@ -3843,6 +3862,7 @@ function JavaScript() {
                 <span style={{ color: "blue" }}> newElement </span>) ;
               </span>{" "}
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="inputSection">
               <h2 style={{ color: "blue" }}>web crowd</h2>
               <div>this is a new h2 element</div>
@@ -3867,10 +3887,11 @@ function JavaScript() {
             style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
-            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">CSS FILE</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
               &lt;<span className="tag">ul</span>&gt; <br />
               &lt;<span className="tag">li</span>&gt; html5 &lt;
@@ -3880,6 +3901,7 @@ function JavaScript() {
               &lt;
               <span className="tag">/ul</span>&gt; <br />
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
             <div className="inputSection">
               <span className="cssTag">li </span>
               &#123; <br />{" "}
@@ -3895,10 +3917,11 @@ function JavaScript() {
             style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h4 className="inhtmlcssjsbroSections">JS FILE</h4>
-            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">JS FILE</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">BROWSER</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">JS FILE</h4>
             <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> ul = </span>{" "}
@@ -3932,8 +3955,9 @@ function JavaScript() {
                 <span style={{ color: "purple" }}> newLi </span>) ;
               </span>{" "}
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="inputSection">
-              <ul style={{ marginLeft: "50px" , pointerEvents: "none" }}>
+              <ul style={{ marginLeft: "50px", pointerEvents: "none" }}>
                 <li style={{ color: "blue" }}>html5</li>
                 <li style={{ color: "blue" }}>css3</li>
                 <li style={{ color: "blue" }}>javascript</li>
@@ -3949,10 +3973,11 @@ function JavaScript() {
             style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
-            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">CSS FILE</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
               &lt;<span className="tag">input</span>{" "}
               <span style={{ color: "blue" }}>placeholder=</span>
@@ -3963,6 +3988,7 @@ function JavaScript() {
               <span className="tag">/ul</span>&gt;
               <br />
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
             <div className="inputSection">
               <span className="cssTag">li </span>
               &#123; <br />{" "}
@@ -4003,10 +4029,11 @@ function JavaScript() {
             style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h4 className="inhtmlcssjsbroSections">JS FILE</h4>
-            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">JS FILE</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">BROWSER</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">JS FILE</h4>
             <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> input = </span>{" "}
@@ -4066,6 +4093,7 @@ function JavaScript() {
               <br />
               &#125; )
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="inputSection">
               <input
                 style={{
@@ -4105,10 +4133,11 @@ function JavaScript() {
             style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
-            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">CSS FILE</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
               &lt;<span className="tag">ul</span>&gt; <br />
               &lt;<span className="tag">li</span>&gt; html5 &lt;
@@ -4122,6 +4151,7 @@ function JavaScript() {
               &lt;
               <span className="tag">/ul</span>&gt; <br />
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
             <div className="inputSection">
               <span className="cssTag">li </span>
               &#123; <br />{" "}
@@ -4137,10 +4167,11 @@ function JavaScript() {
             style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h4 className="inhtmlcssjsbroSections">JS FILE</h4>
-            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">JS FILE</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">BROWSER</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">JS FILE</h4>
             <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> cssLi = </span>{" "}
@@ -4158,8 +4189,9 @@ function JavaScript() {
                 <span style={{ color: "purple" }}> cssLi </span>) ;
               </span>{" "}
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="inputSection">
-              <ul style={{ marginLeft: "50px" , pointerEvents: "none" }}>
+              <ul style={{ marginLeft: "50px", pointerEvents: "none" }}>
                 <li style={{ color: "blue" }}>html5</li>
                 <li style={{ color: "blue" }}>javascript</li>
               </ul>
@@ -4186,16 +4218,18 @@ function JavaScript() {
             style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h4 className="inhtmlcssjsbroSections">HTML FILE</h4>
-            <h4 className="inhtmlcssjsbroSections">CSS FILE</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">HTML FILE</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">CSS FILE</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
               &lt;<span className="tag">h2</span>&gt; web crowd &lt;
               <span className="tag">/h2</span>&gt; <br />
               &lt;<span className="tag">button</span>&gt; click here &lt;
               <span className="tag">/button</span>&gt; <br />
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
             <div className="inputSection">
               <span className="cssTag">button </span>
               &#123; <br />{" "}
@@ -4219,10 +4253,11 @@ function JavaScript() {
             style={{ display: "flex", justifyContent: "space-around" }}
             className="html__css"
           >
-            <h4 className="inhtmlcssjsbroSections">JS FILE</h4>
-            <h4 className="inhtmlcssjsbroSections">BROWSER</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">JS FILE</h4>
+            <h4 className="inhtmlcssjsbroSections beforeMedia">BROWSER</h4>
           </div>
           <div className="codeSection">
+            <h4 className="inhtmlcssjsbroSections afterMedia">JS FILE</h4>
             <div className="inputSection">
               <span className="declarationKey">const</span>
               <span className="variableName"> btn = </span>{" "}
@@ -4252,6 +4287,7 @@ function JavaScript() {
                 <span style={{ color: "purple" }}>"red"</span> <br /> &#125; ) ;
               </span>{" "}
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="inputSection">
               <h2 className="webCrowdTest">web crowd</h2>
               <button
