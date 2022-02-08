@@ -41,9 +41,27 @@
   font-size: 16px;
   
 }
+.activatedLi{
+ 
+  color:#0a005f !important;
+}
+.cancelIcon{
+  margin-bottom:-5px !important;
+  margin-left: 5px !important;
+  display:none !important;
+  color: red !important;
+  font-size: 18px !important;
+}
+.doneIcon{
+  margin-bottom:-5px !important;
+  margin-left: 5px !important;
+  display:none !important;
+  color: green !important;
+}
+
 .Sidebar > ul > a > li {
   margin: 15px 10px;
-  padding: 5px 10px;
+  padding: 2px 5px;
   text-align: start;
   cursor: pointer;
   color: #0a0061;

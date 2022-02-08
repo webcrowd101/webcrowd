@@ -15,7 +15,6 @@ body::-webkit-scrollbar {
   height: 70px;
 }
 .header__logo {
-
   width: fit-content;
   display: flex;
   align-items: center;
@@ -67,6 +66,12 @@ body::-webkit-scrollbar {
 }
 .active {
   color: #eed604 !important;
+}
+.nameOfWeb{
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:-3px;
+  letter-spacing:2px;
 }
 
 .list {

@@ -17,12 +17,16 @@ import {
 function Main() {
   let history = useHistory();
 
-  localStorage.setItem(
-    "current",
-    window.location.href.substring(window.location.href.lastIndexOf("/") + 1)
-  );
+  window.history.pushState(null, "", window.location.href);
+  window.onpopstate = function () {
+    window.history.pushState(null, "", window.location.href);
+  };
 
   useEffect((e) => {
+    localStorage.setItem(
+      "current",
+      window.location.href.substring(window.location.href.lastIndexOf("/") + 1)
+    );
     history.push(localStorage.getItem("current"));
 
     if (localStorage.getItem("current") === "") {
@@ -42,12 +46,17 @@ function Main() {
     window.history.pushState(null, "", window.location.href);
   };
 
+  
+    
+  
+
   AOS.init({
     duration: 2000,
   });
   return (
     <div className="main">
-      <img src="cover.jpeg" className="cover" alt="" />
+      {/* <img src="cover.jpeg" className="cover" alt="" /> */}
+      <img src="secondCoverPic.jpeg" className="cover" alt="" />
       <div className="main__header">
         <Link className="cover__Pic" to="/">
           <div className="main__header__left">
@@ -58,7 +67,7 @@ function Main() {
           <Link to="/" className="main__header__home">
             <li>HOME</li>
           </Link>
-          <Link to="/" className="main__header__earn ">
+          <Link to="/EARN__MONEY" className="main__header__earn ">
             <li>EARN MONEY</li>
           </Link>
           <Link to="/ABOUT" className="main__header__about ">
@@ -80,7 +89,7 @@ function Main() {
             web crowd
           </font>
           {/* <div className="main__top__left__title">WEB CROWD</div> */}
-          <hr/>
+          <hr />
           <div>Your Path to be a Full Stack Web Developer</div>
           <div>With Our Community. fucking indian Guy </div>
           <div>Write Less, Do More.</div>

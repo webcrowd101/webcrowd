@@ -40,14 +40,13 @@ function Contact() {
         <Link className="cover__Pic" to="/">
           <div className="main__header__left">
             <img src="logo.png" className="main__logo" alt="" />
-            <h3>WEB CROWD</h3>
           </div>
         </Link>
-        <ul>
+        <ul className="">
           <Link to="/" className="main__header__home">
             <li>HOME</li>
           </Link>
-          <Link to="/" className="main__header__earn ">
+          <Link to="/EARN__MONEY" className="main__header__earn ">
             <li>EARN MONEY</li>
           </Link>
           <Link to="/ABOUT" className="main__header__about ">
@@ -83,10 +82,8 @@ function Contact() {
           ></textarea>
           <button>Send</button>
         </div>
-        
       </div>
       <Footer />
-      
     </div>
   );
 }

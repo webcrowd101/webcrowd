@@ -92,8 +92,15 @@ function Header() {
       <Route>
         <div className="header__logo__list">
           <Link className="header__logo" to="/">
-            <img src="logo.png" alt="" />
-            
+            {/* <img src="logo.png" alt="" /> */}
+            <font
+              className="nameOfWeb"
+              color="white"
+              size="6"
+              face=" a astro space"
+            >
+              web crowd
+            </font>
           </Link>
           <DehazeIcon
             className="list"
@@ -120,7 +127,6 @@ function Header() {
           <li className="sections sixth" onClick={hideHeader}>
             TEMPLATES
           </li>
-         
         </ul>
       </Route>
     </div>

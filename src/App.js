@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './Header';
+import EarnMoney from './EarnMoney';
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -26,6 +27,9 @@ function App() {
           <Route exact path="/">
             <Main />
           </Route>
+          <Route exact path="/EARN__MONEY">
+            <EarnMoney />
+          </Route>
           <Route exact path="/CONTACT">
             <Contact />
           </Route>
@@ -38,7 +42,6 @@ function App() {
           <Route exact path="/HTML5">
             <Header />
             <Html />
-            
           </Route>
           <Route exact path="/CSS3">
             <Header />

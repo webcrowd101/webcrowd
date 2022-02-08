@@ -4,6 +4,8 @@ import "./Html.css";
 import Footer from "./Footer";
 import DehazeIcon from "@mui/icons-material/Dehaze";
 import CloseIcon from "@mui/icons-material/Close";
+import CancelIcon from "@mui/icons-material/Cancel";
+import DoneIcon from "@mui/icons-material/Done";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import {
   BrowserRouter as Router,
@@ -31,7 +33,6 @@ function Html() {
       document.querySelector(".Sidebar ul").style.display = "none";
       document.querySelector(".Content").style.opacity = "1";
       document.querySelector(".OpenSideBar").style.margin = "0px";
-
 
       hide(false);
     } else {
@@ -78,142 +79,211 @@ function Html() {
       htmlQuizScore++;
     }
     if (document.querySelector(".htmlwrongOne1").checked) {
-      document.querySelector(".htmlWrongAnswerOne1").style.backgroundColor =
-        "red";
-      document.querySelector(".htmlAnswerOne").style.backgroundColor = "green";
+      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
+
+      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
     }
     if (document.querySelector(".htmlwrongOne2").checked) {
-      document.querySelector(".htmlWrongAnswerOne2").style.backgroundColor =
-        "red";
-      document.querySelector(".htmlAnswerTwo").style.backgroundColor = "green";
+      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
+
+      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
     }
     if (document.querySelector(".htmlQuestionTwo").checked) {
       htmlQuizScore++;
     }
     if (document.querySelector(".htmlwrongTwo1").checked) {
-      document.querySelector(".htmlWrongAnswerTwo1").style.backgroundColor =
-        "red";
-      document.querySelector(".htmlAnswerTwo").style.backgroundColor = "green";
+      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
+
+      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
     }
     if (document.querySelector(".htmlwrongTwo2").checked) {
-      document.querySelector(".htmlWrongAnswerTwo2").style.backgroundColor =
-        "red";
-      document.querySelector(".htmlAnswerTwo").style.backgroundColor = "green";
+      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
+
+      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
     }
     if (document.querySelector(".htmlQuestionThree").checked) {
       htmlQuizScore++;
     }
     if (document.querySelector(".htmlwrongThree1").checked) {
-      document.querySelector(".htmlWrongAnswerThree1").style.backgroundColor =
-        "red";
-      document.querySelector(".htmlAnswerThree").style.backgroundColor =
-        "green";
+      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
+      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
     }
     if (document.querySelector(".htmlwrongThree2").checked) {
-      document.querySelector(".htmlWrongAnswerThree2").style.backgroundColor =
-        "red";
-      document.querySelector(".htmlAnswerThree").style.backgroundColor =
-        "green";
+      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
+      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
     }
     if (document.querySelector(".htmlQuestionFour").checked) {
       htmlQuizScore++;
     }
     if (document.querySelector(".htmlwrongFour1").checked) {
-      document.querySelector(".htmlWrongAnswerFour1").style.backgroundColor =
-        "red";
-      document.querySelector(".htmlAnswerFour").style.backgroundColor = "green";
+      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
+
+      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
     }
     if (document.querySelector(".htmlwrongFour2").checked) {
-      document.querySelector(".htmlWrongAnswerFour2").style.backgroundColor =
-        "red";
-      document.querySelector(".htmlAnswerFour").style.backgroundColor = "green";
+      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
+
+      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
     }
     if (document.querySelector(".htmlQuestionFive").checked) {
       htmlQuizScore++;
     }
     if (document.querySelector(".htmlwrongFive").checked) {
-      document.querySelector(".htmlWrongAnswerFive").style.backgroundColor =
-        "red";
-      document.querySelector(".htmlAnswerFive").style.backgroundColor = "green";
+      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
+
+      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
     }
     if (document.querySelector(".htmlQuestionSix").checked) {
       htmlQuizScore++;
     }
     if (document.querySelector(".htmlwrongSix").checked) {
-      document.querySelector(".htmlWrongAnswerSix").style.backgroundColor =
-        "red";
-      document.querySelector(".htmlAnswerSix").style.backgroundColor = "green";
+      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
+
+      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
     }
 
     if (document.querySelector(".htmlQuestionSeven").checked) {
       htmlQuizScore++;
     }
     if (document.querySelector(".htmlwrongSeven1").checked) {
-      document.querySelector(".htmlWrongAnswerSeven1").style.backgroundColor =
-        "red";
-      document.querySelector(".htmlAnswerSeven").style.backgroundColor =
-        "green";
+      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
+      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
     }
     if (document.querySelector(".htmlwrongSeven2").checked) {
-      document.querySelector(".htmlWrongAnswerSeven2").style.backgroundColor =
-        "red";
-      document.querySelector(".htmlAnswerSeven").style.backgroundColor =
-        "green";
+      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
+      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
     }
     if (document.querySelector(".htmlQuestionEight").checked) {
       htmlQuizScore++;
     }
     if (document.querySelector(".htmlwrongEight").checked) {
-      document.querySelector(".htmlWrongAnswerEight").style.backgroundColor =
-        "red";
-      document.querySelector(".htmlAnswerEight").style.backgroundColor =
-        "green";
+      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
+      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
     }
     if (document.querySelector(".htmlQuestionNine").checked) {
       htmlQuizScore++;
     }
     if (document.querySelector(".htmlwrongNine1").checked) {
-      document.querySelector(".htmlWrongAnswerNine1").style.backgroundColor =
-        "red";
-      document.querySelector(".htmlAnswerNine").style.backgroundColor = "green";
+      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
+
+      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
     }
     if (document.querySelector(".htmlwrongNine2").checked) {
-      document.querySelector(".htmlWrongAnswerNine2").style.backgroundColor =
-        "red";
-      document.querySelector(".htmlAnswerNine").style.backgroundColor = "green";
+      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
+
+      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
     }
     if (document.querySelector(".htmlQuestionTen").checked) {
       htmlQuizScore++;
     }
     if (document.querySelector(".htmlwrongTen1").checked) {
-      document.querySelector(".htmlWrongAnswerTen1").style.backgroundColor =
-        "red";
-      document.querySelector(".htmlAnswerTen").style.backgroundColor = "green";
+      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
+
+      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
     }
     if (document.querySelector(".htmlwrongTen2").checked) {
-      document.querySelector(".htmlWrongAnswerTen2").style.backgroundColor =
-        "red";
-      document.querySelector(".htmlAnswerTen").style.backgroundColor = "green";
+      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
+
+      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
+        rightCancel.style.setProperty("display", "inline", "important");
+      });
     }
-    $(".htmlScore").text("your score is " + htmlQuizScore);
-    $(".htmlQuiz__content input").prop("disabled", "false");
-    return $(".Modal").show();
+
+    // $(".htmlScore").text("your score is " + htmlQuizScore);
+    // $(".htmlQuiz__content input").prop("disabled", "false");
+    // return $(".Modal").css("display", "flex");
   };
 
   const hideModal = () => {
-    $(".Modal").hide();
+    $(".Modal").css("display", "none");
     htmlQuizScore = 0;
   };
 
-  const refleshCurrentPage = () => {
+  const refleshCurrentPage = (e) => {
     $(".second").addClass("active");
     if (show && window.innerWidth < 871) {
       document.querySelector(".Sidebar").style.width = "40px";
       document.querySelector(".Sidebar ul").style.display = "none";
-      document.querySelector(".Content").style.opacity = "1";
+      document.querySelector(".Content").style.display = "block";
       document.querySelector(".OpenSideBar").style.margin = "0px";
+        document.querySelector(".Content").style.opacity = "1";
       hide(false);
     }
+
+    document.querySelectorAll(".List li").forEach((item) => {
+      item.style.border = "none";
+      item.style.background = "none";
+    });
+    e.target.style.border = "1px solid #0b0453";
+
+    e.target.style.backgroundColor = "#b0baff";
+    e.target.classList.add("activatedLi");
   };
 
   window.history.pushState(null, "", window.location.href);
@@ -1090,7 +1160,7 @@ function Html() {
               <h3>My Portfolio : </h3>
               <div style={{ flex: "1" }}>
                 <p>
-                  Hello, My name is <i>Mike</i>, i'm 22 years old, and i'm a{" "}
+                  Hello, My name is <i>Mike</i>, Iam 22 years old, and Iam a{" "}
                   <b>Web Developer</b>. <br />
                   So, these are the Languages i've learned.
                 </p>
@@ -1278,7 +1348,7 @@ function Html() {
             <b className="note">Note : </b> Make sure that you have read the
             introduction of every Concept we discussed about above before you
             start this Quiz. So, when you complete all of these questions, click
-            on <b className="note">i'm Done</b> button to display the result
+            on <b className="note">Iam done</b> button to display the result
             immediately.
           </p>
 
@@ -1288,29 +1358,35 @@ function Html() {
             </h5>
             <p className="clickHere">where do we write all of html code ?</p>
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="firstQuestionName"
               className="htmlwrongOne1"
             />
-            <span className="htmlWrongAnswerOne1">inside head tag</span>
+            <span className="showWrongIcon htmlWrongAnswerOne1">
+              inside head tag <CancelIcon className="cancelIcon" />
+            </span>
+
             <br />
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="firstQuestionName"
               className="htmlQuestionOne"
             />
-            <span className="htmlAnswerOne">inside body tag</span>
+            <span className="htmlAnswerOne">
+              inside body tag
+              <DoneIcon className="doneIcon" />
+            </span>
             <br />
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="firstQuestionName"
               className="htmlwrongOne2"
             />
-            <span className="htmlWrongAnswerOne2">
-              between head and body tags
+            <span className="showWrongIcon htmlWrongAnswerOne2">
+              between head and body tags <CancelIcon className="cancelIcon" />
             </span>
             <br />
             <hr style={{ color: "gray", margin: "5px" }} />
@@ -1319,30 +1395,37 @@ function Html() {
             </h5>
             <p className="clickHere">which purpose we use &lt;a&gt; for ?</p>
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="secondQuestionName"
               className="htmlwrongTwo1"
             />
-            <span className="htmlWrongAnswerTwo1">
-              to display an image in the web page
+            <span className="showWrongIcon htmlWrongAnswerTwo1">
+              to display an image in the web page{" "}
+              <CancelIcon className="cancelIcon" />
             </span>
             <br />
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="secondQuestionName"
               className="htmlQuestionTwo"
             />
-            <span className="htmlAnswerTwo">to visit one particular link</span>
+            <span className="htmlAnswerTwo">
+              to visit one particular link
+              <DoneIcon className="doneIcon" />
+            </span>
             <br />
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="secondQuestionName"
               className="htmlwrongTwo2"
             />
-            <span className="htmlWrongAnswerTwo2">to submit the form</span>
+            <span className="showWrongIcon htmlWrongAnswerTwo2">
+              to submit the form <CancelIcon className="cancelIcon" />
+            </span>
+
             <br />
             <hr style={{ color: "gray", margin: "5px" }} />
             <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
@@ -1350,28 +1433,37 @@ function Html() {
             </h5>
             <p className="clickHere">which one of those is a heading tag ?</p>
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="thirdQuestionName"
               className="htmlQuestionThree"
             />
-            <span className="htmlAnswerThree">h3</span>
+            <span className="htmlAnswerThree">
+              h3
+              <DoneIcon className="doneIcon" />
+            </span>
             <br />
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="thirdQuestionName"
               className="htmlwrongThree1"
             />
-            <span className="htmlWrongAnswerThree1">li</span>
+            <span className="showWrongIcon htmlWrongAnswerThree1">
+              li <CancelIcon className="cancelIcon" />
+            </span>
+
             <br />
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="thirdQuestionName"
               className="htmlwrongThree2"
             />
-            <span className="htmlWrongAnswerThree2">td</span>
+            <span className="showWrongIcon htmlWrongAnswerThree2">
+              td <CancelIcon className="cancelIcon" />
+            </span>
+
             <br />
             <hr style={{ color: "gray", margin: "5px" }} />
             <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
@@ -1381,28 +1473,37 @@ function Html() {
               which property related to &lt;img&gt; tag ?
             </p>
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="fourthQuestionName"
               className="htmlwrongFour1"
             />
-            <span className="htmlWrongAnswerFour1">href</span>
+            <span className="showWrongIcon htmlWrongAnswerFour1">
+              href <CancelIcon className="cancelIcon" />
+            </span>
+
             <br />
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="fourthQuestionName"
               className="htmlwrongFour2"
             />
-            <span className="htmlWrongAnswerFour2">placeholder</span>
+            <span className="showWrongIcon htmlWrongAnswerFour2">
+              placeholder <CancelIcon className="cancelIcon" />
+            </span>
+
             <br />
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="fourthQuestionName"
               className="htmlQuestionFour"
             />
-            <span className="htmlAnswerFour">src</span>
+            <span className="htmlAnswerFour">
+              src
+              <DoneIcon className="doneIcon" />
+            </span>
             <br />
             <hr style={{ color: "gray", margin: "5px" }} />
             <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
@@ -1412,20 +1513,26 @@ function Html() {
               can i visit the particular link in a new Tab ?
             </p>
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="fifthQuestionName"
               className="htmlQuestionFive"
             />
-            <span className="htmlAnswerFive">yes</span>
+            <span className="htmlAnswerFive">
+              yes
+              <DoneIcon className="doneIcon" />
+            </span>
             <br />
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="fifthQuestionName"
               className="htmlwrongFive"
             />
-            <span className="htmlWrongAnswerFive">no</span>
+            <span className="showWrongIcon htmlWrongAnswerFive">
+              no <CancelIcon className="cancelIcon" />
+            </span>
+
             <br />
             <hr style={{ color: "gray", margin: "5px" }} />
             <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
@@ -1435,20 +1542,26 @@ function Html() {
               can i write html tags inside each others ?
             </p>
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="sixthQuestionName"
               className="htmlQuestionSix"
             />
-            <span className="htmlAnswerSix">yes</span>
+            <span className="htmlAnswerSix">
+              yes
+              <DoneIcon className="doneIcon" />
+            </span>
             <br />
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="sixthQuestionName"
               className="htmlwrongSix"
             />
-            <span className="htmlWrongAnswerSix">no</span>
+            <span className="showWrongIcon htmlWrongAnswerSix">
+              no <CancelIcon className="cancelIcon" />
+            </span>
+
             <br />
             <hr style={{ color: "gray", margin: "5px" }} />
             <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
@@ -1458,28 +1571,37 @@ function Html() {
               which property is related to &lt;a&gt; tag ?
             </p>
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="seventhQuestionName"
               className="htmlQuestionSeven"
             />
-            <span className="htmlAnswerSeven">href</span>
+            <span className="htmlAnswerSeven">
+              href
+              <DoneIcon className="doneIcon" />
+            </span>
             <br />
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="seventhQuestionName"
               className="htmlwrongSeven1"
             />
-            <span className="htmlWrongAnswerSeven1">placeholder</span>
+            <span className="showWrongIcon htmlWrongAnswerSeven1">
+              placeholder <CancelIcon className="cancelIcon" />
+            </span>
+
             <br />
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="seventhQuestionName"
               className="htmlwrongSeven2"
             />
-            <span className="htmlWrongAnswerSeven2">type</span>
+            <span className="showWrongIcon htmlWrongAnswerSeven2">
+              type <CancelIcon className="cancelIcon" />
+            </span>
+
             <br />
             <hr style={{ color: "gray", margin: "5px" }} />
             <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
@@ -1487,20 +1609,26 @@ function Html() {
             </h5>
             <p className="clickHere">is html a Programming Language ?</p>
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="eightQuestionName"
               className="htmlwrongEight"
             />
-            <span className="htmlAnswerEight">yes</span>
+            <span className="htmlAnswerEight">
+              yes
+              <CancelIcon className="cancelIcon" />
+            </span>
             <br />
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="eightQuestionName"
               className="htmlQuestionEight"
             />
-            <span className="htmlWrongAnswerEight">no</span>
+            <span className="showWrongIcon htmlWrongAnswerEight">
+              no <DoneIcon className="doneIcon" />
+            </span>
+
             <br />
             <hr style={{ color: "gray", margin: "5px" }} />
             <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
@@ -1508,31 +1636,35 @@ function Html() {
             </h5>
             <p className="clickHere">why do we use &lt;comments&gt; ?</p>
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="ninthQuestionName"
               className="htmlQuestionNine"
             />
             <span className="htmlAnswerNine">
               to prevent html code from executing{" "}
+              <DoneIcon className="doneIcon" />
             </span>
             <br />
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="ninthQuestionName"
               className="htmlwrongNine1"
             />
-            <span className="htmlWrongAnswerNine1">to remove html code </span>
+            <span className="showWrongIcon htmlWrongAnswerNine1">
+              to remove html code <CancelIcon className="cancelIcon" />
+            </span>
+
             <br />
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="ninthQuestionName"
               className="htmlwrongNine2"
             />
-            <span className="htmlWrongAnswerNine2">
-              to duplicate html code{" "}
+            <span className="showWrongIcon htmlWrongAnswerNine2">
+              to duplicate html code <CancelIcon className="cancelIcon" />
             </span>
             <br />
             <hr style={{ color: "gray", margin: "5px" }} />
@@ -1543,28 +1675,36 @@ function Html() {
               in which html tag we use placeholder property ?
             </p>
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="tenthQuestionName"
               className="htmlwrongTen1"
             />
-            <span className="htmlWrongAnswerTen1">img </span>
+            <span className="showWrongIcon htmlWrongAnswerTen1">
+              img <CancelIcon className="cancelIcon" />
+            </span>
+
             <br />
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="tenthQuestionName"
               className="htmlQuestionTen"
             />
-            <span className="htmlAnswerTen">input </span>
+            <span className="htmlAnswerTen">
+              input <DoneIcon className="doneIcon" />
+            </span>
             <br />
             <input
-              style={{ margin: "5px 5px 5px 25px" }}
+              style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
               name="tenthQuestionName"
               className="htmlwrongTen2"
             />
-            <span className="htmlWrongAnswerTen2">a </span>
+            <span className="showWrongIcon htmlWrongAnswerTen2">
+              a <CancelIcon className="cancelIcon" />
+            </span>
+
             <br />
             <button
               style={{
@@ -1579,7 +1719,7 @@ function Html() {
               }}
               onClick={htmlCompletedQuiz}
             >
-              i'm Done
+              Iam done
             </button>
           </div>
         </div>
