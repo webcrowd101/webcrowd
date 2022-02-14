@@ -10,32 +10,13 @@
   cursor: pointer;
 }
 
-::-webkit-scrollbar {
-  width: 13px;
-}
-::-webkit-scrollbar-corner {
-  background: #000;
-}
-
 .cssContent {
   flex: 1;
   height: 90vh;
   overflow-y: scroll;
   scroll-behavior: smooth;
 }
-.cssContent::-webkit-scrollbar {
-  display: none;
-}
-/* .showSideBar {
-  display: none !important;
-  width: 50px !important;
-  height: 70px !important;
-  text-align: center !important;
-  float: right !important;
-  padding-right: 10px !important;
-  color: aqua !important;
-  cursor: pointer !important;
-} */
+
 .cssProperty {
   color: purple;
 }
@@ -62,20 +43,22 @@
   height: 200px;
   outline: none;
   border: 1px solid gray;
-  background-color: rgb(228, 226, 226);
-  overflow-y: scroll;
+  /* background-color: rgb(228, 226, 226); */
+    background-color: #cccccc;
+  overflow-y: auto;
 }
 .cssoutput::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
 }
 .htmlCode {
   border-right: 1px solid black;
   margin: 0 5px;
   height: 200px;
   width: 350px;
-  overflow-y: scroll;
+  overflow-y: auto;
   border: 1px solid gray;
-  background-color: rgb(228, 226, 226);
+  /* background-color: rgb(228, 226, 226); */
+    background-color: #cccccc;
   outline: none;
   line-height: 25px;
 }
@@ -84,15 +67,16 @@
 
   height: 200px;
   width: 350px;
-  overflow-y: scroll;
+  overflow-y: auto;
   border: 1px solid gray;
-  background-color: rgb(228, 226, 226);
+  /* background-color: rgb(228, 226, 226); */
+    background-color: #cccccc;
   outline: none;
   line-height: 25px;
 }
 .html__code::-webkit-scrollbar,
 .css__code::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
 }
 #flexbox > h4 {
   margin: 20px;

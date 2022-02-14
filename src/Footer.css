@@ -5,21 +5,37 @@
 .footer{
     width: 100vw;
     background-color: #0a0453;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.social__media{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .footer__top{
-    width: 100vw;
+    width: 60vw;
     display:flex;
     justify-content:space-evenly;
-    padding-top: 30px;
+    margin: 15px 0;
 }
-
+.titles{
+  text-decoration: none;
+  color: white;
+}
+.titles:hover{
+    transform: scale(1.1);
+}
 .footer__titles{
     margin: 10px 0;
     color: white;
     font-size: 20px;
     font-weight:600;
     width: fit-content;
-    /* border-bottom: 1.5px solid white; */
 }
 .footer__links{
     text-decoration: none;
@@ -84,56 +100,41 @@
 .footer__bottom{
     display:flex;
     width: 95vw;
-    justify-content:space-between;
-    margin: 50px auto 0 auto;
+    justify-content:center;
     padding: 20px 0;
     color: white;
+    flex-direction: column;
+    align-items: center;
 
 }
-.terms__privacy{
-    width: 200px;
-    display: flex;
-    justify-content: space-between;
 
-}
-.privacy,.terms{
-    color:white;
-    text-decoration: none;
-    cursor: pointer;
-}
+
 .footer__wave{
     transform: rotateX(180deg);
     margin-top:-5px;
 }
 
-@media only screen and (max-width:625px){
+@media only screen and (max-width:1080px){
+    
+    .footer__top{
+        width: 80vw;
+    }
+}
+@media only screen and (max-width:800px){
+    .footer__top{
+        width: 100vw;
+    }
+
+}
+@media only screen and (max-width:660px){
     .footer__top{
         display: flex;
         flex-direction: column;
-        justify-content:space-evenly;
-        width: fit-content;
-        margin: auto;
+        align-items: center;
+        justify-content: center;
     }
-    .footer__titles{
-        margin-top:40px;
-
+    .titles{
+        margin: 10px 0;
     }
-    .terms__privacy{
-        display: flex;
-        justify-content:space-evenly;
-
-    }
-    .privacy,.terms{
-        font-size:12px;
-    }
-
-    .footer__bottom>p{
-        font-size:12px;
-    }
-
-
-}
-@media only screen and (max-width:805px){
-    
 
 }

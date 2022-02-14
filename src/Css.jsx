@@ -3,6 +3,8 @@ import $ from "jquery";
 import "./Css.css";
 import DehazeIcon from "@mui/icons-material/Dehaze";
 import CloseIcon from "@mui/icons-material/Close";
+import CancelIcon from "@mui/icons-material/Cancel";
+import DoneIcon from "@mui/icons-material/Done";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import {
   BrowserRouter as Router,
@@ -17,30 +19,25 @@ function Css() {
   const [url, setUrl] = useState(window.location.href);
   let history = useHistory();
 
-
-   
-
-  
-
   //show and hide
-    const ShowHide = () => {
-      if (!show) {
-        document.querySelector(".Sidebar").style.width = "250px";
-        document.querySelector(".Sidebar ul").style.display = "block";
-        document.querySelector(".Content").style.opacity = "0.5";
-        document.querySelector(".OpenSideBar").style.float = "right";
-        document.querySelector(".OpenSideBar").style.margin = "3px";
-        hide(true);
-      } else if (show) {
-        document.querySelector(".Sidebar").style.width = "40px";
-        document.querySelector(".Sidebar ul").style.display = "none";
-        document.querySelector(".Content").style.opacity = "1";
-        document.querySelector(".OpenSideBar").style.margin = "0px";
+  const ShowHide = () => {
+    if (!show) {
+      document.querySelector(".Sidebar").style.width = "250px";
+      document.querySelector(".Sidebar ul").style.display = "block";
+      document.querySelector(".Content").style.opacity = "0.5";
+      document.querySelector(".OpenSideBar").style.float = "right";
+      document.querySelector(".OpenSideBar").style.margin = "3px";
+      hide(true);
+    } else if (show) {
+      document.querySelector(".Sidebar").style.width = "40px";
+      document.querySelector(".Sidebar ul").style.display = "none";
+      document.querySelector(".Content").style.opacity = "1";
+      document.querySelector(".OpenSideBar").style.margin = "0px";
 
-        hide(false);
-      } else {
-      }
-    };
+      hide(false);
+    } else {
+    }
+  };
 
   window.addEventListener("resize", function () {
     if (window.innerWidth > 871) {
@@ -76,114 +73,50 @@ function Css() {
     } else {
     }
   });
-  let cssQuizScore = 0;
+  let cssQuizScore;
   const cssCompletedQuiz = () => {
+        cssQuizScore = 0;
     if (document.querySelector(".cssQuestionOne").checked) {
       cssQuizScore++;
     }
-    if (document.querySelector(".csswrongOne").checked) {
-      document.querySelector(".cssWrongAnswerOne").style.backgroundColor =
-        "red";
-      document.querySelector(".cssAnswerOne").style.backgroundColor = "green";
-    }
-
     if (document.querySelector(".cssQuestionTwo").checked) {
       cssQuizScore++;
-    }
-    if (document.querySelector(".csswrongTwo1").checked) {
-      document.querySelector(".cssWrongAnswerTwo1").style.backgroundColor =
-        "red";
-      document.querySelector(".cssAnswerTwo").style.backgroundColor = "green";
-    }
-    if (document.querySelector(".csswrongTwo2").checked) {
-      document.querySelector(".cssWrongAnswerTwo2").style.backgroundColor =
-        "red";
-      document.querySelector(".cssAnswerTwo").style.backgroundColor = "green";
     }
     if (document.querySelector(".cssQuestionThree").checked) {
       cssQuizScore++;
     }
-    if (document.querySelector(".csswrongThree1").checked) {
-      document.querySelector(".cssWrongAnswerThree1").style.backgroundColor =
-        "red";
-      document.querySelector(".cssAnswerThree").style.backgroundColor = "green";
-    }
-    if (document.querySelector(".csswrongThree2").checked) {
-      document.querySelector(".cssWrongAnswerThree2").style.backgroundColor =
-        "red";
-      document.querySelector(".cssAnswerThree").style.backgroundColor = "green";
-    }
     if (document.querySelector(".cssQuestionFour").checked) {
       cssQuizScore++;
-    }
-    if (document.querySelector(".csswrongFour1").checked) {
-      document.querySelector(".cssWrongAnswerFour1").style.backgroundColor =
-        "red";
-      document.querySelector(".cssAnswerFour").style.backgroundColor = "green";
-    }
-    if (document.querySelector(".csswrongFour2").checked) {
-      document.querySelector(".cssWrongAnswerFour2").style.backgroundColor =
-        "red";
-      document.querySelector(".cssAnswerFour").style.backgroundColor = "green";
     }
     if (document.querySelector(".cssQuestionFive").checked) {
       cssQuizScore++;
     }
-    if (document.querySelector(".csswrongFive").checked) {
-      document.querySelector(".cssWrongAnswerFive").style.backgroundColor =
-        "red";
-      document.querySelector(".cssAnswerFive").style.backgroundColor = "green";
-    }
     if (document.querySelector(".cssQuestionSix").checked) {
       cssQuizScore++;
     }
-    if (document.querySelector(".csswrongSix").checked) {
-      document.querySelector(".cssWrongAnswerSix").style.backgroundColor =
-        "red";
-      document.querySelector(".cssAnswerSix").style.backgroundColor = "green";
-    }
-
     if (document.querySelector(".cssQuestionSeven").checked) {
       cssQuizScore++;
-    }
-    if (document.querySelector(".csswrongSeven1").checked) {
-      document.querySelector(".cssWrongAnswerSeven1").style.backgroundColor =
-        "red";
-      document.querySelector(".cssAnswerSeven").style.backgroundColor = "green";
-    }
-    if (document.querySelector(".csswrongSeven2").checked) {
-      document.querySelector(".cssWrongAnswerSeven2").style.backgroundColor =
-        "red";
-      document.querySelector(".cssAnswerSeven").style.backgroundColor = "green";
     }
     if (document.querySelector(".cssQuestionEight").checked) {
       cssQuizScore++;
     }
-    if (document.querySelector(".csswrongEight").checked) {
-      document.querySelector(".cssWrongAnswerEight").style.backgroundColor =
-        "red";
-      document.querySelector(".cssAnswerEight").style.backgroundColor = "green";
-    }
     if (document.querySelector(".cssQuestionNine").checked) {
       cssQuizScore++;
     }
-    if (document.querySelector(".csswrongNine").checked) {
-      document.querySelector(".cssWrongAnswerNine").style.backgroundColor =
-        "red";
-      document.querySelector(".cssAnswerNine").style.backgroundColor = "green";
-    }
-
     if (document.querySelector(".cssQuestionTen").checked) {
       cssQuizScore++;
     }
-    if (document.querySelector(".csswrongTen").checked) {
-      document.querySelector(".cssWrongAnswerTen").style.backgroundColor =
-        "red";
-      document.querySelector(".cssAnswerTen").style.backgroundColor = "green";
-    }
+    document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
+      rightCancel.style.setProperty("display", "inline", "important");
+    });
+
+    document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
+      rightCancel.style.setProperty("display", "inline", "important");
+    });
+
+    
 
     $(".cssScore").text("your score is " + cssQuizScore);
-    $(".cssQuiz__content input").prop("disabled", "false");
     return $(".Modal").show();
   };
 
@@ -192,7 +125,7 @@ function Css() {
     cssQuizScore = 0;
   };
 
-  const refleshCurrentPage = () => {
+  const refleshCurrentPage = (e) => {
     $(".third").addClass("active");
     if (show && window.innerWidth < 871) {
       document.querySelector(".Sidebar").style.width = "40px";
@@ -201,9 +134,14 @@ function Css() {
       document.querySelector(".OpenSideBar").style.margin = "0px";
       hide(false);
     }
-    document.querySelectorAll(".sectionTittle").forEach(function (section) {
-      section.style.offsetHeight = "40px";
+    document.querySelectorAll(".List li").forEach((item) => {
+      item.style.border = "none";
+      item.style.background = "none";
     });
+    e.target.style.border = "1px solid #0b0453";
+
+    e.target.style.backgroundColor = "#b0baff";
+    e.target.classList.add("activatedLi");
   };
   window.history.pushState(null, "", window.location.href);
   window.onpopstate = function () {
@@ -854,7 +792,7 @@ function Css() {
             margin : 10px 20px 30px 40px; <br /> So that : <br />
           </p>
 
-          <ul style={{ marginLeft: "50px" , pointerEvents: "none" }}>
+          <ul style={{ marginLeft: "50px", pointerEvents: "none" }}>
             <li>10px represents margin-top</li>
             <li>20px represents margin-right</li>
             <li>30px represents margin-bottom</li>
@@ -865,7 +803,7 @@ function Css() {
             that : <br />
           </p>
 
-          <ul style={{ marginLeft: "50px" , pointerEvents: "none" }}>
+          <ul style={{ marginLeft: "50px", pointerEvents: "none" }}>
             <li>10px represents margin-top and margin-bottom</li>
             <li>20px represents margin-right and margin-left</li>
           </ul>
@@ -2013,9 +1951,9 @@ function Css() {
               <span style={{ color: "red" }}>4s</span> represents the animation
               duration <br />
               <span style={{ color: "red" }}>infinite</span> makes our animation
-              unstoppable 
-            </b><br />
-            
+              unstoppable
+            </b>
+            <br />
             <a href="">click here</a> for more exercises and examples.
           </p>
         </div>
@@ -2351,15 +2289,21 @@ function Css() {
               name="firstQuestionName"
               className="csswrongOne"
             />
-            <span className="cssWrongAnswerOne">yes</span>
+            <span className="showWrongIcon cssWrongAnswerOne">
+              yes <CancelIcon className="cancelIcon" />
+            </span>
+
             <br />
+
             <input
               style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="firstQuestionName"
               className="cssQuestionOne"
             />
-            <span className="cssAnswerOne">no</span>
+            <span className="cssAnswerOne">
+              no <DoneIcon className="doneIcon" />
+            </span>
 
             <br />
             <hr style={{ color: "gray", margin: "5px" }} />
@@ -2373,8 +2317,9 @@ function Css() {
               name="secondQuestionName"
               className="csswrongTwo1"
             />
-            <span className="cssWrongAnswerTwo1">
-              to make a space between html elements.
+            <span className="showWrongIcon cssWrongAnswerTwo1">
+              to make a space between html elements.{" "}
+              <CancelIcon className="cancelIcon" />
             </span>
             <br />
             <input
@@ -2384,7 +2329,7 @@ function Css() {
               className="cssQuestionTwo"
             />
             <span className="cssAnswerTwo">
-              to make our website responsive{" "}
+              to make our website responsive <DoneIcon className="doneIcon" />
             </span>
             <br />
             <input
@@ -2393,8 +2338,8 @@ function Css() {
               name="secondQuestionName"
               className="csswrongTwo2"
             />
-            <span className="cssWrongAnswerTwo2">
-              to add color to html element
+            <span className="showWrongIcon cssWrongAnswerTwo2">
+              to add color to html element <CancelIcon className="cancelIcon" />
             </span>
             <br />
             <hr style={{ color: "gray", margin: "5px" }} />
@@ -2410,6 +2355,7 @@ function Css() {
             />
             <span className="cssAnswerThree">
               to make our website looks beautiful
+              <DoneIcon className="doneIcon" />
             </span>
             <br />
             <input
@@ -2418,8 +2364,9 @@ function Css() {
               name="thirdQuestionName"
               className="csswrongThree1"
             />
-            <span className="cssWrongAnswerThree1">
-              to make our website more interractive
+            <span className="showWrongIcon cssWrongAnswerThree1">
+              to make our website more interractive{" "}
+              <CancelIcon className="cancelIcon" />
             </span>
             <br />
             <input
@@ -2428,8 +2375,8 @@ function Css() {
               name="thirdQuestionName"
               className="csswrongThree2"
             />
-            <span className="cssWrongAnswerThree2">
-              to submit our html form
+            <span className="showWrongIcon cssWrongAnswerThree2">
+              to submit our html form <CancelIcon className="cancelIcon" />
             </span>
             <br />
             <hr style={{ color: "gray", margin: "5px" }} />
@@ -2445,24 +2392,36 @@ function Css() {
               name="fourthQuestionName"
               className="csswrongFour1"
             />
-            <span className="cssWrongAnswerFour1">margin</span>
+            <span className="showWrongIcon cssWrongAnswerFour1">
+              margin <CancelIcon className="cancelIcon" />
+            </span>
+
             <br />
+
             <input
               style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="fourthQuestionName"
               className="csswrongFour2"
             />
-            <span className="cssWrongAnswerFour2">text-align</span>
+            <span className="showWrongIcon cssWrongAnswerFour2">
+              text-align <CancelIcon className="cancelIcon" />
+            </span>
+
             <br />
+
             <input
               style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="fourthQuestionName"
               className="cssQuestionFour"
             />
-            <span className="cssAnswerFour">padding</span>
+            <span className="cssAnswerFour">
+              padding <DoneIcon className="doneIcon" />
+            </span>
+
             <br />
+
             <hr style={{ color: "gray", margin: "5px" }} />
             <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
               Question 5
@@ -2476,16 +2435,20 @@ function Css() {
               name="fifthQuestionName"
               className="cssQuestionFive"
             />
-            <span className="cssAnswerFive">border: 10px 10px 20px 10px </span>
+            <span className="cssAnswerFive">
+              border: 10px 10px 20px 10px <DoneIcon className="doneIcon" />
+            </span>
+
             <br />
+
             <input
               style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="fifthQuestionName"
               className="csswrongFive"
             />
-            <span className="cssWrongAnswerFive">
-              border: 10px 20px 10px 10px{" "}
+            <span className="showWrongIcon cssWrongAnswerFive">
+              border: 10px 20px 10px 10px <CancelIcon className="cancelIcon" />
             </span>
             <br />
 
@@ -2500,16 +2463,21 @@ function Css() {
               name="sixthQuestionName"
               className="cssQuestionSix"
             />
-            <span className="cssAnswerSix">to specify html elements</span>
+            <span className="cssAnswerSix">
+              to specify html elements <DoneIcon className="doneIcon" />
+            </span>
+
             <br />
+
             <input
               style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="sixthQuestionName"
               className="csswrongSix"
             />
-            <span className="cssWrongAnswerSix">
-              to make our website responsive
+            <span className="showWrongIcon cssWrongAnswerSix">
+              to make our website responsive{" "}
+              <CancelIcon className="cancelIcon" />
             </span>
             <br />
             <hr style={{ color: "gray", margin: "5px" }} />
@@ -2525,24 +2493,36 @@ function Css() {
               name="seventhQuestionName"
               className="cssQuestionSeven"
             />
-            <span className="cssAnswerSeven">1</span>
+            <span className="cssAnswerSeven">
+              1 <DoneIcon className="doneIcon" />
+            </span>
+
             <br />
+
             <input
               style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="seventhQuestionName"
               className="csswrongSeven1"
             />
-            <span className="cssWrongAnswerSeven1">10</span>
+            <span className="showWrongIcon cssWrongAnswerSeven1">
+              10 <CancelIcon className="cancelIcon" />
+            </span>
+
             <br />
+
             <input
               style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="seventhQuestionName"
               className="csswrongSeven2"
             />
-            <span className="cssWrongAnswerSeven2">100</span>
+            <span className="showWrongIcon cssWrongAnswerSeven2">
+              100 <CancelIcon className="cancelIcon" />
+            </span>
+
             <br />
+
             <hr style={{ color: "gray", margin: "5px" }} />
             <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
               Question 8
@@ -2557,16 +2537,24 @@ function Css() {
               name="eightQuestionName"
               className="cssQuestionEight"
             />
-            <span className="cssAnswerEight">yes </span>
+            <span className="cssAnswerEight">
+              yes <DoneIcon className="doneIcon" />
+            </span>
+
             <br />
+
             <input
               style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="eightQuestionName"
               className="csswrongEight"
             />
-            <span className="cssWrongAnswerEight">no </span>
+            <span className="showWrongIcon cssWrongAnswerEight">
+              no <CancelIcon className="cancelIcon" />
+            </span>
+
             <br />
+
             <hr style={{ color: "gray", margin: "5px" }} />
             <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
               Question 9
@@ -2578,15 +2566,22 @@ function Css() {
               name="ninthQuestionName"
               className="cssQuestionNine"
             />
-            <span className="cssAnswerNine">yes </span>
+            <span className="cssAnswerNine">
+              yes <DoneIcon className="doneIcon" />
+            </span>
+
             <br />
+
             <input
               style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="ninthQuestionName"
               className="csswrongNine"
             />
-            <span className="cssWrongAnswerNine">no </span>
+            <span className="showWrongIcon cssWrongAnswerNine">
+              no <CancelIcon className="cancelIcon" />
+            </span>
+
             <br />
 
             <hr />
@@ -2602,27 +2597,27 @@ function Css() {
               name="tenthQuestionName"
               className="cssQuestionTen"
             />
-            <span className="cssAnswerTen">yes </span>
+            <span className="cssAnswerTen">
+              yes <DoneIcon className="doneIcon" />
+            </span>
+
             <br />
+
             <input
               style={{ margin: "5px 5px 5px 25px" }}
               type="radio"
               name="tenthQuestionName"
               className="csswrongTen"
             />
-            <span className="cssWrongAnswerTen">no </span>
+            <span className="showWrongIcon cssWrongAnswerTen">
+              no <CancelIcon className="cancelIcon" />
+            </span>
+
             <br />
+
             <button
-              style={{
-                padding: "5px 10px",
-                margin: "10px 25px",
-                color: "white",
-                backgroundColor: "blue",
-                borderRadius: "5px",
-                cursor: "pointer",
-                border: "none",
-                outline: "none",
-              }}
+            className="iamDone"
+              
               onClick={cssCompletedQuiz}
             >
               i'm Done

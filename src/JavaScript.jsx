@@ -3,6 +3,8 @@ import $ from "jquery";
 import "./JavaScript.css";
 import DehazeIcon from "@mui/icons-material/Dehaze";
 import CloseIcon from "@mui/icons-material/Close";
+import CancelIcon from "@mui/icons-material/Cancel";
+import DoneIcon from "@mui/icons-material/Done";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 import {
@@ -18,24 +20,24 @@ function JavaScript() {
   let history = useHistory();
 
   //show and hide
-    const ShowHide = () => {
-      if (!show) {
-        document.querySelector(".Sidebar").style.width = "250px";
-        document.querySelector(".Sidebar ul").style.display = "block";
-        document.querySelector(".Content").style.opacity = "0.5";
-        document.querySelector(".OpenSideBar").style.float = "right";
-        document.querySelector(".OpenSideBar").style.margin = "3px";
-        hide(true);
-      } else if (show) {
-        document.querySelector(".Sidebar").style.width = "40px";
-        document.querySelector(".Sidebar ul").style.display = "none";
-        document.querySelector(".Content").style.opacity = "1";
-        document.querySelector(".OpenSideBar").style.margin = "0px";
+  const ShowHide = () => {
+    if (!show) {
+      document.querySelector(".Sidebar").style.width = "250px";
+      document.querySelector(".Sidebar ul").style.display = "block";
+      document.querySelector(".Content").style.opacity = "0.5";
+      document.querySelector(".OpenSideBar").style.float = "right";
+      document.querySelector(".OpenSideBar").style.margin = "3px";
+      hide(true);
+    } else if (show) {
+      document.querySelector(".Sidebar").style.width = "40px";
+      document.querySelector(".Sidebar ul").style.display = "none";
+      document.querySelector(".Content").style.opacity = "1";
+      document.querySelector(".OpenSideBar").style.margin = "0px";
 
-        hide(false);
-      } else {
-      }
-    };
+      hide(false);
+    } else {
+    }
+  };
   const unclickAble = () => {
     $(".unclickAble").off("click", "li");
   };
@@ -239,10 +241,10 @@ function JavaScript() {
   const refleshCurrentPage = () => {
     $(".fourth").addClass("active");
     if (show && window.innerWidth < 871) {
-       document.querySelector(".Sidebar").style.width = "40px";
-       document.querySelector(".Sidebar ul").style.display = "none";
-       document.querySelector(".Content").style.opacity = "1";
-       document.querySelector(".OpenSideBar").style.margin = "0px";
+      document.querySelector(".Sidebar").style.width = "40px";
+      document.querySelector(".Sidebar ul").style.display = "none";
+      document.querySelector(".Content").style.opacity = "1";
+      document.querySelector(".OpenSideBar").style.margin = "0px";
 
       hide(false);
     }
@@ -400,142 +402,58 @@ function JavaScript() {
   };
 
   //jsQuiz
-  let javaScriptQuizScore = 0;
+  let javaScriptQuizScore;
   const javaScriptCompletedQuiz = () => {
+    javaScriptQuizScore = 0;
     if (document.querySelector(".javaScriptQuestionOne").checked) {
       javaScriptQuizScore++;
-    }
-    if (document.querySelector(".javaScriptwrongOne").checked) {
-      document.querySelector(
-        ".javaScriptWrongAnswerOne"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javaScriptAnswerOne").style.backgroundColor =
-        "green";
     }
 
     if (document.querySelector(".javaScriptQuestionTwo").checked) {
       javaScriptQuizScore++;
     }
-    if (document.querySelector(".javaScriptwrongTwo1").checked) {
-      document.querySelector(
-        ".javaScriptWrongAnswerTwo1"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javaScriptAnswerTwo").style.backgroundColor =
-        "green";
-    }
-    if (document.querySelector(".javaScriptwrongTwo2").checked) {
-      document.querySelector(
-        ".javaScriptWrongAnswerTwo2"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javaScriptAnswerTwo").style.backgroundColor =
-        "green";
-    }
+
     if (document.querySelector(".javaScriptQuestionThree").checked) {
       javaScriptQuizScore++;
     }
-    if (document.querySelector(".javaScriptwrongThree1").checked) {
-      document.querySelector(
-        ".javaScriptWrongAnswerThree1"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javaScriptAnswerThree").style.backgroundColor =
-        "green";
-    }
-    if (document.querySelector(".javaScriptwrongThree2").checked) {
-      document.querySelector(
-        ".javaScriptWrongAnswerThree2"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javaScriptAnswerThree").style.backgroundColor =
-        "green";
-    }
+
     if (document.querySelector(".javaScriptQuestionFour").checked) {
       javaScriptQuizScore++;
     }
-    if (document.querySelector(".javaScriptwrongFour1").checked) {
-      document.querySelector(
-        ".javaScriptWrongAnswerFour1"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javaScriptAnswerFour").style.backgroundColor =
-        "green";
-    }
-    if (document.querySelector(".javaScriptwrongFour2").checked) {
-      document.querySelector(
-        ".javaScriptWrongAnswerFour2"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javaScriptAnswerFour").style.backgroundColor =
-        "green";
-    }
+
     if (document.querySelector(".javaScriptQuestionFive").checked) {
       javaScriptQuizScore++;
     }
-    if (document.querySelector(".javaScriptwrongFive").checked) {
-      document.querySelector(
-        ".javaScriptWrongAnswerFive"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javaScriptAnswerFive").style.backgroundColor =
-        "green";
-    }
+
     if (document.querySelector(".javaScriptQuestionSix").checked) {
       javaScriptQuizScore++;
-    }
-    if (document.querySelector(".javaScriptwrongSix").checked) {
-      document.querySelector(
-        ".javaScriptWrongAnswerSix"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javaScriptAnswerSix").style.backgroundColor =
-        "green";
     }
 
     if (document.querySelector(".javaScriptQuestionSeven").checked) {
       javaScriptQuizScore++;
     }
-    if (document.querySelector(".javaScriptwrongSeven1").checked) {
-      document.querySelector(
-        ".javaScriptWrongAnswerSeven1"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javaScriptAnswerSeven").style.backgroundColor =
-        "green";
-    }
-    if (document.querySelector(".javaScriptwrongSeven2").checked) {
-      document.querySelector(
-        ".javaScriptWrongAnswerSeven2"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javaScriptAnswerSeven").style.backgroundColor =
-        "green";
-    }
+
     if (document.querySelector(".javaScriptQuestionEight").checked) {
       javaScriptQuizScore++;
     }
-    if (document.querySelector(".javaScriptwrongEight").checked) {
-      document.querySelector(
-        ".javaScriptWrongAnswerEight"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javaScriptAnswerEight").style.backgroundColor =
-        "green";
-    }
+
     if (document.querySelector(".javaScriptQuestionNine").checked) {
       javaScriptQuizScore++;
-    }
-    if (document.querySelector(".javaScriptwrongNine").checked) {
-      document.querySelector(
-        ".javaScriptWrongAnswerNine"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javaScriptAnswerNine").style.backgroundColor =
-        "green";
     }
 
     if (document.querySelector(".javaScriptQuestionTen").checked) {
       javaScriptQuizScore++;
     }
-    if (document.querySelector(".javaScriptwrongTen").checked) {
-      document.querySelector(
-        ".javaScriptWrongAnswerTen"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javaScriptAnswerTen").style.backgroundColor =
-        "green";
-    }
+
+    document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
+      rightCancel.style.setProperty("display", "inline", "important");
+    });
+
+    document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
+      rightCancel.style.setProperty("display", "inline", "important");
+    });
 
     $(".javaScriptScore").text("your score is " + javaScriptQuizScore);
-    $(".Content *").prop("disabled", true);
     return $(".Modal").show();
   };
 
@@ -4666,7 +4584,9 @@ function JavaScript() {
               name="firstQuestionName"
               className="javaScriptwrongOne"
             />
-            <span className="javaScriptWrongAnswerOne">markup language</span>
+            <span className="javaScriptWrongAnswerOne">
+              markup language <CancelIcon className="cancelIcon" />
+            </span>
             <br />
             <input
               style={{ margin: "5px 5px 5px 25px" }}
@@ -4674,7 +4594,9 @@ function JavaScript() {
               name="firstQuestionName"
               className="javaScriptQuestionOne"
             />
-            <span className="javaScriptAnswerOne">programming language</span>
+            <span className="javaScriptAnswerOne">
+              programming language <DoneIcon className="doneIcon" />
+            </span>
 
             <br />
             <hr style={{ color: "gray", margin: "5px" }} />
@@ -4690,7 +4612,9 @@ function JavaScript() {
               name="secondQuestionName"
               className="javaScriptwrongTwo1"
             />
-            <span className="javaScriptWrongAnswerTwo1">select()</span>
+            <span className="javaScriptWrongAnswerTwo1">
+              select() <CancelIcon className="cancelIcon" />
+            </span>
             <br />
             <input
               style={{ margin: "5px 5px 5px 25px" }}
@@ -4698,7 +4622,9 @@ function JavaScript() {
               name="secondQuestionName"
               className="javaScriptQuestionTwo"
             />
-            <span className="javaScriptAnswerTwo">querySelector();</span>
+            <span className="javaScriptAnswerTwo">
+              querySelector(); <DoneIcon className="doneIcon" />
+            </span>
             <br />
             <input
               style={{ margin: "5px 5px 5px 25px" }}
@@ -4706,7 +4632,9 @@ function JavaScript() {
               name="secondQuestionName"
               className="javaScriptwrongTwo2"
             />
-            <span className="javaScriptWrongAnswerTwo2">map()</span>
+            <span className="javaScriptWrongAnswerTwo2">
+              map() <CancelIcon className="cancelIcon" />
+            </span>
             <br />
             <hr style={{ color: "gray", margin: "5px" }} />
             <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
@@ -4721,7 +4649,9 @@ function JavaScript() {
               name="thirdQuestionName"
               className="javaScriptQuestionThree"
             />
-            <span className="javaScriptAnswerThree">push()</span>
+            <span className="javaScriptAnswerThree">
+              push() <DoneIcon className="doneIcon" />
+            </span>
             <br />
             <input
               style={{ margin: "5px 5px 5px 25px" }}
@@ -4729,7 +4659,9 @@ function JavaScript() {
               name="thirdQuestionName"
               className="javaScriptwrongThree1"
             />
-            <span className="javaScriptWrongAnswerThree1">lastIndexOf()</span>
+            <span className="javaScriptWrongAnswerThree1">
+              lastIndexOf() <CancelIcon className="cancelIcon" />
+            </span>
             <br />
             <input
               style={{ margin: "5px 5px 5px 25px" }}
@@ -4737,7 +4669,9 @@ function JavaScript() {
               name="thirdQuestionName"
               className="javaScriptwrongThree2"
             />
-            <span className="javaScriptWrongAnswerThree2">split()</span>
+            <span className="javaScriptWrongAnswerThree2">
+              split() <CancelIcon className="cancelIcon" />
+            </span>
             <br />
             <hr style={{ color: "gray", margin: "5px" }} />
             <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
@@ -4752,7 +4686,9 @@ function JavaScript() {
               name="fourthQuestionName"
               className="javaScriptwrongFour1"
             />
-            <span className="javaScriptWrongAnswerFour1">join()</span>
+            <span className="javaScriptWrongAnswerFour1">
+              join() <CancelIcon className="cancelIcon" />
+            </span>
             <br />
             <input
               style={{ margin: "5px 5px 5px 25px" }}
@@ -4760,7 +4696,9 @@ function JavaScript() {
               name="fourthQuestionName"
               className="javaScriptwrongFour2"
             />
-            <span className="javaScriptWrongAnswerFour2">shift()</span>
+            <span className="javaScriptWrongAnswerFour2">
+              shift() <CancelIcon className="cancelIcon" />
+            </span>
             <br />
             <input
               style={{ margin: "5px 5px 5px 25px" }}
@@ -4768,7 +4706,9 @@ function JavaScript() {
               name="fourthQuestionName"
               className="javaScriptQuestionFour"
             />
-            <span className="javaScriptAnswerFour">endsWith()</span>
+            <span className="javaScriptAnswerFour">
+              endsWith() <DoneIcon className="doneIcon" />
+            </span>
             <br />
             <hr style={{ color: "gray", margin: "5px" }} />
             <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
@@ -4783,7 +4723,9 @@ function JavaScript() {
               name="fifthQuestionName"
               className="javaScriptQuestionFive"
             />
-            <span className="javaScriptAnswerFive">yes</span>
+            <span className="javaScriptAnswerFive">
+              yes <DoneIcon className="doneIcon" />
+            </span>
             <br />
             <input
               style={{ margin: "5px 5px 5px 25px" }}
@@ -4791,7 +4733,9 @@ function JavaScript() {
               name="fifthQuestionName"
               className="javaScriptwrongFive"
             />
-            <span className="javaScriptWrongAnswerFive">no</span>
+            <span className="javaScriptWrongAnswerFive">
+              no <CancelIcon className="cancelIcon" />
+            </span>
             <br />
 
             <hr />
@@ -4807,7 +4751,9 @@ function JavaScript() {
               name="sixthQuestionName"
               className="javaScriptQuestionSix"
             />
-            <span className="javaScriptAnswerSix">yes</span>
+            <span className="javaScriptAnswerSix">
+              yes <DoneIcon className="doneIcon" />
+            </span>
             <br />
             <input
               style={{ margin: "5px 5px 5px 25px" }}
@@ -4815,7 +4761,9 @@ function JavaScript() {
               name="sixthQuestionName"
               className="javaScriptwrongSix"
             />
-            <span className="javaScriptWrongAnswerSix">no</span>
+            <span className="javaScriptWrongAnswerSix">
+              no <CancelIcon className="cancelIcon" />
+            </span>
             <br />
             <hr style={{ color: "gray", margin: "5px" }} />
             <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
@@ -4830,7 +4778,9 @@ function JavaScript() {
               name="seventhQuestionName"
               className="javaScriptQuestionSeven"
             />
-            <span className="javaScriptAnswerSeven">click</span>
+            <span className="javaScriptAnswerSeven">
+              click <DoneIcon className="doneIcon" />
+            </span>
             <br />
             <input
               style={{ margin: "5px 5px 5px 25px" }}
@@ -4838,7 +4788,9 @@ function JavaScript() {
               name="seventhQuestionName"
               className="javaScriptwrongSeven1"
             />
-            <span className="javaScriptWrongAnswerSeven1">type</span>
+            <span className="javaScriptWrongAnswerSeven1">
+              type <CancelIcon className="cancelIcon" />
+            </span>
             <br />
             <input
               style={{ margin: "5px 5px 5px 25px" }}
@@ -4846,7 +4798,9 @@ function JavaScript() {
               name="seventhQuestionName"
               className="javaScriptwrongSeven2"
             />
-            <span className="javaScriptWrongAnswerSeven2">mouseHover</span>
+            <span className="javaScriptWrongAnswerSeven2">
+              mouseHover <CancelIcon className="cancelIcon" />
+            </span>
             <br />
             <hr style={{ color: "gray", margin: "5px" }} />
             <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
@@ -4859,7 +4813,9 @@ function JavaScript() {
               name="eightQuestionName"
               className="javaScriptQuestionEight"
             />
-            <span className="javaScriptAnswerEight">yes </span>
+            <span className="javaScriptAnswerEight">
+              yes <DoneIcon className="doneIcon" />
+            </span>
             <br />
             <input
               style={{ margin: "5px 5px 5px 25px" }}
@@ -4867,7 +4823,9 @@ function JavaScript() {
               name="eightQuestionName"
               className="javaScriptwrongEight"
             />
-            <span className="javaScriptWrongAnswerEight">no </span>
+            <span className="javaScriptWrongAnswerEight">
+              no <CancelIcon className="cancelIcon" />
+            </span>
             <br />
             <hr style={{ color: "gray", margin: "5px" }} />
             <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
@@ -4880,7 +4838,9 @@ function JavaScript() {
               name="ninthQuestionName"
               className="javaScriptQuestionNine"
             />
-            <span className="javaScriptAnswerNine">using join() fuction </span>
+            <span className="javaScriptAnswerNine">
+              using join() fuction <DoneIcon className="doneIcon" />
+            </span>
             <br />
             <input
               style={{ margin: "5px 5px 5px 25px" }}
@@ -4889,7 +4849,7 @@ function JavaScript() {
               className="javaScriptwrongNine"
             />
             <span className="javaScriptWrongAnswerNine">
-              using split() fuction{" "}
+              using split() fuction <CancelIcon className="cancelIcon" />
             </span>
             <br />
 
@@ -4907,7 +4867,9 @@ function JavaScript() {
               name="tenthQuestionName"
               className="javaScriptQuestionTen"
             />
-            <span className="javaScriptAnswerTen">Set() </span>
+            <span className="javaScriptAnswerTen">
+              Set() <DoneIcon className="doneIcon" />
+            </span>
             <br />
             <input
               style={{ margin: "5px 5px 5px 25px" }}
@@ -4915,7 +4877,9 @@ function JavaScript() {
               name="tenthQuestionName"
               className="javaScriptwrongTen"
             />
-            <span className="javaScriptWrongAnswerTen">pop() </span>
+            <span className="javaScriptWrongAnswerTen">
+              pop() <CancelIcon className="cancelIcon" />
+            </span>
             <br />
             <button
               style={{

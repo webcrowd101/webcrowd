@@ -60,7 +60,8 @@
 }
 
 .Sidebar > ul > a > li {
-  margin: 15px 10px;
+  /* margin: 15px 10px; */
+  margin: 20px 10px;
   padding: 2px 5px;
   text-align: start;
   cursor: pointer;
@@ -69,14 +70,13 @@
   font-size:12px;
   font-weight:800;
 }
-
-
 .Sidebar > ul::-webkit-scrollbar {
   background: white;
 }
 .Sidebar > ul::-webkit-scrollbar-thumb {
   background: #0a005f;
 }
+
 .Content {
   flex: 1;
   height: 90vh;
@@ -112,14 +112,14 @@
   height: 200px;
   outline: none;
   border:none;
-  overflow-y: scroll;
+  overflow-y: auto;
   padding: 10px;
   /* background-color: #e9e9e9; */
   background-color: #cccccc;
   line-height: 30px;
 }
 .inputSection::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
 }
 .outputSection {
   width: 400px;
@@ -129,13 +129,9 @@
   border:none;
   /* background-color: rgb(228, 226, 226); */
     background-color: #cccccc;
-  overflow-y: scroll;
+  overflow-y: auto;
   padding: 10px;
 }
-.outputSection::-webkit-scrollbar {
-  display: none;
-}
-
 .sectionTittle {
   margin: 30px;
   padding: 7px 0;
@@ -226,6 +222,17 @@
 }
 .listofcustomers > tr > th {
   padding-right: 10px;
+}
+
+.iamDone{
+  padding: 5px 10px;
+  margin:10px 25px;
+  color: white;
+  background-color:blue;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 @media only screen and (max-width: 871px) {
   .Sidebar {

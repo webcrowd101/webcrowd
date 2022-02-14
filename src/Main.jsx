@@ -46,17 +46,13 @@ function Main() {
     window.history.pushState(null, "", window.location.href);
   };
 
-  
-    
-  
-
   AOS.init({
     duration: 2000,
   });
   return (
     <div className="main">
-      {/* <img src="cover.jpeg" className="cover" alt="" /> */}
-      <img src="secondCoverPic.jpeg" className="cover" alt="" />
+      <img src="cover.jpeg" className="cover" alt="" />
+      {/* <img src="secondCoverPic.jpeg" className="cover" alt="" /> */}
       <div className="main__header">
         <Link className="cover__Pic" to="/">
           <div className="main__header__left">

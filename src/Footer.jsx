@@ -17,68 +17,42 @@ function Footer() {
     return (
       <div>
         <div className="footer">
-          <div className="footer__top">
-            <div className="softwares">
-              <div className="footer__titles">Education</div>
-              <Link className="footer__links" to="">
-                <div>eBooks</div>
-              </Link>
-              <br />
-              <Link className="footer__links" to="">
-                <div>Seo</div>
-              </Link>
-              <br />
-              <Link className="footer__links" to="">
-                <div>Productivity</div>
-              </Link>
-            </div>
-            <div className="affiliate__programs">
-              <div className="footer__titles">Services</div>
-              <Link className="footer__links" to="">
-                <div>Motion Design</div>
-              </Link>
-              <br />
-              <Link className="footer__links" to="">
-                <div>Web Design</div>
-              </Link>
-              <br />
-              <Link className="footer__links" to="">
-                <div>Photoshop</div>
-              </Link>
-            </div>
-            <div className="blogs">
-              <div className="footer__titles">Popular</div>
-              <Link className="footer__links" to="">
-                <div>FAQ's</div>
-              </Link>
-              <br />
-              <Link className="footer__links" to="">
-                <div>Blog</div>
-              </Link>
-              <br />
-              <Link className="footer__links" to="">
-                <div>Help</div>
-              </Link>
-            </div>
-            <div className="social__media">
-              <div className="footer__titles">Follow us</div>
-              <div className="media__icons">
-                <FacebookIcon className="icon-facebook" />
-                <InstagramIcon className="icon-instagram" />
-                <TwitterIcon className="icon-twitter" />
-                <LinkedInIcon className="icon-linkedin" />
-                <YouTubeIcon className="icon-youtube" />
-              </div>
+          <div className="social__media">
+            <div className="footer__titles">Follow us</div>
+            <div className="media__icons">
+              <FacebookIcon className="icon-facebook" />
+              <InstagramIcon className="icon-instagram" />
+              <TwitterIcon className="icon-twitter" />
+              <LinkedInIcon className="icon-linkedin" />
+              <YouTubeIcon className="icon-youtube" />
             </div>
           </div>
           <div className="footer__bottom">
-            <div className="footer__bottm__firstDiv"></div>
-            <div className="terms__privacy">
-              <Link className="privacy" to="">
+            <div className="footer__top">
+              <Link className="titles" to="">
+                Services
+              </Link>
+              <Link className="titles" to="">
+                eBooks
+              </Link>
+              <Link className="titles" to="">
+                Productivity
+              </Link>
+
+              <Link className="titles" to="">
+                FAQ's
+              </Link>
+              <Link className="titles" to="">
+                Blog
+              </Link>
+              <Link className="titles" to="">
                 Privacy Policy
               </Link>
-              <Link className="terms" to="">
+              <Link className="titles" to="">
                 Terms of use
+              </Link>
+              <Link className="titles" to="">
+                Help
               </Link>
             </div>
             <p>© copyright 2022, All Rights Reserved.</p>

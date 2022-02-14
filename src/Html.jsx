@@ -73,195 +73,52 @@ function Html() {
     } else {
     }
   });
-  let htmlQuizScore = 0;
+  let htmlQuizScore;
   const htmlCompletedQuiz = () => {
+    htmlQuizScore = 0;
     if (document.querySelector(".htmlQuestionOne").checked) {
       htmlQuizScore++;
-    }
-    if (document.querySelector(".htmlwrongOne1").checked) {
-      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-
-      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-    }
-    if (document.querySelector(".htmlwrongOne2").checked) {
-      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-
-      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
     }
     if (document.querySelector(".htmlQuestionTwo").checked) {
       htmlQuizScore++;
     }
-    if (document.querySelector(".htmlwrongTwo1").checked) {
-      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-
-      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-    }
-    if (document.querySelector(".htmlwrongTwo2").checked) {
-      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-
-      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-    }
     if (document.querySelector(".htmlQuestionThree").checked) {
       htmlQuizScore++;
-    }
-    if (document.querySelector(".htmlwrongThree1").checked) {
-      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-    }
-    if (document.querySelector(".htmlwrongThree2").checked) {
-      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
     }
     if (document.querySelector(".htmlQuestionFour").checked) {
       htmlQuizScore++;
     }
-    if (document.querySelector(".htmlwrongFour1").checked) {
-      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-
-      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-    }
-    if (document.querySelector(".htmlwrongFour2").checked) {
-      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-
-      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-    }
     if (document.querySelector(".htmlQuestionFive").checked) {
       htmlQuizScore++;
-    }
-    if (document.querySelector(".htmlwrongFive").checked) {
-      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-
-      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
     }
     if (document.querySelector(".htmlQuestionSix").checked) {
       htmlQuizScore++;
     }
-    if (document.querySelector(".htmlwrongSix").checked) {
-      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-
-      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-    }
-
     if (document.querySelector(".htmlQuestionSeven").checked) {
       htmlQuizScore++;
-    }
-    if (document.querySelector(".htmlwrongSeven1").checked) {
-      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-    }
-    if (document.querySelector(".htmlwrongSeven2").checked) {
-      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
     }
     if (document.querySelector(".htmlQuestionEight").checked) {
       htmlQuizScore++;
     }
-    if (document.querySelector(".htmlwrongEight").checked) {
-      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-    }
     if (document.querySelector(".htmlQuestionNine").checked) {
       htmlQuizScore++;
-    }
-    if (document.querySelector(".htmlwrongNine1").checked) {
-      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-
-      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-    }
-    if (document.querySelector(".htmlwrongNine2").checked) {
-      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-
-      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
     }
     if (document.querySelector(".htmlQuestionTen").checked) {
       htmlQuizScore++;
     }
-    if (document.querySelector(".htmlwrongTen1").checked) {
-      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
+    document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
+      rightCancel.style.setProperty("display", "inline", "important");
+    });
+    document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
+      rightCancel.style.setProperty("display", "inline", "important");
+    });
 
-      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-    }
-    if (document.querySelector(".htmlwrongTen2").checked) {
-      document.querySelectorAll(".cancelIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-
-      document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
-        rightCancel.style.setProperty("display", "inline", "important");
-      });
-    }
-
-    // $(".htmlScore").text("your score is " + htmlQuizScore);
-    // $(".htmlQuiz__content input").prop("disabled", "false");
-    // return $(".Modal").css("display", "flex");
+    $(".htmlScore").text("your score is " + htmlQuizScore);
+    return $(".Modal").show();
   };
 
   const hideModal = () => {
-    $(".Modal").css("display", "none");
+    $(".Modal").hide();
     htmlQuizScore = 0;
   };
 
@@ -272,7 +129,7 @@ function Html() {
       document.querySelector(".Sidebar ul").style.display = "none";
       document.querySelector(".Content").style.display = "block";
       document.querySelector(".OpenSideBar").style.margin = "0px";
-        document.querySelector(".Content").style.opacity = "1";
+      document.querySelector(".Content").style.opacity = "1";
       hide(false);
     }
 
@@ -1706,19 +1563,7 @@ function Html() {
             </span>
 
             <br />
-            <button
-              style={{
-                padding: "5px 10px",
-                margin: " 10px 25px",
-                color: "white",
-                backgroundColor: "blue",
-                borderRadius: "5px",
-                cursor: "pointer",
-                border: "none",
-                outline: "none",
-              }}
-              onClick={htmlCompletedQuiz}
-            >
+            <button className="iamDone" onClick={htmlCompletedQuiz}>
               Iam done
             </button>
           </div>
