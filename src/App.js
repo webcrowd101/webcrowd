@@ -2,6 +2,7 @@ import './App.css';
 import Header from './Header';
 import EarnMoney from './EarnMoney';
 import React from "react";
+import Faq from './Faq';
 import {
   BrowserRouter as Router,
   Switch,
@@ -26,12 +27,16 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Main />
+            <Footer />
           </Route>
           <Route exact path="/EARN__MONEY">
             <EarnMoney />
           </Route>
           <Route exact path="/CONTACT">
             <Contact />
+          </Route>
+          <Route exact path="/FAQ">
+            <Faq />
           </Route>
           <Route exact path="/OVERVIEW">
             <Header />

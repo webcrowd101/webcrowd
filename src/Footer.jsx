@@ -30,7 +30,7 @@ function Footer() {
           <div className="footer__bottom">
             <div className="footer__top">
               <Link className="titles" to="">
-                Services
+                <p>Services</p>
               </Link>
               <Link className="titles" to="">
                 eBooks
@@ -39,12 +39,16 @@ function Footer() {
                 Productivity
               </Link>
 
-              <Link className="titles" to="">
-                FAQ's
-              </Link>
-              <Link className="titles" to="">
-                Blog
-              </Link>
+              
+                <a
+                  className="titles"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=hassanamouri031@gmail.com"
+                  target="_blank"
+                >
+                  Contact
+                </a>
+              
+
               <Link className="titles" to="">
                 Privacy Policy
               </Link>
@@ -52,7 +56,7 @@ function Footer() {
                 Terms of use
               </Link>
               <Link className="titles" to="">
-                Help
+                Git & Github
               </Link>
             </div>
             <p>© copyright 2022, All Rights Reserved.</p>

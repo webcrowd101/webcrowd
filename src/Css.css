@@ -34,10 +34,11 @@
 }
 .cssInput {
   display: flex;
-  width: 700px;
-  height: 200px;
+  /* width: 700px;
+  height: 200px; */
   outline: none;
 }
+
 .cssoutput {
   width: 300px;
   height: 200px;
@@ -53,8 +54,8 @@
 .htmlCode {
   border-right: 1px solid black;
   margin: 0 5px;
+width: 300px;
   height: 200px;
-  width: 350px;
   overflow-y: auto;
   border: 1px solid gray;
   /* background-color: rgb(228, 226, 226); */
@@ -64,9 +65,8 @@
 }
 .cssCode {
   margin: 0 5px;
-
+width: 300px;
   height: 200px;
-  width: 350px;
   overflow-y: auto;
   border: 1px solid gray;
   /* background-color: rgb(228, 226, 226); */
@@ -211,6 +211,16 @@
   }
   
 }
+@media only screen and (max-width:950px){
+  .cssInput{
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+  }
+  .htmlCode,.cssCode{
+    margin-top:20px;
+  }
+}
 @media only screen and (max-width:745px){
   .Content{
     overflow-x: hidden;
@@ -218,13 +228,18 @@
   .cssInput{
      flex-direction: column;
      align-items: center;
-     height: 420px;
   }
   .htmlCode{
     margin-bottom: 20px;
   }
 }
-@media only screen and (max-width:375px){
+@media only screen and (max-width:414px){
+  .htmlCode,.cssCode,.cssoutput{
+    width: 300px;
+  }
+  
+}
+@media only screen and (max-width:360px){
   .htmlCode,.cssCode,.cssoutput{
     width: 300px;
   }

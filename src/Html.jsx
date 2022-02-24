@@ -15,6 +15,7 @@ import {
   useHistory,
   useLocation,
 } from "react-router-dom";
+import ContentFooter from "./ContentFooter";
 function Html() {
   const [show, hide] = useState(false);
   let history = useHistory();
@@ -1568,6 +1569,7 @@ function Html() {
             </button>
           </div>
         </div>
+        <ContentFooter />
       </div>
     </div>
   );

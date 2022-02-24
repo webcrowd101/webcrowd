@@ -14,6 +14,7 @@ import {
   useHistory,
   useLocation,
 } from "react-router-dom";
+import ContentFooter from "./ContentFooter";
 function Css() {
   const [show, hide] = useState(false);
   const [url, setUrl] = useState(window.location.href);
@@ -75,7 +76,7 @@ function Css() {
   });
   let cssQuizScore;
   const cssCompletedQuiz = () => {
-        cssQuizScore = 0;
+    cssQuizScore = 0;
     if (document.querySelector(".cssQuestionOne").checked) {
       cssQuizScore++;
     }
@@ -113,8 +114,6 @@ function Css() {
     document.querySelectorAll(".doneIcon").forEach((rightCancel) => {
       rightCancel.style.setProperty("display", "inline", "important");
     });
-
-    
 
     $(".cssScore").text("your score is " + cssQuizScore);
     return $(".Modal").show();
@@ -2615,15 +2614,12 @@ function Css() {
 
             <br />
 
-            <button
-            className="iamDone"
-              
-              onClick={cssCompletedQuiz}
-            >
+            <button className="iamDone" onClick={cssCompletedQuiz}>
               i'm Done
             </button>
           </div>
         </div>
+        <ContentFooter />
       </div>
     </div>
   );

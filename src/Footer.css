@@ -26,9 +26,10 @@
 .titles{
   text-decoration: none;
   color: white;
+  transition: color 0.5s ease;
 }
 .titles:hover{
-    transform: scale(1.1);
+    color: #eed604;
 }
 .footer__titles{
     margin: 10px 0;

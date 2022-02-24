@@ -16,21 +16,10 @@ body::-webkit-scrollbar {
 }
 .header__logo {
   width: fit-content;
-  display: flex;
-  align-items: center;
   margin-left: 40px;
   text-decoration: none;
   margin-right: 150px;
 }
-
-.header__logo > img {
-  width: 50px;
-  height: 40px;
-}
-.header__logo > h3 {
-  color: white;
-}
-
 .webCrowd > h1 {
   font-size: 22px;
   color: white;
@@ -116,4 +105,8 @@ body::-webkit-scrollbar {
   .list:hover {
     color: aqua !important;
   }
+  .nameOfWeb{
+    font-size:14px;
+  }
 }
+

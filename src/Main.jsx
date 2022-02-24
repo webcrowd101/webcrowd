@@ -36,7 +36,7 @@ function Main() {
     } else if (localStorage.getItem("current") === "ABOUT") {
       $(".main__header__about").addClass("active");
     } else if (localStorage.getItem("current") === "CONTACT") {
-      $(".main__header__contact").addClass("active");
+      $(".main__header__faq").addClass("active");
     } else {
     }
   }, []);
@@ -56,7 +56,15 @@ function Main() {
       <div className="main__header">
         <Link className="cover__Pic" to="/">
           <div className="main__header__left">
-            <img src="logo.png" className="main__logo" alt="" />
+            <font
+              className="nameOfWebsite"
+              color="white"
+              size="6"
+              face=" a astro space"
+            >
+              web crowd
+            </font>
+            {/* <img src="logo.png" className="main__logo" alt="" /> */}
           </div>
         </Link>
         <ul className="">
@@ -64,13 +72,13 @@ function Main() {
             <li>HOME</li>
           </Link>
           <Link to="/EARN__MONEY" className="main__header__earn ">
-            <li>EARN MONEY</li>
+            <li>EARN</li>
           </Link>
           <Link to="/ABOUT" className="main__header__about ">
             <li>ABOUT</li>
           </Link>
-          <Link to="/CONTACT" className="main__header__contact ">
-            <li>CONTACT US</li>
+          <Link to="/FAQ" className="main__header__faq ">
+            <li>FAQ's</li>
           </Link>
         </ul>
       </div>
@@ -85,11 +93,11 @@ function Main() {
             web crowd
           </font>
           {/* <div className="main__top__left__title">WEB CROWD</div> */}
-          <hr />
+          <br /><br /><br />
           <div>Your Path to be a Full Stack Web Developer</div>
           <div>With Our Community. fucking indian Guy </div>
           <div>Write Less, Do More.</div>
-          <button>
+          <button className='mainBotton'>
             <Link to="/OVERVIEW" className="getStartedButton">
               Get Started
             </Link>{" "}
@@ -99,7 +107,7 @@ function Main() {
           <img src="./laptop.png" alt="" />
         </div>
       </div>
-      <div className="waves">
+      {/* <div className="waves">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
           <path
             fill="white"
@@ -107,7 +115,7 @@ function Main() {
             d="M0,192L40,202.7C80,213,160,235,240,208C320,181,400,107,480,101.3C560,96,640,160,720,165.3C800,171,880,117,960,122.7C1040,128,1120,192,1200,218.7C1280,245,1360,235,1400,229.3L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
           ></path>
         </svg>
-      </div>
+      </div> */}
       <div className="main__center">
         <h1 data-aos="fade-down" data-aos-duration="1000">
           Why Web Development ?
@@ -180,7 +188,7 @@ function Main() {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

@@ -15,6 +15,7 @@ import {
   useHistory,
   useLocation,
 } from "react-router-dom";
+import ContentFooter from "./ContentFooter";
 function JavaScript() {
   const [show, hide] = useState(false);
   let history = useHistory();
@@ -541,7 +542,7 @@ function JavaScript() {
             <li>DOM Manipulation</li>
           </a>
 
-          <a onClick={refleshCurrentPage} href="#javascriptExercises">
+          <a onClick={refleshCurrentPage} href="#Exercises">
             <li>Exercises</li>
           </a>
           <a onClick={refleshCurrentPage} href="#javascriptQuiz">
@@ -3727,8 +3728,9 @@ function JavaScript() {
               &lt;<span className="tag">h2</span>&gt; web crowd &lt;
               <span className="tag">/h2</span>&gt; <br />
             </div>
+            <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
             <div className="inputSection">
-              <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
+              
               <span className="cssTag">h2 </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
@@ -4229,8 +4231,8 @@ function JavaScript() {
             <a href="">click here</a> for more examples and exercises.
           </p>
         </div>
-        <div className="addPaddingToSection" id="javascriptExercises">
-          <di className="sectionTittle" className="javascript__exercise">
+        <div className="addPaddingToSection" id="Exercises">
+          <di className="sectionTittle" className="exercise">
             <h3
               style={{
                 textAlign: "center",
@@ -4388,7 +4390,7 @@ function JavaScript() {
               Solution
             </a>
           </di>
-          <div className="javascript__exercise">
+          <div className="exercise">
             <div style={{ textAlign: "center", flex: "1" }}>
               <h3 style={{ padding: "10px", fontSize: "30px", color: "blue" }}>
                 Todo-List
@@ -4439,7 +4441,7 @@ function JavaScript() {
               Solution
             </a>
           </div>
-          <div className="javascript__exercise">
+          <div className="exercise">
             <div style={{ textAlign: "center", flex: "1" }}>
               <h3 style={{ padding: "10px", fontSize: "30px", color: "blue" }}>
                 Timer
@@ -4495,7 +4497,7 @@ function JavaScript() {
               Solution
             </a>
           </div>
-          <div className="javascript__exercise">
+          <div className="exercise">
             <div style={{ textAlign: "center", flex: "1" }}>
               <h3
                 style={{
@@ -4898,6 +4900,7 @@ function JavaScript() {
             </button>
           </div>
         </div>
+        <ContentFooter/>
       </div>
     </div>
   );
