@@ -113,7 +113,7 @@ function Overview() {
           target="SingleSecondaryWindowName"
         >
           Visual Studio Code
-        </a>{" "}
+        </a>.{" "}
         after download it, you must install a bunch of Extensions which make
         your VsCode more Efficient. and help you write less. SO, here is the way
         of how to install those Extensions :
@@ -131,6 +131,7 @@ function Overview() {
         <li>Tabnine</li>
         <li>Prettier</li>
       </ul>
+      
       <p>
         Here is the Explanation :{" "}
         <a className="content__links" href="">

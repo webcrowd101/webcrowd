@@ -332,7 +332,7 @@ function Jquery() {
           <a onClick={refleshCurrentPage} href="#animateFunction">
             <li>animate()</li>
           </a>
-          <a onClick={refleshCurrentPage} href="#jqueryExercises">
+          <a onClick={refleshCurrentPage} href="#Exercises">
             <li>Exercises</li>
           </a>
           <a onClick={refleshCurrentPage} href="#jqueryQuiz">
@@ -461,7 +461,7 @@ function Jquery() {
           <h3 className="sectionTittle">prop()</h3>
 
           <p className="clickHere">
-            this fuction allows you to change the element's properties value.
+            this function allows you to change the element's properties value.
           </p>
 
           <div
@@ -1146,7 +1146,7 @@ function Jquery() {
 
           <p className="clickHere">
             this fuction makes the element fades out (disappears). and it also
-            accepts the fading duration (time in miliseconds).
+            accepts the fading duration (time in milliseconds).
           </p>
 
           <div
@@ -1536,7 +1536,7 @@ function Jquery() {
             for more examples and exercises <a href="">click here</a>.
           </p>
         </div>
-        <div id="jqueryExercises" className="addPaddingToSection">
+        <div id="Exercises" className="addPaddingToSection">
           <div className="exercise">
             <h3
               style={{
@@ -2116,7 +2116,7 @@ function Jquery() {
             </button>
           </div>
         </div>
-        <ContentFooter/>
+        <ContentFooter />
       </div>
     </div>
   );

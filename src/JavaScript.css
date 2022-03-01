@@ -163,6 +163,7 @@
     margin-bottom: -70px;
   }
   .beforeMedia,.afterMedia{
-    width: 280px;
+    /* width: 280px; */
+    width: 300px;
   }
 }

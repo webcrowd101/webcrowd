@@ -262,9 +262,7 @@ function Html() {
               <span className="tag">h6</span>&gt; welcome to web crowd &lt;
               <span className="tag">/h6</span>&gt; <br />
             </div>
-            <div>
               <ArrowRightAltIcon className="arrow" />
-            </div>
             <div className="outputSection">
               {" "}
               <h1>welcome to web crowd</h1>
@@ -303,9 +301,7 @@ function Html() {
               <span className="tag">sup</span>&gt; this is sup &lt;
               <span className="tag">/sup</span>&gt; <br />
             </div>
-            <div>
               <ArrowRightAltIcon className="arrow" />
-            </div>
             <div className="outputSection">
               {" "}
               this is <b>bold</b>
@@ -350,9 +346,7 @@ function Html() {
               <span className="tag">div</span>&gt; Fourth line &lt;
               <span className="tag">/div</span>&gt; <br />
             </div>
-            <div>
               <ArrowRightAltIcon className="arrow" />
-            </div>
             <div className="outputSection">
               {" "}
               <div>First line</div>
@@ -402,9 +396,7 @@ function Html() {
               <span className="tag">/a</span>&gt;
               <br />
             </div>
-            <div>
               <ArrowRightAltIcon className="arrow" />
-            </div>
             <div className="outputSection">
               {" "}
               <a href="https://www.youtube.com/">Go to YouTube</a> <br />
@@ -453,9 +445,7 @@ function Html() {
               <span className="tag"> /</span>&gt;
               <br />
             </div>
-            <div>
               <ArrowRightAltIcon className="arrow" />
-            </div>
             <div className="outputSection">
               {" "}
               <h2>the picture will display bellow</h2>
@@ -525,9 +515,7 @@ function Html() {
               &lt;
               <span className="tag">/ol</span>&gt; <br />
             </div>
-            <div>
               <ArrowRightAltIcon className="arrow" />
-            </div>
             <div className="outputSection">
               {" "}
               <h4>the First type of Lists</h4>
@@ -592,9 +580,7 @@ function Html() {
               <span className="tag"> /</span>&gt;
               <br />
             </div>
-            <div>
               <ArrowRightAltIcon className="arrow" />
-            </div>
             <div className="outputSection">
               {" "}
               <h4>Enter your full name</h4>
@@ -646,9 +632,7 @@ function Html() {
               &gt; click here &lt;
               <span className="tag">/button</span>&gt; <br />
             </div>
-            <div>
               <ArrowRightAltIcon className="arrow" />
-            </div>
             <div className="outputSection">
               {" "}
               <b>click on this button to pop up a message</b>
@@ -692,9 +676,7 @@ function Html() {
               &lt;
               <span className="tag">/select</span>&gt; <br />
             </div>
-            <div>
               <ArrowRightAltIcon className="arrow" />
-            </div>
             <div className="outputSection">
               {" "}
               <h4>select your country :</h4>
@@ -736,9 +718,7 @@ function Html() {
               &lt;
               <span className="tag">/fieldset</span>&gt; <br />
             </div>
-            <div>
               <ArrowRightAltIcon className="arrow" />
-            </div>
             <div className="outputSection">
               {" "}
               <fieldset>
@@ -816,9 +796,7 @@ function Html() {
               <span className="tag">/tr</span>&gt; <br />
               &lt;<span className="tag">/table</span>&gt;
             </div>
-            <div>
               <ArrowRightAltIcon className="arrow" />
-            </div>
             <div className="outputSection">
               {" "}
               <h4>this is the list of Customers :</h4>
@@ -946,9 +924,7 @@ function Html() {
               &lt;
               <span className="tag">/form</span>&gt; <br />
             </div>
-            <div>
               <ArrowRightAltIcon className="arrow" />
-            </div>
             <div className="outputSection">
               {" "}
               <h4>Sign up to Facebook :</h4>

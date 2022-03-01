@@ -166,6 +166,7 @@
 .arrow {
   transform: scale(3);
   color: #0b0453 !important;
+  overflow-x: hidden !important;
 }
 
 .tag {
@@ -194,7 +195,7 @@
 #Exercises {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: center; */
+  justify-content: center;
 }
 .exercisesContainer {
   display: flex;

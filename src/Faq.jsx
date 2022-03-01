@@ -10,6 +10,7 @@ import {
   useHistory,
   useLocation,
 } from "react-router-dom";
+import Footer from "./Footer";
 function Faq() {
     let history = useHistory();
   useEffect((e) => {
@@ -34,8 +35,8 @@ function Faq() {
     <div className="faq">
       {/* <img src="secondCoverPic.jpeg" className="cover" alt="" /> */}
       <div className=" faq__header main__header">
-        <Link className="cover__Pic" to="/">
-          <div className="main__header__left">
+        <Link className="main__header__left" to="/">
+         
             <font
               className="nameOfWebsite"
               color="white"
@@ -45,7 +46,7 @@ function Faq() {
               web crowd
             </font>
             {/* <img src="logo.png" className="main__logo" alt="" /> */}
-          </div>
+          
         </Link>
         <ul className="">
           <Link to="/" className="main__header__home">
@@ -73,8 +74,8 @@ function Faq() {
         </p>
         <div className="question__number">1 : what is html ?</div>
         <p>
-          html stands for Hyper Text Markup Languege, it representes everythings
-          you see in front of you in any webiste, actually you can make a
+          html stands for Hyper Text Markup Language, it represented everything
+          you see in front of you in any website, actually you can make a
           website only using this language, but it will look terrible such as
           wikipedia. So that's why html is not enough for building a decent
           website.{" "}
@@ -96,11 +97,11 @@ function Faq() {
         <div className="question__number">4 : what css used for ? </div>
         <p>
           we use css makes your website beautiful by adding some styles to our
-          web pages such as color,background,padding,marging,width,height...etc,
-          and it responsibles on make a website more responsive.
+          web pages such as color,background,padding,margin,width,height...etc,
+          and it responsible on make a website more responsive.
         </p>
         <div className="question__number">
-          5 : what is the defference between visibility : hidden and display :
+          5 : what is the difference between visibility : hidden and display :
           none properties ?
         </div>
         <p>
@@ -116,7 +117,7 @@ function Faq() {
         <div className="question__number">7 : what is server ?</div>
         <p>
           a server is a computer that provides services to other computers, but
-          the defference between server and other simple computers is that
+          the difference between server and other simple computers is that
           server has a hardware with high performances and qualities, it allows
           other computers to connect with each others.
         </p>
@@ -124,7 +125,7 @@ function Faq() {
         <p>
           a domain name is just an address to your website, is a link that is
           showed up in google's search bar. you can buy a domain name from a lot
-          of companies such as NameCheap or firebaee of GoDaddy..etc.
+          of companies such as NameCheap or firebase of GoDaddy..etc.
         </p>
         <div className="question__number">9 : what is hosting ?</div>
         <p>
@@ -133,7 +134,7 @@ function Faq() {
           your website available across the internet.
         </p>
         <div className="question__number">
-          10 : what are the defferences between http and https ?
+          10 : what are the differences between http and https ?
         </div>
         <p>
           {" "}
@@ -204,7 +205,8 @@ function Faq() {
           20 : which array function allows us to add item at the end of array ?
         </div>
         <p>in this case we use push function.</p>
-        <ContentFooter />
+        <br /><br /><br />
+        <Footer />
       </div>
     </div>
   );

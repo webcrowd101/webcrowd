@@ -284,9 +284,7 @@ function Css() {
                 <br />
               </div>
             </div>
-            <div>
-              <ArrowRightAltIcon className="arrow" />
-            </div>
+            <ArrowRightAltIcon className="arrow" />
             <div className="cssoutput">
               {" "}
               <h1 style={{ color: "red" }}>this is h1</h1>
@@ -324,9 +322,7 @@ function Css() {
                 <br />
               </div>
             </div>
-            <div>
-              <ArrowRightAltIcon className="arrow" />
-            </div>
+            <ArrowRightAltIcon className="arrow" />
             <div className="cssoutput">
               {" "}
               <h1 style={{ color: "red" }}>this is h1</h1>
@@ -390,9 +386,7 @@ function Css() {
                 <br />
               </div>
             </div>
-            <div>
-              <ArrowRightAltIcon className="arrow" />
-            </div>
+            <ArrowRightAltIcon className="arrow" />
             <div className="cssoutput">
               {" "}
               <h1 style={{ color: "red" }}>this is h1</h1>
@@ -469,9 +463,7 @@ function Css() {
                 <br />
               </div>
             </div>
-            <div>
-              <ArrowRightAltIcon className="arrow" />
-            </div>
+            <ArrowRightAltIcon className="arrow" />
             <div className="cssoutput">
               {" "}
               <h3 style={{ color: "red", backgroundColor: "orange" }}>
@@ -543,9 +535,7 @@ function Css() {
                 <br />
               </div>
             </div>
-            <div>
-              <ArrowRightAltIcon className="arrow" />
-            </div>
+            <ArrowRightAltIcon className="arrow" />
             <div className="cssoutput">
               {" "}
               <h3
@@ -637,9 +627,7 @@ function Css() {
                 <br />
               </div>
             </div>
-            <div>
-              <ArrowRightAltIcon className="arrow" />
-            </div>
+            <ArrowRightAltIcon className="arrow" />
             <div className="cssoutput">
               {" "}
               <h3
@@ -741,9 +729,7 @@ function Css() {
                 &nbsp;&#125; <br />
               </div>
             </div>
-            <div>
-              <ArrowRightAltIcon className="arrow" />
-            </div>
+            <ArrowRightAltIcon className="arrow" />
             <div className="cssoutput">
               {" "}
               <h3
@@ -875,9 +861,7 @@ function Css() {
                 &nbsp;&#125; <br />
               </div>
             </div>
-            <div>
-              <ArrowRightAltIcon className="arrow" />
-            </div>
+            <ArrowRightAltIcon className="arrow" />
             <div className="cssoutput">
               {" "}
               <h3
@@ -976,9 +960,7 @@ function Css() {
                 &nbsp;&#125; <br />
               </div>
             </div>
-            <div>
-              <ArrowRightAltIcon className="arrow" />
-            </div>
+            <ArrowRightAltIcon className="arrow" />
             <div className="cssoutput">
               {" "}
               <h3
@@ -1058,9 +1040,7 @@ function Css() {
                 &nbsp;&#125; <br />
               </div>
             </div>
-            <div>
-              <ArrowRightAltIcon className="arrow" />
-            </div>
+            <ArrowRightAltIcon className="arrow" />
             <div className="cssoutput">
               {" "}
               <h3>this is h3</h3>
@@ -1152,9 +1132,7 @@ function Css() {
                 &nbsp;&#125; <br />
               </div>
             </div>
-            <div>
-              <ArrowRightAltIcon className="arrow" />
-            </div>
+            <ArrowRightAltIcon className="arrow" />
             <div className="cssoutput">
               {" "}
               <h3
@@ -1259,9 +1237,7 @@ function Css() {
                 &nbsp;&#125; <br />
               </div>
             </div>
-            <div>
-              <ArrowRightAltIcon className="arrow" />
-            </div>
+            <ArrowRightAltIcon className="arrow" />
             <div className="cssoutput">
               {" "}
               <h3>this is h3</h3>
@@ -1334,9 +1310,7 @@ function Css() {
                 &nbsp;&#125;
               </div>
             </div>
-            <div>
-              <ArrowRightAltIcon className="arrow" />
-            </div>
+            <ArrowRightAltIcon className="arrow" />
             <div className="cssoutput">
               {" "}
               <h3 style={{ fontStyle: "italic" }}>this is h3</h3>
@@ -1398,9 +1372,7 @@ function Css() {
                 &nbsp;&#125; <br />
               </div>
             </div>
-            <div>
-              <ArrowRightAltIcon className="arrow" />
-            </div>
+            <ArrowRightAltIcon className="arrow" />
             <div className="cssoutput">
               {" "}
               <h3 className="h3Hover">this is h3</h3>
@@ -1453,9 +1425,7 @@ function Css() {
                 &nbsp;&#125; <br />
               </div>
             </div>
-            <div>
-              <ArrowRightAltIcon className="arrow" />
-            </div>
+            <ArrowRightAltIcon className="arrow" />
             <div className="cssoutput">
               {" "}
               <h3 className="h3Transition">this is h3</h3>
@@ -1544,9 +1514,7 @@ function Css() {
                 &nbsp;&#125; <br />
               </div>
             </div>
-            <div>
-              <ArrowRightAltIcon className="arrow" />
-            </div>
+            <ArrowRightAltIcon className="arrow" />
             <div className="cssoutput">
               {" "}
               <div style={{ display: "flex", backgroundColor: "gray" }}>
@@ -1622,9 +1590,7 @@ function Css() {
                 &nbsp;&#125; <br />
               </div>
             </div>
-            <div>
-              <ArrowRightAltIcon className="arrow" />
-            </div>
+            <ArrowRightAltIcon className="arrow" />
             <div className="cssoutput">
               {" "}
               <div
@@ -1715,9 +1681,7 @@ function Css() {
                 &nbsp;&#125; <br />
               </div>
             </div>
-            <div>
-              <ArrowRightAltIcon className="arrow" />
-            </div>
+            <ArrowRightAltIcon className="arrow" />
             <div className="cssoutput">
               {" "}
               <div
@@ -1794,9 +1758,7 @@ function Css() {
                 &nbsp;&#125; <br />
               </div>
             </div>
-            <div>
-              <ArrowRightAltIcon className="arrow" />
-            </div>
+            <ArrowRightAltIcon className="arrow" />
             <div className="cssoutput">
               {" "}
               <div
@@ -1853,7 +1815,7 @@ function Css() {
                 <span className="classProperty"> class=</span>
                 <span className="classValue">"child" </span>&gt; &lt;
                 <span className="tag">/div</span>&gt; <br /> <br />
-                &lt;
+                &nbsp;&nbsp;&lt;
                 <span className="tag">/div</span>&gt; <br />
               </div>
               <div className="cssCode">
@@ -1891,26 +1853,35 @@ function Css() {
                   &nbsp;&nbsp; transform
                 </span>: <span className="cssValue">translate</span>(0,120px);{" "}
                 <br />
+                &nbsp;&nbsp;&#125;
+                <br />
                 <span className="keyframes__percent">50%</span>&#123; <br />
                 <span className="cssProperty">
                   &nbsp;&nbsp; transform
                 </span>: <span className="cssValue">translate</span>
-                (120px,120px); <br />
+                (120px,120px);
+                <br />
+                &nbsp;&nbsp;&#125;
+                <br />
                 <span className="keyframes__percent">75% </span>&#123; <br />
                 <span className="cssProperty">
                   &nbsp;&nbsp; transform
                 </span>: <span className="cssValue">translate</span>(120px,0);{" "}
+                <br />
+                &nbsp;&nbsp;&#125;
                 <br />
                 <span className="keyframes__percent">100% </span>&#123; <br />
                 <span className="cssProperty">
                   &nbsp;&nbsp; transform
                 </span>: <span className="cssValue">translate</span>(0,0);{" "}
                 <br />
+                &nbsp;&nbsp;&#125;
+                <br />
+                &nbsp;&nbsp;&#125;
+                <br />
               </div>
             </div>
-            <div>
-              <ArrowRightAltIcon className="arrow" />
-            </div>
+            <ArrowRightAltIcon className="arrow" />
             <div className="cssoutput">
               {" "}
               <div

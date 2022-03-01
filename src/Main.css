@@ -1,13 +1,19 @@
 * {
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
+}
+.main {
+   overflow: hidden;
+}
+html {
+    /* overflow-x: hidden;  */
 }
 
 .cover {
   width: 100vw;
   height: 110vh;
   position: relative;
+  
 }
 
 .main__logo {
@@ -23,6 +29,7 @@
   width: 100vw;
   /* background-color: red; */
   height: 70px;
+  
 
 }
 .main__header__left {
@@ -30,6 +37,7 @@
   margin-right: 500px;
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 .main__header__left > h3 {
   color: white;
@@ -168,6 +176,7 @@
 .main__top__left__title {
     font-size: 22px;
   }
+  
 
 @media only screen and (max-width: 1148px) {
   .main__header__home > li,
@@ -281,7 +290,4 @@
 
 .main__active {
   color: #eed604;
-}
-.cover__Pic {
-  text-decoration: none;
 }

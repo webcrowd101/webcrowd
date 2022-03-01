@@ -39,7 +39,7 @@ function Header() {
       $(".fourth").addClass("active");
     } else if (localStorage.getItem("current") === "JQUERY") {
       $(".fifth").addClass("active");
-    } else if (localStorage.getItem("current") === "TEMPLATES") {
+    } else if (localStorage.getItem("current") === "GIT%20&%20GITHUB") {
       $(".sixth").addClass("active");
     } else {
     }
@@ -125,7 +125,7 @@ function Header() {
             JQUERY
           </li>
           <li className="sections sixth" onClick={hideHeader}>
-            TEMPLATES
+            GIT & GITHUB
           </li>
         </ul>
       </Route>

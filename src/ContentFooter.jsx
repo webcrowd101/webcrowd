@@ -53,9 +53,7 @@ function ContentFooter() {
             <Link className="ContentFooter__titles" to="">
               Terms of use
             </Link>
-            <Link className="ContentFooter__titles" to="">
-              Git & Github
-            </Link>
+           
           </div>
           <p>© copyright 2022, All Rights Reserved.</p>
         </div>

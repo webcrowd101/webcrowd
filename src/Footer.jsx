@@ -55,9 +55,7 @@ function Footer() {
               <Link className="titles" to="">
                 Terms of use
               </Link>
-              <Link className="titles" to="">
-                Git & Github
-              </Link>
+              
             </div>
             <p>© copyright 2022, All Rights Reserved.</p>
           </div>

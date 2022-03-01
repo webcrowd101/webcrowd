@@ -166,6 +166,9 @@ width: 300px;
 .signupButton:hover {
   background-color: green !important;
 }
+.keyframes{
+  margin-left: 5px;
+}
 
 @media only screen and (max-width: 1000px) {
   .mediaQueryDiv {
@@ -181,6 +184,7 @@ width: 300px;
 }
 .keyframes__percent {
   color: black;
+  margin-left: 5px;
 }
 .animatedItem {
 }

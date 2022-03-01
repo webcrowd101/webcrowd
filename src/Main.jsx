@@ -31,15 +31,17 @@ function Main() {
 
     if (localStorage.getItem("current") === "") {
       $(".main__header__home").addClass("active");
-    } else if (localStorage.getItem("current") === "EARN__MONEY") {
+    } else if (localStorage.getItem("current") === "EARN") {
       $(".main__header__earn").addClass("active");
     } else if (localStorage.getItem("current") === "ABOUT") {
       $(".main__header__about").addClass("active");
-    } else if (localStorage.getItem("current") === "CONTACT") {
+    } else if (localStorage.getItem("current") === "FAQ") {
       $(".main__header__faq").addClass("active");
     } else {
     }
   }, []);
+
+  
 
   window.history.pushState(null, "", window.location.href);
   window.onpopstate = function () {
@@ -54,8 +56,8 @@ function Main() {
       <img src="cover.jpeg" className="cover" alt="" />
       {/* <img src="secondCoverPic.jpeg" className="cover" alt="" /> */}
       <div className="main__header">
-        <Link className="cover__Pic" to="/">
-          <div className="main__header__left">
+        <Link className="main__header__left" to="/">
+          
             <font
               className="nameOfWebsite"
               color="white"
@@ -65,13 +67,13 @@ function Main() {
               web crowd
             </font>
             {/* <img src="logo.png" className="main__logo" alt="" /> */}
-          </div>
+         
         </Link>
         <ul className="">
           <Link to="/" className="main__header__home">
             <li>HOME</li>
           </Link>
-          <Link to="/EARN__MONEY" className="main__header__earn ">
+          <Link to="/EARN" className="main__header__earn ">
             <li>EARN</li>
           </Link>
           <Link to="/ABOUT" className="main__header__about ">

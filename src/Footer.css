@@ -1,9 +1,10 @@
 *{
     padding: 0;
     margin: 0;
+   
 }
 .footer{
-    width: 100vw;
+    max-width: 100vw;
     background-color: #0a0453;
     display: flex;
     flex-direction: column;

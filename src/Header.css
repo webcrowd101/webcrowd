@@ -102,9 +102,7 @@ body::-webkit-scrollbar {
     transition: color 0.5s ease !important;
     color: white !important;
   }
-  .list:hover {
-    color: aqua !important;
-  }
+
   .nameOfWeb{
     font-size:14px;
   }
