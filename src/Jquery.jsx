@@ -356,7 +356,7 @@ function Jquery() {
             applied unless you add this following script inside <b>head</b> tag
             in html file : <br />
             the script :{" "}
-            <b style={{ color: "purple" }}>
+            <b style={{ color: "purple", wordBreak: "break-word" }}>
               &lt;script
               src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;
             </b>{" "}
@@ -1537,6 +1537,10 @@ function Jquery() {
           </p>
         </div>
         <div id="Exercises" className="addPaddingToSection">
+          <div style={{ width: "100%" }}>
+            <h3 className="sectionTittle">Exercises</h3>
+            
+          </div>
           <div className="exercise">
             <h3
               style={{

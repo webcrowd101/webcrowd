@@ -52,7 +52,7 @@ function Main() {
     duration: 2000,
   });
   return (
-    <div className="main">
+    <div className="main" name='main' id="main">
       <img src="cover.jpeg" className="cover" alt="" />
       {/* <img src="secondCoverPic.jpeg" className="cover" alt="" /> */}
       <div className="main__header">
@@ -90,14 +90,14 @@ function Main() {
             className="main__top__left__title"
             color="white"
             size="6"
-            face=" a astro space"
+            // face=" a astro space"
           >
             web crowd
           </font>
           {/* <div className="main__top__left__title">WEB CROWD</div> */}
           <br /><br /><br />
-          <div>Your Path to be a Full Stack Web Developer</div>
-          <div>With Our Community. fucking indian Guy </div>
+          <div>Your Path to become a Front End Web</div>
+          <div> Developer with our community.</div>
           <div>Write Less, Do More.</div>
           <button className='mainBotton'>
             <Link to="/OVERVIEW" className="getStartedButton">
@@ -130,7 +130,7 @@ function Main() {
           >
             <h4>1-Growth & Popularity :</h4>
             <p>
-              In main__current time, web development became one of the most
+              In the current time, web development became one of the most
               Popular Skills you must master as 2021 Survey. it makes you more
               Creative.
             </p>
@@ -190,7 +190,6 @@ function Main() {
           </div>
         </div>
       </div>
-      {/* <Footer /> */}
     </div>
   );
 }

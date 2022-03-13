@@ -30,7 +30,7 @@ function ContentFooter() {
         <div className="ContentFooter__footer__bottom">
           <div className="ContentFooter__footer__top">
             <Link className="ContentFooter__titles" to="">
-              <p>Services</p>
+              <p>Earn</p>
             </Link>
             <Link className="ContentFooter__titles" to="">
               eBooks
@@ -39,21 +39,21 @@ function ContentFooter() {
               Productivity
             </Link>
 
+            
             <a
               className="ContentFooter__titles"
-              href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=hassanamouri031@gmail.com"
-              target="_blank"
+              href="mailto:webcrowd101@gmail.com"
+              target="_top"
             >
               Contact
             </a>
 
-            <Link className="ContentFooter__titles" to="">
+            <Link className="ContentFooter__titles" to="/PRIVACY">
               Privacy Policy
             </Link>
-            <Link className="ContentFooter__titles" to="">
+            <Link className="ContentFooter__titles" to="/TERMS">
               Terms of use
             </Link>
-           
           </div>
           <p>© copyright 2022, All Rights Reserved.</p>
         </div>

@@ -15,8 +15,13 @@ import Css from './Css';
 import JavaScript from './JavaScript';
 import Jquery from './Jquery';
 import Contact from './Contact';
+import About from "./About";
 import Overview from './Overview';
 import Footer from './Footer';
+import GitGithub from './GitGithub';
+import Ebooks from './Ebooks';
+import Privacy from './Privacy';
+import Terms from './Terms';
 
 function App() {
  
@@ -35,8 +40,20 @@ function App() {
           <Route exact path="/CONTACT">
             <Contact />
           </Route>
+          <Route exact path="/ABOUT">
+            <About />
+          </Route>
           <Route exact path="/FAQ">
             <Faq />
+          </Route>
+          <Route exact path="/eBooks">
+            <Ebooks />
+          </Route>
+          <Route exact path="/PRIVACY">
+            <Privacy />
+          </Route>
+          <Route exact path="/TERMS">
+            <Terms />
           </Route>
           <Route exact path="/OVERVIEW">
             <Header />
@@ -59,6 +76,10 @@ function App() {
           <Route exact path="/JQUERY">
             <Header />
             <Jquery />
+          </Route>
+          <Route exact path="/GIT & GITHUB">
+            <Header />
+            <GitGithub />
           </Route>
         </Switch>
       </div>

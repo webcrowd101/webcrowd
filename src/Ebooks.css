@@ -1,0 +1,71 @@
+.ebooks {
+  display: flex;
+  width: 100vw;
+  
+}
+.ebooksContent{
+   
+   margin-top: 7vh;
+   text-align: center;
+}
+
+.introToBooks{
+  margin-top:  60px !important;
+  line-height:25px;
+}
+.ebooksContent>p{
+  line-height:25px;
+  margin: 10px auto;
+  width: 90vw;
+}
+.ebooksContent>p::first-letter{
+  margin-left: 20px;
+}
+.ebooksContent>h1{
+  margin: 60px;
+  text-align: center;
+  color: #0a0453;
+  background: #0b045352;
+  font-family: 'a astro space';
+  font-size:18px;
+  padding-top: 5px;
+  height: 20px;
+  line-height: 20px;
+  padding-bottom: 2px;
+  
+}
+.ebooksContent>h3{
+  margin: 10px;
+  text-align: center;
+  color: #149b02;
+  padding: 3px 0;
+}
+.ebooksContent>b{
+  margin: 10px 0;
+  text-align: center;
+  color: #0a0453;
+  padding: 3px 0;
+}
+.ebooksContent>a{
+  
+  text-align: center;
+  color: rgb(202, 38, 66);
+  padding: 3px 0;
+  font-size:18px;
+  font-weight: bold;
+}
+.lastParag{
+  margin-bottom:100px !important;
+}
+
+@media only screen and (max-width: 604px){
+  .ebooksContent>h1{
+    font-size:13px;
+  }
+}
+@media only screen and (max-width: 490px){
+  .ebooksContent>h1{
+    font-size:8px;
+  }
+}
+

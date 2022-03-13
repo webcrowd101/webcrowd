@@ -47,8 +47,11 @@ function Header() {
 
   const showHeader = () => {
     document.querySelector(".items").style.display = "flex";
+    document.querySelector(".items").style.marginTop = "-2px";
     document.querySelectorAll(".sections").forEach(section => {
-      section.style.margin = "12px 0";
+      section.style.marginTop = "-2px";
+      section.style.padding = "20px 0";
+
     
     })
     setSituation(false);
@@ -62,7 +65,7 @@ function Header() {
       document.querySelector(".items").style.display = "flex";
     }
     document.querySelectorAll(".sections").forEach((section) => {
-      section.style.margin = "0";
+      // section.style.margin = "0";
     });
   };
   const hideHeaderFromIcon = () => {
@@ -72,7 +75,7 @@ function Header() {
       document.querySelector(".items").style.display = "flex";
     }
     document.querySelectorAll(".sections").forEach((section) => {
-      section.style.margin = "0";
+      // section.style.margin = "0";
     });
   };
 
@@ -83,6 +86,9 @@ function Header() {
       }
       if (window.innerWidth <= 1000) {
         document.querySelector(".items").style.display = "none";
+
+        
+
       }
     } catch {}
   });

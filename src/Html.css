@@ -1,6 +1,20 @@
+body{
+  overflow:scroll;
+}
+body::-webkit-scrollbar{
+  display:none;
+}
 .html {
   display: flex;
-  width: 100vw;
+    width: 100vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 94vh;
+  margin-top: 6vh;
+  
+}
+.html::-webkit-scrollbar{
+  display: none;
 }
 .Modal {
   width: 30%;
@@ -20,16 +34,15 @@
 .Sidebar {
   background-color: #e9e9e9;
   width: 250px;
-  height: 90vh;
+  height: 94vh;
+
 }
 .Sidebar > ul {
-  /* margin-top: 20px; */
   background-color: #e9e9e9;
   text-align: center;
-  height: 90vh;
+  height: 86vh;
   overflow-y: scroll;
   width: 100% !important;
-  scrollbar-color: red yellow !important;
 }
 
 .Sidebar > ul > a {
@@ -39,23 +52,21 @@
   /* text-transform: uppercase; */
   font-weight: 600;
   font-size: 16px;
-  
 }
-.activatedLi{
- 
-  color:#0a005f !important;
+.activatedLi {
+  color: #0a005f !important;
 }
-.cancelIcon{
-  margin-bottom:-5px !important;
+.cancelIcon {
+  margin-bottom: -5px !important;
   margin-left: 5px !important;
-  display:none !important;
+  display: none !important;
   color: red !important;
   font-size: 18px !important;
 }
-.doneIcon{
-  margin-bottom:-5px !important;
+.doneIcon {
+  margin-bottom: -5px !important;
   margin-left: 5px !important;
-  display:none !important;
+  display: none !important;
   color: green !important;
 }
 
@@ -67,8 +78,8 @@
   cursor: pointer;
   color: #0a0061;
   text-transform: uppercase;
-  font-size:12px;
-  font-weight:800;
+  font-size: 12px;
+  font-weight: 800;
 }
 .Sidebar > ul::-webkit-scrollbar {
   background: white;
@@ -79,26 +90,25 @@
 
 .Content {
   flex: 1;
-  height: 90vh;
+  height: 94vh;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  /* margin-top: 7vh; */
 }
 
 .Content::-webkit-scrollbar {
   display: none;
 }
 .OpenSideBar {
-  display:none !important;
+  display: none !important;
   width: 40px !important;
   height: 40px !important;
   color: #0a005f !important;
   cursor: pointer !important;
 }
-.addPaddingToSection{
+.addPaddingToSection {
   padding: 2px 0;
-  
 }
-
 
 .codeSection {
   display: flex;
@@ -109,7 +119,7 @@
   width: 400px;
   height: 200px;
   outline: none;
-  border:none;
+  border: none;
   overflow-y: auto;
   padding: 10px;
   /* background-color: #e9e9e9; */
@@ -124,9 +134,9 @@
   height: 200px;
   outline: none;
   /* border: 1px solid gray; */
-  border:none;
+  border: none;
   /* background-color: rgb(228, 226, 226); */
-    background-color: #cccccc;
+  background-color: #cccccc;
   overflow-y: auto;
   padding: 10px;
 }
@@ -143,18 +153,16 @@
   line-height: 2;
   width: 95%;
   margin: 5px auto;
-
 }
-.clickHere::first-letter{
+.clickHere::first-letter {
   text-transform: uppercase;
 }
-.flexboxProperties{
-  font-size:18px !important;
-  color:#0b0453;
+.flexboxProperties {
+  font-size: 18px !important;
+  color: #0b0453;
   background: #0a005f31;
   width: fit-content;
   padding: 5px;
-
 }
 .instruction {
   color: rgb(75, 134, 75);
@@ -200,7 +208,7 @@
 .exercisesContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content:center;
+  justify-content: center;
 }
 .exercise {
   background-color: rgb(223, 221, 221);
@@ -213,7 +221,7 @@
   padding: 5px;
   overflow-x: hidden;
 }
-.exercise::-webkit-scrollbar{
+.exercise::-webkit-scrollbar {
   display: none;
 }
 
@@ -224,11 +232,11 @@
   padding-right: 10px;
 }
 
-.iamDone{
+.iamDone {
   padding: 5px 10px;
-  margin:10px 25px;
+  margin: 10px 25px;
   color: white;
-  background-color:blue;
+  background-color: blue;
   border-radius: 5px;
   cursor: pointer;
   border: none;
@@ -245,34 +253,33 @@
     display: block !important;
   }
 }
-@media only screen and (max-width:1320px){
-  .codeSection{
-    flex-direction: column; 
+@media only screen and (max-width: 1320px) {
+  .codeSection {
+    flex-direction: column;
   }
-  .arrow{
+  .arrow {
     transform: rotate(90deg) scale(3);
     margin: 20px 0;
-    
   }
 }
-@media only screen and (max-width:414px){
-  .inputSection, .outputSection{
-    width:300px;
-  }
-  .exercise{
+@media only screen and (max-width: 414px) {
+  .inputSection,
+  .outputSection {
     width: 300px;
-    
   }
-  .exercise>a{
-    margin-left:-100px;
+  .exercise {
+    width: 300px;
+  }
+  .exercise > a {
+    margin-left: -100px;
   }
 }
-@media only screen and (max-width:360px){
-  .inputSection, .outputSection{
-    width:280px;
+@media only screen and (max-width: 360px) {
+  .inputSection,
+  .outputSection {
+    width: 280px;
   }
-  .exercise{
+  .exercise {
     width: 280px;
   }
 }
-

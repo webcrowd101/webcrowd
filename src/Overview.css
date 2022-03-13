@@ -1,12 +1,14 @@
+
 .overview {
   width: 100vw;
-  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 94vh;
+  margin-top: 6vh;
 }
+
 .overview::-webkit-scrollbar {
   display: none;
-}
-.overview {
-  padding-top: 20px;
 }
 .overview > h3 {
   text-align: center;

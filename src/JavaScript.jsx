@@ -605,7 +605,7 @@ function JavaScript() {
                 console.log(<span className="insideConsole">country</span>)
               </div>
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>mike</div>
               <div>22</div>
@@ -647,7 +647,7 @@ function JavaScript() {
                 console.log(<span className="insideConsole">country</span>)
               </div>
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>22</div>
               <div>canada</div>
@@ -715,7 +715,7 @@ function JavaScript() {
                 console.log(<span className="insideConsole">city</span>)
               </div>
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>mike</div>
               <div>22</div>
@@ -786,16 +786,16 @@ function JavaScript() {
                 )
               </div>
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
-              <div>23 &nbsp; &nbsp;&nbsp; &nbsp; // "23"</div>
-              <div>"20" &nbsp; &nbsp;&nbsp;// 20</div>
-              <div>3 &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;// "3"</div>
+              <div>23 &nbsp; &nbsp;&nbsp; &nbsp; (string)</div>
+              <div>"20" &nbsp; &nbsp;&nbsp;(number)</div>
+              <div>3 &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;(string)</div>
             </div>
           </div>
           <p className="clickHere">
             <b className="note">Note : </b> to check out the type of output
-            variables type the folowing : <br />
+            variables type the following : <br />
             <div className="console">
               {" "}
               console.log( <span style={{ color: "purple" }}>typeof</span>
@@ -842,7 +842,7 @@ function JavaScript() {
               &#125;
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>his name is mike</div>
             </div>
@@ -885,7 +885,7 @@ function JavaScript() {
               &#125;
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>his name is frank</div>
             </div>
@@ -946,7 +946,7 @@ function JavaScript() {
               &#125;
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>his name is frank</div>
             </div>
@@ -987,7 +987,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>his name is mike</div>
             </div>
@@ -1029,7 +1029,7 @@ function JavaScript() {
               </span>
               <br /> &#125;
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>my name is mike</div>
               <div>my name is mike</div>
@@ -1150,7 +1150,7 @@ function JavaScript() {
               </span>{" "}
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>5</div>
               <div>6</div>
@@ -1250,7 +1250,7 @@ function JavaScript() {
               <span className="variableName"> ShowInConsole() </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>hello</div>
               <div>hello</div>
@@ -1307,7 +1307,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>6</div>
               <div>12</div>
@@ -1365,7 +1365,7 @@ function JavaScript() {
                 <br />
               </div>
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>22</div>
             </div>
@@ -1498,7 +1498,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>khalid</div>
               <div>20</div>
@@ -1560,7 +1560,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>mike</div>
               <div>false</div>
@@ -1605,7 +1605,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>3</div>
             </div>
@@ -1639,7 +1639,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>arr = [ "mike" , 22 , false , "frank" ]</div>
             </div>
@@ -1672,7 +1672,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>arr = [ "mike" , 22 ]</div>
             </div>
@@ -1708,7 +1708,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>arr = [ "frank" , "mike" , 22 , false ]</div>
             </div>
@@ -1741,7 +1741,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>arr = [ 22 , false ]</div>
             </div>
@@ -1774,7 +1774,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>arr = [ false , 22 , "mike" ]</div>
             </div>
@@ -1818,7 +1818,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>[ false , 22 , "mike" , 1 , 2 , 3 ]</div>
             </div>
@@ -1855,7 +1855,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>numbers = [ 1 , 2 , 3 , 4 , 5 ]</div>
             </div>
@@ -1892,7 +1892,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>numbers = [ 6 , 7 , 8 , 9 , 10 ]</div>
             </div>
@@ -1934,7 +1934,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>the sum is : 55</div>
             </div>
@@ -1976,7 +1976,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>numbers = [ 3 , 5 , 12 , 17 , 56 , 60 , 78 ]</div>
             </div>
@@ -2010,7 +2010,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div> strings = [ "b" , "d" , "frank" , "john" , "mike" ]</div>
             </div>
@@ -2043,7 +2043,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>numbers = [2 , 4 , 6 , 8 , 10 ]</div>
             </div>
@@ -2090,7 +2090,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>
                 {" "}
@@ -2138,7 +2138,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>false</div>
               <div>true</div>
@@ -2172,7 +2172,7 @@ function JavaScript() {
                 )
               </span>
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>numbers = [ 0 , 0 , 0 , 0 , 0 ]</div>
             </div>
@@ -2210,7 +2210,7 @@ function JavaScript() {
                 )
               </span>
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>true</div>
             </div>
@@ -2247,7 +2247,7 @@ function JavaScript() {
                 )
               </span>
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>2</div>
             </div>
@@ -2283,7 +2283,7 @@ function JavaScript() {
                 )
               </span>
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>2</div>
             </div>
@@ -2320,7 +2320,7 @@ function JavaScript() {
                 )
               </span>
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>3</div>
             </div>
@@ -2367,7 +2367,7 @@ function JavaScript() {
                 )
               </span>
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>true</div>
               <div>false</div>
@@ -2423,7 +2423,7 @@ function JavaScript() {
                 <span style={{ color: "blue" }}> numbers</span> )
               </span>
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div> numbers = [ 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 ]</div>
               <div> [ 5 , 6 , 7 , 8 , 9 , 10 ]</div>
@@ -2484,7 +2484,7 @@ function JavaScript() {
                 )
               </span>
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>numbers = [ 1 , 2 , 8 ]</div>
               <div>numbers = [ 6 , 7 , 8 ]</div>
@@ -2527,7 +2527,7 @@ function JavaScript() {
                 )
               </span>
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>abcde</div>
             </div>
@@ -2567,7 +2567,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>the length is : 20</div>
             </div>
@@ -2600,7 +2600,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>the length is : 20</div>
             </div>
@@ -2633,7 +2633,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div> the char at index 5 is : r</div>
             </div>
@@ -2677,7 +2677,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div> true</div>
               <div> false</div>
@@ -2719,7 +2719,7 @@ function JavaScript() {
                 <span style={{ color: "purple" }}> str</span> )
               </span>
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div> web development</div>
               <div> web crowd</div>
@@ -2763,7 +2763,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div> true</div>
               <div> false</div>
@@ -2808,7 +2808,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div> index of b is : 2</div>
               <div> index of crowd is : 4</div>
@@ -2842,7 +2842,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>last index of w is : 7</div>
             </div>
@@ -2874,7 +2874,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>WEB CROWD</div>
             </div>
@@ -2906,7 +2906,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>web crowd</div>
             </div>
@@ -2938,7 +2938,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>Web Crowd Web Crowd Web Crowd Web Crowd Web Crowd</div>
             </div>
@@ -2994,7 +2994,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>[ 'w' , 'e' , 'b' , ' ' , 'c' , 'r' , 'o' , 'w' , 'd' ]</div>
               <div>[ 'w' , ' crowd' ]</div>
@@ -3032,7 +3032,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>web crowd</div>
             </div>
@@ -3067,7 +3067,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>web crowd</div>
             </div>
@@ -3108,7 +3108,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div> ( take a look on console )</div>
             </div>
@@ -3151,7 +3151,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div> 6</div>
             </div>
@@ -3175,7 +3175,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div> 5</div>
             </div>
@@ -3198,7 +3198,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div> 33</div>
             </div>
@@ -3229,7 +3229,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div style={{ color: "gray" }}>// 5 * 5 * 5</div>
               <div> 125</div>
@@ -3275,7 +3275,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div> the square of 25 is : 5</div>
               <div> the square of 81 is : 9</div>
@@ -3316,7 +3316,7 @@ function JavaScript() {
               </span>
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>( check out the console )</div>
             </div>
@@ -3610,7 +3610,6 @@ function JavaScript() {
             </div>
             <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
             <div className="inputSection">
-              
               <span className="cssTag">h2 </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
@@ -4112,7 +4111,10 @@ function JavaScript() {
           </p>
         </div>
         <div className="addPaddingToSection" id="Exercises">
-          <di className="sectionTittle" className="exercise">
+          <div style={{ width: "100%" }}>
+            <h3 className="sectionTittle">Exercises</h3>
+          </div>
+          <div className="exercise">
             <h3
               style={{
                 textAlign: "center",
@@ -4269,7 +4271,7 @@ function JavaScript() {
             >
               Solution
             </a>
-          </di>
+          </div>
           <div className="exercise">
             <div style={{ textAlign: "center", flex: "1" }}>
               <h3 style={{ padding: "10px", fontSize: "30px", color: "blue" }}>
@@ -4780,7 +4782,7 @@ function JavaScript() {
             </button>
           </div>
         </div>
-        <ContentFooter/>
+        <ContentFooter />
       </div>
     </div>
   );

@@ -2,11 +2,16 @@
   padding: 0;
   margin: 0;
 }
-.main {
+
+.main>* {
    overflow: hidden;
+
 }
-html {
-    /* overflow-x: hidden;  */
+html>* {
+    overflow-x: hidden; 
+}
+.main__top__left__title{
+  font-family: 'a astro space';
 }
 
 .cover {
@@ -80,6 +85,7 @@ html {
 .main__header__faq:hover {
   color: #eed604;
 }
+
 .main__top {
   display: flex;
   justify-content: space-between;
@@ -178,12 +184,19 @@ html {
   }
   
 
-@media only screen and (max-width: 1148px) {
+@media only screen and (max-width: 1170px) {
   .main__header__home > li,
   .main__header__earn > li,
   .main__header__about > li,
   .main__header__faq > li {
     font-size: 12px;
+  }
+  .main__header>ul{
+    margin-left: -80px;
+  }
+
+  .nameOfWebsite{
+    font-size:18px;
   }
 }
 @media only screen and (max-width: 1028px) {
@@ -249,12 +262,22 @@ html {
   .third__reason__right {
     margin-top: 20px;
   }
+  .nameOfWebsite{
+    display: none;
+  }
+  .main__header>ul{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
 }
+
 
 
 @media only screen and (max-width: 529px) {
   .main__header__left {
-    margin-right: 20px;
+    display: none;
   }
   .main__top__right > img {
     width: 500px;
@@ -264,6 +287,10 @@ html {
     margin-left:8px;
     font-size: 18px !important;
   }
+  .main__top__left__title{
+    font-family: 'a astro space' !important;
+  }
+  
   .main__top__left {
     margin-top: 30px;
   }
@@ -284,10 +311,13 @@ html {
     margin-top: -20px !important;
   }
   .main__header>ul{
-    margin-left: 30px !important;
+    width: 80vw;
+    margin: 0 auto;
   }
 }
 
 .main__active {
   color: #eed604;
 }
+
+

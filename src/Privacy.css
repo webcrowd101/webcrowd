@@ -1,8 +1,8 @@
-.faq {
+.privacy {
   display: flex;
   width: 100vw;
 }
-.faq__header {
+.privacy__header {
   background-color: #0a0453;
   width: 100vw;
   /* height: 11.2vh !important; */
@@ -12,13 +12,13 @@
 
 
 
-.faqContent{
+.privacyContent{
    margin-top: 7vh; 
 }
-.faqContent > h2 {
+.privacyContent > h2 {
   padding: 10px 0;
   text-align: center;
-  margin: 40px auto;
+  margin: 20px auto;
   color: #0a0453;
   background-color: #d1cfcf;
   width: 70vw;
@@ -34,14 +34,27 @@
   font-size: 17px;
   border-radius: 5px;
 }
-.faqContent > p {
+.privacyContent > p {
   width: 75vw;
   margin: 20px auto;
-  color: #0a0453;
+  /* color: #0a0453; */
   line-height: 30px;
 }
-.faqContent > p::first-letter {
+.privacyContent > ul {
+  width: 65vw;
+  margin: 20px auto;
+  
+  line-height: 30px;
+}
+.privacyContent > p::first-letter {
   margin-left: 20px;
+}
+.privacyContent>h1{
+     width: 100vw;
+  margin: 60px auto;
+  text-align: center;
+  color: #0a0453;
+  line-height: 30px;
 }
 
 

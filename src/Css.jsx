@@ -234,11 +234,11 @@ function Css() {
           <h3 className="sectionTittle">Introduction</h3>
           <p className="clickHere">
             CSS stands for <b>C</b>ascading <b>S</b>tyle <b>S</b>heet , actually
-            you can make a website using only HTML, you that wibsite will look
-            terrible, this is when CSS comes in, it makes your website awesome
-            by adding Colors and Controlling the element's possition...etc.{" "}
-            <br />
-            So, the bottom line is you should add Some Styling to your Web
+            you can make a website using only HTML, however that website will
+            look terrible, this is when CSS comes in, it makes your website
+            awesome by adding Colors and Controlling the element's
+            position...etc. <br />
+            So, the bottom line is you should add some Styling to your Web
             Page(s) to make it looks Beautiful and Attractive.
             <br />
             <b className="instruction">Instruction :</b> Actually you can write
@@ -250,7 +250,7 @@ function Css() {
               click here
             </a>{" "}
             <br />
-            One more thing : if you feel distructed with css property, try read
+            One more thing : if you feel distracted with css property, try read
             them one by one in examples.
           </p>
         </div>
@@ -292,8 +292,8 @@ function Css() {
             </div>
           </div>
           <p className="clickHere">
-            but if you have a bunch of &lt;h2&gt; tags in your web page, So,
-            this style will be executed on all of them. as you can see below.
+            but if you have a bunch of &lt;h2&gt; tags in your web page, this
+            style will be executed on all of them. as you can see below.
           </p>
           <div className="css__code">
             {" "}
@@ -333,7 +333,7 @@ function Css() {
           </div>
           <p className="clickHere">
             So, if you don't want that happens, and you want to apply a
-            particular style to each of them, in this case you Should use what
+            particular style to each of them, in this case you should use what
             is called <b>class</b> or <b>id</b> or you can use both of them.{" "}
             let's try it out.
           </p>
@@ -368,11 +368,11 @@ function Css() {
                 <span className="cssProperty">&nbsp;&nbsp;color</span>:{" "}
                 <span className="cssValue">red</span>; <br /> &nbsp;&#125;{" "}
                 <br />
-                <span className="cssTag">.secondH2</span>&#123; <br />{" "}
+                <span className="cssTag">.secondH1</span>&#123; <br />{" "}
                 <span className="cssProperty">&nbsp;&nbsp;color</span>:{" "}
                 <span className="cssValue">green</span>; <br /> &nbsp;&#125;{" "}
                 <br />
-                <span className="cssTag">.thirdH3</span>&#123; <br />{" "}
+                <span className="cssTag">.thirdH1</span>&#123; <br />{" "}
                 <span className="cssProperty">&nbsp;&nbsp;color</span>:{" "}
                 <span className="cssValue">purple</span>; <br /> &nbsp;&#125;{" "}
                 <br />
@@ -392,17 +392,17 @@ function Css() {
               <h1 style={{ color: "red" }}>this is h1</h1>
               <h1 style={{ color: "green" }}>this is h1</h1>
               <h1 style={{ color: "purple" }}>this is h1</h1>
-              <p>this is p</p>
+              <p style={{ color: "blue" }}>this is p</p>
               <p style={{ color: "orange" }}>this is p</p>
             </div>
           </div>
           <p className="clickHere">
-            So,as you can see, when we add class or id properties, we can take
-            controle of the duplicated tag's styling. You may wonder, what is
-            the differences between these properties,and when do we use{" "}
+            So, as you can see, when we add class or id properties, we can take
+            control of the duplicated tag's styling. You may wonder, what is the
+            differences between those properties, and when do we use{" "}
             <b>class</b> instead of <b>id</b> or the opposite ?! don't worry,
             you will find a video explain that{" "}
-            <a onClick={refleshCurrentPage} href="#">
+            <a href="#" target="_blank">
               here
             </a>
             , but don't watch it unless you complete the other properties.{" "}
@@ -410,7 +410,6 @@ function Css() {
             <b className="importants">Important</b> : don't forget to add{" "}
             <b>.</b> before class name in css file and <b>#</b> before id name.{" "}
             <br />
-            <a href="">click here</a> for more exercises and examples.
           </p>
         </div>
 
@@ -434,7 +433,7 @@ function Css() {
                 &nbsp; &lt;<span className="tag">div</span>{" "}
                 <span className="classProperty">class</span>=
                 <span className="classValue">secondDiv</span>
-                &gt; this is div &lt;
+                &gt; this is div2 &lt;
                 <span className="tag">/div</span>&gt; <br />
               </div>
               <div className="cssCode">
@@ -469,20 +468,20 @@ function Css() {
               <h3 style={{ color: "red", backgroundColor: "orange" }}>
                 this is h3
               </h3>
-              <div style={{ backgroundColor: "aqua" }}>this is p</div>
-              <div style={{ backgroundColor: "purple" }}>this is p</div>
+              <div style={{ backgroundColor: "aqua" }}>this is div</div>
+              <div style={{ backgroundColor: "purple", color: "white" }}>
+                this is div2
+              </div>
             </div>
           </div>
-          <p className="clickHere">
-            <a href="">click here</a> for more exercises and examples.
-          </p>
+          <p className="clickHere"></p>
         </div>
 
         <div className="addPaddingToSection" id="width">
           <h3 className="sectionTittle">width</h3>
           <p className="clickHere">
             there are many ways to add width to a particular html tag, but we
-            will discuss about three ways
+            will discuss about three ways.
           </p>
 
           <div className="css__code">
@@ -568,7 +567,6 @@ function Css() {
             and when we typed <b>50%</b> for the first div tag, it takes a half
             of the container.
             <br />
-            <a href="">click here</a> for more exercises and examples.
           </p>
         </div>
 
@@ -603,7 +601,9 @@ function Css() {
                 </span>
                 : <span className="cssValue">orange</span>; <br />
                 <span className="cssProperty">&nbsp;&nbsp;width</span>:{" "}
-                <span className="cssValue">100px</span>; <br /> &nbsp;&#125;{" "}
+                <span className="cssValue">100px</span>; <br />
+                <span className="cssProperty">&nbsp;&nbsp;height</span>:{" "}
+                <span className="cssValue">8vh</span>; <br /> &nbsp;&#125;{" "}
                 <br />
                 <span className="cssTag">div</span>&#123; <br />{" "}
                 <span className="cssProperty">
@@ -623,7 +623,9 @@ function Css() {
                 </span>
                 : <span className="cssValue">purple</span>; <br />
                 <span className="cssProperty">&nbsp;&nbsp;width</span>:{" "}
-                <span className="cssValue">10vw</span>; <br /> &nbsp;&#125;{" "}
+                <span className="cssValue">10vw</span>; <br />
+                <span className="cssProperty">&nbsp;&nbsp;height</span>:{" "}
+                <span className="cssValue">20%</span>; <br /> &nbsp;&#125;{" "}
                 <br />
               </div>
             </div>
@@ -635,6 +637,7 @@ function Css() {
                   color: "red",
                   backgroundColor: "orange",
                   width: "100px",
+                  height: "6vh",
                 }}
               >
                 this is h3
@@ -653,22 +656,21 @@ function Css() {
                   color: "white",
                   backgroundColor: "purple",
                   width: "10vw",
+                  height: "20%",
                 }}
               >
                 this is div2
               </div>
             </div>
           </div>
-          <p className="clickHere">
-            <a href="">click here</a> for more exercises and examples.
-          </p>
+          <p className="clickHere"></p>
         </div>
 
         <div className="addPaddingToSection" id="margin">
           <h3 className="sectionTittle">margin</h3>
           <p className="clickHere">
-            we can use margin to separate between elements iwth space. <br />
-            we will apply margin on the same html elements above.
+            we can use margin to separate elements with space. we will apply
+            margin on the same html elements above.
           </p>
           <div className="css__code">
             {" "}
@@ -766,14 +768,14 @@ function Css() {
           </div>
           <p className="clickHere">
             As you can see, when we add margin property with 20px value to the
-            first element, it creates some space between this element and the
-            element arrond it. <br />
+            first element, it creates a space between this element and the
+            element around it. <br />
             and when we add margin-left with auto value to the second element,
             that makes the the item slides to the right side, cause when you add
             margin-(left or right or top or bottom), that makes the item slide
             to the opposite side. <br />
-            <b>Note : </b> you can customize the margin format as following :{" "}
-            <br />
+            <b className="note">Note : </b> you can customize the margin format
+            as following : <br />
             margin : 10px 20px 30px 40px; <br /> So that : <br />
           </p>
 
@@ -784,17 +786,15 @@ function Css() {
             <li>40px represents margin-left</li>
           </ul>
           <p style={{ margin: "20px" }}>
-            you can also write as the following : <b>margin : 10px 20px;</b> So
-            that : <br />
+            you can also write as the following : <b>margin : 10px 20px;</b>{" "}
+            <br /> So that : <br />
           </p>
 
           <ul style={{ marginLeft: "50px", pointerEvents: "none" }}>
             <li>10px represents margin-top and margin-bottom</li>
             <li>20px represents margin-right and margin-left</li>
           </ul>
-          <p className="clickHere">
-            <a href="">click here</a> for more exercises and examples.
-          </p>
+          <p className="clickHere"></p>
         </div>
 
         <div className="addPaddingToSection" id="padding">
@@ -897,10 +897,9 @@ function Css() {
           </div>
           <p className="clickHere">
             As you can see, padding is the same thing as margin, the only
-            difference between them is that marging makes space arrond the
+            difference between them is that margin makes space around the
             element when padding scale the element's area.
             <br />
-            <a href="">click here</a> for more exercises and examples.
           </p>
         </div>
 
@@ -908,8 +907,8 @@ function Css() {
           <h3 className="sectionTittle">border</h3>
           <p className="clickHere">
             border property allows you to set a border of a particular element.
-            you can also specify wich side you want to add border to
-            (border-top,border-left,border-bottom,border-right)
+            you can also specify which side you want to add border to
+            (border-top,border-left,border-bottom,border-right).
           </p>
           <div className="css__code">
             {" "}
@@ -993,12 +992,11 @@ function Css() {
             </div>
           </div>
           <p className="clickHere">
-            the first value of border property (2px) refers to a border size,
-            the second (solid) refers to a border style (you can also type
-            (dotted,dashed,double...)), and the last one refers to a border
-            color.
+            the first value of border property (2px) refers to a border{" "}
+            <b>size</b>, the second (solid) refers to a border <b>style</b> (you
+            can also type (dotted,dashed,double...)), and the last one refers to
+            a border <b>color</b>.
             <br />
-            <a href="">click here</a> for more exercises and examples.
           </p>
         </div>
 
@@ -1059,14 +1057,13 @@ function Css() {
             As you can see, when we wrapped the last property in css with
             comment token (/* property */), it's no longer applied.
             <br />
-            <a href="">click here</a> for more exercises and examples.
           </p>
         </div>
 
         <div className="addPaddingToSection" id="textAlign">
           <h3 className="sectionTittle">text-align</h3>
           <p className="clickHere">
-            We can take controle of element's text position, through align-text
+            We can take control of item text position through align-text
             property.
           </p>
           <div className="css__code">
@@ -1168,20 +1165,19 @@ function Css() {
             </div>
           </div>
           <p className="clickHere">
-            As you can see, when we add text-align:start nothing changes,
-            because this is the default value of text-align.
+            As you can see, when we add text-align : start nothing changes,
+            because this is the default value of text-align property.
             <br />
-            <a href="">click here</a> for more exercises and examples.
           </p>
         </div>
 
         <div className="addPaddingToSection" id="position">
           <h3 className="sectionTittle">position</h3>
           <p className="clickHere">
-            we can take controle of element's position using defferent ways.
-            such as transform,position...etc. So, we won't explain that in this
-            section, cause we need the entire web page, So, to learn it click{" "}
-            <a onClick={refleshCurrentPage} href="#">
+            we can take control of element's position using different ways. such
+            as transform,position...etc. So, we won't explain that in this
+            section, cause we need the entire web page. to learn it click{" "}
+            <a href="#" target="_blank">
               Here
             </a>
           </p>
@@ -1190,7 +1186,7 @@ function Css() {
         <div className="addPaddingToSection" id="opacity">
           <h3 className="sectionTittle">opacity</h3>
           <p className="clickHere">
-            opacity property allows us to take controle of opacity/transparency
+            opacity property allows us to take control of opacity/transparency
             of html element. opacity property can take value from 0 to 1
             (includes 0.1,0.2,...,0.9)
           </p>
@@ -1260,9 +1256,8 @@ function Css() {
           </div>
           <p className="clickHere">
             As you can see, when we add <b>opacity : 0</b> to a div tag, it
-            disapeared, actually it's existed but not visual.
+            disappeared, actually it's existed but not visual.
             <br />
-            <a href="">click here</a> for more exercises and examples.
           </p>
         </div>
 
@@ -1334,14 +1329,13 @@ function Css() {
             another useful one, it's <b>font-family</b> you can check out by
             typing <b>google fonts</b> in search bar.
             <br />
-            <a href="">click here</a> for more exercises and examples.
           </p>
         </div>
 
         <div className="addPaddingToSection" id="hover">
           <h3 className="sectionTittle">hover</h3>
           <p className="clickHere">
-            we use hover, when the mouses hover over an element, So that we can
+            we use hover, when the mouse hover over an element, So that we can
             add an effect to the element.
           </p>
           <div className="css__code">
@@ -1364,7 +1358,7 @@ function Css() {
                 : <span className="cssValue">red</span>; <br />
                 &nbsp;&#125; <br />
                 <span className="cssTag">h3</span>
-                <span className="cssTag">:hover</span>&#123; <br />{" "}
+                <span style={{ color: "blue" }}>:hover</span>&#123; <br />{" "}
                 <span className="cssProperty">
                   &nbsp;&nbsp; background-color
                 </span>
@@ -1382,7 +1376,6 @@ function Css() {
             try hover over the element, then you will see that the element's
             background-color changes to blue.
             <br />
-            <a href="">click here</a> for more exercises and examples.
           </p>
         </div>
 
@@ -1390,7 +1383,7 @@ function Css() {
           <h3 className="sectionTittle">transition</h3>
           <p className="clickHere">
             transition property related to hover, So that when we hover over an
-            element, we can take controle of effect duration through transition
+            element, we can take control of effect duration through transition
             property.
           </p>
           <div className="css__code">
@@ -1432,12 +1425,12 @@ function Css() {
             </div>
           </div>
           <p className="clickHere">
-            As you can see, when we hover over an element, it takes 1s to
+            As you can see, when we hover over an element, it takes <b>1s</b> to
             completely apply the effect (changing background-color). you can
             apply transition on every property inside hover event, you should
             only write the property name in front of transition property. <br />
-            <b>Note : </b>you can make as much as you can of transitions, just
-            add comma(,) between each transition. <br />
+            <b className="note">Note : </b>you can make as much as you can of
+            transitions, just add comma(,) between each transition. <br />
             for Example : <br />
             <b>
               element &#123; <br /> transition : color 2s , background-color 2s;
@@ -1446,7 +1439,6 @@ function Css() {
               : blue; <br /> &nbsp;&#125;
             </b>
             <br />
-            <a href="">click here</a> for more exercises and examples.
           </p>
         </div>
 
@@ -1456,11 +1448,11 @@ function Css() {
           <p className="clickHere">
             flexbox is considered as the most useful and powerful concept in web
             development. it helps you a lot to make a responsive website
-            (website fits all devices (desktop, mobile, tablet)). So now we are
-            going to be talking about the most useful properties in flexbox.{" "}
-            <br />
-            <b>Note : </b> this properties applied on container tag. as the
-            following.
+            (website fits all devices including desktop, mobile, tablet...etc).
+            So now we are going to be talking about the most useful properties
+            in flexbox. <br />
+            <b className="note">Note : </b> those properties applied on
+            container tag. as the following.
           </p>
           <h4 className="flexboxProperties">display property :</h4>
           <div className="css__code">
@@ -1615,8 +1607,8 @@ function Css() {
             </div>
           </div>
           <p className="clickHere">
-            you can also set <b>space-around ans space-evenly and center</b>{" "}
-            values. try it out to see the difference.{" "}
+            you can also set <b>space-around</b> , <b>space-evenly</b> and{" "}
+            <b>center</b> values. try it out to see the difference.{" "}
           </p>
           <h4 className="flexboxProperties">align-items property :</h4>
           <div className="css__code">
@@ -1665,8 +1657,6 @@ function Css() {
                 <span className="cssTag">div</span>&#123; <br />{" "}
                 <span className="cssProperty">&nbsp;&nbsp;color</span>:{" "}
                 <span className="cssValue">blue</span>; <br />
-                <span className="cssProperty">&nbsp;&nbsp;height</span>:{" "}
-                <span className="cssValue">50px</span>; <br />
                 <span className="cssProperty">
                   &nbsp;&nbsp;background-color
                 </span>
@@ -1696,7 +1686,6 @@ function Css() {
                 <div
                   style={{
                     color: "blue",
-                    height: "50px",
                     backgroundColor: "red",
                   }}
                 >
@@ -1709,10 +1698,11 @@ function Css() {
             </div>
           </div>
           <p className="clickHere">
-            As you can see, when i add <b>align-items : center</b>, that
+            As you can see, when we added <b>align-items : center</b>, that
             centered all items inside, <br />
             you may not understand this, So try to set <b>start or end</b> as a
-            value of align-items, then you will figure out the difference.
+            value of <b>align-items</b>, then you will figure out the
+            difference.
           </p>
           <h4 className="flexboxProperties">flex property :</h4>
           <div className="css__code">
@@ -1779,7 +1769,6 @@ function Css() {
             As you can see, when we add <b>flex : 1</b> to a particular element,
             the right side elements get pushed completely to the right.
             <br />
-            <a href="">click here</a> for more exercises and examples.
           </p>
         </div>
 
@@ -1789,7 +1778,11 @@ function Css() {
             Grid is very similar to flexbox, but it's more confused that's why
             we prefer to explain that in a video, to make things much clear for
             you. <br />
-            So, <a href="">click here</a> and good luck.
+            So,{" "}
+            <a href="" target="_blank">
+              click here
+            </a>{" "}
+            and good luck.
           </p>
         </div>
         <div className="addPaddingToSection" id="animation">
@@ -1829,10 +1822,7 @@ function Css() {
                 <span className="cssProperty">&nbsp;&nbsp; width</span>:{" "}
                 <span className="cssValue">150px</span>; <br />
                 <span className="cssProperty">&nbsp;&nbsp; height</span>:{" "}
-                <span className="cssValue">150px</span>; <br />
-                <span className="cssProperty">
-                  &nbsp;&nbsp; animation
-                </span>: <span className="cssValue">animate 4s infinite</span>;{" "}
+                <span className="cssValue">150px</span>;
                 <br />
                 &nbsp;&#125; <br />
                 <span className="cssTag">.child</span>
@@ -1844,14 +1834,18 @@ function Css() {
                 <span className="cssProperty">&nbsp;&nbsp; width</span>:{" "}
                 <span className="cssValue">30px</span>; <br />
                 <span className="cssProperty">&nbsp;&nbsp; height</span>:{" "}
-                <span className="cssValue">30px</span>; <br />
+                <span className="cssValue">30px</span>; 
+                <br />
+                <span className="cssProperty">
+                  &nbsp;&nbsp; animation
+                </span>: <span className="cssValue">animate 4s infinite</span>;{" "} <br />
                 &nbsp;&#125; <br /> <br />
                 <span className="keyframes">@keyframes </span>
                 <span className="animation__name">animate </span> &#123; <br />
                 <span className="keyframes__percent">25%</span>&#123; <br />
                 <span className="cssProperty">
                   &nbsp;&nbsp; transform
-                </span>: <span className="cssValue">translate</span>(0,120px);{" "}
+                </span>: <span className="cssValue">translate</span>(0 , 120px);{" "}
                 <br />
                 &nbsp;&nbsp;&#125;
                 <br />
@@ -1859,21 +1853,21 @@ function Css() {
                 <span className="cssProperty">
                   &nbsp;&nbsp; transform
                 </span>: <span className="cssValue">translate</span>
-                (120px,120px);
+                (120px , 120px);
                 <br />
                 &nbsp;&nbsp;&#125;
                 <br />
                 <span className="keyframes__percent">75% </span>&#123; <br />
                 <span className="cssProperty">
                   &nbsp;&nbsp; transform
-                </span>: <span className="cssValue">translate</span>(120px,0);{" "}
+                </span>: <span className="cssValue">translate</span>(120px , 0);{" "}
                 <br />
                 &nbsp;&nbsp;&#125;
                 <br />
                 <span className="keyframes__percent">100% </span>&#123; <br />
                 <span className="cssProperty">
                   &nbsp;&nbsp; transform
-                </span>: <span className="cssValue">translate</span>(0,0);{" "}
+                </span>: <span className="cssValue">translate</span>(0 , 0);{" "}
                 <br />
                 &nbsp;&nbsp;&#125;
                 <br />
@@ -1897,17 +1891,18 @@ function Css() {
                     backgroundColor: "blue",
                     width: "30px",
                     height: "30px",
+                    animation: "animate 4s infinite",
                   }}
                 ></div>
               </div>
             </div>
           </div>
           <p className="clickHere">
-            So, let's talk about what heppens inside keyframes : <br />
+            So, let's talk about what happens inside keyframes : <br />
             So when our animation reach 25% ,at this moment translate(X,Y) get
-            applied (X mention to horizontal line , Y mention to vertical line).
-            So the same thing as 50% ,75% and 100%(the end of animation). <br />{" "}
-            <br />
+            applied (X mentions to horizontal line , Y mentions to vertical
+            line). So the same thing as 50% ,75% and 100%(the end of animation).{" "}
+            <br /> <br />
             add the following in child css :{" "}
             <span style={{ color: "blue" }}>
               animation : animate 4s infinite
@@ -1915,28 +1910,27 @@ function Css() {
             So that : <br />
             <b>
               <span style={{ color: "red" }}>animation</span> represents
-              property <br />
+              property. <br />
               <span style={{ color: "red" }}>animate</span> represents the
-              animation name (in front of keyframes) <br />
+              animation name (in front of keyframes). <br />
               <span style={{ color: "red" }}>4s</span> represents the animation
-              duration <br />
+              duration. <br />
               <span style={{ color: "red" }}>infinite</span> makes our animation
-              unstoppable
+              unstoppable.
             </b>
             <br />
-            <a href="">click here</a> for more exercises and examples.
           </p>
         </div>
 
         <div className="addPaddingToSection" id="mediaQuery">
           <h3 className="sectionTittle">media Query</h3>
           <p className="clickHere">
-            keep in mind, every website on the internet is responsive. <br />
+            keep in mind, all website on the internet are responsive. <br />
             So, if you want to earn money from your website and get paid from
-            google adsense, your website must be responsive. this is where{" "}
+            Google Adsense, your website must be responsive. this is where{" "}
             <b>Media Query</b> comes in. So, we can't explain that here, you may
             get confused here. <br />
-            this is why a made a video explains that. <a href="">click here</a>.
+            this is why we made a video explains that. <a href="">click here</a>.
           </p>
         </div>
 
@@ -2233,9 +2227,7 @@ function Css() {
               </a>
             </div>
           </div>
-          <p style={{ margin: "20px" }}>
-            <a href="">click here</a> for more exercises and examples.
-          </p>
+          <p style={{ margin: "20px" }}></p>
         </div>
 
         <div className="addPaddingToSection" id="cssQuiz">
@@ -2243,7 +2235,7 @@ function Css() {
           <p className="clickHere">
             <b className="note">Note : </b> Make sure that you have read the
             introduction of every Concept we discussed about above before you
-            start this Quiz. So, when you complete all of these questions, click
+            start this Quiz. <br /> So, when you complete all of those questions, click
             on <b className="note">i'm Done</b> button to display the result
             immediately. <br />
           </p>

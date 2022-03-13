@@ -74,7 +74,7 @@ function Overview() {
       <h3>Introduction :</h3>
       <p>
         In the current time, web development became one of the most important
-        things that anybody must aware of, it helps you a lot to get a passive
+        things that anybody must be aware of, it helps you a lot to get a passive
         income. In web development, you can create a website(s) for you or for
         others and get paid through. So when it comes to web development, you
         need two things :
@@ -82,13 +82,13 @@ function Overview() {
       <b>1 - Web browser : </b>
       <p>
         {" "}
-        To display the web pages which are created with html There is a bunch of
-        web browsers such as Google Chrome , firefox and edge And i recommend to
-        use Google Chrome
+        To display the web pages which are created with html. There is a bunch of
+        web browsers such as Google Chrome , firefox and edge, i recommend to
+        use Google Chrome.
       </p>
       <b>2 - Text editor :</b>
       <p>
-        Where you can write your entire code of html, css, js...ect.And i
+        Where you can write your entire code of html, css, js...ect. i
         absolutely recommend{" "}
         <a
           className="content__links"
@@ -114,7 +114,7 @@ function Overview() {
         >
           Visual Studio Code
         </a>.{" "}
-        after download it, you must install a bunch of Extensions which make
+        after downloading it, you must install a bunch of Extensions which make
         your VsCode more Efficient. and help you write less. SO, here is the way
         of how to install those Extensions :
       </p>

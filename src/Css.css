@@ -1,6 +1,13 @@
 .css {
   display: flex;
-  width: 100vw;
+    width: 100vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  max-height: 94vh;
+  margin-top: 6vh;
+}
+.css::-webkit-scrollbar{
+  display: none;
 }
 
 .closeModal {

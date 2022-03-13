@@ -221,7 +221,7 @@ function Html() {
             anguage, it's a Design Language NOT a Programming Language, and it's
             considered as the Door of your Website. You can create a Website
             only Using this Language. but you can't control the Elements Colors
-            or Position. So, HTML consists of a list of Elements (Tags) which
+            or Position. <br /> So, HTML consists of a list of Elements (Tags) which
             can build the Structure of your Entire Website. Scroll down to
             figure out the most of these Elements. <br />
             <span className="instruction">Instruction :</span> Here is how to
@@ -262,7 +262,7 @@ function Html() {
               <span className="tag">h6</span>&gt; welcome to web crowd &lt;
               <span className="tag">/h6</span>&gt; <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               {" "}
               <h1>welcome to web crowd</h1>
@@ -301,7 +301,7 @@ function Html() {
               <span className="tag">sup</span>&gt; this is sup &lt;
               <span className="tag">/sup</span>&gt; <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               {" "}
               this is <b>bold</b>
@@ -346,12 +346,12 @@ function Html() {
               <span className="tag">div</span>&gt; Fourth line &lt;
               <span className="tag">/div</span>&gt; <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               {" "}
               <div>First line</div>
               <div>Third line</div>
-              <div>strong</div>
+              <div>Fourth line</div>
             </div>
           </div>
           <p className="clickHere">
@@ -374,7 +374,9 @@ function Html() {
               &lt;
               <span className="tag">
                 a <span className="hrefColor">href=</span>{" "}
-                <span className="linkColor">"https://www.youtube.com/"</span>
+                <span className="linkColor">"https://www.youtube.com/"</span>{" "}
+                <span className="hrefColor">target=</span>
+                <span className="linkColor">"_blank"</span>
               </span>
               &gt; Go to youtube &lt;
               <span className="tag">/a</span>&gt;
@@ -382,7 +384,9 @@ function Html() {
               &lt;
               <span className="tag">
                 a <span className="hrefColor">href=</span>{" "}
-                <span className="linkColor">"https://www.amazon.com/"</span>
+                <span className="linkColor">"https://www.amazon.com/"</span>{" "}
+                <span className="hrefColor">target=</span>
+                <span className="linkColor">"_blank"</span>
               </span>
               &gt; Go to Amazon &lt;
               <span className="tag">/a</span>&gt;
@@ -390,36 +394,40 @@ function Html() {
               &lt;
               <span className="tag">
                 a <span className="hrefColor">href=</span>{" "}
-                <span className="linkColor">"https://www.instagram.com/"</span>
+                <span className="linkColor">"https://www.instagram.com/"</span>{" "}
+                <span className="hrefColor">target=</span>
+                <span className="linkColor">"_blank"</span>
               </span>
               &gt; Go to Instagram &lt;
               <span className="tag">/a</span>&gt;
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               {" "}
-              <a href="https://www.youtube.com/">Go to YouTube</a> <br />
+              <a href="https://www.youtube.com/" target="_blank">
+                Go to YouTube
+              </a>{" "}
+              <br />
               <a href="https://www.amazon.com/" target="_blank">
                 Go to Amazon
               </a>{" "}
               <br />
-              <a href="https://www.instagram.com/">Go to Instagram</a> <br />
+              <a href="https://www.instagram.com/" target="_blank">
+                Go to Instagram
+              </a>{" "}
+              <br />
             </div>
           </div>
           <p className="clickHere">
-            As you can see, when you click on any particular link, that will
-            lead you to the specific website, but in the <b>Same tab</b>. <br />
-            So, if you want to open the link in a <b>new tab</b>, you must add
-            <b> target="_blank"</b> after href. <br /> Example:{" "}
-            <b>
-              &lt;a href="https://www.amazon.com/" target="_blank"&gt;Go to
-              Amazon&lt;/a&gt;
-            </b>
+            you must add
+            <b> target="_blank"</b> after href. to open up the link in a new
+            Tab.
           </p>
           <p className="clickHere">
             <b className="note">Note : </b> we can also exploit <b>a</b> tag to
-            scroll among our current page using <b>id</b> property.
+            scroll among our current page using <b>id</b> property, but you
+            should learn css first.
           </p>
         </div>
         <div className="addPaddingToSection" id="images">
@@ -445,7 +453,7 @@ function Html() {
               <span className="tag"> /</span>&gt;
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               {" "}
               <h2>the picture will display bellow</h2>
@@ -462,16 +470,16 @@ function Html() {
             <b>&lt;img src="imageName.extension</b> (the extensions like jpg,
             png, etc..), makes sure that the image is in the same folder that
             has html file (html file and the image must have the same path
-            inside your desktop)
+            inside your desktop).
             <br />
           </p>
         </div>
         <div className="addPaddingToSection" id="lists">
           <h3 className="sectionTittle">Lists</h3>
           <p className="clickHere">
-            we use Lists &lt;ul&gt; & &lt;ol&gt; to display a list of items, it
-            usually used in the Header (the top part of your page). ans the
-            Sidebar (the left or right side of your page).
+            we use Lists <b>&lt;ul&gt;</b> & <b>&lt;ol&gt;</b> to display a list
+            of items, it is usually used in the Header (the top part of your
+            page). and the Sidebar (the left or right side of your page).
           </p>
           <div className="codeSection">
             {" "}
@@ -515,7 +523,7 @@ function Html() {
               &lt;
               <span className="tag">/ol</span>&gt; <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               {" "}
               <h4>the First type of Lists</h4>
@@ -538,10 +546,11 @@ function Html() {
         <div className="addPaddingToSection" id="inputs">
           <h3 className="sectionTittle">Inputs</h3>
           <p className="clickHere">
-            we often use &lt;input&gt; tag for registration purposes, because
-            this tag is where we put out information such Full name,Email and
-            Password...etc. we can integrat multiple attributes to this tag, but
-            the most popular are <b>type & placeholder</b>
+            we often use <b>&lt;input&gt;</b> tag for registration purposes,
+            because this tag is where we put out information such Full
+            name,Email and Password...etc. <br /> we can integrat multiple
+            attributes to this tag, but the most popular are{" "}
+            <b>type & placeholder</b>.
           </p>
           <div className="codeSection">
             {" "}
@@ -580,7 +589,7 @@ function Html() {
               <span className="tag"> /</span>&gt;
               <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               {" "}
               <h4>Enter your full name</h4>
@@ -594,9 +603,9 @@ function Html() {
           <p className="clickHere">
             <b className="note">Note : </b> When it comes to Email, you are
             allowed to enter Name, not only Eamil. that's because we didn't
-            surround all those tags with <b>form tag</b>. <br />
+            surround all those tags with <b>form</b> tag. <br />
             there are many others of input types like{" "}
-            <b>number,radio,checkbox,button,range...etc.</b>
+            <b>number, radio, checkbox, button, range...etc.</b>
           </p>
         </div>
         <div className="addPaddingToSection" id="buttons">
@@ -607,13 +616,10 @@ function Html() {
             those information, so that's when button comes in, you click on that
             button to confirm that information. and get into that particular
             website. <br />
-            <b>imortant! </b> to make this button works, we need to add{" "}
-            <i>onclick</i> event as a property as the following : <br />
-            <b>
-              &lt;button onclick="alert('the button is clicked')"&gt;click
-              here&lt;/button&gt;
-            </b>{" "}
-            <br />
+            <span className="importants">important! </span>: to make this button
+            works, we need to add <i>onclick</i> event as a property. In
+            JavaScript we won't use <b>onclick</b> property, we will use{" "}
+            <b>addEventListener</b> instead. <br />
             in this example we will pop up an alert with{" "}
             <i>the button is clicked</i> message.
           </p>
@@ -632,7 +638,7 @@ function Html() {
               &gt; click here &lt;
               <span className="tag">/button</span>&gt; <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               {" "}
               <b>click on this button to pop up a message</b>
@@ -644,14 +650,14 @@ function Html() {
           </div>
           <p className="clickHere">
             <b className="note">Note : </b> in JavaScript we will find out more
-            about button, So don't focus on it now
+            about button, So don't focus on it now.
           </p>
         </div>
         <div className="addPaddingToSection" id="selectOption">
           <h3 className="sectionTittle">Select&Option</h3>
           <p className="clickHere">
             we often use <b>&lt;select&gt; & &lt;option&gt;</b> tag to filter
-            the results in our website.
+            the results in our website or picking a Country.
           </p>
           <div className="codeSection">
             {" "}
@@ -676,7 +682,7 @@ function Html() {
               &lt;
               <span className="tag">/select</span>&gt; <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               {" "}
               <h4>select your country :</h4>
@@ -718,7 +724,7 @@ function Html() {
               &lt;
               <span className="tag">/fieldset</span>&gt; <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               {" "}
               <fieldset>
@@ -736,10 +742,10 @@ function Html() {
           <h3 className="sectionTittle">Tables</h3>
           <p className="clickHere">
             actually <b>&lt;table&gt;</b> became useless in the current time.
-            but that's not mean you shouldn't take a look on it. So you can use
-            tables in registration form. just to keep your code more organized.
-            and when you want to display a list of Customers and their
-            information.
+            but that does not mean you shouldn't take a look on it. So you can
+            use tables in registration form. just to keep your code more
+            organized. and when you want to display a list of Customers and
+            their information.
           </p>
           <div className="codeSection">
             {" "}
@@ -796,7 +802,7 @@ function Html() {
               <span className="tag">/tr</span>&gt; <br />
               &lt;<span className="tag">/table</span>&gt;
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               {" "}
               <h4>this is the list of Customers :</h4>
@@ -827,7 +833,7 @@ function Html() {
           <p className="clickHere">
             As you can see, <b>&lt;th&gt;</b> seems bold comparing to{" "}
             <b>&lt;td&gt;</b> <br />
-            <b>Reminder :</b> don't forget to write{" "}
+            <b className="note">Reminder :</b> don't forget to write{" "}
             <b>&lt;table&gt;&lt;/table&gt;</b>
           </p>
         </div>
@@ -835,7 +841,8 @@ function Html() {
           <h3 className="sectionTittle">Forms</h3>
           <p className="clickHere">
             we use <b>&lt;form&gt;</b> tag in Registration, through this tag we
-            can send the users's information to the Server once Click on Sign up
+            can send the users information to the Server once we click on{" "}
+            <b>Sign up</b>
             button.
           </p>
           <div className="codeSection">
@@ -924,7 +931,7 @@ function Html() {
               &lt;
               <span className="tag">/form</span>&gt; <br />
             </div>
-              <ArrowRightAltIcon className="arrow" />
+            <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               {" "}
               <h4>Sign up to Facebook :</h4>
@@ -971,11 +978,12 @@ function Html() {
           </div>
           <p className="clickHere">
             So, when you click on Sign up button, all of the information you
-            wrote displayed in the URL. that's because we add <b>name</b>{" "}
+            wrote displayed in the <b>URL</b>. that's because we add <b>name</b>{" "}
             property to each input, So the value of this property Equals the
-            value you Enter.
+            value you Enter. <br />
             <b className="note">Note : </b>we prevented that from happening in
-            this page, but if you copy this code and paste it will work.
+            this page, but if you copied this code and pasted it, that will
+            work.
           </p>
         </div>
 
@@ -1181,7 +1189,7 @@ function Html() {
           <p className="clickHere">
             <b className="note">Note : </b> Make sure that you have read the
             introduction of every Concept we discussed about above before you
-            start this Quiz. So, when you complete all of these questions, click
+            start this Quiz. <br /> So, when you complete all of these questions, click
             on <b className="note">Iam done</b> button to display the result
             immediately.
           </p>
