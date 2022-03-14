@@ -118,7 +118,7 @@ function GitGithub() {
         can type at this tip : git commit -m "sidebar added successfully".
       </p>
       <strong>
-        18 : git push https://github.com/hassan-amouri10575/myProject.git master
+        18 : git push https://github.com/***********/myProject.git master
         (So that the link between push and master is the link you copied from
         github ).
       </strong>
@@ -129,11 +129,11 @@ function GitGithub() {
         if you the following message showed up :{" "}
         <span className='error'>
           error: failed to push some refs to
-          'https://github.com/hassan-amouri10575/myProject.git'
+          'https://github.com/***********/myProject.git'
         </span>.{" "}
         try this command :{" "}
         <span className='error'>
-          git push https://github.com/hassan-amouri10575/myProject.git --force
+          git push https://github.com/***********/myProject.git --force
         </span>.{" "}
       </p>
       <strong>
@@ -171,7 +171,7 @@ function GitGithub() {
         </strong>
         <strong>
           7 : type the following command : git pull
-          https://github.com/hassan-amouri10575/firstProject.git master
+          https://github.com/*************/firstProject.git master
         </strong>
         <strong>8 : back to your folder and check it out.</strong>
         <p>

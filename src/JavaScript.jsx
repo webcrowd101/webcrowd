@@ -270,10 +270,7 @@ function JavaScript() {
     webCrowdTest.style.color = "red";
   };
 
-  //add items to ul using input
-  //  <input className="itemsInput" type="text" placeholder="type a new item..." />
-  //           <button onClick={addItemsToUl} style={{color:"white" , padding:"10px 15px" , backgroundColor:"blue" , border:"none"}}>add item</button>
-  //           <ul className="liContainer"></ul>
+ 
   const addItemsToUl = () => {
     let input = document.querySelector(".itemsInput");
     let liContainer = document.querySelector(".liContainer");
@@ -311,7 +308,7 @@ function JavaScript() {
       case "addition":
         result.value = Number(firstNumber.value) + Number(secondNumber.value);
         break;
-      case "substraction":
+      case "subtraction":
         result.value = Number(firstNumber.value) - Number(secondNumber.value);
         break;
 
@@ -510,9 +507,7 @@ function JavaScript() {
           <a onClick={refleshCurrentPage} href="#scope">
             <li>Scope</li>
           </a>
-          <a onClick={refleshCurrentPage} href="#hoisting">
-            <li>Hoisting</li>
-          </a>
+
           <a onClick={refleshCurrentPage} href="#object">
             <li>Object</li>
           </a>
@@ -558,9 +553,9 @@ function JavaScript() {
             the most popular programming languages worldwide. <br />
             Actually you can make an awesome website using only HTML and CSS,
             but in this case, the user can't make an action (he can only read),
-            this is where Javascript comes in. <br />
-            with JavaScript you can make your website more interractive by
-            allowing users to makean action such as click, double click or
+            this is when Javascript comes in. <br />
+            with JavaScript you can make your website more interactive by
+            allowing users to make an action such as click, double click or
             something like that. <br />
             <b className="note">Note : </b> you can write JavaScript code in a
             separated file or within html file. But it will be better if you
@@ -574,11 +569,20 @@ function JavaScript() {
           <p className="clickHere">
             When we work with JavaScript, we usually work with data, that's why
             we use Variables. we declare some variables to store data on, So we
-            can use it later. So, we can declare variables using three keyWords
-            : <b>var , let and const</b>. <br />
-            you may be wondering, what is the defference between them ? , don't
-            worry we will talk about this in{" "}
-            <a href="#scopeHoisting">Scope & hoisting</a> sections. <br />
+            can use it later. <br /> We can declare variables using three
+            keyWords : <b>var</b> , <b>let</b> and <b>const</b>. <br />
+            <ul style={{ marginLeft: "50px", pointerEvents: "none" }}>
+              <li>
+                Use <b>let</b> keyWord when you realize that the value of
+                variable will change.
+              </li>
+              <li>
+                Use <b>const</b> for every other variable.
+              </li>
+              <li>
+                Don't use <b>var</b>.
+              </li>
+            </ul>
             <b className="importants">Important : </b> before you see the
             example bellow, you need to know how to work with the console, if
             don't, <a href="">click here</a>.
@@ -586,7 +590,7 @@ function JavaScript() {
 
           <div className="codeSection">
             <div className="inputSection">
-              <span className="declarationKey">var</span>
+              <span className="declarationKey">let</span>
               <span className="variableName"> name = </span>
               <span>"mike"</span>;
               <div className="console">
@@ -612,22 +616,18 @@ function JavaScript() {
               <div>canada</div>
             </div>
           </div>
-          <p className="clickHere">
-            if you want to figure out the defferences between{" "}
-            <b>var,let and const</b> <a href="">click here</a>.
-          </p>
         </div>
         <div className="addPaddingToSection" id="jsComment">
           <h3 className="sectionTittle">comment</h3>
           <p className="clickHere">
-            As we mentioned before in we use comments to prevent code from
+            As we mentioned before, we use comments to prevent code from
             execution. So, we set JavaScript code as a comment by adding two
             back slashes at the beginning of line.
           </p>
 
           <div className="codeSection">
             <div className="inputSection">
-              <span className="declarationKey">var</span>
+              <span className="declarationKey">let</span>
               <span className="variableName"> name = </span>
               <span>"mike"</span>;
               <div className="console">
@@ -654,8 +654,8 @@ function JavaScript() {
             </div>
           </div>
           <p className="clickHere">
-            As you can see, when we added // in front of console.log(name)
-            thelast one didn't get executed.
+            As you can see, when we added <b>//</b> in front of{" "}
+            <b>console.log(name)</b>, this line didn't get executed.
           </p>
         </div>
         <div className="addPaddingToSection" id="dataTypes">
@@ -672,16 +672,11 @@ function JavaScript() {
               <li>object</li>
             </ul>
           </p>
-          <p className="clickHere">
-            <b className="importants">Important : </b> before you see the
-            example bellow, you need to know how to work with the console. if
-            don't, <a href="">click here</a>
-          </p>
 
           <div className="codeSection">
             <div className="inputSection">
               <div style={{ color: "gray" }}>// string</div>
-              <span className="declarationKey">var</span>
+              <span className="declarationKey">let</span>
               <span className="variableName"> name = </span>
               <span>"mike"</span>;
               <div className="console">
@@ -746,11 +741,11 @@ function JavaScript() {
 
           <div className="codeSection">
             <div className="inputSection">
-              <div style={{ color: "gray" }}>// Implicit conversion</div> <br />
-              <span className="declarationKey">var</span>
+              <div style={{ color: "gray" }}>// Implicit conversion</div>
+              <span className="declarationKey">let</span>
               <span className="variableName"> number1 = </span>
               <span>2</span>; <br />
-              <span className="declarationKey">var</span>
+              <span className="declarationKey">let</span>
               <span className="variableName"> number2 = </span>
               <span>"3"</span>;
               <div className="console">
@@ -760,7 +755,6 @@ function JavaScript() {
               <div style={{ color: "gray" }}>
                 // Explicit conversion (convert from string to number){" "}
               </div>{" "}
-              <br />
               <span className="declarationKey">let</span>
               <span className="variableName"> age = </span>
               <span>"20"</span>;
@@ -771,10 +765,6 @@ function JavaScript() {
                 </span>
                 )
               </div>
-              <div style={{ color: "gray" }}>
-                // Explicit conversion (convert from number to string)
-              </div>{" "}
-              <br />
               <span className="declarationKey">const</span>
               <span className="variableName"> languages = </span>
               <span>3</span>;
@@ -789,7 +779,7 @@ function JavaScript() {
             <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               <div>23 &nbsp; &nbsp;&nbsp; &nbsp; (string)</div>
-              <div>"20" &nbsp; &nbsp;&nbsp;(number)</div>
+              <div>20 &nbsp; &nbsp;&nbsp;(number)</div>
               <div>3 &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;(string)</div>
             </div>
           </div>
@@ -816,15 +806,15 @@ function JavaScript() {
         <div className="addPaddingToSection" id="ifElse">
           <h3 className="sectionTittle">if/else Statement</h3>
           <p className="clickHere">
-            we use if/else statements when we have a condition.
-            if(condition===true) then do some stuff.
+            we use <b>if/else</b> statements when we have a condition.{" "}
+            <b>if(condition === true)</b> then do some stuff.
           </p>
 
           <div className="codeSection">
             <div className="inputSection">
-              <span className="declarationKey">var</span>
+              <span className="declarationKey">let</span>
               <span className="variableName"> name = </span>
-              <span>"mike"</span>; <br /> <br />
+              <span>"mike"</span>; <br />
               <span style={{ color: "blue" }}>if</span>( name{" "}
               <span style={{ color: "purple" }}>=== </span>"mike" ) &#123;{" "}
               <br />
@@ -856,9 +846,9 @@ function JavaScript() {
 
           <div className="codeSection">
             <div className="inputSection">
-              <span className="declarationKey">var</span>
+              <span className="declarationKey">let</span>
               <span className="variableName"> name = </span>
-              <span>"frank"</span>; <br /> <br />
+              <span>"frank"</span>; <br />
               <span style={{ color: "blue" }}>if</span>( name{" "}
               <span style={{ color: "purple" }}>=== </span>"mike" ) &#123;{" "}
               <br />
@@ -902,9 +892,9 @@ function JavaScript() {
 
           <div className="codeSection">
             <div className="inputSection">
-              <span className="declarationKey">var</span>
+              <span className="declarationKey">let</span>
               <span className="variableName"> name = </span>
-              <span>"frank"</span>; <br /> <br />
+              <span>"frank"</span>; <br />
               <span style={{ color: "blue" }}>switch</span>( name ) &#123;{" "}
               <br />
               <div style={{ color: "red" }}>
@@ -951,27 +941,20 @@ function JavaScript() {
               <div>his name is frank</div>
             </div>
           </div>
-
-          <p className="clickHere">
-            <b className="note">Note : </b>the defference between <b>if/else</b>{" "}
-            and <b>switch</b> is that the first one can check a multiple of
-            variables in the same time, while switch can't. if you didn't get
-            it, <a href="">click here</a>
-          </p>
         </div>
         <div className="addPaddingToSection" id="ternary">
           <h3 className="sectionTittle">ternary</h3>
           <p className="clickHere">
             we can assume that ternary is the alternative (or shorthand) of{" "}
-            <b>if...else</b>. but it doesn't mean we should give up on the last
-            one. because it still useful. <br />
+            <b>if/else</b>. but it doesn't mean we should give up on the last
+            one. because it's still useful. <br />
           </p>
 
           <div className="codeSection">
             <div className="inputSection">
-              <span className="declarationKey">var</span>
+              <span className="declarationKey">let</span>
               <span className="variableName"> name = </span>
-              <span>"mike"</span>; <br /> <br />
+              <span>"mike"</span>; <br />
               <span style={{ color: "red" }}>
                 name<span style={{ color: "black" }}>===</span> "mike"{" "}
                 <span style={{ color: "purple", fontSize: "22px" }}> ? </span>
@@ -994,11 +977,8 @@ function JavaScript() {
           </div>
 
           <p className="clickHere">
-            So, we can consider that <b>?</b> reparates <b>if</b> and <b>:</b>{" "}
-            reparates <b>else</b>. <br />
-            we will dive deep into ternary in <a href="">
-              Array Functions
-            </a> and <a href="">String Methods</a>.
+            So, we can consider that <b>?</b> represents <b>if</b> and <b>:</b>{" "}
+            represents <b>else</b>.
           </p>
         </div>
         <div className="addPaddingToSection" id="loops">
@@ -1007,19 +987,19 @@ function JavaScript() {
             loops are very important in programming, through loops you can
             rewrite your code as many times as you need in one line. there are
             two types of loops, <b>for</b> loop and <b>while</b> loop. but it
-            will be better if you use the first one
+            will be better if you use the first one.
           </p>
 
           <div className="codeSection">
             <div className="inputSection">
-              <span className="declarationKey">var</span>
+              <span className="declarationKey">let</span>
               <span className="variableName"> str = </span>
-              <span>" my name is mike "</span>; <br />
+              <span>" web crowd "</span>; <br />
               <span style={{ color: "purple" }}>
                 for(
                 <span className="declarationKey">let </span>
                 <span style={{ color: "blue" }}>i = 0 </span>;{" "}
-                <span style={{ color: "blue" }}>i &gt; 5 </span>;{" "}
+                <span style={{ color: "blue" }}>i &lt; 5 </span>;{" "}
                 <span style={{ color: "blue" }}>i++ </span>)
               </span>{" "}
               &#123; <br />
@@ -1031,24 +1011,27 @@ function JavaScript() {
             </div>
             <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
-              <div>my name is mike</div>
-              <div>my name is mike</div>
-              <div>my name is mike</div>
-              <div>my name is mike</div>
-              <div>my name is mike</div>
+              <div>web crowd</div>
+              <div>web crowd</div>
+              <div>web crowd</div>
+              <div>web crowd</div>
+              <div>web crowd</div>
             </div>
           </div>
 
           <p className="clickHere">
             So here are the steps of how <b>for</b> loop works : <br />
             <ol style={{ marginLeft: "50px", pointerEvents: "none" }}>
-              <li>check if i &gt; 5</li>
               <li>
-                if yes, <b>str</b> will get executed, if not... the loop will
-                stop.
+                check if <b>i &lt; 5</b>
               </li>
               <li>
-                if <b>str</b> get executed, then loop will do the same proccess.
+                if yes, <b>console.log( str )</b> will get executed, if not...
+                the loop will stop.
+              </li>
+              <li>
+                if <b>console.log( str )</b> get executed, then loop will do the
+                same process.
               </li>
             </ol>
           </p>
@@ -1064,15 +1047,15 @@ function JavaScript() {
           <p className="clickHere">
             When we talk about Arithmetic Operators we talk about the most
             popular operations such as addition, subtraction, multiplication and
-            division. in addtion to Modulus.
+            division. in addition to Modulus.
           </p>
           <div className="codeSection">
             <div className="inputSection">
               <span style={{ color: "gray" }}>// Addition</span> <br />
-              <span className="declarationKey">var</span>
+              <span className="declarationKey">let</span>
               <span className="variableName"> num1 = </span>
               <span>2</span>; <br />
-              <span className="declarationKey">var</span>
+              <span className="declarationKey">let</span>
               <span className="variableName"> num2 = </span>
               <span>3</span>; <br />
               <span className="console">
@@ -1080,11 +1063,11 @@ function JavaScript() {
                 <span className="insideConsole">num1 + num2</span>)
               </span>{" "}
               <br />
-              <span style={{ color: "gray" }}>// Substraction</span> <br />
-              <span className="declarationKey">var</span>
+              <span style={{ color: "gray" }}>// Subtraction</span> <br />
+              <span className="declarationKey">let</span>
               <span className="variableName"> num3 = </span>
               <span>10</span>; <br />
-              <span className="declarationKey">var</span>
+              <span className="declarationKey">let</span>
               <span className="variableName"> num4 = </span>
               <span>4</span>; <br />
               <span className="console">
@@ -1093,10 +1076,10 @@ function JavaScript() {
               </span>{" "}
               <br />
               <span style={{ color: "gray" }}>// Multiplication</span> <br />
-              <span className="declarationKey">var</span>
+              <span className="declarationKey">let</span>
               <span className="variableName"> num5 = </span>
               <span>4</span>; <br />
-              <span className="declarationKey">var</span>
+              <span className="declarationKey">let</span>
               <span className="variableName"> num6 = </span>
               <span>3</span>; <br />
               <span className="console">
@@ -1105,10 +1088,10 @@ function JavaScript() {
               </span>{" "}
               <br />
               <span style={{ color: "gray" }}>// Division</span> <br />
-              <span className="declarationKey">var</span>
+              <span className="declarationKey">let</span>
               <span className="variableName"> num7 = </span>
               <span>21</span>; <br />
-              <span className="declarationKey">var</span>
+              <span className="declarationKey">let</span>
               <span className="variableName"> num8 = </span>
               <span>3</span>; <br />
               <span className="console">
@@ -1117,13 +1100,13 @@ function JavaScript() {
               </span>{" "}
               <br />
               <span style={{ color: "gray" }}>
-                // Modulus (the rest of division oparation)
+                // Modulus (the rest of division operation)
               </span>{" "}
               <br />
-              <span className="declarationKey">var</span>
+              <span className="declarationKey">let</span>
               <span className="variableName"> num9 = </span>
               <span>11</span>; <br />
-              <span className="declarationKey">var</span>
+              <span className="declarationKey">let</span>
               <span className="variableName"> num10 = </span>
               <span>4</span>; <br />
               <span className="console">
@@ -1132,7 +1115,7 @@ function JavaScript() {
               </span>{" "}
               <br />
               <span style={{ color: "gray" }}>// Increment</span> <br />
-              <span className="declarationKey">var</span>
+              <span className="declarationKey">let</span>
               <span className="variableName"> num11 = </span>
               <span>21</span>; <br />
               <span className="console">
@@ -1141,7 +1124,7 @@ function JavaScript() {
               </span>{" "}
               <br />
               <span style={{ color: "gray" }}>// Decrement</span> <br />
-              <span className="declarationKey">var</span>
+              <span className="declarationKey">let</span>
               <span className="variableName"> num12 = </span>
               <span>14</span>; <br />
               <span className="console">
@@ -1167,7 +1150,7 @@ function JavaScript() {
             We won't discuss about all Assignment Operators, but only the most
             useful ones. <br />
             So let's assume <b>a = 12</b> and <b>b = 4</b>, the following table
-            will explain the Assignment Oparators :
+            will explain the Assignment Operators :
             <table className="assignmentOperatorsExplanation">
               <tr>
                 <th>operator</th>
@@ -1218,10 +1201,10 @@ function JavaScript() {
           <h3 className="sectionTittle">function</h3>
           <p className="clickHere">
             functions help you to write less and do more. So, instead of writing
-            the same code for many times, you can just write your code one time
+            the same code for many times, you can just write your code once
             inside function. then call this function whenever you want and your
             code will get executed. <br />
-            <b className="note">Note : </b> ther are two types of functions.{" "}
+            <b className="note">Note : </b> there are two types of functions.{" "}
             <br />
             <ol style={{ marginLeft: "50px", pointerEvents: "none" }}>
               <li>function without parameters</li>
@@ -1316,15 +1299,9 @@ function JavaScript() {
           </div>
           <p className="clickHere">
             you can pass as much parameters as you want, and handle them as you
-            like. <a href="">click here</a> for more examples. <br />
+            like. <br />
             <b className="note">Note : </b>there are three ways for declaring a
             function. <a href="">click here</a> to figure it out. <br />
-          </p>
-          <p className="clickHere">
-            <b className="importants">Important! </b>: in the examples above we
-            didn't use <b>return</b> key inside the function. this key is very
-            important in function. <br /> <a href="">click here</a> to figure it
-            out, and you will find a bunch of examples.
           </p>
         </div>
         <div className="addPaddingToSection" id="scope">
@@ -1344,14 +1321,14 @@ function JavaScript() {
 
           <h4 className="subTittles">Global Scope :</h4>
           <p className="clickHere">
-            in global scope you can create a variables and get access them
-            anywhere in your code. it's like a global varibale.
+            in global scope you can create a variables and access them anywhere
+            in your code. it's like a global variable.
           </p>
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">let</span>
               <span className="variableName"> age = </span>
-              <span>22</span>; <br /> <br />
+              <span>22</span>; <br />
               <span style={{ color: "blue" }}>
                 <span style={{ color: "purple" }}>function</span> showAge()
                 &#123; <br /> <span style={{ color: "red" }}>return </span>age ;{" "}
@@ -1361,7 +1338,6 @@ function JavaScript() {
               <br />
               <div className="console">
                 console.log(<span style={{ color: "blue" }}> showAge() </span>){" "}
-                <br />
                 <br />
               </div>
             </div>
@@ -1379,8 +1355,8 @@ function JavaScript() {
           </p>
           <h4 className="subTittles">Function Scope :</h4>
           <p className="clickHere">
-            in function scope you can create a variables inside a function and
-            get access them only inside that function.
+            in function scope you can create variables inside a function and
+            access them only inside that function.
           </p>
           <div className="codeSection">
             <div className="inputSection">
@@ -1404,14 +1380,13 @@ function JavaScript() {
             in this case you will get an Error message says that :{" "}
             <b>country</b> is not defined. that's because we declared the
             variable (country) inside a function and tried to access it from
-            outside the function. if that didn't make sense,{" "}
-            <a href="">click here</a> to learn more about scope.
+            outside the function (check out the console).
           </p>
 
           <h4 className="subTittles">Block Scope :</h4>
           <p className="clickHere">
-            block scope is like if/elese , switch , loop...,and it's very
-            similar to function scope.
+            block scope is like <b>if/else</b> , <b>switch</b> , <b>loop</b>
+            ...etc, and it's very similar to a function scope.
           </p>
           <div className="codeSection">
             <div className="inputSection">
@@ -1435,30 +1410,22 @@ function JavaScript() {
             {" "}
             in this case you will also get an Error message says that :{" "}
             <b>name</b> is not defined. that's because we declared the variable
-            (name) inside if statement and tried to access it from outside.{" "}
-            <a href="">click here</a> to learn more about scope.
+            (name) inside <b>if statement</b> and tried access it from outside.{" "}
+            if you wanna display the name in console, type{" "}
+            <b>console.log( name )</b> bellow <b>let name = "khalid"</b>
           </p>
         </div>
-        <div className="addPaddingToSection" id="hoisting">
-          <h3 className="sectionTittle">hoisting</h3>
-          <p className="clickHere">
-            {" "}
-            the hoisting concept relates to variables and functions declaration.
-            So, you may not understand this concept in this article, that's why
-            we specified <a href="">this video</a> just to make it clear for
-            you.
-          </p>
-        </div>
+
         <div className="addPaddingToSection" id="object">
           <h3 className="sectionTittle">object</h3>
           <p className="clickHere">
             objects as we mentioned previously in{" "}
             <a href="#dataTypes">data types</a> section is a data type. inside
             objects we can store a multiple of data and data types (we can store
-            string, numbers,undefined,null and even objects themselves...etc).{" "}
+            string, numbers,undefined,null or even objects themselves...etc).{" "}
             <br />
             <b className="note">Note : </b>we can create objects with two
-            defferent ways (traditional way and modern way). but as we know the
+            different ways (traditional way and modern way). but as we know the
             new ways are better, that's why we will ignore the traditional one.
             and focus on the new way.
           </p>
@@ -1505,16 +1472,15 @@ function JavaScript() {
             </div>
           </div>
           <p className="clickHere">
-            As you can see, you can set any data types into an object, and get
-            access them easily. watch out <a href="">this video</a> for more
-            examples.
+            As you can see, you can set any data types into an object, and
+            access them easily.
           </p>
         </div>
         <div className="addPaddingToSection" id="array">
           <h3 className="sectionTittle">array</h3>
           <p className="clickHere">
             array is considered as the most important concept in programming,
-            because it allows you to store a bunch of data from a defferent
+            because it allows you to store a bunch of data from a different
             types. <br />
             Array can also include another array. like the following :
           </p>
@@ -1568,11 +1534,13 @@ function JavaScript() {
             </div>
           </div>
           <p className="clickHere">
+            <b className="note">Note : </b>if you want to display the first item
+            of array you can just type : <b>arr[0]</b>. <br />
             for the last value, you may be wondering how did we get it. So when
-            you write <b>arr[3]</b> inside console, you only will get the sub
+            you write <b>arr[3]</b> inside console, you will only get the sub
             array, but if you want to display <b>frank</b> you must add another
-            square brackets in put 0 inside like this : <b>arr[3][0]</b>. <br />
-            for more examples and exercises, <a href="">click here</a>.
+            square brackets and put 0 inside like this : <b>arr[3][0]</b>.{" "}
+            <br />
           </p>
         </div>
         <div className="addPaddingToSection" id="arrayFunctions">
@@ -1584,7 +1552,6 @@ function JavaScript() {
             array property which is <b>length</b>. this property gives you the
             number of elements inside an array.
           </p>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -1614,13 +1581,10 @@ function JavaScript() {
             So now, let's talk about array functions. here is a list of the most
             popular ones :
           </p>
-
           <h4 className="subTittles">push()</h4>
-
           <p className="clickHere">
-            adds a new element to the end of the array
+            adds a new element to the end of the array.
           </p>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -1630,29 +1594,19 @@ function JavaScript() {
               </span>{" "}
               ]
               <br />
+              arr.<span style={{ color: "blue" }}>push( "frank" )</span> <br />
               <span className="console">
-                console.log({" "}
-                <span style={{ color: "purple" }}>
-                  arr. <span style={{ color: "blue" }}>push( "frank"</span>
-                </span>{" "}
-                )
+                console.log( <span style={{ color: "purple" }}>arr</span> )
               </span>
               <br />
             </div>
             <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
-              <div>arr = [ "mike" , 22 , false , "frank" ]</div>
+              <div>[ "mike" , 22 , false , "frank" ]</div>
             </div>
           </div>
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
-
           <h4 className="subTittles">pop()</h4>
-
-          <p className="clickHere">removes the last element of the array</p>
-
+          <p className="clickHere">removes the last element of the array.</p>
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -1662,33 +1616,21 @@ function JavaScript() {
               </span>{" "}
               ]
               <br />
+              arr.<span style={{ color: "blue" }}>pop()</span> <br />
               <span className="console">
-                console.log({" "}
-                <span style={{ color: "purple" }}>
-                  {" "}
-                  arr.<span style={{ color: "blue" }}>pop()</span>
-                </span>{" "}
-                )
+                console.log( <span style={{ color: "purple" }}> arr</span> )
               </span>
               <br />
             </div>
             <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
-              <div>arr = [ "mike" , 22 ]</div>
+              <div>[ "mike" , 22 ]</div>
             </div>
           </div>
-
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
-
           <h4 className="subTittles">unshift()</h4>
-
           <p className="clickHere">
             adds a new element at the beginning of the array.
           </p>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -1698,31 +1640,20 @@ function JavaScript() {
               </span>{" "}
               ]
               <br />
+              arr.<span style={{ color: "blue" }}>unshift( "frank"</span> ){" "}
+              <br />
               <span className="console">
-                console.log({" "}
-                <span style={{ color: "purple" }}>
-                  {" "}
-                  arr.<span style={{ color: "blue" }}>unshift( "frank"</span> )
-                </span>{" "}
-                )
+                console.log( <span style={{ color: "purple" }}> arr</span> )
               </span>
               <br />
             </div>
             <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
-              <div>arr = [ "frank" , "mike" , 22 , false ]</div>
+              <div>[ "frank" , "mike" , 22 , false ]</div>
             </div>
           </div>
-
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
-
           <h4 className="subTittles">shift()</h4>
-
           <p className="clickHere">removes the first element of the array.</p>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -1732,30 +1663,20 @@ function JavaScript() {
               </span>{" "}
               ]
               <br />
+              arr.<span style={{ color: "blue" }}>shift()</span>
+              <br />
               <span className="console">
-                console.log({" "}
-                <span style={{ color: "purple" }}>
-                  arr.<span style={{ color: "blue" }}>shift()</span>
-                </span>{" "}
-                )
+                console.log( <span style={{ color: "purple" }}>arr</span> )
               </span>
               <br />
             </div>
             <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
-              <div>arr = [ 22 , false ]</div>
+              <div>[ 22 , false ]</div>
             </div>
           </div>
-
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
-
           <h4 className="subTittles">reverse()</h4>
-
           <p className="clickHere">reverses the elements of the array.</p>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -1765,33 +1686,23 @@ function JavaScript() {
               </span>{" "}
               ]
               <br />
+              arr.<span style={{ color: "blue" }}>reverse()</span>
+              <br />
               <span className="console">
-                console.log({" "}
-                <span style={{ color: "purple" }}>
-                  arr.<span style={{ color: "blue" }}>reverse()</span>
-                </span>{" "}
-                )
+                console.log( <span style={{ color: "purple" }}>arr</span> )
               </span>
               <br />
             </div>
             <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
-              <div>arr = [ false , 22 , "mike" ]</div>
+              <div>[ false , 22 , "mike" ]</div>
             </div>
           </div>
-
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
-
           <h4 className="subTittles">concat()</h4>
-
           <p className="clickHere">
-            combine two arrays or more in one new array ( you can also combine
+            combines two arrays or more in one new array ( you can also combine
             arrays with string, or string with another string ).
           </p>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -1825,19 +1736,14 @@ function JavaScript() {
           </div>
           <p className="clickHere">
             you can assign the result to a new array like the following :
-            <b> let newArray = arr1,concat(arr2) </b>
-            and display <b>newArray</b> in console (console.log( newArray )).
-          </p>
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
+            <b> let newArray = arr1.concat(arr2) </b>
+            and display <b>newArray</b> in console ({" "}
+            <b>console.log( newArray )</b> ).
           </p>
           <h4 className="subTittles">Set()</h4>
-
           <p className="clickHere">
             allows you to delete the duplicated elements.
           </p>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -1857,21 +1763,14 @@ function JavaScript() {
             </div>
             <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
-              <div>numbers = [ 1 , 2 , 3 , 4 , 5 ]</div>
+              <div>[ 1 , 2 , 3 , 4 , 5 ]</div>
             </div>
           </div>
-
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
-
           <h4 className="subTittles">filter()</h4>
-
           <p className="clickHere">
-            allows you to filter elements from array according to a condition.
+            allows you to filter elements from an array according to a
+            condition.
           </p>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -1885,8 +1784,8 @@ function JavaScript() {
                 console.log({" "}
                 <span style={{ color: "blue" }}>
                   {" "}
-                  <span style={{ color: "purple" }}>filter</span>( num =&gt; num
-                  &gt; 5 ){" "}
+                  numbers.<span style={{ color: "purple" }}>filter</span>( num
+                  =&gt; num &gt; 5 ){" "}
                 </span>{" "}
                 )
               </span>
@@ -1894,26 +1793,18 @@ function JavaScript() {
             </div>
             <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
-              <div>numbers = [ 6 , 7 , 8 , 9 , 10 ]</div>
+              <div>[ 6 , 7 , 8 , 9 , 10 ]</div>
             </div>
           </div>
           <p className="clickHere">
-            we know you didn't get it, don't worry this's called{" "}
-            <a href="">arrow function</a>, it's another way of creating a
-            function. <br />
-            <a href="">click here</a> to learn this kind of functions.
-          </p>
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
+            if you didn't get it, don't worry, this is arrow function, we talked
+            about it at the end of <a href="#function">function</a> section.
           </p>
           <h4 className="subTittles">reduce()</h4>
-
           <p className="clickHere">
             if you have an array of numbers , So <b>reduce()</b> returns the sum
             of those numbers.
           </p>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -1939,23 +1830,16 @@ function JavaScript() {
               <div>the sum is : 55</div>
             </div>
           </div>
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
-
           <h4 className="subTittles">sort()</h4>
-
           <p className="clickHere">
-            this function allows you to sort array elements in ascending or
+            this function allows you to sort array's elements in ascending or
             descending order. <br />
-            <b className="note">Note : </b>sorting numbers is a bit defferent
+            <b className="note">Note : </b>sorting numbers is a bit different
             than sorting strings or alphabet.
           </p>
           <h4 style={{ margin: "10px 30px", color: "#0b0453" }}>
             Sorting Numbers :
           </h4>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -1966,31 +1850,24 @@ function JavaScript() {
               ]
               <br />
               <span className="console">
-                console.log({'" numbers : "'}
+                console.log(
                 <span style={{ color: "blue" }}>
                   {" "}
-                  + numbers.<span style={{ color: "purple" }}>sort</span>( (a ,
-                  b) =&gt; a - b )
+                  numbers.<span style={{ color: "purple" }}>sort</span>( (a , b)
+                  =&gt; a - b
                 </span>{" "}
-                )
+                ) )
               </span>
               <br />
             </div>
             <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
-              <div>numbers = [ 3 , 5 , 12 , 17 , 56 , 60 , 78 ]</div>
+              <div> [ 3 , 5 , 12 , 17 , 56 , 60 , 78 ]</div>
             </div>
           </div>
-
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
-
           <h4 style={{ margin: "10px 30px", color: "#0b0453" }}>
             Sorting Strings and Alphabet :
           </h4>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -2001,10 +1878,10 @@ function JavaScript() {
               ]
               <br />
               <span className="console">
-                console.log({'" strings = "'}
+                console.log(
                 <span style={{ color: "blue" }}>
                   {" "}
-                  + numbers.<span style={{ color: "purple" }}>sort</span>()
+                  strings.<span style={{ color: "purple" }}>sort</span>()
                 </span>{" "}
                 )
               </span>
@@ -2012,20 +1889,17 @@ function JavaScript() {
             </div>
             <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
-              <div> strings = [ "b" , "d" , "frank" , "john" , "mike" ]</div>
+              <div> [ "b" , "d" , "frank" , "john" , "mike" ]</div>
             </div>
           </div>
-
           <h4 className="subTittles">map()</h4>
-
           <p className="clickHere">
-            map() allows you to loop through every element of the array. and do
-            whatever you want with that elements. <br />
+            allows you to loop through every element of the array. and do
+            whatever you want with those elements. <br />
             So, in this example we will loop through the elements and take every
             element and double it. <br />
             <b className="note">Note : </b> map() returns a new array.
           </p>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -2033,11 +1907,11 @@ function JavaScript() {
               <span style={{ color: "purple" }}>1 , 2 , 3 , 4 , 5</span> ]
               <br />
               <span className="console">
-                console.log({' "numbers :  "'}
+                console.log(
                 <span style={{ color: "blue" }}>
                   {" "}
-                  + numbers.<span style={{ color: "purple" }}>map</span>( a
-                  =&gt; a * 2 )
+                  numbers.<span style={{ color: "purple" }}>map</span>( a =&gt;
+                  a * 2 )
                 </span>{" "}
                 )
               </span>
@@ -2045,26 +1919,19 @@ function JavaScript() {
             </div>
             <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
-              <div>numbers = [2 , 4 , 6 , 8 , 10 ]</div>
+              <div>[2 , 4 , 6 , 8 , 10 ]</div>
             </div>
           </div>
-
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
-
           <h4 className="subTittles">forEach()</h4>
-
           <p className="clickHere">
-            forEach() is actually like map() , the defferences between them is
+            forEach() is actually like map() , the differences between them is
             that : <br />
             <ul style={{ marginLeft: "50px", pointerEvents: "none" }}>
               <li style={{ pointerEvents: "none" }}>
                 map() returns a new array.{" "}
               </li>
               <li style={{ pointerEvents: "none" }}>
-                forEach() returns each element of the array separatly.
+                forEach() returns each element of the array separately.
               </li>
               <li style={{ pointerEvents: "none" }}>
                 map() can be followed by other array functions while forEach
@@ -2072,7 +1939,6 @@ function JavaScript() {
               </li>
             </ul>
           </p>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -2083,7 +1949,7 @@ function JavaScript() {
                 console.log({" "}
                 <span style={{ color: "blue" }}>
                   {" "}
-                  + numbers.<span style={{ color: "purple" }}>forEach</span>( a
+                  numbers.<span style={{ color: "purple" }}>forEach</span>( a
                   =&gt; <span className="console">console.log</span>( a * 3 ) )
                 </span>{" "}
                 )
@@ -2097,20 +1963,17 @@ function JavaScript() {
                 2 <br /> 4 <br /> 6 <br /> 8 <br /> 10{" "}
               </div>
             </div>
-          </div>
+          </div>{" "}
           <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
+            you might see the undefined or NaN at the end of console, in this
+            case i want to recommend to use <b>map()</b> instead.
           </p>
-
           <h4 className="subTittles">every()</h4>
-
           <p className="clickHere">
-            every() checks wheather all of the elements in the array accept the
-            condition or not. if so then it returns <b>true</b> if not then
-            returns <b>false</b>.
+            checks whether all of the elements in the array accept the condition
+            or not. if so, it will return <b>true</b> if not it will return{" "}
+            <b>false</b>.
           </p>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -2144,19 +2007,11 @@ function JavaScript() {
               <div>true</div>
             </div>
           </div>
-
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
-
           <h4 className="subTittles">fill()</h4>
-
           <p className="clickHere">
-            every() loops through each element of the array and changes all of
-            them to a provided value.
+            loops through each element of the array and changes all of them to a
+            provided value.
           </p>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -2164,33 +2019,25 @@ function JavaScript() {
               <span style={{ color: "purple" }}>1 , 2 , 3 , 4 , 5</span> ]
               <br />
               <span className="console">
-                console.log({'" numbers = "'}
+                console.log(
                 <span style={{ color: "blue" }}>
                   {" "}
-                  + numbers.<span style={{ color: "purple" }}>fill</span>( 0 )
+                  numbers.<span style={{ color: "purple" }}>fill</span>( 0 )
                 </span>{" "}
                 )
               </span>
             </div>
             <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
-              <div>numbers = [ 0 , 0 , 0 , 0 , 0 ]</div>
+              <div>[ 0 , 0 , 0 , 0 , 0 ]</div>
             </div>
           </div>
-
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
-
           <h4 className="subTittles">includes()</h4>
-
           <p className="clickHere">
-            includes() checks wheather the array contains a particular value. it
-            reatuns true if the given value is existed or false if not or you
-            can return any message.
+            checks whether the array contains a particular value. it returns{" "}
+            <b>true</b> if the given value is existed or <b>false</b> if not, or
+            you can return any message.
           </p>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -2215,19 +2062,11 @@ function JavaScript() {
               <div>true</div>
             </div>
           </div>
-
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
-
           <h4 className="subTittles">findIndex()</h4>
-
           <p className="clickHere">
-            findIndex() returns the index of a given value if it exists,
-            otherwise returns -1.
+            returns the index of a given value if it exists, otherwise returns
+            -1.
           </p>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -2252,18 +2091,10 @@ function JavaScript() {
               <div>2</div>
             </div>
           </div>
-
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
-
           <h4 className="subTittles">indexOf()</h4>
-
           <p className="clickHere">
-            indexOf() is the same as <b>findIndex()</b> but it's much easier.
+            it is the same as <b>findIndex()</b> but it's much easier.
           </p>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -2288,19 +2119,11 @@ function JavaScript() {
               <div>2</div>
             </div>
           </div>
-
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
-
           <h4 className="subTittles">lastIndexOf()</h4>
-
           <p className="clickHere">
-            lastIndexOf() returns the index of the last duplicated item
-            according to the given value.
+            returns the index of the last duplicated item according to the given
+            value.
           </p>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -2325,19 +2148,11 @@ function JavaScript() {
               <div>3</div>
             </div>
           </div>
-
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
-
           <h4 className="subTittles">some()</h4>
-
           <p className="clickHere">
-            some() check weather the given value is existed or no, if exists
-            then return true , if not then return false.
+            checks weather the given value is existed or no, if exists then
+            return <b>true</b> , if not then return <b>false</b>.
           </p>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -2373,19 +2188,13 @@ function JavaScript() {
               <div>false</div>
             </div>
           </div>
-
+          <h4 className="subTittles" id="sliceInArray">
+            slice()
+          </h4>
           <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
+            allows you to display a part of an array according to arguments you
+            passed.
           </p>
-
-          <h4 className="subTittles">slice()</h4>
-
-          <p className="clickHere">
-            slice() allows you to display a part of an array according to
-            arguments you passed.
-          </p>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -2399,62 +2208,42 @@ function JavaScript() {
                 console.log(
                 <span style={{ color: "blue" }}>
                   {" "}
-                  + numbers.<span style={{ color: "purple" }}>slice</span>( 4 )
+                  numbers.<span style={{ color: "purple" }}>slice</span>( 4 )
                 </span>{" "}
                 )
               </span>
-              <br />
-              <span className="console">
-                console.log( {'" numbers = "'}
-                <span style={{ color: "blue" }}> numbers</span> )
-              </span>{" "}
               <br />
               <span className="console">
                 console.log(
                 <span style={{ color: "blue" }}>
                   {" "}
-                  + numbers.<span style={{ color: "purple" }}>slice</span>( 1 ,
-                  4 )
+                  numbers.<span style={{ color: "purple" }}>slice</span>( 1 , 4
+                  )
                 </span>{" "}
                 )
-              </span>
-              <span className="console">
-                console.log( {'" numbers = "'}
-                <span style={{ color: "blue" }}> numbers</span> )
               </span>
             </div>
             <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
-              <div> numbers = [ 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 ]</div>
               <div> [ 5 , 6 , 7 , 8 , 9 , 10 ]</div>
               <div> [ 2 , 3 , 4 ]</div>
-              <div> numbers = [ 1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 ]</div>
             </div>
           </div>
           <p className="clickHere">
-            So, when we passed one value inside slice(), this value representes
+            So, when we passed one value inside slice(), this value represents
             the number of the item you wanna slice till, so in this case the the
             numbers 1,2,3,4 will get removed. <br />
             when we passed two values inside slice(), we specify the items we
             want to remove, so that first value is the index of the beginning
-            item you will remove , and the second value is the numbers of last
+            item you will remove , and the second value is the position of last
             item you want to remove. <br />
             <b className="note">Note : </b> slice doesn't effect on the array.
-            the array won't get changed.
+            the array won't get changed. it creates a <b>new array</b>.
           </p>
-
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
-
           <h4 className="subTittles">splice()</h4>
-
           <p className="clickHere">
-            splice() allows you to remove items from an array or you can change
-            them.
+            allows you to remove items from an array or you can change them.
           </p>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -2465,50 +2254,56 @@ function JavaScript() {
               ]
               <br />
               <span className="console">
-                console.log( {'" numbers = "'}
+                console.log(
                 <span style={{ color: "blue" }}>
                   {" "}
-                  + numbers.<span style={{ color: "purple" }}>splice</span>( 2 ,
-                  5 )
+                  numbers.<span style={{ color: "purple" }}>splice</span>( 2 , 5
+                  )
                 </span>{" "}
                 )
               </span>
               <br />
               <span className="console">
-                console.log( {'" numbers = "'}
+                console.log(
+                <span style={{ color: "blue" }}> numbers</span> )
+              </span>
+              <br />
+              <span className="console">
+                console.log(
                 <span style={{ color: "blue" }}>
                   {" "}
-                  + numbers.<span style={{ color: "purple" }}>splice</span>( 0 ,
-                  2 , 6 , 7 )
+                  numbers.<span style={{ color: "purple" }}>splice</span>( 0 , 2
+                  , 6 , 7 )
                 </span>{" "}
                 )
+              </span>
+              <br />
+              <span className="console">
+                console.log(
+                <span style={{ color: "blue" }}> numbers</span> )
               </span>
             </div>
             <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
-              <div>numbers = [ 1 , 2 , 8 ]</div>
-              <div>numbers = [ 6 , 7 , 8 ]</div>
+              <div>[ 3 , 4 , 5 , 6 , 7 ]</div>
+              <div>[ 1, 2 , 8 , 9 , 10 ]</div>
+              <div>[ 1 , 2 ]</div>
+              <div>[ 6 , 7 , 8 , 9 , 10 ]</div>
             </div>
           </div>
           <p className="clickHere">
-            in the first console, we only removed 5 items from index 2 ( from
-            index 2 to index 6 ). <br />
-            in the second console, we changed the first and second items with 6
-            and 7 digits.
+            in the first console, we only removed 5 items ( from index 2 to
+            index 6 ). <br />
+            in the third console, we changed the first and second items with 6
+            and 7 digits. <br />
+            <b className="note">Note : </b> this function returns a new array
+            includes the removed items.
           </p>
-
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
-
           <h4 className="subTittles">join()</h4>
-
           <p className="clickHere">
-            join() returns a new string by concatinating array's elements. we
-            can join according the given value.
+            returns a new string by concatenating array's elements. we can join
+            according the given value.
           </p>
-
           <div className="codeSection">
             <div className="inputSection">
               <span className="declarationKey">const</span>
@@ -2532,12 +2327,10 @@ function JavaScript() {
               <div>abcde</div>
             </div>
           </div>
-
           <p className="clickHere">
-            in this example we joined all array items through enpty space (""),
+            in this example we joined all array items through empty space (""),
             you can do it according to any item in array, you can join them by
-            "c" or "b" or anything exists in array. <br /> for more examples and
-            exercises <a href="">click here</a>.
+            "c" or "b" or anything exists in array.
           </p>
         </div>
         <div className="addPaddingToSection" id="stringMethods">
@@ -2572,16 +2365,12 @@ function JavaScript() {
               <div>the length is : 20</div>
             </div>
           </div>
-          <p className="clickHere">spaces also get counted as alphbet.</p>
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
+          <p className="clickHere">spaces also get counted as alphabet.</p>
 
           <h4 className="subTittles">slice()</h4>
           <p className="clickHere">
-            you can also use <b>slice()</b> in string as long as arrays.
-            <a href="">click here</a> to figure out how it works.
+            you can also use <b>slice()</b> in string as long as arrays.{" "}
+            <a href="#sliceInArray">click here</a> to figure out how it works.
           </p>
 
           <div className="codeSection">
@@ -2591,10 +2380,22 @@ function JavaScript() {
               <span style={{ color: "purple" }}>"web crowd" ;</span> <br />
               <span className="console">
                 {" "}
-                console.log( {'" the length is : "'}
+                console.log(
                 <span style={{ color: "purple" }}>
                   {" "}
-                  + str.<span style={{ color: "blue" }}>length</span>{" "}
+                  str.<span style={{ color: "blue" }}>slice</span>({" "}
+                  <span style={{ color: "purple" }}>5 </span>)
+                </span>
+                ){" "}
+              </span>
+              <br />
+              <span className="console">
+                {" "}
+                console.log(
+                <span style={{ color: "purple" }}>
+                  {" "}
+                  str.<span style={{ color: "blue" }}>slice</span>({" "}
+                  <span style={{ color: "purple" }}>2 , 6 </span>)
                 </span>
                 ){" "}
               </span>
@@ -2602,19 +2403,14 @@ function JavaScript() {
             </div>
             <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
-              <div>the length is : 20</div>
+              <div>rowd</div>
+              <div>b cr</div>
             </div>
           </div>
-          <p className="clickHere">spaces also get counted as alphbet.</p>
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
+          <p className="clickHere">spaces also get counted as alphabet.</p>
 
           <h4 className="subTittles">charAt()</h4>
-          <p className="clickHere">
-            charAt() returns the character at the given index.
-          </p>
+          <p className="clickHere">returns the character at the given index.</p>
 
           <div className="codeSection">
             <div className="inputSection">
@@ -2638,15 +2434,11 @@ function JavaScript() {
               <div> the char at index 5 is : r</div>
             </div>
           </div>
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
 
           <h4 className="subTittles">endsWith()</h4>
           <p className="clickHere">
-            endsWith() returns true if the string ends with the given string of
-            character, and returns false if it does not end.
+            returns <b>true</b> if the string ends with the given value, and
+            returns <b>false</b> if not.
           </p>
 
           <div className="codeSection">
@@ -2660,7 +2452,7 @@ function JavaScript() {
                 <span style={{ color: "purple" }}>
                   {" "}
                   str.<span style={{ color: "blue" }}>endsWith</span>({" "}
-                  <span style={{ color: "purple" }}>" wd "</span> )
+                  <span style={{ color: "purple" }}>"wd"</span> )
                 </span>{" "}
                 )
               </span>
@@ -2671,7 +2463,7 @@ function JavaScript() {
                 <span style={{ color: "purple" }}>
                   {" "}
                   str.<span style={{ color: "blue" }}>endsWith</span>({" "}
-                  <span style={{ color: "purple" }}> "web" </span> )
+                  <span style={{ color: "purple" }}> "crowd" </span> )
                 </span>{" "}
                 )
               </span>
@@ -2679,19 +2471,15 @@ function JavaScript() {
             </div>
             <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
-              <div> true</div>
               <div> false</div>
+              <div> true</div>
             </div>
           </div>
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
 
           <h4 className="subTittles">replace()</h4>
           <p className="clickHere">
-            replace() allows you to replace string or character with another
-            one. but the original string will stay as it is.
+            allows you to replace string or character with another one. but the
+            original string will stay as it is.
           </p>
 
           <div className="codeSection">
@@ -2725,14 +2513,11 @@ function JavaScript() {
               <div> web crowd</div>
             </div>
           </div>
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
+
           <h4 className="subTittles">includes()</h4>
           <p className="clickHere">
-            includes() is the same as includes() in array,{" "}
-            <a href="">click here </a> to figure it out.
+            it is the same as includes() in array, it checks if the string
+            includes the given value.
           </p>
 
           <div className="codeSection">
@@ -2769,15 +2554,11 @@ function JavaScript() {
               <div> false</div>
             </div>
           </div>
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
 
           <h4 className="subTittles">indexOf()</h4>
           <p className="clickHere">
-            indexOf() is also the same as indexOf() in array,{" "}
-            <a href="">click here </a> to figure it out.
+            it is also the same as indexOf() in array, it returns the index of a
+            given value.
           </p>
 
           <div className="codeSection">
@@ -2814,15 +2595,12 @@ function JavaScript() {
               <div> index of crowd is : 4</div>
             </div>
           </div>
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
 
           <h4 className="subTittles">lastIndexOf()</h4>
           <p className="clickHere">
-            lastIndexOf() is also the same as lastIndexOf() in array,{" "}
-            <a href="">click here </a> to figure it out.
+            it is also the same as lastIndexOf() in array, it returns the last
+            index of a given value ( if the string includes the same word two
+            times, it returns the index of the last duplicated word).
           </p>
 
           <div className="codeSection">
@@ -2847,15 +2625,11 @@ function JavaScript() {
               <div>last index of w is : 7</div>
             </div>
           </div>
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
 
           <h4 className="subTittles">toUpperCase()</h4>
           <p className="clickHere">
-            toUpperCase() capitalizes all the alphabitic characters of your
-            string (a ==&gt; A).
+            capitalizes all the alphabetic characters of your string (a ==&gt;
+            A).
           </p>
 
           <div className="codeSection">
@@ -2879,15 +2653,11 @@ function JavaScript() {
               <div>WEB CROWD</div>
             </div>
           </div>
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
 
           <h4 className="subTittles">toLowerCase()</h4>
           <p className="clickHere">
-            toLowerCase() is the opposite of toUpperCase() it lowers your string
-            (A ==&gt; a).
+            it is the opposite of toUpperCase() it lowers your string (A ==&gt;
+            a).
           </p>
 
           <div className="codeSection">
@@ -2911,15 +2681,11 @@ function JavaScript() {
               <div>web crowd</div>
             </div>
           </div>
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
 
           <h4 className="subTittles">repeat()</h4>
           <p className="clickHere">
-            repeat() allows you to repeat your string as many times as you need
-            by a given value.
+            allows you to repeat your string as many times as you need by a
+            given value.
           </p>
 
           <div className="codeSection">
@@ -2943,16 +2709,11 @@ function JavaScript() {
               <div>Web Crowd Web Crowd Web Crowd Web Crowd Web Crowd</div>
             </div>
           </div>
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
 
           <h4 className="subTittles">split()</h4>
           <p className="clickHere">
-            split() converts your string into an array by a given value. that
-            value can be an empty string or an includes string or even
-            character.
+            converts your string into an array by a given value. that value can
+            be an empty string or an includes string or even character.
           </p>
 
           <div className="codeSection">
@@ -3001,16 +2762,12 @@ function JavaScript() {
               <div>[ 'web ' , 'rowd' ]</div>
             </div>
           </div>
-          <p className="clickHere">
-            {" "}
-            empty strings also counted. <br /> for more examples and exercises{" "}
-            <a href="">click here</a>.
-          </p>
+          <p className="clickHere"> spaces also counted.</p>
 
           <h4 className="subTittles">concat()</h4>
           <p className="clickHere">
-            concat() is the same as concat() in array, <a href="">click here</a>{" "}
-            to figure it out.
+            it is the same as concat() in array, it concatenates two strings or
+            more.
           </p>
 
           <div className="codeSection">
@@ -3037,14 +2794,10 @@ function JavaScript() {
               <div>web crowd</div>
             </div>
           </div>
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
 
           <h4 className="subTittles">trim()</h4>
           <p className="clickHere">
-            trim() remove the spaces at the beginning or the end of your string.
+            removes the spaces at the beginning and the end of your string.
           </p>
 
           <div className="codeSection">
@@ -3072,18 +2825,14 @@ function JavaScript() {
               <div>web crowd</div>
             </div>
           </div>
-          <p className="clickHere">
-            {" "}
-            for more examples and exercises <a href="">click here</a>.
-          </p>
         </div>
         <div className="addPaddingToSection" id="date">
           <h3 className="sectionTittle">date</h3>
           <p className="clickHere">
             we have a quick look on dates, you will figure out how to display
             the current date on console, and when you learn{" "}
-            <a href="">Dom Manipulation</a> you will be able to display it
-            inside your website.
+            <a href="#domManipulation">Dom Manipulation</a> you will be able to
+            display it inside your website.
           </p>
 
           <div className="codeSection">
@@ -3099,10 +2848,11 @@ function JavaScript() {
                 console.log({" "}
                 <span style={{ color: "purple" }}>
                   {" "}
-                  + date.<span style={{ color: "blue" }}>getHours() </span> + "
-                  : " + date.
-                  <span style={{ color: "blue" }}>getMinutes() </span> + " : " +
-                  date.<span style={{ color: "blue" }}>getSeconds() </span>
+                  date.<span style={{ color: "blue" }}>getHours() </span> + "h "
+                  + date.
+                  <span style={{ color: "blue" }}>getMinutes() </span> + "m " +
+                  date.<span style={{ color: "blue" }}>getSeconds() </span> +
+                  "s"
                 </span>{" "}
                 )
               </span>
@@ -3117,15 +2867,14 @@ function JavaScript() {
           <p className="clickHere">
             {" "}
             there is a bunch of methods like
-            getMonth(),getFullYear(),getDate()..., to see an example of this{" "}
-            <a href="">click here</a>.
+            <b>getMonth() , getFullYear() , getDate()</b>...etc.
           </p>
         </div>
         <div className="addPaddingToSection" id="math">
           <h3 className="sectionTittle">Math</h3>
           <p className="clickHere">
             Math in an object that uses a bunch of methods to do mathematical
-            operations, here is the list of most of these methods.
+            operations, here is the list of most of those methods.
           </p>
           <h4 className="subTittles">Math.abs()</h4>
           <p className="clickHere">
@@ -3159,7 +2908,7 @@ function JavaScript() {
 
           <h4 className="subTittles">Math.max()</h4>
           <p className="clickHere">
-            this method returns the bigger value among two numbers.
+            this method returns the biggest value of two numbers.
           </p>
 
           <div className="codeSection">
@@ -3182,7 +2931,7 @@ function JavaScript() {
           </div>
           <h4 className="subTittles">Math.min()</h4>
           <p className="clickHere">
-            this method returns the smaller value among two numbers.
+            this method returns the smallest value of two numbers.
           </p>
 
           <div className="codeSection">
@@ -3192,7 +2941,7 @@ function JavaScript() {
                 console.log({" "}
                 <span style={{ color: "purple" }}>
                   {" "}
-                  Math.<span style={{ color: "blue" }}>max( 33 , 65 ) </span>
+                  Math.<span style={{ color: "blue" }}>min( 33 , 65 ) </span>
                 </span>{" "}
                 )
               </span>
@@ -3200,7 +2949,7 @@ function JavaScript() {
             </div>
             <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
-              <div> 33</div>
+              <div>33</div>
             </div>
           </div>
           <h4 className="subTittles">Math.pow()</h4>
@@ -3235,9 +2984,6 @@ function JavaScript() {
               <div> 125</div>
             </div>
           </div>
-          <p className="clickHere">
-            <a href="">click here</a> for more examples and exercises.
-          </p>
 
           <h4 className="subTittles">Math.sqrt()</h4>
           <p className="clickHere">
@@ -3257,7 +3003,7 @@ function JavaScript() {
                 console.log({'" the square of 25 is : "'}{" "}
                 <span style={{ color: "purple" }}>
                   {" "}
-                  Math.
+                  + Math.
                   <span style={{ color: "blue" }}>sqrt( num1 ) </span>
                 </span>{" "}
                 )
@@ -3268,7 +3014,7 @@ function JavaScript() {
                 console.log({'" the square of 81 is : "'}
                 <span style={{ color: "purple" }}>
                   {" "}
-                  Math.
+                  + Math.
                   <span style={{ color: "blue" }}>sqrt( num2 ) </span>
                 </span>{" "}
                 )
@@ -3281,9 +3027,6 @@ function JavaScript() {
               <div> the square of 81 is : 9</div>
             </div>
           </div>
-          <p className="clickHere">
-            <a href="">click here</a> for more examples and exercises.
-          </p>
 
           <h4 className="subTittles">Math.random()</h4>
           <p className="clickHere">
@@ -3310,7 +3053,7 @@ function JavaScript() {
                 <span style={{ color: "purple" }}>
                   {" "}
                   Math.
-                  <span style={{ color: "blue" }}>random() </span>
+                  <span style={{ color: "blue" }}>random() * 10 </span>
                 </span>{" "}
                 )
               </span>
@@ -3322,8 +3065,10 @@ function JavaScript() {
             </div>
           </div>
           <p className="clickHere">
-            you can also trap the random numbers among two numbers.
-            <a href=""> click here</a> to see examples and exercises of this.
+            as you can see, when you reflesh the page, the first value takes the
+            values between <b>0</b> and <b>1</b>, but the second one could take
+            the values between <b>0</b> and <b>10</b> . that's because we added
+            the Max value which is <b>10</b>.
           </p>
         </div>
         <div className="addPaddingToSection" id="setTimeout">
@@ -3338,12 +3083,12 @@ function JavaScript() {
         <div className="addPaddingToSection" id="setInterval">
           <h3 className="sectionTittle">setInterval()</h3>
           <p className="clickHere">
-            setInterval() is the same as setTimeout(), but the deferrent between
+            setInterval() is the same as setTimeout(), but the difference between
             them is the following : <br />
-            <ul>
+            <ul style={{ marginLeft: "50px", pointerEvents: "none" }}>
               <li>
                 setTimeout() : the callback function get executed once we reach
-                the given time (number of miliSeconds).{" "}
+                the given time (number of MiliSeconds).{" "}
               </li>
               <li>
                 setInterval() : the callback function get executed repeatedly
@@ -3360,11 +3105,11 @@ function JavaScript() {
             basically means everything you see in front of you once you get in
             any particular website, it's HTML content. it's created by the
             browser once the page gets loaded. <br />
-            programmatically, we can use JavaScript to read,add,remove or update
+            programmatically, we can use JavaScript to read, add ,remove or update
             DOM elements using a bunch of methods. <br />
             the first thing you must be aware of is how to select and get html
             elements using JavaScript. in this case we use{" "}
-            <a href="">selectors</a>.
+            <b>selectors</b>.
           </p>
           <h2 className=" subTittles">selectors :</h2>
 
@@ -3469,11 +3214,8 @@ function JavaScript() {
           </div>
           <p className="clickHere">
             as you can see, we selected h2,div elements from HTML, then assigned
-            them to <b>h2Variable,divVariable</b>, then add styling to these
+            them to <b>h2Variable,divVariable</b>, then added styling to those
             elements. <br />
-          </p>
-          <p className="clickHere">
-            <a href="">click here</a> for more examples and exercises.
           </p>
 
           <h2 className=" subTittles">change element's text :</h2>
@@ -3578,9 +3320,7 @@ function JavaScript() {
             <b>textContent</b> property in JavaScript. in addition that, css
             file applied also.
           </p>
-          <p className="clickHere">
-            <a href="">click here</a> for more examples and exercises.
-          </p>
+
           <p className="clickHere">
             <b className="importants">Important!</b> you can override css style
             using JavaScript. <br /> let's assume we added <b>color</b> to html
@@ -3589,9 +3329,7 @@ function JavaScript() {
             <b>overridden</b>. then the JavaScript one will get <b>applied</b>.{" "}
             <br />
           </p>
-          <p className="clickHere">
-            <a href="">click here</a> to see examples and exercises of that.
-          </p>
+          
 
           <h2 className=" subTittles">add elements :</h2>
 
@@ -3630,7 +3368,7 @@ function JavaScript() {
           <div className="codeSection">
             <h4 className="inhtmlcssjsbroSections afterMedia">JS FILE</h4>
             <div className="inputSection">
-              <span style={{ color: "gray" }}>// create a new element</span>
+              <span style={{ color: "gray" }}>// 1 create a new element</span>
               <br />
               <span className="declarationKey">const</span>
               <span className="variableName"> newElement = </span>{" "}
@@ -3641,7 +3379,7 @@ function JavaScript() {
               </span>{" "}
               <br />
               <span style={{ color: "gray" }}>
-                // add text to the new element
+                // 2 add text to the new element
               </span>
               <br />
               <span className="variableName"> newElement.</span>
@@ -3652,10 +3390,10 @@ function JavaScript() {
               ;
               <br />
               <span style={{ color: "gray" }}>
-                // add the new element to web page
+                // 3 add the new element to web page
               </span>
               <br />
-              <span className="variableName"> newEelement.</span>{" "}
+              <span style={{color:"blue"}}> body.</span>
               <span style={{ color: "purple" }}>
                 <span style={{ color: "purple" }}>append.</span>(
                 <span style={{ color: "blue" }}> newElement </span>) ;
@@ -3664,20 +3402,16 @@ function JavaScript() {
             <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="inputSection">
               <h2 style={{ color: "blue" }}>web crowd</h2>
-              <div>this is a new h2 element</div>
+              <h2>this is a new h2 element</h2>
             </div>
           </div>
           <p className="clickHere">
-            as you can see, we changed <b>h2</b> and <b>div</b>'s text using{" "}
-            <b>textContent</b> property in JavaScript. in addition that, css
-            file applied also.
+           don't miss any step.
           </p>
+
           <p className="clickHere">
-            <a href="">click here</a> for more examples and exercises.
-          </p>
-          <p className="clickHere">
-            <b>Important!</b> : in this exercise, we added the new paragraph in
-            our body. you can also add any html element whereever you want, s
+            <b className="importants">Important!</b> : in this exercise, we added the new paragraph in
+            our body. you can also add any html element wherever you want, s
             let's make another example, in this example we will add new{" "}
             <b>li</b> to our <b>ul</b>.
           </p>
@@ -3730,7 +3464,7 @@ function JavaScript() {
                 <span style={{ color: "blue" }}> "ul" </span>) ;
               </span>{" "}
               <br />
-              <span style={{ color: "gray" }}>// create a new li</span>
+              <span style={{ color: "gray" }}>// 1 create a new li</span>
               <br />
               <span className="declarationKey">const</span>
               <span className="variableName"> newLi = </span>{" "}
@@ -3740,13 +3474,13 @@ function JavaScript() {
                 <span style={{ color: "blue" }}> "li" </span>) ;
               </span>{" "}
               <br />
-              <span style={{ color: "gray" }}>// add text to the new li</span>
+              <span style={{ color: "gray" }}>// 2 add text to the new li</span>
               <br />
               <span className="variableName"> newLi.</span>
               <span style={{ color: "blue" }}>textContent</span> =
               <span style={{ color: "purple" }}>"javascript"</span> ;
               <br />
-              <span style={{ color: "gray" }}>// add the new li to ul</span>
+              <span style={{ color: "gray" }}>// 3 add the new li to ul</span>
               <br />
               <span className="variableName"> ul.</span>
               <span style={{ color: "purple" }}>
@@ -3763,9 +3497,6 @@ function JavaScript() {
               </ul>
             </div>
           </div>
-          <p className="clickHere">
-            <a href="">click here</a> for more examples and exercises.
-          </p>
 
           <h4 className="subTittles">Add items using input value :</h4>
           <div
@@ -3793,7 +3524,7 @@ function JavaScript() {
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
               <span className="cssValue">blue</span>; <br />
-              &#125;
+              &#125; <br />
               <span className="cssTag">input </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; padding</span> :{" "}
@@ -3922,9 +3653,9 @@ function JavaScript() {
 
           <p className="clickHere">
             As you can see, when we added a new <b>item</b>, the input value
-            became an empty string, that happened becouse of the{" "}
-            <b>last line </b>in javascript file. <br />
-            <a href="">click here</a> for more examples and exercises.
+            became an empty string, that happened because of the{" "}
+            <b>last line </b>in javascript file.
+            
           </p>
 
           <h4 className="subTittles">remove items :</h4>
@@ -3982,10 +3713,9 @@ function JavaScript() {
               <br />
               <span style={{ color: "gray" }}>// remove cssLi</span>
               <br />
-              <span className="variableName"> document.</span>body.
+              <span className="variableName"> cssLi.</span>
               <span style={{ color: "purple" }}>
-                <span style={{ color: "blue" }}>remove</span>(
-                <span style={{ color: "purple" }}> cssLi </span>) ;
+                <span style={{ color: "blue" }}>remove</span>() ;
               </span>{" "}
             </div>
             <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
@@ -3996,22 +3726,15 @@ function JavaScript() {
               </ul>
             </div>
           </div>
-          <p className="clickHere">
-            in this example, we just deleted the second li using its id, if you
-            want to remove all <b>li</b>s, you can just write <b>li</b> instead
-            of <b>cssLi</b> inside <b>remove()</b> function.
-          </p>
-          <p className="clickHere">
-            <a href="">click here</a> for more examples and exercises.
-          </p>
+          
 
           <h4 className="subTittles">JavaScript Events :</h4>
           <p className="clickHere">
-            we use JavaScript events when we want to jump to another page, there
+            we often use JavaScript events when we want to jump to another page, there
             are a bunch of JavaScript Events, but the most famous is{" "}
             <b>click event</b>, So in this section we will only have an example
-            of <b>click</b> events. <br /> if you want to see examples of other
-            events <a href="">click here</a>.
+            of <b>click</b> event. <br /> 
+            <b className="note">Note : </b> you can also use <b>dblclick</b> , <b>mouseover</b> , <b>mouseleave</b>...etc.
           </p>
           <div
             style={{ display: "flex", justifyContent: "space-around" }}
@@ -4104,10 +3827,7 @@ function JavaScript() {
           </div>
           <p className="clickHere">
             As you can see, when you click on the button you will see that the
-            color of h2 will get changed.
-          </p>
-          <p className="clickHere">
-            <a href="">click here</a> for more examples and exercises.
+            color of h2 will change.
           </p>
         </div>
         <div className="addPaddingToSection" id="Exercises">
@@ -4193,7 +3913,7 @@ function JavaScript() {
                   >
                     <option value="selectOperation">Select Operation</option>
                     <option value="addition">Addition (+)</option>
-                    <option value="substraction">Substraction (-)</option>
+                    <option value="subtraction">Subtraction (-)</option>
                     <option value="multiplication">Multiplication (*)</option>
                     <option value="division">Division (/)</option>
                   </select>
@@ -4443,16 +4163,14 @@ function JavaScript() {
             </a>
           </div>
         </div>
-        <p className="clickHere">
-          <a href="">click here</a> for more examples and exercises.
-        </p>
+        
         <div className="addPaddingToSection" id="javascriptQuiz">
           <h3 className="sectionTittle">Quiz</h3>
           <p className="clickHere">
             <b className="note">Note : </b> Make sure that you have read the
             introduction of every Concept we discussed about above before you
             start this Quiz. <br />
-            So, when you complete all of these questions, click on{" "}
+            So, when you complete all of those questions, click on{" "}
             <b className="note">i'm Done</b> button to display the result
             immediately.
           </p>
