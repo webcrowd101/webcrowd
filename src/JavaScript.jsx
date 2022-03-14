@@ -239,18 +239,26 @@ function JavaScript() {
     javascriptQuizScore = 0;
   };
 
-  const refleshCurrentPage = () => {
+  const refleshCurrentPage = (e) => {
     $(".fourth").addClass("active");
     if (show && window.innerWidth < 871) {
       document.querySelector(".Sidebar").style.width = "40px";
       document.querySelector(".Sidebar ul").style.display = "none";
-      document.querySelector(".Content").style.opacity = "1";
+      document.querySelector(".Content").style.display = "block";
       document.querySelector(".OpenSideBar").style.margin = "0px";
-
+      document.querySelector(".Content").style.opacity = "1";
       hide(false);
     }
-  };
 
+    document.querySelectorAll(".List li").forEach((item) => {
+      item.style.border = "none";
+      item.style.background = "none";
+    });
+    e.target.style.border = "1px solid #0b0453";
+
+    e.target.style.backgroundColor = "#b0baff";
+    e.target.classList.add("activatedLi");
+  };
   window.history.pushState(null, "", window.location.href);
   window.onpopstate = function () {
     window.history.pushState(null, "", window.location.href);
@@ -469,7 +477,7 @@ function JavaScript() {
       <div className="Sidebar">
         {/* <DehazeIcon onClick={ShowHide} className="showSideBar" /> */}
         <DehazeIcon onClick={ShowHide} className="OpenSideBar" />
-        <ul>
+        <ul className="List">
           <a onClick={refleshCurrentPage} href="#introduction">
             <li>Introduction</li>
           </a>

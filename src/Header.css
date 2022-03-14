@@ -87,7 +87,6 @@
   .sections {
     background-color: #0a0453;
     width: 100vw;
-    /* padding: 5px 0; */
   }
   .list {
     float: right !important;
@@ -100,8 +99,6 @@
     color: white !important;
   }
 
-  .nameOfWeb{
-    font-size:14px;
-  }
+  
 }
 

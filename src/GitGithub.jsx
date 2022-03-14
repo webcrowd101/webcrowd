@@ -4,20 +4,18 @@ import "./GitGithub.css";
 
 function GitGithub() {
   return (
-
     <div className="gitGithub">
-      
       <h3>Introduction :</h3>
       <p>
         Git is an open source and free distributed version control system allows
-        you to save and track changes on your project on a platform called
-        github. you can also work as a team so that every member works on its
-        own part of project and save changes every time. so that others members
-        can track the whole changes of project. So in this article we are going
-        to be discussing about the whole process, but we will consider that you
-        as a self-worker (work on your own project). So, using git you can
-        deploy your own project on github using push command and download others
-        project on your device using pull command.
+        you to save and track changes of your project on a platform called
+        <b>github</b>. you can also work as a team so that every member works on
+        its own part of project and save changes every time, so that others
+        members can track the whole changes of project. in this article we
+        are going to be discussing about the whole process, but we will consider
+        that you as a self-worker (work on your own project). So, using git you
+        can deploy your own project on github using push command and download
+        others project on your device using pull command.
       </p>
       <div className="impor">
         <span>
@@ -50,7 +48,7 @@ function GitGithub() {
         <img src="third.png" alt="" />
       </div>
       <strong>
-        5 : click on main and create a new branch named master ( choose master
+        5 : click on main and create a new branch, name it master ( choose master
         instead of main ).
       </strong>
       <div className="git__push__explanation">
@@ -87,7 +85,7 @@ function GitGithub() {
         <img src="ninth.png" alt="" />
       </div>
       <strong>
-        14 : keep typing cd folderName till you reach out the targeted forder (
+        14 : keep typing cd folderName till you reach out the targeted folder (
         the folder that includes html css js files ). ( THE FINAL PATH IS
         FOLDER'S PATH ).
       </strong>
@@ -118,71 +116,60 @@ function GitGithub() {
         can type at this tip : git commit -m "sidebar added successfully".
       </p>
       <strong>
-        18 : git push https://github.com/***********/myProject.git master
-        (So that the link between push and master is the link you copied from
-        github ).
+        18 : git push https://github.com/***********/myProject.git master (So
+        that the link between push and master is the link you copied from github
+        ).
       </strong>
       <div className="git__push__explanation">
         <img src="fourteen.png" alt="" />
       </div>
       <p>
-        if you the following message showed up :{" "}
-        <span className='error'>
+        if the following message showed up :{" "}
+        <span className="error">
           error: failed to push some refs to
           'https://github.com/***********/myProject.git'
-        </span>.{" "}
-        try this command :{" "}
-        <span className='error'>
+        </span>
+        . try this command :{" "}
+        <span className="error">
           git push https://github.com/***********/myProject.git --force
-        </span>.{" "}
+        </span>
+        .{" "}
       </p>
       <strong>
         19 : wait a few seconds till deployment get finished then back to github
         and refresh page, and congratulation your project deployed successfully.
       </strong>
 
-      <p>
-        if you came across any issues,{" "}
-        <a href="" target="_blank">
-          watch out this video on Youtube
-        </a>
-        .
-      </p>
+      
       <h1> download github repository using pull command </h1>
       <p>
         In this section we wont use images, because we already used them in
         deployment section above.
       </p>
+
+      <strong>
+        1 : create a folder in your desktop. ( make sure that its name has no
+        space ).
+      </strong>
+      <strong>2 : right click on it and click on run as administrator.</strong>
+      <strong>3 : click yes.</strong>
+      <strong>4 : type cd .. and click enter ( do it two times ).</strong>
+      <strong>
+        5: keep typing cd folderName till you reach out the targeted folder (
+        the folder that includes html css js files ).
+      </strong>
+      <strong>
+        6 : type git init to initialize git repository ( back to your folder and
+        make sure that it includes .git folder ).
+      </strong>
+      <strong>
+        7 : type the following command : git pull
+        https://github.com/*************/firstProject.git master
+      </strong>
+      <strong>8 : back to your folder and check it out.</strong>
       
-        <strong>
-          1 : create a folder in your desktop. ( make sure that its name has no
-          space ).
-        </strong>
-        <strong>2 : right click on it and click on run as administrator.</strong>
-        <strong>3 : click yes.</strong>
-        <strong>4 : type cd .. and click enter ( do it two times ).</strong>
-        <strong>
-          5: keep typing cd folderName till you reach out the targeted forder (
-          the folder that includes html css js files ).
-        </strong>
-        <strong>
-          6 : type git init to initialize git repository ( back to your folder
-          and make sure that it includes .git folder ).
-        </strong>
-        <strong>
-          7 : type the following command : git pull
-          https://github.com/*************/firstProject.git master
-        </strong>
-        <strong>8 : back to your folder and check it out.</strong>
-        <p>
-          if you came across any issues,{" "}
-          <a href="" target="_blank">
-            watch out this video on Youtube
-          </a>
-          .
-        </p>
-      
-      <Footer/>
+
+      <Footer />
     </div>
   );
 }

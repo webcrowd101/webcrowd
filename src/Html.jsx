@@ -225,7 +225,7 @@ function Html() {
             can build the Structure of your Entire Website. Scroll down to
             figure out the most of these Elements. <br />
             <span className="instruction">Instruction :</span> Here is how to
-            create HTML file, and how to use <i>"live server exetension"</i>{" "}
+            create HTML file, and how to use <i>"live server extension"</i>{" "}
             <a href="">click here</a>.
             <br />
             <span className="importants">Important : </span> Keep in mind that
@@ -283,14 +283,14 @@ function Html() {
         <div className="addPaddingToSection" id="formattingElements">
           <h3 className="sectionTittle">Formatting Elements</h3>
           <p className="clickHere">
-            you can change the format of any element using the followinhg tags :
+            you can change the format of any element using the following tags :
           </p>
           <div className="codeSection">
             {" "}
             <div className="inputSection">
               &lt;<span className="tag">b</span>&gt; this is bold &lt;
               <span className="tag">/b</span>&gt; <br /> &lt;
-              <span className="tag">i</span>&gt; this is btalic &lt;
+              <span className="tag">i</span>&gt; this is italic &lt;
               <span className="tag">/i</span>&gt; <br />
               &lt;
               <span className="tag">sub</span>&gt; this is sub &lt;
@@ -465,7 +465,7 @@ function Html() {
           </div>
           <p className="clickHere">
             <b className="note">Note : </b> You can also save image inside your
-            desktop then instead of typing <b>image adress</b> you can type{" "}
+            desktop then instead of typing <b>image address</b> you can type{" "}
             <b>the name of image and its extension </b> like the following :{" "}
             <b>&lt;img src="imageName.extension</b> (the extensions like jpg,
             png, etc..), makes sure that the image is in the same folder that
@@ -548,7 +548,7 @@ function Html() {
           <p className="clickHere">
             we often use <b>&lt;input&gt;</b> tag for registration purposes,
             because this tag is where we put out information such Full
-            name,Email and Password...etc. <br /> we can integrat multiple
+            name,Email and Password...etc. <br /> we can integrate multiple
             attributes to this tag, but the most popular are{" "}
             <b>type & placeholder</b>.
           </p>
@@ -602,7 +602,7 @@ function Html() {
           </div>
           <p className="clickHere">
             <b className="note">Note : </b> When it comes to Email, you are
-            allowed to enter Name, not only Eamil. that's because we didn't
+            allowed to enter Name, not only Email. that's because we didn't
             surround all those tags with <b>form</b> tag. <br />
             there are many others of input types like{" "}
             <b>number, radio, checkbox, button, range...etc.</b>

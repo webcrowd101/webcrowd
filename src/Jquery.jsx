@@ -126,15 +126,25 @@ function Jquery() {
     return $(".Modal").show();
   };
 
-  const refleshCurrentPage = () => {
+  const refleshCurrentPage = (e) => {
     $(".fifth").addClass("active");
     if (show && window.innerWidth < 871) {
       document.querySelector(".Sidebar").style.width = "40px";
       document.querySelector(".Sidebar ul").style.display = "none";
-      document.querySelector(".Content").style.opacity = "1";
+      document.querySelector(".Content").style.display = "block";
       document.querySelector(".OpenSideBar").style.margin = "0px";
+      document.querySelector(".Content").style.opacity = "1";
       hide(false);
     }
+
+    document.querySelectorAll(".List li").forEach((item) => {
+      item.style.border = "none";
+      item.style.background = "none";
+    });
+    e.target.style.border = "1px solid #0b0453";
+
+    e.target.style.backgroundColor = "#b0baff";
+    e.target.classList.add("activatedLi");
   };
 
   window.history.pushState(null, "", window.location.href);
@@ -164,7 +174,7 @@ function Jquery() {
     $(".h3Element").html("this is new h3 text");
   };
   const doubleClickEvent = () => {
-    $(".para").html("this is new h3 text");
+    $(".para").html("this is new p text");
   };
 
   const hideElement = () => {
@@ -186,7 +196,7 @@ function Jquery() {
     $(".slidedH1").slideUp(3000);
   };
   const slideToggleElement = () => {
-    $(".slideToggleH1").slideToggle();
+    $(".slideToggleH1").slideToggle(2000);
   };
   const fadeOutElement = () => {
     $(".fadeOutH1").fadeOut(2000);
@@ -255,6 +265,8 @@ function Jquery() {
     }
   };
 
+  
+
   //show Password
   let passwordSituation = true;
   const showPassword = () => {
@@ -285,7 +297,7 @@ function Jquery() {
       </div>
       <div className="Sidebar">
         <DehazeIcon onClick={ShowHide} className="OpenSideBar" />
-        <ul>
+        <ul className="List">
           <a onClick={refleshCurrentPage} href="#introduction">
             <li>Introduction</li>
           </a>
@@ -342,10 +354,10 @@ function Jquery() {
       </div>
       <div className="Content">
         <div id="introduction" className="addPaddingToSection">
-          <h3 className="sectionTittle">introdution</h3>
+          <h3 className="sectionTittle">introduction</h3>
           <p className="clickHere">
             Jquery is a JavaScript library that allows us to{" "}
-            <b>write less and do more</b>. all of things you do with jquery, it
+            <b>write less and do more</b>. all of the things you do with jquery
             can be done also using JavaScript, but Jquery seems shorter and more
             powerful. <br />
             this example shows you how to change element's color using
@@ -365,9 +377,10 @@ function Jquery() {
           </p>
           <p className="clickHere">
             {" "}
-            let'sassume we have &lt;<span className="variableName">h2</span>&gt;
-            web crowd &lt;<span className="variableName">/h2</span>&gt; in html.
-            an we want to change its color to red using JQEURY and JavaScript.
+            let's assume we have &lt;<span className="variableName">h2</span>
+            &gt; web crowd &lt;<span className="variableName">/h2</span>&gt; in
+            html. an we want to change its color to red using JQUERY and
+            JavaScript.
           </p>
 
           <div
@@ -398,16 +411,16 @@ function Jquery() {
           <p className="clickHere">
             the Jquery code does the same as JavaScript, but Jquery sounds
             shorter. but this doesn't mean that we need to give up on
-            JavaScript, because it can do many thing that Jquery can't. <br />
+            JavaScript, because it can do many things that Jquery can't. <br />
             So, in this section we will discuss about the most useful functions
-            in Jqeury which help us write less and do more.
+            in Jquery which help us write less and do more.
           </p>
         </div>
         <div id="htmlFunction" className="addPaddingToSection">
           <h3 className="sectionTittle">html()</h3>
           <p className="clickHere">
-            this fuction does the same as <b>textContent</b> in JavaScript, it
-            changes the element text.
+            this function does the same as <b>textContent</b> in JavaScript, it
+            changes the element's text.
           </p>
           <div
             style={{ display: "flex", justifyContent: "space-around" }}
@@ -453,9 +466,6 @@ function Jquery() {
               <h2>this is new h2 text</h2>
             </div>
           </div>
-          <p className="clickHere">
-            for more examples and exercises <a href="">click here</a>.
-          </p>
         </div>
         <div id="propFunction" className="addPaddingToSection">
           <h3 className="sectionTittle">prop()</h3>
@@ -507,7 +517,7 @@ function Jquery() {
             <h4 className="inhtmlcssjsbroSections afterMedia">JQUERY</h4>
             <div className="inputSection">
               <span className="declarationKey">$</span>(
-              <span className="variableName"> "h2" </span>).
+              <span className="variableName"> "input" </span>).
               <span className="declarationKey">prop</span>(
               <span className="variableName"> "placeholder" </span> ,
               <span className="variableName">
@@ -529,16 +539,13 @@ function Jquery() {
               />
             </div>
           </div>
-          <p className="clickHere">
-            for more examples and exercises <a href="">click here</a>.
-          </p>
         </div>
         <div id="clickFunction" className="addPaddingToSection">
           <h3 className="sectionTittle">click()</h3>
 
           <p className="clickHere">
-            this fuction accepts another function (callback function) that runs
-            once we click on element that we assign <b>click()</b> to.
+            this function accepts another function (callback function) that runs
+            once we <b>click</b> on element that we assign <b>click()</b> to.
           </p>
 
           <div
@@ -598,16 +605,14 @@ function Jquery() {
               <button onClick={changeH3Color}>click me</button>
             </div>
           </div>
-          <p className="clickHere">
-            for more examples and exercises <a href="">click here</a>.
-          </p>
         </div>
         <div id="dblclickFunction" className="addPaddingToSection">
           <h3 className="sectionTittle">dblclick()</h3>
 
           <p className="clickHere">
-            this fuction accepts another function (callback function) that runs
-            once we click on element that we assign <b>click()</b> to.
+            this function also accepts another function (callback function) that
+            runs once we <b>double click</b> on element that we assign{" "}
+            <b>click()</b> to.
           </p>
 
           <div
@@ -625,7 +630,7 @@ function Jquery() {
               &lt;<span className="tag">/p</span>&gt; <br />
               <br />
               &lt;<span className="tag">button</span>&gt;
-              <span> click me </span>
+              <span> double click on me </span>
               &lt;<span className="tag">/button</span>&gt;
             </div>
             <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
@@ -669,16 +674,13 @@ function Jquery() {
               </button>
             </div>
           </div>
-          <p className="clickHere">
-            for more examples and exercises <a href="">click here</a>.
-          </p>
         </div>
         <div id="hideFunction" className="addPaddingToSection">
           <h3 className="sectionTittle">hide()</h3>
 
           <p className="clickHere">
-            this fuction does the same as <b>display = "none"</b> in JavaScript.
-            it disappears the element.
+            this function does the same as <b>display = "none"</b> in
+            JavaScript. it disappears the element.
           </p>
 
           <div
@@ -735,16 +737,14 @@ function Jquery() {
               </p>
             </div>
           </div>
-          <p className="clickHere">
-            for more examples and exercises <a href="">click here</a>.
-          </p>
         </div>
         <div id="showFunction" className="addPaddingToSection">
           <h3 className="sectionTittle">show()</h3>
 
           <p className="clickHere">
-            this fuction is the opposite of hide(), it appears the element, but
-            the element must be hidden (display: none in css).
+            this function is the opposite of <b>hide()</b>, it appears the
+            element, but the element must be hidden (<b>display: none</b> in
+            css).
           </p>
 
           <div
@@ -806,16 +806,13 @@ function Jquery() {
               </div>
             </div>
           </div>
-          <p className="clickHere">
-            for more examples and exercises <a href="">click here</a>.
-          </p>
         </div>
         <div id="toggleFunction" className="addPaddingToSection">
           <h3 className="sectionTittle">toggle()</h3>
 
           <p className="clickHere">
-            this fuction combines between show() and hide() functions. it
-            switches between them at every click on button.
+            this function toggles between <b>show()</b> and <b>hide()</b>{" "}
+            functions. it switches between them at every click on button.
           </p>
 
           <div
@@ -872,17 +869,14 @@ function Jquery() {
               </div>
             </div>
           </div>
-          <p className="clickHere">
-            for more examples and exercises <a href="">click here</a>.
-          </p>
         </div>
         <div id="slideUpFunction" className="addPaddingToSection">
           <h3 className="sectionTittle">slideUp()</h3>
 
           <p className="clickHere">
-            this fuction disappears a particular element smoothly from the
+            this function disappears a particular element smoothly from the
             bottom to the top. you can also specify the sliding duration =&gt;
-            slideUp(speed in milliseconds).
+            <b>slideUp(speed in milliseconds)</b>.
           </p>
 
           <div
@@ -949,11 +943,8 @@ function Jquery() {
             </div>
           </div>
           <p className="clickHere">
-            2000 representes the amount of milliseconds that sliding takes to
+            2000 represents the amount of milliseconds that sliding takes to
             finish.
-          </p>
-          <p className="clickHere">
-            for more examples and exercises <a href="">click here</a>.
           </p>
         </div>
 
@@ -961,8 +952,8 @@ function Jquery() {
           <h3 className="sectionTittle">slideDown()</h3>
 
           <p className="clickHere">
-            this fuction is the opposite of slideUp(). but you should first
-            apply <b>slideUp()</b> on the element.
+            this function is the opposite of <b>slideUp()</b>. but you should
+            first apply <b>slideUp()</b> on the element.
           </p>
 
           <div
@@ -1003,7 +994,6 @@ function Jquery() {
               <span className="cssProperty">&nbsp;&nbsp; padding</span> :{" "}
               <span className="cssValue">20px 0</span>; <br />
               &#125; <br />
-              <br />
               <span className="cssTag">button </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; margin</span> :{" "}
@@ -1060,18 +1050,17 @@ function Jquery() {
             </div>
           </div>
           <p className="clickHere">
-            As you can see, when we click on slideUp button it takes 3000ms (3s)
-            to finish the sliding. while slideDown takes 2000ms.
-          </p>
-          <p className="clickHere">
-            for more examples and exercises <a href="">click here</a>.
+            As you can see, when we click on <b>slideUp</b> button it takes
+            3000ms (3s) to finish the sliding. while <b>slideDown</b> takes
+            2000ms (2s).
           </p>
         </div>
         <div id="slideToggleFunction" className="addPaddingToSection">
           <h3 className="sectionTittle">slideToggle()</h3>
 
           <p className="clickHere">
-            this fuction combines between slideUp and slideDown functions.
+            this function toggles between <b>slideUp</b> and <b>slideDown</b>
+            functions.
           </p>
 
           <div
@@ -1137,15 +1126,12 @@ function Jquery() {
               <button onClick={slideToggleElement}>click me</button>
             </div>
           </div>
-          <p className="clickHere">
-            for more examples and exercises <a href="">click here</a>.
-          </p>
         </div>
         <div id="fadeOutFunction" className="addPaddingToSection">
           <h3 className="sectionTittle">fadeOut()</h3>
 
           <p className="clickHere">
-            this fuction makes the element fades out (disappears). and it also
+            this function makes the element fades out (disappears). and it also
             accepts the fading duration (time in milliseconds).
           </p>
 
@@ -1212,16 +1198,13 @@ function Jquery() {
               <button onClick={fadeOutElement}>click me</button>
             </div>
           </div>
-          <p className="clickHere">
-            for more examples and exercises <a href="">click here</a>.
-          </p>
         </div>
         <div id="fadeInFunction" className="addPaddingToSection">
           <h3 className="sectionTittle">fadeIn()</h3>
 
           <p className="clickHere">
-            this fuction is the opposite of fadeOut(). but you should first
-            apply <b>fadeOut()</b> on the element.
+            this function is the opposite of <b>fadeOut()</b>. but you should
+            first apply <b>fadeOut()</b> on the element.
           </p>
 
           <div
@@ -1262,7 +1245,6 @@ function Jquery() {
               <span className="cssProperty">&nbsp;&nbsp; padding</span> :{" "}
               <span className="cssValue">20px 0</span>; <br />
               &#125; <br />
-              <br />
               <span className="cssTag">button </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; margin</span> :{" "}
@@ -1288,7 +1270,6 @@ function Jquery() {
               <span className="variableName"> "h1" </span>).
               <span className="declarationKey">fadeOut</span>(2000) ; <br />{" "}
               &#125; ) <br />
-              <br />
               <span className="declarationKey">$</span>(
               <span className="variableName"> ".btn" </span>).
               <span className="declarationKey">click</span>(
@@ -1318,16 +1299,13 @@ function Jquery() {
               </button>
             </div>
           </div>
-
-          <p className="clickHere">
-            for more examples and exercises <a href="">click here</a>.
-          </p>
         </div>
         <div id="fadeToggleFunction" className="addPaddingToSection">
           <h3 className="sectionTittle">fadeToggle()</h3>
 
           <p className="clickHere">
-            this fuction combines between fadeIn and fadeOut functions.
+            this function toggles between <b>fadeIn()</b> and <b>fadeOut()</b>{" "}
+            functions.
           </p>
 
           <div
@@ -1399,15 +1377,12 @@ function Jquery() {
               <button onClick={fadeToggleElement}>click me</button>
             </div>
           </div>
-          <p className="clickHere">
-            for more examples and exercises <a href="">click here</a>.
-          </p>
         </div>
         <div id="animateFunction" className="addPaddingToSection">
           <h3 className="sectionTittle">animate()</h3>
 
           <p className="clickHere">
-            this fuction allows you to add some animations in your web page.
+            this function allows you to add some animations in your web page.
           </p>
 
           <div
@@ -1420,9 +1395,9 @@ function Jquery() {
           <div className="codeSection">
             <h4 className="inhtmlcssjsbroSections afterMedia">HTML FILE</h4>
             <div className="inputSection">
-              &lt;<span className="tag">div</span>&gt;
+              &lt;<span className="tag">h3</span>&gt;
               <span> web crowd </span>
-              &lt;<span className="tag">/div</span>&gt;
+              &lt;<span className="tag">/h3</span>&gt;
               <br />
               &lt;<span className="tag">button</span>&gt;
               <span> start animation </span>
@@ -1431,7 +1406,7 @@ function Jquery() {
             </div>
             <h4 className="inhtmlcssjsbroSections afterMedia">CSS FILE</h4>
             <div className="inputSection">
-              <span className="cssTag">div </span>
+              <span className="cssTag">h3 </span>
               &#123; <br />{" "}
               <span className="cssProperty">&nbsp;&nbsp; color</span> :{" "}
               <span className="cssValue">purple</span>; <br />
@@ -1460,7 +1435,7 @@ function Jquery() {
               <span className="declarationKey">click</span>(
               <span style={{ color: "blue" }}> function()</span> &#123; <br />
               <span className="declarationKey">$</span>(
-              <span className="variableName"> "div" </span>).
+              <span className="variableName"> "h3" </span>).
               <span className="declarationKey">animate</span>( <br /> &#123;{" "}
               <br /> <span className="cssProperty">height</span> :{" "}
               <span className="cssValue">"100px"</span> , <br />
@@ -1472,7 +1447,7 @@ function Jquery() {
             </div>
             <h4 className="inhtmlcssjsbroSections afterMedia">BROWSER</h4>
             <div className="outputSection">
-              <div
+              <h3
                 className="animatedDiv"
                 style={{
                   color: "purple",
@@ -1481,7 +1456,7 @@ function Jquery() {
                 }}
               >
                 web crowd
-              </div>
+              </h3>
               <button onClick={animateElement}>start animation</button>
             </div>
           </div>
@@ -1522,24 +1497,17 @@ function Jquery() {
               <li disabled="true">left</li>
               <li disabled="true">right</li>
               <li disabled="true">top</li>
-              <li disabled="true">letterSpecing</li>
+              <li disabled="true">letterSpacing</li>
               <li disabled="true">wordSpacing</li>
               <li disabled="true">lineHeight</li>
               <li disabled="true">textIndent</li>
             </ul>
           </p>
-          <p className="clickHere">
-            <b className="note">Note : </b> you can also add a callback function
-            after animation duration like <a href="">this</a>
-          </p>
-          <p className="clickHere">
-            for more examples and exercises <a href="">click here</a>.
-          </p>
+          
         </div>
         <div id="Exercises" className="addPaddingToSection">
           <div style={{ width: "100%" }}>
             <h3 className="sectionTittle">Exercises</h3>
-            
           </div>
           <div className="exercise">
             <h3
@@ -1793,7 +1761,7 @@ function Jquery() {
             <b className="note">Note : </b> Make sure that you have read the
             introduction of every Concept we discussed about above before you
             start this Quiz. <br />
-            So, when you complete all of these questions, click on{" "}
+            So, when you complete all of those questions, click on{" "}
             <b className="note">i'm Done</b> button to display the result
             immediately.
           </p>
