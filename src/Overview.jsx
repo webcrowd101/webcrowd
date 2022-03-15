@@ -15,6 +15,10 @@ function Overview() {
   const [show, hide] = useState(false);
   let history = useHistory();
 
+   useEffect(() => {
+     document.title = "Web Crowd - OVERVIEW";
+   }, []);
+
   //show and hide
   const ShowHide = () => {
     if (!show) {

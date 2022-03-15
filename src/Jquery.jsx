@@ -18,6 +18,11 @@ function Jquery() {
   const [show, hide] = useState(false);
   let history = useHistory();
 
+
+   useEffect(() => {
+     document.title = "Web Crowd - JQUERY";
+   }, []);
+
   //show and hide
   const ShowHide = () => {
     if (!show) {

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState, useEffect }from "react";
 import Footer from "./Footer";
 import "./GitGithub.css";
 
 function GitGithub() {
+   useEffect(() => {
+     document.title = "Web Crowd - Git & Github";
+   }, []);
   return (
     <div className="gitGithub">
       <h3>Introduction :</h3>

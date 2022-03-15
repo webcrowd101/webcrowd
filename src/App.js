@@ -22,6 +22,7 @@ import GitGithub from './GitGithub';
 import Ebooks from './Ebooks';
 import Privacy from './Privacy';
 import Terms from './Terms';
+import Productivity from './Productivity';
 
 function App() {
  
@@ -49,11 +50,14 @@ function App() {
           <Route exact path="/eBooks">
             <Ebooks />
           </Route>
-          <Route exact path="/PRIVACY">
+          <Route exact path="/privacy">
             <Privacy />
           </Route>
-          <Route exact path="/TERMS">
+          <Route exact path="/terms">
             <Terms />
+          </Route>
+          <Route exact path="/productivity">
+            <Productivity />
           </Route>
           <Route exact path="/OVERVIEW">
             <Header />

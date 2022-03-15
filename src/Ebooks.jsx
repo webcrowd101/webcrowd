@@ -13,6 +13,11 @@ import {
 import Footer from "./Footer";
 function Ebooks() {
   let history = useHistory();
+
+   useEffect(() => {
+     document.title = "Web Crowd - eBooks";
+   }, []);
+
   useEffect((e) => {
     localStorage.setItem(
       "current",
@@ -85,12 +90,12 @@ function Ebooks() {
         </p>
         <h3>Reason 2 : </h3>
         <p>
-          E-books are super flexible, now, I’m a real fan of hardcopy books
+          E-books are super flexible, now, I'm a real fan of hardcopy books
           sitting on in the moment just pure concentration in one task on one
           task reading a hardcopy book for working student that is pure bliss
           like I will take that anytime I can get it, but the reality is often
-          we are busy our lives are full we’ve got lots on the go and you can
-          listen to podcasts and audio books while doing other things, now, I’m
+          we are busy our lives are full we've got lots on the go and you can
+          listen to podcasts and audio books while doing other things, now, I'm
           thinking specifically, chores, routines task, things like tidying the
           house cooking cleaning maybe you are commuting or doing a long drive
           and exercising you can pop that on you know it is similar to what we
@@ -121,25 +126,25 @@ function Ebooks() {
         <h1>HOW DO WE GO ABOUT GETTING HANDS ON THEM?</h1>
         <p>
           Then interesting things that most of them are actually free, and
-          that’s good news, isn’t it?, we all like to read and improve our
-          writing by reading other people’s work, getting some inspiration, if
-          you are a member of your local library, if you aren’t not, I highly
-          recommend you do, you’re probably interested to find that the library
+          that's good news, isn't it?, we all like to read and improve our
+          writing by reading other people's work, getting some inspiration, if
+          you are a member of your local library, if you aren't not, I highly
+          recommend you do, you're probably interested to find that the library
           has signed up to different online platforms that offer not only
-          eBooks, but audiobooks ,and they’re free, because the library is
+          eBooks, but audiobooks ,and they're free, because the library is
           paying for this service for its own members, so all you need to do is
-          just enquire with your local library and don’t forget you can also
+          just enquire with your local library and don't forget you can also
           apply to become a member of your state region library or even your
-          national library they all have these different platforms so tat’s
+          national library they all have these different platforms so tat's
           three levels that you can get access to, probably of free audiobooks
           so check it out for example at my library they use the platform borrow
           box. Now, for podcasts, podcasts is a whole another universe there ‘s
           lots of free shows from short shows to long shows to serial shows,
-          it’s a whole another world to explore and most if these are free, all
+          it's a whole another world to explore and most if these are free, all
           you need to do is to download an app so you can start listening
           subscribing and enjoying. Now depending on your type of phone like
-          whether it’s Android or Mac you are going to look for you have got
-          Apple podcasts and you have also google podcast and there’s other lots
+          whether it's Android or Mac you are going to look for you have got
+          Apple podcasts and you have also google podcast and there's other lots
           of different listening platforms including Spotify, but I would
           suggest to start there and see how you go. Now, come to the paid
           options, this is mostly for eBooks there are some paid podcasts out
@@ -147,19 +152,19 @@ function Ebooks() {
           books and again you are going to go to different platforms to get
           these and you will pay for set books or you will probably pay per
           month of membership on these platforms, Apple include the plat books,
-          which is google platform or you’re going to have Apple books, then
-          there’s the amazon company Audible, which is all about audiobooks and
+          which is google platform or you're going to have Apple books, then
+          there's the amazon company Audible, which is all about audiobooks and
           amazon also has Kindle and if you buy a kindle books sometimes when
-          you look in the purchasing options there’s a box where you can tick
+          you look in the purchasing options there's a box where you can tick
           purchase the audible version of the box xo you can do it in a
-          back-back way through kindle if you’ve already got a kindle so there
-          you go that’s everything you need to know about listening to podcasts
-          and audiobooks . So there you go that’s everything you need to know
+          back-back way through kindle if you've already got a kindle so there
+          you go that's everything you need to know about listening to podcasts
+          and audiobooks . So there you go that's everything you need to know
           about audiobooks and podcasts and just to recap, the main reason why I
           think these you are going to love it is because number one is so
-          personal, it’s having a direct conversation, they are also very
+          personal, it's having a direct conversation, they are also very
           flexible to do with other things in your life and thirdly it can be
-          really fast you can turn through the book and there’s different ways
+          really fast you can turn through the book and there's different ways
           to get your hands on them mostly free but they are some paid options
           too, so I really hope that this gets you inspired and excited ti try
           these wonderful different listening ways of getting into life stories
@@ -177,7 +182,7 @@ function Ebooks() {
         <p>
           In the story of Richard Mayhew, a person with an ordinary normal life,
           but he has kind of pure good heart, his life will completely change
-          after coming across a girl bleeding in the sidewalk, he couldn’t
+          after coming across a girl bleeding in the sidewalk, he couldn't
           ignore her, and he stopped to help her, that act of kindness will let
           him live in a world he never believed existed.
         </p>
@@ -194,7 +199,7 @@ function Ebooks() {
           This one is kind of medical book, the author clarified the and recount
           the story of cancer, research and treatments, also he discussed its
           development overtime, he started from the very beginning where
-          humanity didn’t know anything about cancer till the last thing we know
+          humanity didn't know anything about cancer till the last thing we know
           about it today.
         </p>
         <b>The Future of Medicine, by James Temperton: </b>

@@ -2,7 +2,6 @@ import React from "react";
 import "./ContentFooter.css";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import {
@@ -23,7 +22,6 @@ function ContentFooter() {
             <FacebookIcon className="icon-facebook" />
             <InstagramIcon className="icon-instagram" />
             <TwitterIcon className="icon-twitter" />
-            <LinkedInIcon className="icon-linkedin" />
             <YouTubeIcon className="icon-youtube" />
           </div>
         </div>
@@ -35,7 +33,7 @@ function ContentFooter() {
             <Link className="ContentFooter__titles" to="">
               eBooks
             </Link>
-            <Link className="ContentFooter__titles" to="">
+            <Link className="ContentFooter__titles" to="/productivity">
               Productivity
             </Link>
 
@@ -48,10 +46,10 @@ function ContentFooter() {
               Contact
             </a>
 
-            <Link className="ContentFooter__titles" to="/PRIVACY">
+            <Link className="ContentFooter__titles" to="/privacy">
               Privacy Policy
             </Link>
-            <Link className="ContentFooter__titles" to="/TERMS">
+            <Link className="ContentFooter__titles" to="/terms">
               Terms of use
             </Link>
           </div>

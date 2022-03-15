@@ -20,6 +20,10 @@ function Html() {
   const [show, hide] = useState(false);
   let history = useHistory();
 
+
+  useEffect(() => {
+    document.title = "Web Crowd - HTML5";
+  }, []);
   //show and hide
   const ShowHide = () => {
     if (!show) {

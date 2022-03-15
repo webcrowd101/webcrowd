@@ -17,6 +17,10 @@ import {
 function Main() {
   let history = useHistory();
 
+   useEffect(() => {
+     document.title = "Web Crowd - HOME";
+   }, []);
+
   window.history.pushState(null, "", window.location.href);
   window.onpopstate = function () {
     window.history.pushState(null, "", window.location.href);
@@ -52,22 +56,20 @@ function Main() {
     duration: 2000,
   });
   return (
-    <div className="main" name='main' id="main">
+    <div className="main" name="main" id="main">
       <img src="cover.jpeg" className="cover" alt="" />
       {/* <img src="secondCoverPic.jpeg" className="cover" alt="" /> */}
       <div className="main__header">
         <Link className="main__header__left" to="/">
-          
-            <font
-              className="nameOfWebsite"
-              color="white"
-              size="6"
-              face=" a astro space"
-            >
-              web crowd
-            </font>
-            {/* <img src="logo.png" className="main__logo" alt="" /> */}
-         
+          <font
+            className="nameOfWebsite"
+            color="white"
+            size="6"
+            face=" a astro space"
+          >
+            web crowd
+          </font>
+          {/* <img src="logo.png" className="main__logo" alt="" /> */}
         </Link>
         <ul className="">
           <Link to="/" className="main__header__home">
@@ -95,11 +97,13 @@ function Main() {
             web crowd
           </font>
           {/* <div className="main__top__left__title">WEB CROWD</div> */}
-          <br /><br /><br />
+          <br />
+          <br />
+          <br />
           <div>Your Path to become a Front End Web</div>
           <div> Developer with our community.</div>
           <div>Write Less, Do More.</div>
-          <button className='mainBotton'>
+          <button className="mainBotton">
             <Link to="/OVERVIEW" className="getStartedButton">
               Get Started
             </Link>{" "}
@@ -130,9 +134,9 @@ function Main() {
           >
             <h4>1-Growth & Popularity :</h4>
             <p>
-              In the current time, web development became one of the most
-              Popular Skills you must master as 2021 Survey. it makes you more
-              Creative.
+              In the current time, according to 2022 Survey, web development
+              became one of the most Popular Skills you must master. it makes
+              you more Creative.
             </p>
           </div>
           <div
@@ -152,9 +156,8 @@ function Main() {
           >
             <h4>2-Easy to Learn :</h4>
             <p>
-              When it comes to Programming.Web development's Considered as the
-              Easiest Choose for you, cause you can Learn it Faster than you can
-              Ever Imagine.
+              When it comes to Programming, Web development's considered as the
+              easiest option for you, cause you can learn it faster comparing to others.
             </p>
           </div>
           <div

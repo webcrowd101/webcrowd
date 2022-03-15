@@ -2,7 +2,6 @@ import React from 'react'
 import './Footer.css';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import {
@@ -23,7 +22,6 @@ function Footer() {
               <FacebookIcon className="icon-facebook" />
               <InstagramIcon className="icon-instagram" />
               <TwitterIcon className="icon-twitter" />
-              <LinkedInIcon className="icon-linkedin" />
               <YouTubeIcon className="icon-youtube" />
             </div>
           </div>
@@ -35,7 +33,7 @@ function Footer() {
               <Link className="titles" to="/eBooks">
                 eBooks
               </Link>
-              <Link className="titles" to="">
+              <Link className="titles" to="/productivity">
                 Productivity
               </Link>
 
@@ -47,10 +45,10 @@ function Footer() {
                 Contact
               </a>
 
-              <Link className="titles" to="/PRIVACY">
+              <Link className="titles" to="/privacy">
                 Privacy Policy
               </Link>
-              <Link className="titles" to="/TERMS">
+              <Link className="titles" to="/terms">
                 Terms of use
               </Link>
             </div>

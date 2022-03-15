@@ -1,0 +1,32 @@
+.productivity {
+  display: flex;
+  width: 100vw;
+  margin-top: 7vh !important;
+}
+.productivityContent{
+  width: 90vw;
+}
+.productivityContent>p {
+  line-height: 25px;
+  margin: 10px auto;
+  width: 90vw;
+}
+
+.productivityContent>p::first-letter{
+  margin-left: 20px;
+}
+
+.productivityContent>h3{
+   width:90vw !important;
+   text-align: center;
+   margin: 30px auto;
+   color: #0a0453;
+  background: #0b045352;
+  font-family: 'a astro space';
+  padding: 5px;
+}
+.productivityContent>p>a {
+ color: rgb(202, 38, 66);
+ font-weight: 600;
+}
+

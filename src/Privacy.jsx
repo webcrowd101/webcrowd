@@ -13,6 +13,11 @@ import {
 import Footer from "./Footer";
 function Privacy() {
   let history = useHistory();
+
+   useEffect(() => {
+     document.title = "Web Crowd - privacy";
+   }, []);
+
   useEffect((e) => {
     localStorage.setItem(
       "current",
@@ -144,7 +149,7 @@ function Privacy() {
             here
           </a>
           . <br />
-          Data may be collected for remarketing on the Display Network and the
+          Data may be collected for re-marketing on the Display Network and the
           Search Network via the Ads policy that targets the interests and
           locations of visitors, and this feature can be disabled from{" "}
           <a

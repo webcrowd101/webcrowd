@@ -13,6 +13,10 @@ import {
 import Footer from "./Footer";
 function About() {
   let history = useHistory();
+
+   useEffect(() => {
+     document.title = "Web Crowd - ABOUT";
+   }, []);
   useEffect((e) => {
     localStorage.setItem(
       "current",
@@ -73,9 +77,9 @@ function About() {
               <div>Khalid Fatni</div>
               <i>Junior Data Scientist</i>
               <p>
-                this boy is the fucking craziest person i have ever seen in my
-                whole life. he has no time for loving, he is waiting for rockets
-                exploding. cause he prays.
+                Junior Data Scientist and a college Math Student, I have been
+                working on too many Neural Network projects, interested in AI
+                and extracting information and insights from data.
               </p>
             </div>
           </div>
@@ -87,7 +91,9 @@ function About() {
               <div>Hassan El Amri</div>
               <i>Web developer</i>
               <p>
-                a quick look at this boy, this boy learned html then he applied for NASA, whenever he likes a girl, it's turned out that she is taller than him.
+                I am a web developer, i've made a bunch of clones of social
+                media such as facebook, twitter, youtube ,whatsapp...etc. I am
+                looking forward to build a big App such whatsapp.
               </p>
             </div>
           </div>
@@ -97,9 +103,11 @@ function About() {
             </div>
             <div className="member__info__right">
               <div>Khalid Toustous</div>
-              <i>Jobless</i>
+              <i>Web & Motion Graphic designer </i>
               <p>
-                this boy likes indian girls, because of his exaggerating of watching india movies, he swear that can pick a piece of moon up to his girlfriend because of her birthday.
+                I am a Web and Motion Graphic designer, i have been working on
+                that for 3 years. In addition that, i worked as a motion graphic
+                for 3 years.
               </p>
             </div>
           </div>
@@ -110,9 +118,9 @@ function About() {
             <b>Motion Graphic</b>
             <div className="offers">
               <ul>
-                <li>video motion graphic 10 seconds</li>
-                <li>set an offer</li>
-                <li>set an offer</li>
+                <li>video motion graphics 10 seconds</li>
+                <li>video motion graphics 20 seconds</li>
+                <li>video motion graphics 60 seconds</li>
               </ul>
             </div>
             <button>Apply now</button>
@@ -132,27 +140,29 @@ function About() {
             <b>Web development</b>
             <div className="offers">
               <ul>
-                <li>set an offer</li>
-                <li>set an offer</li>
-                <li>set an offer</li>
+                <li>Simple E-commerce website.</li>
+                <li>Simple Blog.</li>
+                <li>Professional Portfolio.</li>
               </ul>
             </div>
             <button>Apply now</button>
           </div>
-           <div className="card__info">
-            <b>Writing articles</b>
+          <div className="card__info">
+            <b>Math & Programming</b>
             <div className="offers">
               <ul>
-                <li>set an offer</li>
-                <li>set an offer</li>
-                <li>set an offer</li>
+                <li>Real life problems solving using Math.</li>
+                <li>Math and programming problems Solving.</li>
+                <li>
+                  Extracting useful insights from your Data using the latest
+                  technologies.
+                </li>
               </ul>
             </div>
             <button>Apply now</button>
           </div>
-          
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );

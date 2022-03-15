@@ -13,6 +13,11 @@ import {
 import Footer from "./Footer";
 function Faq() {
     let history = useHistory();
+
+     useEffect(() => {
+       document.title = "Web Crowd - FAQ";
+     }, []);
+
   useEffect((e) => {
     localStorage.setItem(
       "current",

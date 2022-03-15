@@ -13,6 +13,11 @@ import {
 import Footer from "./Footer";
 function Terms() {
     let history = useHistory();
+
+     useEffect(() => {
+       document.title = "Web Crowd - terms";
+     }, []);
+
   useEffect((e) => {
     localStorage.setItem(
       "current",
@@ -62,9 +67,9 @@ function Terms() {
         </ul>
       </div>
 
-      <div className="Content faqContent">
+      <div className="Content faqContent termsHeight">
         <h2>Certificate of use</h2>
-        <p style={{ marginBottom: "70px" }}>
+        <p>
           Hello to all the followers and visitors to the site, There is no doubt
           our honorable visitor that you are one of the priorities of the site,
           and we always hope you Get in touch with us and always try to be on
@@ -75,21 +80,14 @@ function Terms() {
           visiting Our <a href="">Facebook page</a> or visit our{" "}
           <a href="https://www.youtube.com/channel/UCi7aWEyuj7NWXB-Wrh5LwAg" target="_blank">
             YouTube channel
-          </a>
-          . Therefore, no visitor or member is allowed to violate the following
-          terms: <br /> 1: Comments may not be used to promote people or
-          organizations. <br />
-          2: It is forbidden to offend other people or entities, whether
-          verbally or otherwise. <br /> 3: It is prohibited to use the blog to
-          promote any extremist, religious or ethnic ideas 4: It is prohibited
-          to put any links to any external sites, whether public or personal
-          sites. In addition, these terms must be adhered to and are not subject
-          to discussion. It is also subject to renewal and change at any time.
-          We hope that everyone will abide by these terms so that the benefit
-          continues for everyone. thank you all.
+          </a>.
         </p>
-        <Footer />
+        
+          <Footer />
+        
+        
       </div>
+      
     </div>
   );
 }

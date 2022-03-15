@@ -1,0 +1,8 @@
+.termsHeight {
+  height: 94vh !important;
+  display: flex;
+  flex-direction: column;
+}
+.termsHeight > p {
+  flex: 1;
+}

@@ -20,6 +20,9 @@ function Css() {
   const [url, setUrl] = useState(window.location.href);
   let history = useHistory();
 
+   useEffect(() => {
+     document.title = "Web Crowd - CSS3";
+   }, []);
   //show and hide
   const ShowHide = () => {
     if (!show) {
@@ -212,9 +215,7 @@ function Css() {
           <a onClick={refleshCurrentPage} href="#flexbox">
             <li>Flexbox</li>
           </a>
-          <a onClick={refleshCurrentPage} href="#grid">
-            <li>Grid</li>
-          </a>
+          
           <a onClick={refleshCurrentPage} href="#animation">
             <li>Animation</li>
           </a>
@@ -401,7 +402,7 @@ function Css() {
             control of the duplicated tag's styling. You may wonder, what is the
             differences between those properties, and when do we use{" "}
             <b>class</b> instead of <b>id</b> or the opposite ?! don't worry,
-            you will find a video explain that{" "}
+            you will find a video explains when we use id instead of class{" "}
             <a href="#" target="_blank">
               here
             </a>
@@ -1772,19 +1773,7 @@ function Css() {
           </p>
         </div>
 
-        <div className="addPaddingToSection" id="grid">
-          <h3 className="sectionTittle">grid</h3>
-          <p className="clickHere">
-            Grid is very similar to flexbox, but it's more confused that's why
-            we prefer to explain that in a video, to make things much clear for
-            you. <br />
-            So,{" "}
-            <a href="" target="_blank">
-              click here
-            </a>{" "}
-            and good luck.
-          </p>
-        </div>
+       
         <div className="addPaddingToSection" id="animation">
           <h3 className="sectionTittle">animation</h3>
           <p className="clickHere">
