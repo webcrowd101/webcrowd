@@ -215,7 +215,7 @@ function Css() {
           <a onClick={refleshCurrentPage} href="#flexbox">
             <li>Flexbox</li>
           </a>
-          
+
           <a onClick={refleshCurrentPage} href="#animation">
             <li>Animation</li>
           </a>
@@ -247,7 +247,10 @@ function Css() {
             file), but it will be better if you create a separated CSS file.{" "}
             <br />
             So, here is how to create CSS file and link it to your HTML file{" "}
-            <a onClick={refleshCurrentPage} href="#">
+            <a
+              href="https://www.youtube.com/watch?v=915oonk1UaQ"
+              target="_blank"
+            >
               click here
             </a>{" "}
             <br />
@@ -403,11 +406,14 @@ function Css() {
             differences between those properties, and when do we use{" "}
             <b>class</b> instead of <b>id</b> or the opposite ?! don't worry,
             you will find a video explains when we use id instead of class{" "}
-            <a href="#" target="_blank">
+            <a
+              href="https://www.youtube.com/watch?v=CknsVN34lck&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=5"
+              target="_blank"
+            >
               here
             </a>
-            , but don't watch it unless you complete the other properties.{" "}
-            <br />
+            . <br />
+            But don't watch it unless you complete the other properties. <br />
             <b className="importants">Important</b> : don't forget to add{" "}
             <b>.</b> before class name in css file and <b>#</b> before id name.{" "}
             <br />
@@ -1178,7 +1184,10 @@ function Css() {
             we can take control of element's position using different ways. such
             as transform,position...etc. So, we won't explain that in this
             section, cause we need the entire web page. to learn it click{" "}
-            <a href="#" target="_blank">
+            <a
+              href="https://www.youtube.com/watch?v=89aVq9hwP8I&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=6"
+              target="_blank"
+            >
               Here
             </a>
           </p>
@@ -1773,7 +1782,6 @@ function Css() {
           </p>
         </div>
 
-       
         <div className="addPaddingToSection" id="animation">
           <h3 className="sectionTittle">animation</h3>
           <p className="clickHere">
@@ -1823,11 +1831,12 @@ function Css() {
                 <span className="cssProperty">&nbsp;&nbsp; width</span>:{" "}
                 <span className="cssValue">30px</span>; <br />
                 <span className="cssProperty">&nbsp;&nbsp; height</span>:{" "}
-                <span className="cssValue">30px</span>; 
+                <span className="cssValue">30px</span>;
                 <br />
                 <span className="cssProperty">
                   &nbsp;&nbsp; animation
-                </span>: <span className="cssValue">animate 4s infinite</span>;{" "} <br />
+                </span>: <span className="cssValue">animate 4s infinite</span>;{" "}
+                <br />
                 &nbsp;&#125; <br /> <br />
                 <span className="keyframes">@keyframes </span>
                 <span className="animation__name">animate </span> &#123; <br />
@@ -1919,7 +1928,8 @@ function Css() {
             Google Adsense, your website must be responsive. this is where{" "}
             <b>Media Query</b> comes in. So, we can't explain that here, you may
             get confused here. <br />
-            this is why we made a video explains that. <a href="">click here</a>.
+            this is why we made a video explains that. <a href="https://www.youtube.com/watch?v=jKzvU_ZB-K0&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=7" target="_blank">click here</a>
+            .
           </p>
         </div>
 
@@ -1949,7 +1959,6 @@ function Css() {
                   type="email"
                   placeholder="Email..."
                   style={{
-                    border: "none",
                     outline: "none",
                     padding: "5px",
                     margin: "5px",
@@ -1960,7 +1969,6 @@ function Css() {
                   type="text"
                   placeholder="Password..."
                   style={{
-                    border: "none",
                     outline: "none",
                     padding: "5px",
                     margin: "5px",
@@ -1987,7 +1995,8 @@ function Css() {
                 </div>
               </div>
               <a
-                href=""
+                href="https://www.youtube.com/watch?v=ce1tTXobkpg&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=18"
+                target="_blank"
                 style={{
                   color: "blue",
                   cursor: "pointer",
@@ -2160,7 +2169,8 @@ function Css() {
                 </table>
               </div>
               <a
-                href=""
+                href="https://www.youtube.com/watch?v=vpaPlONgHKs&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=19"
+                target="_blank"
                 style={{
                   color: "blue",
                   cursor: "pointer",
@@ -2203,7 +2213,8 @@ function Css() {
                 </header>
               </div>
               <a
-                href=""
+                href="https://www.youtube.com/watch?v=KhFQbUEvzrY&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=20"
+                target="_blank"
                 style={{
                   color: "blue",
                   cursor: "pointer",
@@ -2224,9 +2235,9 @@ function Css() {
           <p className="clickHere">
             <b className="note">Note : </b> Make sure that you have read the
             introduction of every Concept we discussed about above before you
-            start this Quiz. <br /> So, when you complete all of those questions, click
-            on <b className="note">i'm Done</b> button to display the result
-            immediately. <br />
+            start this Quiz. <br /> So, when you complete all of those
+            questions, click on <b className="note">i'm Done</b> button to
+            display the result immediately. <br />
           </p>
 
           <div className="cssQuiz__content">

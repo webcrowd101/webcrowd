@@ -407,7 +407,7 @@ function JavaScript() {
   //generateNumbers
   const generateNumbers = () => {
     let numbersContainer = document.querySelector(".numbersContainer");
-    numbersContainer.textContent = Math.floor(Math.random() * 10000);
+    numbersContainer.textContent = Math.floor(Math.random() * 100);
   };
 
   //jsQuiz
@@ -572,7 +572,7 @@ function JavaScript() {
             separated file or within html file. But it will be better if you
             create a separated JavaScript file. here is how to create a
             JavaScript file, and how to link it with html file{" "}
-            <a href="">click here</a>.
+            <a href="https://www.youtube.com/watch?v=N8SZLRqkhm4&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=8" target="_blank">click here</a>.
           </p>
         </div>
         <div className="addPaddingToSection" id="variables">
@@ -596,7 +596,7 @@ function JavaScript() {
             </ul>
             <b className="importants">Important : </b> before you see the
             example bellow, you need to know how to work with the console, if
-            don't, <a href="">click here</a>.
+            don't, <a href="https://www.youtube.com/watch?v=kl61pSQNf3I&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=9" target="_blank">click here</a>.
           </p>
 
           <div className="codeSection">
@@ -1312,7 +1312,7 @@ function JavaScript() {
             you can pass as much parameters as you want, and handle them as you
             like. <br />
             <b className="note">Note : </b>there are three ways for declaring a
-            function. <a href="">click here</a> to figure it out. <br />
+            function. <a href="https://www.youtube.com/watch?v=eWfGqhQg8rw&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=10" target="_blank">click here</a> to figure it out. <br />
           </p>
         </div>
         <div className="addPaddingToSection" id="scope">
@@ -3088,7 +3088,7 @@ function JavaScript() {
             setTimeout() is a function that accepts two parameters(function and
             number of MiliSeconds), so the second function get executed after
             this amount of time. we know this seems little confused. but don't
-            worry, <a href="">this video</a> will explain that.{" "}
+            worry, <a href="https://www.youtube.com/watch?v=thrjQJkyOu4&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=11" target="_blank">this video</a> will explain that.{" "}
           </p>
         </div>
         <div className="addPaddingToSection" id="setInterval">
@@ -3103,7 +3103,7 @@ function JavaScript() {
               </li>
               <li>
                 setInterval() : the callback function get executed repeatedly
-                after we reach the given time. <a href="">click here</a> to see
+                after we reach the given time. <a href="https://www.youtube.com/watch?v=iQQoLUgFOTs&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=12" target="_blank">click here</a> to see
                 an example.
               </li>
             </ul>
@@ -3991,7 +3991,8 @@ function JavaScript() {
               </tr>
             </table>
             <a
-              href=""
+              href="https://www.youtube.com/watch?v=HQsZzPFNvKI&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=21"
+              target="_blank"
               style={{
                 color: "blue",
                 cursor: "pointer",
@@ -4042,7 +4043,8 @@ function JavaScript() {
               ></ul>
             </div>
             <a
-              href=""
+              href="https://www.youtube.com/watch?v=tV2UnmCD0PE&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=22"
+              target="_blank"
               style={{
                 color: "blue",
                 cursor: "pointer",
@@ -4098,7 +4100,8 @@ function JavaScript() {
               </button>
             </div>
             <a
-              href=""
+              href="https://www.youtube.com/watch?v=r2vCpGeLHYg&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=23"
+              target="_blank"
               style={{
                 color: "blue",
                 cursor: "pointer",
@@ -4161,7 +4164,8 @@ function JavaScript() {
               </button>
             </div>
             <a
-              href=""
+              href="https://www.youtube.com/watch?v=KqVxvWhrYyI&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=24"
+              target="_blank"
               style={{
                 color: "blue",
                 cursor: "pointer",

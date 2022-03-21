@@ -106,7 +106,7 @@ function About() {
               <i>Web & Motion Graphic designer </i>
               <p>
                 I am a Web and Motion Graphic designer, i have been working on
-                that for 3 years. In addition that, i worked as a motion graphic
+                that for 3 years. In addition that, i've been working as a Motion Graphic Designer
                 for 3 years.
               </p>
             </div>
@@ -118,20 +118,20 @@ function About() {
             <b>Motion Graphic</b>
             <div className="offers">
               <ul>
-                <li>video motion graphics 10 seconds</li>
-                <li>video motion graphics 20 seconds</li>
-                <li>video motion graphics 60 seconds</li>
+                <li>video motion graphics 10 seconds.</li>
+                <li>video motion graphics 20 seconds.</li>
+                <li>video motion graphics 60 seconds.</li>
               </ul>
             </div>
             <button>Apply now</button>
           </div>
           <div className="card__info">
-            <b>Web Design</b>
+            <b>Design & Editing</b>
             <div className="offers">
               <ul>
-                <li>set an offer</li>
-                <li>set an offer</li>
-                <li>set an offer</li>
+                <li>Web Design.</li>
+                <li>Logo Design.</li>
+                <li>Video Editing.</li>
               </ul>
             </div>
             <button>Apply now</button>

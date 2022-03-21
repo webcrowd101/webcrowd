@@ -14,9 +14,9 @@ import Footer from "./Footer";
 function Productivity() {
   let history = useHistory();
 
-   useEffect(() => {
-     document.title = "Web Crowd - productivity";
-   }, []);
+  useEffect(() => {
+    document.title = "Web Crowd - productivity";
+  }, []);
 
   useEffect((e) => {
     localStorage.setItem(
@@ -127,9 +127,44 @@ function Productivity() {
           flowing in your vessels and mind, which going to speed up your neurons
           naturally so you will smarter, faster and better than the last version
           of yourself. <br /> <br />
-          If you need some workout equipment, here you go : <br />1 :{" "}
-          <a href="">Dumbbells</a>. <br />2 : <a href="">Resistance bands</a>.{" "}
-          <br />3 : <a href="">Bar</a>. <br />
+          If you need some workout equipment, here you go : <br />
+          <b>1 - Dumbbells</b> :{" "}
+          <a
+            href=""
+            style={{
+              color: "rgb(202, 38, 66)",
+              fontSize: "18px",
+              fontWeight: "bold",
+            }}
+          >
+            get it now
+          </a>
+          .
+          <br />
+          <b>2 - Resistance bands</b> :{" "}
+          <a
+            href=""
+            style={{
+              color: "rgb(202, 38, 66)",
+              fontSize: "18px",
+              fontWeight: "bold",
+            }}
+          >
+            get it now
+          </a>
+          . <br />
+          <b>3 - Bar</b> :{" "}
+          <a
+            href=""
+            style={{
+              color: "rgb(202, 38, 66)",
+              fontSize: "18px",
+              fontWeight: "bold",
+            }}
+          >
+            get it now
+          </a>
+          . <br />
         </p>
         <h3>4 : DIET, DIET, DIET </h3>
         <p>

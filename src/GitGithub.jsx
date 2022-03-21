@@ -70,7 +70,7 @@ function GitGithub() {
 
       <strong>9 : click yes.</strong>
       <strong>
-        10 : type git --version to check if it already installed on your
+        10 : type git --version to check if it is already installed on your
         computer.
       </strong>
       <div className="git__push__explanation">
@@ -110,7 +110,7 @@ function GitGithub() {
         <img src="twelve.png" alt="" />
       </div>
       <strong>17 : type git commit -m "last changes".</strong>
-      <div className="git__pull__explanation">
+      <div className="git__push__explanation">
         <img src="thirteen.png" alt="" />
       </div>
       <p>

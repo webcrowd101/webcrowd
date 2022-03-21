@@ -378,7 +378,7 @@ function Jquery() {
               src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"&gt;&lt;/script&gt;
             </b>{" "}
             <br />
-            to watch a video explains that <a href="">click here</a>.
+            to watch a video explains that <a href="https://www.youtube.com/watch?v=3wlI_NApqk8&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=13" target="_blank">click here</a>.
           </p>
           <p className="clickHere">
             {" "}
@@ -633,7 +633,7 @@ function Jquery() {
               &lt;<span className="tag">p</span>&gt;
               <span> web crowd </span>
               &lt;<span className="tag">/p</span>&gt; <br />
-              <br />
+              
               &lt;<span className="tag">button</span>&gt;
               <span> double click on me </span>
               &lt;<span className="tag">/button</span>&gt;
@@ -1538,7 +1538,7 @@ function Jquery() {
                     padding: "0 10px",
                   }}
                 >
-                  <li className="itemItem">Home</li>
+                  <li>Home</li>
                   <li>Pricing</li>
                   <li>Help</li>
                   <li>Contact</li>
@@ -1559,7 +1559,8 @@ function Jquery() {
               </div>
             </div>
             <a
-              href=""
+              href="https://www.youtube.com/watch?v=k_AOPjrxL1o&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=25"
+              target="_blank"
               style={{
                 color: "blue",
                 cursor: "pointer",
@@ -1597,7 +1598,8 @@ function Jquery() {
             </div>
 
             <a
-              href=""
+              href="https://www.youtube.com/watch?v=d14l-bZg80E&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=26"
+              target="_blank"
               style={{
                 color: "blue",
                 cursor: "pointer",
@@ -1707,7 +1709,8 @@ function Jquery() {
             </div>
 
             <a
-              href=""
+              href="https://www.youtube.com/watch?v=6q1r-B5E_Aw&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=27"
+              target="_blank"
               style={{
                 color: "blue",
                 cursor: "pointer",
@@ -1747,7 +1750,8 @@ function Jquery() {
             </div>
 
             <a
-              href=""
+              href="https://www.youtube.com/watch?v=eawT--5aGRc&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=28"
+              target="_blank"
               style={{
                 color: "blue",
                 cursor: "pointer",

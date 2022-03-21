@@ -230,7 +230,7 @@ function Html() {
             figure out the most of these Elements. <br />
             <span className="instruction">Instruction :</span> Here is how to
             create HTML file, and how to use <i>"live server extension"</i>{" "}
-            <a href="">click here</a>.
+            <a href="https://www.youtube.com/watch?v=tMsIfRjRctY" target="_blank">click here</a>.
             <br />
             <span className="importants">Important : </span> Keep in mind that
             the whole HTML code should be written inside <b>body</b> Tag.
@@ -1018,7 +1018,8 @@ function Html() {
                 <p>Hope you like it.</p>
               </div>
               <a
-                href=""
+                href="https://www.youtube.com/watch?v=dwHT2Pgirl0&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=14"
+                target="_blank"
                 style={{
                   color: "blue",
                   cursor: "pointer",
@@ -1057,7 +1058,8 @@ function Html() {
                 </table>
               </div>
               <a
-                href=""
+                href="https://www.youtube.com/watch?v=CnNEsLCFiZU&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=15"
+                target="_blank"
                 style={{
                   color: "blue",
                   cursor: "pointer",
@@ -1098,7 +1100,8 @@ function Html() {
                 </table>
               </div>
               <a
-                href=""
+                href="https://www.youtube.com/watch?v=KNPy8mXjLsk&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=16"
+                target="_blank"
                 style={{
                   color: "blue",
                   cursor: "pointer",
@@ -1139,7 +1142,7 @@ function Html() {
                     </td>
                   </tr>
                   <tr>
-                    <td>Verfiy Password :</td>
+                    <td>Verify Password :</td>
                     <td>
                       <input type="password" placeholder="Verify Password" />
                     </td>
@@ -1174,7 +1177,8 @@ function Html() {
                 </table>
               </div>
               <a
-                href=""
+                href="https://www.youtube.com/watch?v=mlOR4gEw40Y&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=17"
+                target="_blank"
                 style={{
                   color: "blue",
                   cursor: "pointer",

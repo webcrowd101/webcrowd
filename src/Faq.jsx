@@ -73,9 +73,9 @@ function Faq() {
         
         <p style={{marginTop:"50px"}}>
           You as a Web developer when you apply for Job at any particular
-          company you will come across a bunch of Question about Web
+          company you will come across a bunch of Questions about Web
           development, So here are 20 Questions of the most popular asking
-          Question in web development :
+          Questions in web development :
         </p>
         <div className="question__number">1 : what is html ?</div>
         <p>

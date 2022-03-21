@@ -19,10 +19,36 @@ function Footer() {
           <div className="social__media">
             <div className="footer__titles">Follow us</div>
             <div className="media__icons">
-              <FacebookIcon className="icon-facebook" />
-              <InstagramIcon className="icon-instagram" />
-              <TwitterIcon className="icon-twitter" />
-              <YouTubeIcon className="icon-youtube" />
+              <FacebookIcon
+                className="icon-facebook"
+                onClick={() =>
+                  window.open(
+                    "https://web.facebook.com/people/Web-crowd/100076500933308/",
+                    "_blank"
+                  )
+                }
+              />
+              <InstagramIcon
+                className="icon-instagram"
+                onClick={() =>
+                  window.open("https://www.instagram.com/webcrowd01/", "_blank")
+                }
+              />
+              <TwitterIcon
+                className="icon-twitter"
+                onClick={() =>
+                  window.open("https://twitter.com/crowd_web", "_blank")
+                }
+              />
+              <YouTubeIcon
+                className="icon-youtube"
+                onClick={() =>
+                  window.open(
+                    "https://www.youtube.com/channel/UCi7aWEyuj7NWXB-Wrh5LwAg/playlists",
+                    "_blank"
+                  )
+                }
+              />
             </div>
           </div>
           <div className="footer__bottom">

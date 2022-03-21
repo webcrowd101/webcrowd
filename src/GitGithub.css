@@ -43,6 +43,7 @@
   margin: 20px 3px;
   color: #0a0453;
   font-size:30px;
+  
 }
 .git__push__explanation{
     width: 100%;
@@ -57,7 +58,7 @@
     display:block;
     text-align: center;
     background: #0b04534f;
-    padding: 5px 0;
+    padding: 5px;
     border-radius: 3px;
     color: #0a0453;
 }
