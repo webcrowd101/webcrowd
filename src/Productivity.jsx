@@ -27,11 +27,11 @@ function Productivity() {
 
     if (localStorage.getItem("current") === "") {
       $(".main__header__home").addClass("active");
-    } else if (localStorage.getItem("current") === "EARN__MONEY") {
+    } else if (localStorage.getItem("current") === "earn") {
       $(".main__header__earn").addClass("active");
-    } else if (localStorage.getItem("current") === "ABOUT") {
+    } else if (localStorage.getItem("current") === "about") {
       $(".main__header__about").addClass("active");
-    } else if (localStorage.getItem("current") === "FAQ") {
+    } else if (localStorage.getItem("current") === "faq") {
       $(".main__header__faq").addClass("active");
     } else {
     }
@@ -55,13 +55,13 @@ function Productivity() {
           <Link to="/" className="main__header__home">
             <li>HOME</li>
           </Link>
-          <Link to="/EARN__MONEY" className="main__header__earn ">
+          <Link to="/earn" className="main__header__earn ">
             <li>EARN</li>
           </Link>
-          <Link to="/ABOUT" className="main__header__about ">
+          <Link to="/about" className="main__header__about ">
             <li>ABOUT</li>
           </Link>
-          <Link to="/FAQ" className="main__header__faq ">
+          <Link to="/faq" className="main__header__faq ">
             <li>FAQ's</li>
           </Link>
         </ul>

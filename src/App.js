@@ -14,7 +14,6 @@ import Html from './Html';
 import Css from './Css';
 import JavaScript from './JavaScript';
 import Jquery from './Jquery';
-import Contact from './Contact';
 import About from "./About";
 import Overview from './Overview';
 import Footer from './Footer';
@@ -35,16 +34,14 @@ function App() {
             <Main />
             <Footer />
           </Route>
-          <Route exact path="/EARN">
+          <Route exact path="/earn">
             <Earn />
           </Route>
-          <Route exact path="/CONTACT">
-            <Contact />
-          </Route>
-          <Route exact path="/ABOUT">
+         
+          <Route exact path="/about">
             <About />
           </Route>
-          <Route exact path="/FAQ">
+          <Route exact path="/faq">
             <Faq />
           </Route>
           <Route exact path="/eBooks">

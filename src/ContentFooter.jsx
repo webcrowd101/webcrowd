@@ -27,7 +27,7 @@ function ContentFooter() {
         </div>
         <div className="ContentFooter__footer__bottom">
           <div className="ContentFooter__footer__top">
-            <Link className="ContentFooter__titles" to="">
+            <Link className="ContentFooter__titles" to="/earn">
               <p>Earn</p>
             </Link>
             <Link className="ContentFooter__titles" to="">

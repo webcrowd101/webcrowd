@@ -53,7 +53,7 @@ function Footer() {
           </div>
           <div className="footer__bottom">
             <div className="footer__top">
-              <Link className="titles" to="">
+              <Link className="titles" to="/earn">
                 <p>Earn</p>
               </Link>
               <Link className="titles" to="/eBooks">
