@@ -130,7 +130,8 @@ function Productivity() {
           If you need some workout equipment, here you go : <br />
           <b>1 - Dumbbells</b> :{" "}
           <a
-            href=""
+            href="https://www.amazon.com/s?k=dumbbells&ref=nb_sb_noss"
+            target="_blank"
             style={{
               color: "rgb(202, 38, 66)",
               fontSize: "18px",
@@ -143,7 +144,8 @@ function Productivity() {
           <br />
           <b>2 - Resistance bands</b> :{" "}
           <a
-            href=""
+            href="https://www.amazon.com/s?k=Resistance+bands&crid=21MDUBVUBZJK6&sprefix=resistance+bands%2Caps%2C265&ref=nb_sb_noss"
+            target="_blank"
             style={{
               color: "rgb(202, 38, 66)",
               fontSize: "18px",
@@ -153,9 +155,10 @@ function Productivity() {
             get it now
           </a>
           . <br />
-          <b>3 - Bar</b> :{" "}
+          <b>3 - Fixed bar</b> :{" "}
           <a
-            href=""
+            href="https://www.amazon.com/s?k=fixed+bar&crid=2VCZNFEY7E93T&sprefix=fixed+bar%2Caps%2C258&ref=nb_sb_noss"
+            target="_blank"
             style={{
               color: "rgb(202, 38, 66)",
               fontSize: "18px",
@@ -165,6 +168,18 @@ function Productivity() {
             get it now
           </a>
           . <br />
+          <b>3 - Threadmill</b> :{" "}
+          <a
+            href="https://www.amazon.com/s?k=threadmills&crid=2GXOTH91SCMTF&sprefix=threadmills%2Caps%2C220&ref=nb_sb_noss"
+            target="_blank"
+            style={{
+              color: "rgb(202, 38, 66)",
+              fontSize: "18px",
+              fontWeight: "bold",
+            }}
+          >
+            get it now
+          </a>
         </p>
         <h3>4 : DIET, DIET, DIET </h3>
         <p>

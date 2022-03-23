@@ -14,9 +14,9 @@ import Footer from "./Footer";
 function Ebooks() {
   let history = useHistory();
 
-   useEffect(() => {
-     document.title = "Web Crowd - eBooks";
-   }, []);
+  useEffect(() => {
+    document.title = "Web Crowd - eBooks";
+  }, []);
 
   useEffect((e) => {
     localStorage.setItem(
@@ -68,13 +68,12 @@ function Ebooks() {
       </div>
 
       <div className="Content ebooksContent">
-        <p className='introToBooks'>
+        <p className="introToBooks">
           Recently, most of us give a lot of illogical excuses to not read books
           and get educated, they give excuses such I do not have enough time, my
           9 to 5 job cannot allow me to do so, I have to take care of my
           children, I do not feel comfortable carrying a bulky book with me in
-          public places, or basically I do not see myself into it.{" "} 
-          
+          public places, or basically I do not see myself into it.{" "}
         </p>
         <h1>Why you should give it a shot?</h1>
         <h3>Reason 1 :</h3>
@@ -173,11 +172,12 @@ function Ebooks() {
         <h1>EBooks I highly recommend:</h1>
         <b>Neverwhere, by Neil Gaiman: </b>
         <a
-          href="https://www.audible.fr/pd/Neverwhere-Adaptation-Livre-Audio/B00ELIWHO4"
+          href="https://www.audible.com/pd/Neverwhere-Audiobook/B00354ZSS2?qid=1647958740&sr=1-1&ref=a_search_c3_lProduct_1_1&pf_rd_p=83218cca-c308-412f-bfcf-90198b687a2f&pf_rd_r=K5V4PPQG79V2KDXVM6QZ"
           target="_blank"
         >
           get it now
-        </a>.
+        </a>
+        .
         <br />
         <p>
           In the story of Richard Mayhew, a person with an ordinary normal life,
@@ -188,12 +188,12 @@ function Ebooks() {
         </p>
         <b>The Emperor of all Maladies, by Siddharta Mukherjee: </b>
         <a
-          href="https://www.audible.fr/pd/The-Emperor-of-All-Maladies-Livre-Audio/B017E0427A
-"
+          href="https://www.audible.com/pd/The-Emperor-of-All-Maladies-Audiobook/B017DQS9P6?qid=1647958829&sr=1-1&ref=a_search_c3_lProduct_1_1&pf_rd_p=83218cca-c308-412f-bfcf-90198b687a2f&pf_rd_r=QTJTVY52BXKM2CZGZ7X4"
           target="_blank"
         >
           get it now
-        </a>.
+        </a>
+        .
         <br />
         <p>
           This one is kind of medical book, the author clarified the and recount
@@ -204,11 +204,12 @@ function Ebooks() {
         </p>
         <b>The Future of Medicine, by James Temperton: </b>
         <a
-          href="https://www.audible.fr/pd/The-Future-of-Medicine-WIRED-Guides-Livre-Audio/1473594820"
+          href="https://www.audible.com/search?keywords=The+Future+of+Medicine%2C+by+James+Temperton&skip_spell_correction=true&ref=a_search_t3_noResReversionUrl&pf_rd_p=7a98be95-bbf9-496e-a68c-79ce2c792da5&pf_rd_r=Y0WEXRGBABHAKAAN0WQ7"
           target="_blank"
         >
           get it now
-        </a>.
+        </a>
+        .
         <br />
         <p className="lastParag">
           In this one, the author and journalist, James Temperton, mentioned all
@@ -216,7 +217,7 @@ function Ebooks() {
           the science - and ethics - of genetic engineering and its power to
           create what we call: 'designer babies'.
         </p>
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );

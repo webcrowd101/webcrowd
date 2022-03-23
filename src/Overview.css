@@ -46,6 +46,8 @@
   margin: 7px 0;
   list-style: square;
   pointer-events: none;
+  color: #002c66;
+  font-weight: 600;
 }
 .content__links {
   color: blue;

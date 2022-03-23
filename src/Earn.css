@@ -1,0 +1,57 @@
+.earnContent{
+    margin-top:7vh;
+}
+.earnContent>p{
+   line-height: 30px;
+   width: 90vw;
+   margin: 20px auto;
+}
+.earn__intro{
+    margin-top:70px !important;
+}
+.earn__intro>h2{
+    margin-bottom: 10px;
+}
+.earn__intro>i{
+    background: rgba(216, 139, 38, 0.411);
+    padding: 3px;
+}
+.passive__income__title{
+    width: 95vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px auto;
+    flex-wrap: wrap;
+    height: 350px;
+}
+.passive__income__title > p {
+  width: 650px;
+  margin: 20px;
+  line-height: 30px;
+}
+.passive__income__title > p>h2{
+    margin-bottom: 10px;
+}
+.passive__income__title > img{
+ 
+    width: 500px;
+    height: 100%;
+
+}
+
+.conclusion{
+    margin: 70px auto !important;
+
+}
+@media only screen and (max-width:1147px){
+    .passive__income__title{
+        justify-content:center;
+    }
+}
+@media only screen and (max-width:600px){
+    .passive__income__title > img{
+        width: 300px;
+        height: 300px;
+    }
+}

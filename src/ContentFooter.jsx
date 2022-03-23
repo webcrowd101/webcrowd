@@ -40,7 +40,7 @@ function ContentFooter() {
             
             <a
               className="ContentFooter__titles"
-              href="mailto:webcrowd101@gmail.com"
+              href="mailto:hassanamouri031@gmail.com"
               target="_top"
             >
               Contact

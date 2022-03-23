@@ -27,7 +27,7 @@ function Faq() {
 
     if (localStorage.getItem("current") === "") {
       $(".main__header__home").addClass("active");
-    } else if (localStorage.getItem("current") === "EARN__MONEY") {
+    } else if (localStorage.getItem("current") === "EARN") {
       $(".main__header__earn").addClass("active");
     } else if (localStorage.getItem("current") === "ABOUT") {
       $(".main__header__about").addClass("active");
@@ -41,23 +41,21 @@ function Faq() {
       {/* <img src="secondCoverPic.jpeg" className="cover" alt="" /> */}
       <div className=" faq__header main__header">
         <Link className="main__header__left" to="/">
-         
-            <font
-              className="nameOfWebsite"
-              color="white"
-              size="6"
-              face=" a astro space"
-            >
-              web crowd
-            </font>
-            {/* <img src="logo.png" className="main__logo" alt="" /> */}
-          
+          <font
+            className="nameOfWebsite"
+            color="white"
+            size="6"
+            face=" a astro space"
+          >
+            web crowd
+          </font>
+          {/* <img src="logo.png" className="main__logo" alt="" /> */}
         </Link>
         <ul className="">
           <Link to="/" className="main__header__home">
             <li>HOME</li>
           </Link>
-          <Link to="/EARN__MONEY" className="main__header__earn ">
+          <Link to="/EARN" className="main__header__earn ">
             <li>EARN</li>
           </Link>
           <Link to="/ABOUT" className="main__header__about ">
@@ -68,10 +66,9 @@ function Faq() {
           </Link>
         </ul>
       </div>
-      
+
       <div className="Content faqContent">
-        
-        <p style={{marginTop:"50px"}}>
+        <p style={{ marginTop: "50px" }}>
           You as a Web developer when you apply for Job at any particular
           company you will come across a bunch of Questions about Web
           development, So here are 20 Questions of the most popular asking
@@ -106,15 +103,16 @@ function Faq() {
           and it responsible on make a website more responsive.
         </p>
         <div className="question__number">
-          5 : what is the difference between visibility : hidden and display :
-          none properties ?
+          5 : what is the difference between{" "}
+          <b style={{ color: "#0a0453" }}>visibility : hidden</b> and{" "}
+          <b style={{ color: "#0a0453" }}>display : none</b> properties ?
         </div>
         <p>
           display:none removes the element from the layout flow. but
           visibility:hidden hides it but leaves the space.
         </p>
-        <div className="question__number">
-          6 : what is the highest value can opacity accept ?{" "}
+        <div className="question__number" >
+          6 : what is the Highest and Lowest value can opacity accept ?{" "}
         </div>
         <p>
           the highest value can opacity take is 1, and the lowest value is 0.
@@ -210,7 +208,9 @@ function Faq() {
           20 : which array function allows us to add item at the end of array ?
         </div>
         <p>in this case we use push function.</p>
-        <br /><br /><br />
+        <br />
+        <br />
+        <br />
         <Footer />
       </div>
     </div>

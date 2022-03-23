@@ -6,3 +6,6 @@
 .termsHeight > p {
   flex: 1;
 }
+.termsHeight > p > a {
+  color: blue;
+}

@@ -26,7 +26,7 @@ function About() {
 
     if (localStorage.getItem("current") === "") {
       $(".main__header__home").addClass("active");
-    } else if (localStorage.getItem("current") === "EARN__MONEY") {
+    } else if (localStorage.getItem("current") === "EARN") {
       $(".main__header__earn").addClass("active");
     } else if (localStorage.getItem("current") === "ABOUT") {
       $(".main__header__about").addClass("active");
@@ -54,7 +54,7 @@ function About() {
           <Link to="/" className="main__header__home">
             <li>HOME</li>
           </Link>
-          <Link to="/EARN__MONEY" className="main__header__earn ">
+          <Link to="/EARN" className="main__header__earn ">
             <li>EARN</li>
           </Link>
           <Link to="/ABOUT" className="main__header__about ">

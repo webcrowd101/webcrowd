@@ -230,7 +230,7 @@ function Html() {
             figure out the most of these Elements. <br />
             <span className="instruction">Instruction :</span> Here is how to
             create HTML file, and how to use <i>"live server extension"</i>{" "}
-            <a href="https://www.youtube.com/watch?v=tMsIfRjRctY" target="_blank">click here</a>.
+            <a style={{color:"blue"}} href="https://www.youtube.com/watch?v=tMsIfRjRctY" target="_blank">click here</a>.
             <br />
             <span className="importants">Important : </span> Keep in mind that
             the whole HTML code should be written inside <b>body</b> Tag.

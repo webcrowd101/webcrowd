@@ -1,6 +1,6 @@
 import './App.css';
 import Header from './Header';
-import EarnMoney from './EarnMoney';
+import Earn from './Earn';
 import React from "react";
 import Faq from './Faq';
 import {
@@ -35,8 +35,8 @@ function App() {
             <Main />
             <Footer />
           </Route>
-          <Route exact path="/EARN__MONEY">
-            <EarnMoney />
+          <Route exact path="/EARN">
+            <Earn />
           </Route>
           <Route exact path="/CONTACT">
             <Contact />

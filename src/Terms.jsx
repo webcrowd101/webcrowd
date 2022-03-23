@@ -77,17 +77,24 @@ function Terms() {
           some important points And to ask you to comply. First, web crowd is an
           Educational site Interested in providing simplified explanations of
           Web Development Languages. You can get to know the site better by
-          visiting Our <a href="">Facebook page</a> or visit our{" "}
-          <a href="https://www.youtube.com/channel/UCi7aWEyuj7NWXB-Wrh5LwAg" target="_blank">
+          visiting Our{" "}
+          <a href="https://web.facebook.com/people/Web-crowd/100076500933308/" 
+          target="_blank"
+          >
+            Facebook page
+          </a>{" "}
+          or visit our{" "}
+          <a
+            href="https://www.youtube.com/channel/UCi7aWEyuj7NWXB-Wrh5LwAg"
+            target="_blank"
+          >
             YouTube channel
-          </a>.
+          </a>
+          .
         </p>
-        
-          <Footer />
-        
-        
+
+        <Footer />
       </div>
-      
     </div>
   );
 }

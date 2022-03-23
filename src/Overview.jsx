@@ -103,6 +103,7 @@ function Overview() {
         </a>{" "}
         cause it is developed specifically for web development{" "}
         <a
+          className="content__links"
           href="https://www.youtube.com/watch?v=WHQFUzZpA-U&t=18s"
           target="_blank"
         >
@@ -131,9 +132,9 @@ function Overview() {
         of how to install those Extensions :
       </p>
       <ol>
-        <li>Go to Visual Studio Code</li>
-        <li>Click on Extensions icon in the Left Side </li>
-        <li> Then Search for the following Extensions</li>
+        <li>Go to Visual Studio Code.</li>
+        <li>Click on Extensions icon in the Left Side.</li>
+        <li> Then Search for the following Extensions.</li>
       </ol>
       <ul>
         <li>Auto Close Tag</li>

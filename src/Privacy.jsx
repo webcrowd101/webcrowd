@@ -67,7 +67,7 @@ function Privacy() {
         </ul>
       </div>
 
-      <div className="Content faqContent">
+      <div className="Content privacyContent">
         <p>
           Your privacy, visitor, is extremely important to us, and the privacy
           policy in this article represents the types of personal information
@@ -113,8 +113,8 @@ function Privacy() {
           preferred by them so that we can in turn develop our service and
           knowledge content appropriate for them. We add to that, that some of
           the companies that advertise on our site may look at cookies and
-          network settings for our site and for you, and these companies. <br /> for
-          example, Google and its advertising program{" "}
+          network settings for our site and for you, and these companies. <br />{" "}
+          for example, Google and its advertising program{" "}
           <a href="https://www.google.com/adsense/start/" target="_blank">
             Google AdSense
           </a>
@@ -128,11 +128,12 @@ function Privacy() {
           for the same purposes mentioned above, which are to develop the
           advertising content of these companies and measure the effectiveness
           of these ads, without Any other objectives that may harm in one way or
-          another the visitors of our site. Of course, the "web crowd" site cannot access or control these files, even after you
-          allow and activate them to take them from your device (cookies), and
-          we are not responsible in any way for the illegal use of them if they
-          happen, God forbid. You should review the third-party privacy policy
-          in this document, advertisers such as{" "}
+          another the visitors of our site. Of course, the "web crowd" site
+          cannot access or control these files, even after you allow and
+          activate them to take them from your device (cookies), and we are not
+          responsible in any way for the illegal use of them if they happen, God
+          forbid. You should review the third-party privacy policy in this
+          document, advertisers such as{" "}
           <a href="https://www.google.com/adsense/start/" target="_blank">
             Google AdSense
           </a>{" "}
@@ -171,12 +172,11 @@ function Privacy() {
           . <br />
           If you need more information or have any questions about the privacy
           policy, feel free to contact us by entering the{" "}
-          <a href="mailto:webcrowd101@gmail.com" target="_top">
+          <a href="mailto:hassanamouri031@gmail.com" target="_top">
             Contact us
-          </a> section
-          .
+          </a>{" "}
+          section .
         </p>
-
 
         <Footer />
       </div>

@@ -572,7 +572,13 @@ function JavaScript() {
             separated file or within html file. But it will be better if you
             create a separated JavaScript file. here is how to create a
             JavaScript file, and how to link it with html file{" "}
-            <a href="https://www.youtube.com/watch?v=N8SZLRqkhm4&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=8" target="_blank">click here</a>.
+            <a
+              href="https://www.youtube.com/watch?v=N8SZLRqkhm4&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=8"
+              target="_blank"
+            >
+              click here
+            </a>
+            .
           </p>
         </div>
         <div className="addPaddingToSection" id="variables">
@@ -596,7 +602,14 @@ function JavaScript() {
             </ul>
             <b className="importants">Important : </b> before you see the
             example bellow, you need to know how to work with the console, if
-            don't, <a href="https://www.youtube.com/watch?v=kl61pSQNf3I&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=9" target="_blank">click here</a>.
+            don't,{" "}
+            <a
+              href="https://www.youtube.com/watch?v=kl61pSQNf3I&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=9"
+              target="_blank"
+            >
+              click here
+            </a>
+            .
           </p>
 
           <div className="codeSection">
@@ -1311,8 +1324,16 @@ function JavaScript() {
           <p className="clickHere">
             you can pass as much parameters as you want, and handle them as you
             like. <br />
-            <b className="note">Note : </b>there are three ways for declaring a
-            function. <a href="https://www.youtube.com/watch?v=eWfGqhQg8rw&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=10" target="_blank">click here</a> to figure it out. <br />
+            <b className="note">Note : </b>there are three ways of declaring a
+            function.{" "}
+            <a
+              style={{ color: "blue" }}
+              href="https://www.youtube.com/watch?v=eWfGqhQg8rw&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=10"
+              target="_blank"
+            >
+              click here
+            </a>{" "}
+            to figure it out. <br />
           </p>
         </div>
         <div className="addPaddingToSection" id="scope">
@@ -1320,13 +1341,36 @@ function JavaScript() {
           <p className="clickHere">
             there are three types of scope :
             <ol style={{ marginLeft: "50px", pointerEvents: "none" }}>
-              <li className="unclickAble" style={{ pointerEvents: "none" }}>
+              <li
+                className="unclickAble"
+                style={{
+                  pointerEvents: "none",
+                  color: "#002c66",
+                  fontWeight: "600",
+                }}
+              >
                 Global Scope
               </li>
 
-              <li style={{ pointerEvents: "none" }}>Function Scope</li>
+              <li
+                style={{
+                  pointerEvents: "none",
+                  color: "#002c66",
+                  fontWeight: "600",
+                }}
+              >
+                Function Scope
+              </li>
 
-              <li style={{ pointerEvents: "none" }}>Block Scope</li>
+              <li
+                style={{
+                  pointerEvents: "none",
+                  color: "#002c66",
+                  fontWeight: "600",
+                }}
+              >
+                Block Scope
+              </li>
             </ol>
           </p>
 
@@ -1448,16 +1492,16 @@ function JavaScript() {
               &#123;
               <br />
               <span className="objectProperty">name </span>:{" "}
-              <span className="propertyValue">"khalid"</span> ,
+              <span style={{ color: "blue" }}>"khalid"</span> ,
               <br />
               <span className="objectProperty">age </span>:{" "}
-              <span className="propertyValue">20</span> ,
+              <span style={{ color: "blue" }}>20</span> ,
               <br />
               <span className="objectProperty">isWorking </span>:{" "}
-              <span className="propertyValue">false</span> ,
+              <span style={{ color: "blue" }}>false</span> ,
               <br />
               <span className="objectProperty">country </span>:{" "}
-              <span className="propertyValue">"canada"</span> ,
+              <span style={{ color: "blue" }}>"canada"</span> ,
               <br />
               &#125;
               <br />
@@ -3088,14 +3132,21 @@ function JavaScript() {
             setTimeout() is a function that accepts two parameters(function and
             number of MiliSeconds), so the second function get executed after
             this amount of time. we know this seems little confused. but don't
-            worry, <a href="https://www.youtube.com/watch?v=thrjQJkyOu4&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=11" target="_blank">this video</a> will explain that.{" "}
+            worry,{" "}
+            <a
+              href="https://www.youtube.com/watch?v=thrjQJkyOu4&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=11"
+              target="_blank"
+            >
+              this video
+            </a>{" "}
+            will explain that.{" "}
           </p>
         </div>
         <div className="addPaddingToSection" id="setInterval">
           <h3 className="sectionTittle">setInterval()</h3>
           <p className="clickHere">
-            setInterval() is the same as setTimeout(), but the difference between
-            them is the following : <br />
+            setInterval() is the same as setTimeout(), but the difference
+            between them is the following : <br />
             <ul style={{ marginLeft: "50px", pointerEvents: "none" }}>
               <li>
                 setTimeout() : the callback function get executed once we reach
@@ -3103,8 +3154,14 @@ function JavaScript() {
               </li>
               <li>
                 setInterval() : the callback function get executed repeatedly
-                after we reach the given time. <a href="https://www.youtube.com/watch?v=iQQoLUgFOTs&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=12" target="_blank">click here</a> to see
-                an example.
+                after we reach the given time.{" "}
+                <a
+                  href="https://www.youtube.com/watch?v=iQQoLUgFOTs&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=12"
+                  target="_blank"
+                >
+                  click here
+                </a>{" "}
+                to see an example.
               </li>
             </ul>
           </p>
@@ -3116,11 +3173,10 @@ function JavaScript() {
             basically means everything you see in front of you once you get in
             any particular website, it's HTML content. it's created by the
             browser once the page gets loaded. <br />
-            programmatically, we can use JavaScript to read, add ,remove or update
-            DOM elements using a bunch of methods. <br />
+            programmatically, we can use JavaScript to read, add ,remove or
+            update DOM elements using a bunch of methods. <br />
             the first thing you must be aware of is how to select and get html
-            elements using JavaScript. in this case we use{" "}
-            <b>selectors</b>.
+            elements using JavaScript. in this case we use <b>selectors</b>.
           </p>
           <h2 className=" subTittles">selectors :</h2>
 
@@ -3340,7 +3396,6 @@ function JavaScript() {
             <b>overridden</b>. then the JavaScript one will get <b>applied</b>.{" "}
             <br />
           </p>
-          
 
           <h2 className=" subTittles">add elements :</h2>
 
@@ -3404,7 +3459,7 @@ function JavaScript() {
                 // 3 add the new element to web page
               </span>
               <br />
-              <span style={{color:"blue"}}> body.</span>
+              <span style={{ color: "blue" }}> body.</span>
               <span style={{ color: "purple" }}>
                 <span style={{ color: "purple" }}>append.</span>(
                 <span style={{ color: "blue" }}> newElement </span>) ;
@@ -3416,15 +3471,13 @@ function JavaScript() {
               <h2>this is a new h2 element</h2>
             </div>
           </div>
-          <p className="clickHere">
-           don't miss any step.
-          </p>
+          <p className="clickHere">don't miss any step.</p>
 
           <p className="clickHere">
-            <b className="importants">Important!</b> : in this exercise, we added the new paragraph in
-            our body. you can also add any html element wherever you want, s
-            let's make another example, in this example we will add new{" "}
-            <b>li</b> to our <b>ul</b>.
+            <b className="importants">Important!</b> : in this exercise, we
+            added the new paragraph in our body. you can also add any html
+            element wherever you want, s let's make another example, in this
+            example we will add new <b>li</b> to our <b>ul</b>.
           </p>
           <h4 className="subTittles">Add li to ul :</h4>
           <div
@@ -3666,7 +3719,6 @@ function JavaScript() {
             As you can see, when we added a new <b>item</b>, the input value
             became an empty string, that happened because of the{" "}
             <b>last line </b>in javascript file.
-            
           </p>
 
           <h4 className="subTittles">remove items :</h4>
@@ -3737,15 +3789,15 @@ function JavaScript() {
               </ul>
             </div>
           </div>
-          
 
           <h4 className="subTittles">JavaScript Events :</h4>
           <p className="clickHere">
-            we often use JavaScript events when we want to jump to another page, there
-            are a bunch of JavaScript Events, but the most famous is{" "}
+            we often use JavaScript events when we want to jump to another page,
+            there are a bunch of JavaScript Events, but the most famous is{" "}
             <b>click event</b>, So in this section we will only have an example
-            of <b>click</b> event. <br /> 
-            <b className="note">Note : </b> you can also use <b>dblclick</b> , <b>mouseover</b> , <b>mouseleave</b>...etc.
+            of <b>click</b> event. <br />
+            <b className="note">Note : </b> you can also use <b>dblclick</b> ,{" "}
+            <b>mouseover</b> , <b>mouseleave</b>...etc.
           </p>
           <div
             style={{ display: "flex", justifyContent: "space-around" }}
@@ -4178,7 +4230,7 @@ function JavaScript() {
             </a>
           </div>
         </div>
-        
+
         <div className="addPaddingToSection" id="javascriptQuiz">
           <h3 className="sectionTittle">Quiz</h3>
           <p className="clickHere">

@@ -248,6 +248,7 @@ function Css() {
             <br />
             So, here is how to create CSS file and link it to your HTML file{" "}
             <a
+              style={{ color: "blue" }}
               href="https://www.youtube.com/watch?v=915oonk1UaQ"
               target="_blank"
             >
@@ -407,6 +408,7 @@ function Css() {
             <b>class</b> instead of <b>id</b> or the opposite ?! don't worry,
             you will find a video explains when we use id instead of class{" "}
             <a
+             style={{color:"blue"}}
               href="https://www.youtube.com/watch?v=CknsVN34lck&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=5"
               target="_blank"
             >
@@ -1185,6 +1187,7 @@ function Css() {
             as transform,position...etc. So, we won't explain that in this
             section, cause we need the entire web page. to learn it click{" "}
             <a
+              style={{ color: "blue" }}
               href="https://www.youtube.com/watch?v=89aVq9hwP8I&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=6"
               target="_blank"
             >
@@ -1928,7 +1931,13 @@ function Css() {
             Google Adsense, your website must be responsive. this is where{" "}
             <b>Media Query</b> comes in. So, we can't explain that here, you may
             get confused here. <br />
-            this is why we made a video explains that. <a href="https://www.youtube.com/watch?v=jKzvU_ZB-K0&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=7" target="_blank">click here</a>
+            this is why we made a video explains that.{" "}
+            <a
+              href="https://www.youtube.com/watch?v=jKzvU_ZB-K0&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=7"
+              target="_blank"
+            >
+              click here
+            </a>
             .
           </p>
         </div>
