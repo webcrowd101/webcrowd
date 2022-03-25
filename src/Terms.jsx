@@ -70,20 +70,19 @@ function Terms() {
       <div className="Content faqContent termsHeight">
         <h2>Certificate of use</h2>
         <p>
-          Hello to all the followers and visitors to the site, There is no doubt
-          our honorable visitor that you are one of the priorities of the site,
-          and we always hope you Get in touch with us and always try to be on
-          your best mind. But first, we would like to draw your attention to
+          Hello dear visitor to the site, There is no doubt
+          our honorable visitor, you are one of the priorities of our site,
+          and we always hope you Get in touch with us and be in a good mood. but first, we would like to draw your attention to
           some important points And to ask you to comply. First, web crowd is an
-          Educational site Interested in providing simplified explanations of
-          Web Development Languages. You can get to know the site better by
+          Educational website Interested in providing simplified explanations of
+          Web Development Languages. You can get to know our site better by
           visiting Our{" "}
           <a href="https://web.facebook.com/people/Web-crowd/100076500933308/" 
           target="_blank"
           >
             Facebook page
           </a>{" "}
-          or visit our{" "}
+          or our{" "}
           <a
             href="https://www.youtube.com/channel/UCi7aWEyuj7NWXB-Wrh5LwAg"
             target="_blank"

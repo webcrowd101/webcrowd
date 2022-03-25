@@ -22,16 +22,15 @@
   margin-left: 20px;
 }
 .ebooksContent>h1{
-  margin: 60px;
+ margin: 40px auto;
+  background: #0b045352 !important;
+  width: 75vw;
+  padding: 10px 0;
+  font-weight: bold;
   text-align: center;
-  color: #0a0453;
-  background: #0b045352;
-  font-family: 'a astro space';
-  font-size:18px;
-  padding-top: 5px;
-  height: 20px;
-  line-height: 20px;
-  padding-bottom: 2px;
+  font-size: 17px;
+  border-radius: 5px;
+  color: #0a0453 !important;
   
 }
 .ebooksContent>h3{
@@ -45,6 +44,7 @@
   text-align: center;
   color: #0a0453;
   padding: 3px 0;
+  width: 80%;
 }
 .ebooksContent>a{
   
@@ -62,10 +62,7 @@
   .ebooksContent>h1{
     font-size:13px;
   }
+ 
 }
-@media only screen and (max-width: 490px){
-  .ebooksContent>h1{
-    font-size:8px;
-  }
-}
+
 

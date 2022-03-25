@@ -21,7 +21,9 @@ function Faq() {
   useEffect((e) => {
     localStorage.setItem(
       "current",
-      window.location.href.substring(window.location.href.lastIndexOf("/") + 1)
+      window.location.href
+        .substring(window.location.href.lastIndexOf("/") + 1)
+        .toLowerCase()
     );
     history.push(localStorage.getItem("current"));
 
@@ -74,33 +76,32 @@ function Faq() {
           development, So here are 20 Questions of the most popular asking
           Questions in web development :
         </p>
-        <div className="question__number">1 : what is html ?</div>
+        <div className="question__number">1 : what is HTML ?</div>
         <p>
-          html stands for Hyper Text Markup Language, it represented everything
+          HTML stands for Hyper Text Markup Language, it structures everything
           you see in front of you in any website, actually you can make a
-          website only using this language, but it will look terrible such as
-          wikipedia. So that's why html is not enough for building a decent
-          website.{" "}
+          website only using this language, but it will look terrible. So that's
+          why html is not enough for building a decent website.{" "}
         </p>
         <div className="question__number">
           2 : which html tag used to switch between website's pages ?
         </div>
         <p>
-          to switch between a website pages you can use a tag, in addition that
-          you can also use it to scroll among page's section.
+          to switch between a website pages you can use <b>a</b> tag, in
+          addition to that, you can also use it to scroll among page's sections.
         </p>
         <div className="question__number">
           3 : what does responsive website mean ?
         </div>
         <p>
           responsive website is a website that fits all devices size, its
-          structure's changed according to device's type.
+          structure can be changed according to the device's type.
         </p>
         <div className="question__number">4 : what css used for ? </div>
         <p>
-          we use css makes your website beautiful by adding some styles to our
-          web pages such as color,background,padding,margin,width,height...etc,
-          and it responsible on make a website more responsive.
+           css makes the website beautiful by adding some styles to the
+          web pages such as color,background,padding,margin,width,height...etc.
+          and it responsible on making the website more responsive.
         </p>
         <div className="question__number">
           5 : what is the difference between{" "}
@@ -111,26 +112,26 @@ function Faq() {
           display:none removes the element from the layout flow. but
           visibility:hidden hides it but leaves the space.
         </p>
-        <div className="question__number" >
+        <div className="question__number">
           6 : what is the Highest and Lowest value can opacity accept ?{" "}
         </div>
         <p>
           the highest value can opacity take is 1, and the lowest value is 0.
         </p>
-        <div className="question__number">7 : what is server ?</div>
+        <div className="question__number">7 : what is a server ?</div>
         <p>
           a server is a computer that provides services to other computers, but
           the difference between server and other simple computers is that
           server has a hardware with high performances and qualities, it allows
           other computers to connect with each others.
         </p>
-        <div className="question__number">8 : what is domain ?</div>
+        <div className="question__number">8 : what is a domain ?</div>
         <p>
           a domain name is just an address to your website, is a link that is
           showed up in google's search bar. you can buy a domain name from a lot
-          of companies such as NameCheap or firebase of GoDaddy..etc.
+          of companies such as NameCheap or firebase or GoDaddy...etc.
         </p>
-        <div className="question__number">9 : what is hosting ?</div>
+        <div className="question__number">9 : what is a hosting ?</div>
         <p>
           hosting is a home of your website, if you own a website you need to
           host it in somewhere, So basically a hosting is a computer that keeps
@@ -148,16 +149,16 @@ function Faq() {
         <div className="question__number">11 : what does IDE mean ?</div>
         <p>
           IDE stands for Integrated Development Environment, is an environment
-          where you can build Games, softwares and websites, is basically where
-          you write the programming languages code. there are a bunch of IDE's
+          where you can build Games, softwares and websites, it's basically where
+          you write the programming languages code. there are a bunch of IDEs
           such as visual studio code, sublime,atom,visual studio...etc.{" "}
         </p>
         <div className="question__number">12 : what is JavaScript ?</div>
         <p>
           JavaScript is a programming language allows you to make your website
-          more interractive, for example : when you want to sign up at facebook,
+          more Interactive, for example : when you want to sign up at facebook,
           first of all you fill up all form fields then you click on sign up
-          botton to submit info and become a member at facebook, So the click
+          button to submit info and become a member at Facebook, So the click
           event made by JavaScript.
         </p>
         <div className="question__number">13 : what does DOM mean ?</div>
@@ -166,10 +167,10 @@ function Faq() {
           of you when you get in any particular website, it's basically HTML
           content.
         </p>
-        <div className="question__number">14 : what loops used for ?</div>
+        <div className="question__number">14 : what loops are used for ?</div>
         <p>
           loops allow you to do repetitive tasks without re-write the same code,
-          you can repeat code as much as you can.
+          you can repeat a code as much as you need.
         </p>
         <div className="question__number">
           15 : what are JavaScript scopes ?
@@ -178,20 +179,19 @@ function Faq() {
           there are three scopes, Global scope, Function scope and Block scope.{" "}
         </p>
         <div className="question__number">
-          16 : what is the defference between join and split functions ?
+          16 : what is the difference between join and split functions ?
         </div>
         <p>
           join function combines array item to string, while split does the
           opposite, it transforms string to array according to a given value.
         </p>
         <div className="question__number">
-          17 : what is the defference between setTimeout and setIntervals
+          17 : what is the difference between setTimeout and setInterval
           functions ?
         </div>
         <p>
           setTimeout function execute the internal code one time, once the page
-          gets loaded, while setIntervals function re-execute the code every a
-          bunch of times according to a given time.
+          gets loaded, on the other hand setInterval function re-execute the same code every given time interval.
         </p>
         <div className="question__number">
           18 : why do we use reduce function in array ?
@@ -201,13 +201,13 @@ function Faq() {
         </p>
         <div className="question__number">
           19 : which string function do we use to check if string contains a
-          particular alphbet ?
+          particular alphabet ?
         </div>
-        <p>in this case we use includes function.</p>
+        <p>in this case we use includes() function.</p>
         <div className="question__number">
           20 : which array function allows us to add item at the end of array ?
         </div>
-        <p>in this case we use push function.</p>
+        <p>in this case we use push() function.</p>
         <br />
         <br />
         <br />

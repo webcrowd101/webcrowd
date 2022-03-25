@@ -70,10 +70,10 @@ function Productivity() {
       <div className="Content productivityContent productivityTitles ">
         <p className="introToBooks">
           We are living in a world full of distractions, where productivity has
-          become difficult thing to achieve, most of unproductive people are
-          most of the time checking social media, lying in the bed, or basically
-          they just don't feel like working, in this due too many factors, which
-          I'm not going to mention it, instead, I will give you some tips and
+          became difficult thing to achieve, most of unproductive people are
+          checking social media, laying in the bed, or basically
+          they just don't feel like working, and this is due to many factors, which
+          I'm not going to mention, instead, I will give you some tips and
           tricks to get back to the road and live the life you really wanted.{" "}
           <br />
           Before we get started I want you to be aware of the fact that, getting
@@ -81,16 +81,16 @@ function Productivity() {
           willing to go the Extra Miles, the failure is a normal thing, just get
           ready to screw the first 3 days in what I call : productivity Neuron
           training, cause, basically you are just training your mind to get used
-          to the new productive life, it called the plasticity, which is a good
+          to the new productive life, it's called the plasticity, which is a good
           thing to know about, we are going to talk about it in the future
           blogs.
         </p>
         <h3> Now, let's get in the heart of the object buddies:</h3>
         <p>
-          I am going to share with you just, enough, to get out of your rut, to
-          shake off the rust, (Sounds like Rap hahaha), Trust me, I was there,
+          I am going to share with you just enough, to get out of your rut, to
+          shake off the rust, Trust me, I was there,
           feeling lost, weak, useless and my existence doesn't mean
-          anything(Trying to be emotional, but I am not good at this hahaha)
+          anything.
         </p>
         <h3>
           1: Fix your sleep (I started with sleep because I love sleep hihihi):
@@ -101,31 +101,31 @@ function Productivity() {
           and 7:30 hours are largely enough, Why 7 to 7:30 and not 7 to 8 hours
           as the influences and YouTuber say without any knowledge? We are going
           to talk about sleep in the next blog, it's such an interesting topic
-          all it's own As a summary fix your sleep, stay consistent on it, I
-          recommend hitting the bed at 11:00 PM and waking between 6:00 and 6:30
-          am.
+          all it's own, as a summary, fix your sleep, stay consistent on it, I
+          recommend hitting the bed at 11:00 PM and waking up between 6:00 and 6:30
+          AM.
         </p>
         <h3>2: Prepare a To Do List:</h3>
         <p>
           I'm sure you have heard about this tip, and its efficiency, but trust
           me, people don't know how to prepare it well, they get motivated and
-          they put on too many task that they wouldn't achieve, in the end of
+          they put on too many tasks that they wouldn't achieve, in the end of
           the day, they feel exhausted and suffocated because they couldn't
           achieve all the things they wrote down, to not fall into this trap, I
           suggest to put on your list just enough, the big titles, just the most
           4 important things, and make sure you get them done, don't sleep only
           and if only you get the work done, remember what I said, not going to
           be easy, you are training and stressing your mind to get back in
-          truck, you will be happy after a week trust me
+          truck, you will be happy after a week, trust me.
         </p>
         <h3>3: move your body (it's Sia Song I love it, xd) </h3>
         <p>
           The mind is connected with the body, to have an active mind, you
           should certainly have an active body, and if you are not used to do
           sport, I suggest to start with a simple follow along YouTube videos,
-          then, move to some cardio or weight lifting, just to get that blood
+          then, move to some Cardio or Weight lifting, just to get that blood
           flowing in your vessels and mind, which going to speed up your neurons
-          naturally so you will smarter, faster and better than the last version
+          naturally so you will be smarter, faster and better than the last version
           of yourself. <br /> <br />
           If you need some workout equipment, here you go : <br />
           <b>1 - Dumbbells</b> :{" "}
@@ -195,8 +195,8 @@ function Productivity() {
         <h3>5 : WATER, WATER, WATER</h3>
         <p>
           Again, these fake influencers say: You Should Drink 3 L of water,
-          which is not scientifically proven, it depends on your ‘During the day
-          activities', if you make a lot of physical effort, you should
+          which is not scientifically proven, it depends on your " During the day
+          activities", if you make a lot of physical effort, you should
           absolutely consider drinking more water, else, drink just enough to
           not feel dry.
         </p>
@@ -208,8 +208,7 @@ function Productivity() {
           45 minutes, I'm talking about the absolute full concentration, when
           you are totally focused on the task you are doing and you can't hear
           and be conscience about what around you, it might look exaggerated,
-          but that's the real concentration (some people get red ears when they
-          are concentrated, like me, don't interrupt them hahahha). <br />
+          but that's the real concentration. <br />
           During the break, take a real break, do not think about your work, do
           something fun, move your body and leave your desk. <br />
           In summary, work like hell for 45 minutes, and take a break for 5 to

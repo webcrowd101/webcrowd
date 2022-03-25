@@ -14,13 +14,15 @@ import Footer from "./Footer";
 function About() {
   let history = useHistory();
 
-   useEffect(() => {
-     document.title = "Web Crowd - about";
-   }, []);
+  useEffect(() => {
+    document.title = "Web Crowd - about";
+  }, []);
   useEffect((e) => {
     localStorage.setItem(
       "current",
-      window.location.href.substring(window.location.href.lastIndexOf("/") + 1)
+      window.location.href
+        .substring(window.location.href.lastIndexOf("/") + 1)
+        .toLowerCase()
     );
     history.push(localStorage.getItem("current"));
 
@@ -106,8 +108,7 @@ function About() {
               <i>Web & Motion Graphic designer </i>
               <p>
                 I am a Web and Motion Graphic designer, i have been working on
-                that for 3 years. In addition that, i've been working as a Motion Graphic Designer
-                for 3 years.
+                that for 3 years.
               </p>
             </div>
           </div>
@@ -123,7 +124,9 @@ function About() {
                 <li>video motion graphics 60 seconds.</li>
               </ul>
             </div>
-            <button>Apply now</button>
+            <a href="mailto:fatnikhalid@gmail.com" target="_top">
+              Apply now
+            </a>
           </div>
           <div className="card__info">
             <b>Design & Editing</b>
@@ -134,7 +137,13 @@ function About() {
                 <li>Video Editing.</li>
               </ul>
             </div>
-            <button>Apply now</button>
+            <a
+              href="mailto:fatnikhalid@gmail.com"
+              target="_top"
+              
+            >
+              Apply now
+            </a>
           </div>
           <div className="card__info">
             <b>Web development</b>
@@ -145,7 +154,9 @@ function About() {
                 <li>Professional Portfolio.</li>
               </ul>
             </div>
-            <button>Apply now</button>
+            <a href="mailto:hassanamouri031@gmail.com" target="_top">
+              Apply now
+            </a>
           </div>
           <div className="card__info">
             <b>Math & Programming</b>
@@ -159,7 +170,9 @@ function About() {
                 </li>
               </ul>
             </div>
-            <button>Apply now</button>
+            <a href="mailto:fatnikhalid@gmail.com" target="_top">
+              Apply now
+            </a>
           </div>
         </div>
         <Footer />

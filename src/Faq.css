@@ -10,10 +10,8 @@
   position: fixed !important;
 }
 
-
-
-.faqContent{
-   margin-top: 6vh; 
+.faqContent {
+  margin-top: 6vh;
 }
 .faqContent > h2 {
   padding: 10px 0;
@@ -25,24 +23,20 @@
 }
 .question__number {
   margin: 20px auto;
-  color: #ef4045;
-  background-color: #d1cfcf;
+  background: #0b045352 !important;
   width: 75vw;
   padding: 10px 0;
   font-weight: bold;
   text-align: center;
   font-size: 17px;
   border-radius: 5px;
+  color: #0a0453 !important;
 }
 .faqContent > p {
   width: 75vw;
   margin: 20px auto;
-  color: #0a0453;
   line-height: 30px;
 }
 .faqContent > p::first-letter {
   margin-left: 20px;
 }
-
-
-

@@ -29,7 +29,9 @@ function Main() {
   useEffect((e) => {
     localStorage.setItem(
       "current",
-      window.location.href.substring(window.location.href.lastIndexOf("/") + 1)
+      window.location.href
+        .substring(window.location.href.lastIndexOf("/") + 1)
+        .toLowerCase()
     );
     history.push(localStorage.getItem("current"));
 
@@ -157,7 +159,7 @@ function Main() {
             <h4>2-Easy to Learn :</h4>
             <p>
               When it comes to Programming, Web development's considered as the
-              easiest option for you, cause you can learn it faster comparing to others.
+              easiest option for you, cause you can learn it faster comparing to the other Programming Branches.
             </p>
           </div>
           <div

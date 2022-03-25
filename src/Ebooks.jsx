@@ -21,7 +21,9 @@ function Ebooks() {
   useEffect((e) => {
     localStorage.setItem(
       "current",
-      window.location.href.substring(window.location.href.lastIndexOf("/") + 1)
+      window.location.href
+        .substring(window.location.href.lastIndexOf("/") + 1)
+        .toLowerCase()
     );
     history.push(localStorage.getItem("current"));
 

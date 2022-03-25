@@ -13,7 +13,7 @@
     margin-bottom: 10px;
 }
 .earn__intro>i{
-    background: rgba(216, 139, 38, 0.411);
+    background: rgba(233, 215, 54, 0.315);
     padding: 3px;
 }
 .passive__income__title{
@@ -37,6 +37,10 @@
     width: 500px;
     height: 350px;
 
+}
+.passive__income__title>p>i{
+    background: rgba(233, 215, 54, 0.315);
+    padding: 3px;
 }
 
 .conclusion{
