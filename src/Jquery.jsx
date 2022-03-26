@@ -384,7 +384,7 @@ function Jquery() {
             {" "}
             let's assume we have &lt;<span className="variableName">h2</span>
             &gt; web crowd &lt;<span className="variableName">/h2</span>&gt; in
-            html. an we want to change its color to red using JQUERY and
+            HTML. and we want to change its color to red using JQUERY and
             JavaScript.
           </p>
 
@@ -1467,7 +1467,7 @@ function Jquery() {
           </div>
           <p className="clickHere">
             <b className="importants">Important!</b> : you can't apply animation
-            on all css properties, here is the list of CSS properties that you
+            on all CSS properties, here is the list of CSS properties that you
             can apply animations on. <br />
             <b className="importants">the list :</b>
             <ul style={{ marginLeft: "50px", pointerEvents: "none" }}>
@@ -1768,7 +1768,7 @@ function Jquery() {
           <h3 className="sectionTittle">Quiz</h3>
           <p className="clickHere">
             <b className="note">Note : </b> Make sure that you have read the
-            introduction of every Concept we discussed about above before you
+            introduction of every Concept we discussed above before you
             start this Quiz. <br />
             So, when you complete all of those questions, click on{" "}
             <b className="note">i'm Done</b> button to display the result

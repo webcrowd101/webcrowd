@@ -119,8 +119,8 @@ function About() {
             <b>Motion Graphic</b>
             <div className="offers">
               <ul>
-                <li>video motion graphics 10 seconds.</li>
-                <li>video motion graphics 20 seconds.</li>
+                <li>video motion graphics 15 seconds.</li>
+                <li>video motion graphics 35 seconds.</li>
                 <li>video motion graphics 60 seconds.</li>
               </ul>
             </div>
@@ -129,12 +129,12 @@ function About() {
             </a>
           </div>
           <div className="card__info">
-            <b>Design & Editing</b>
+            <b>Design</b>
             <div className="offers">
               <ul>
                 <li>Web Design.</li>
                 <li>Logo Design.</li>
-                <li>Video Editing.</li>
+                <li>Application Design.</li>
               </ul>
             </div>
             <a

@@ -57,6 +57,7 @@
   font-weight:600;
   margin-bottom:-3px;
   letter-spacing:2px;
+  line-height: 6vh;
 }
 
 .list {
@@ -100,5 +101,11 @@
   }
 
   
+}
+
+@media only screen and (max-width:390px){
+   .nameOfWeb{
+     font-size:13px;
+   }
 }
 

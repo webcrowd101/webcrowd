@@ -224,7 +224,7 @@ function Html() {
             HTML stands for <b>H</b>yper <b>T</b>ext <b>M</b>arkup <b>L</b>
             anguage, it's a Design Language NOT a Programming Language, and it's
             considered as the Door of your Website. You can create a Website
-            only Using this Language. but you can't control the Elements Colors
+            only Using this Language. but you can't control the Element's Colors
             or Position. <br /> So, HTML consists of a list of Elements (Tags) which
             can build the Structure of your Entire Website. Scroll down to
             figure out the most of these Elements. <br />
@@ -281,7 +281,7 @@ function Html() {
             As you see, h1 bigger than h2 bigger than h3.....bigger than h6.
             <br />
             <b className="note">Note</b> : You can use other useful tags like
-            (div, span,p....).
+            (div, span,p...etc).
           </p>
         </div>
         <div className="addPaddingToSection" id="formattingElements">
@@ -323,7 +323,7 @@ function Html() {
             <b>Note :</b> if you write the code above, the result will showed up
             in one line, i used &lt;<span className="tag">br /</span>&gt; tag
             after every single tag just to split that line into many lines. to
-            be able understand the difference between those tag.
+            be able to understand the difference between these tags.
           </p>
         </div>
         <div className="addPaddingToSection" id="comments">
@@ -353,13 +353,13 @@ function Html() {
             <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
               {" "}
-              <div>First line</div>
+              <div>First Line</div>
               <div>Third line</div>
               <div>Fourth line</div>
             </div>
           </div>
           <p className="clickHere">
-            As you see, the <b>Second line</b> didn't Showed in the right side.
+            As you see, the <b>Second line</b> didn't appear in the right side.
             Because we wrapped it with Comment token. <br />
             So the bottom line is that everything you write inside the comment
             token will not be executed.
@@ -607,7 +607,7 @@ function Html() {
           <p className="clickHere">
             <b className="note">Note : </b> When it comes to Email, you are
             allowed to enter Name, not only Email. that's because we didn't
-            surround all those tags with <b>form</b> tag. <br />
+            surround all these tags with <b>form</b> tag. <br />
             there are many others of input types like{" "}
             <b>number, radio, checkbox, button, range...etc.</b>
           </p>
@@ -617,7 +617,7 @@ function Html() {
           <p className="clickHere">
             we often use <b>&lt;button&gt;</b> tag in Registration. So, when you
             type your information inside input tag, you will need to confirm
-            those information, so that's when button comes in, you click on that
+            these information, so that's when button comes in, you click on that
             button to confirm that information. and get into that particular
             website. <br />
             <span className="importants">important! </span>: to make this button
@@ -982,7 +982,7 @@ function Html() {
           </div>
           <p className="clickHere">
             So, when you click on Sign up button, all of the information you
-            wrote displayed in the <b>URL</b>. that's because we add <b>name</b>{" "}
+            wrote will be displayed in the <b>URL</b>. that's because we add <b>name</b>{" "}
             property to each input, So the value of this property Equals the
             value you Enter. <br />
             <b className="note">Note : </b>we prevented that from happening in
@@ -995,9 +995,9 @@ function Html() {
           <div style={{ width: "100%" }}>
             <h3 className="sectionTittle">Exercises</h3>
             <p className="clickHere">
-              before you start the following exercises, try figure out the other
+              before you start the following exercises, try to figure out the other
               types of input such <b>radio,range,checkbox,number</b>. Don't be
-              limited to these Exercises, try out more because{" "}
+              limited to these Exercises, try out more, {" "}
               <b>Practice makes perfect</b>.
             </p>
           </div>
@@ -1196,9 +1196,9 @@ function Html() {
           <h3 className="sectionTittle">Quiz</h3>
           <p className="clickHere">
             <b className="note">Note : </b> Make sure that you have read the
-            introduction of every Concept we discussed about above before you
+            introduction of every Concept we discussed above before you
             start this Quiz. <br /> So, when you complete all of these questions, click
-            on <b className="note">Iam done</b> button to display the result
+            on <b className="note">I am done</b> button to display the result
             immediately.
           </p>
 
@@ -1281,7 +1281,7 @@ function Html() {
             <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
               Question 3
             </h5>
-            <p className="clickHere">which one of those is a heading tag ?</p>
+            <p className="clickHere">which one of these is a heading tag ?</p>
             <input
               style={{ margin: "8px 5px 8px 25px" }}
               type="radio"
@@ -1457,7 +1457,7 @@ function Html() {
             <h5 style={{ color: "blue", fontSize: "18px", margin: "5px 25px" }}>
               Question 8
             </h5>
-            <p className="clickHere">is html a Programming Language ?</p>
+            <p className="clickHere">is HTML a Programming Language ?</p>
             <input
               style={{ margin: "8px 5px 8px 25px" }}
               type="radio"

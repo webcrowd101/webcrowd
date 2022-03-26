@@ -15,9 +15,9 @@ function Overview() {
   const [show, hide] = useState(false);
   let history = useHistory();
 
-   useEffect(() => {
-     document.title = "Web Crowd - OVERVIEW";
-   }, []);
+  useEffect(() => {
+    document.title = "Web Crowd - OVERVIEW";
+  }, []);
 
   //show and hide
   const ShowHide = () => {
@@ -86,8 +86,8 @@ function Overview() {
       <b>1 - Web browser : </b>
       <p>
         {" "}
-        To display the web pages which are created with html. There is a bunch
-        of web browsers such as Google Chrome , firefox and edge, i recommend to
+        To display the web pages which are created with HTML. There is a bunch
+        of web browsers such as Google Chrome , firefox and edge...etc, i recommend to
         use Google Chrome.
       </p>
       <b>2 - Text editor :</b>
@@ -128,7 +128,7 @@ function Overview() {
         </a>
         . <br />
         After downloading it, you must install a bunch of Extensions which make
-        your VsCode more Efficient. and help you write less. SO, here is the way
+        your VsCode more Efficient. and help you write less. So, here is the way
         of how to install those Extensions :
       </p>
       <ol>

@@ -243,7 +243,7 @@ function Css() {
             Page(s) to make it looks Beautiful and Attractive.
             <br />
             <b className="instruction">Instruction :</b> Actually you can write
-            Css code in the same file where you write html code (inside html
+            Css code in the same file where you write HTML code (inside HTML
             file), but it will be better if you create a separated CSS file.{" "}
             <br />
             So, here is how to create CSS file and link it to your HTML file{" "}
@@ -264,7 +264,7 @@ function Css() {
           <h3 className="sectionTittle">color</h3>
           <p className="clickHere">
             color is the most useful css Property in every website, So here is
-            how to add color to a particular html element.
+            how to add color to a particular HTML element.
           </p>
           <div className="css__code">
             {" "}
@@ -337,8 +337,7 @@ function Css() {
             </div>
           </div>
           <p className="clickHere">
-            So, if you don't want that happens, and you want to apply a
-            particular style to each of them, in this case you should use what
+            So, to prevent this problem, you should use what
             is called <b>class</b> or <b>id</b> or you can use both of them.{" "}
             let's try it out.
           </p>
@@ -404,7 +403,7 @@ function Css() {
           <p className="clickHere">
             So, as you can see, when we add class or id properties, we can take
             control of the duplicated tag's styling. You may wonder, what is the
-            differences between those properties, and when do we use{" "}
+            differences between these properties, and when do we use{" "}
             <b>class</b> instead of <b>id</b> or the opposite ?! don't worry,
             you will find a video explains when we use id instead of class{" "}
             <a
@@ -425,7 +424,7 @@ function Css() {
         <div className="addPaddingToSection" id="background">
           <h3 className="sectionTittle">background</h3>
           <p className="clickHere">
-            we often use background property in headear to highlight it, to make
+            we often use background property in header to highlight it, to make
             your website's sections more clearly for users.
           </p>
           <div className="css__code">
@@ -489,7 +488,7 @@ function Css() {
         <div className="addPaddingToSection" id="width">
           <h3 className="sectionTittle">width</h3>
           <p className="clickHere">
-            there are many ways to add width to a particular html tag, but we
+            there are many ways to add width to a particular HTML tag, but we
             will discuss about three ways.
           </p>
 
@@ -679,7 +678,7 @@ function Css() {
           <h3 className="sectionTittle">margin</h3>
           <p className="clickHere">
             we can use margin to separate elements with space. we will apply
-            margin on the same html elements above.
+            margin on the same HTML elements above.
           </p>
           <div className="css__code">
             {" "}
@@ -780,8 +779,8 @@ function Css() {
             first element, it creates a space between this element and the
             element around it. <br />
             and when we add margin-left with auto value to the second element,
-            that makes the the item slides to the right side, cause when you add
-            margin-(left or right or top or bottom), that makes the item slide
+            that makes the item slides to the right side, cause when you add
+            margin-(left,right,top or bottom), that makes the item slides
             to the opposite side. <br />
             <b className="note">Note : </b> you can customize the margin format
             as following : <br />
@@ -1003,7 +1002,7 @@ function Css() {
           <p className="clickHere">
             the first value of border property (2px) refers to a border{" "}
             <b>size</b>, the second (solid) refers to a border <b>style</b> (you
-            can also type (dotted,dashed,double...)), and the last one refers to
+            can also type (dotted,dashed,double...etc)), and the last one refers to
             a border <b>color</b>.
             <br />
           </p>
@@ -1064,7 +1063,7 @@ function Css() {
           </div>
           <p className="clickHere">
             As you can see, when we wrapped the last property in css with
-            comment token (/* property */), it's no longer applied.
+            comment token (/* property : value; */), it's no longer applied.
             <br />
           </p>
         </div>
@@ -1200,7 +1199,7 @@ function Css() {
           <h3 className="sectionTittle">opacity</h3>
           <p className="clickHere">
             opacity property allows us to take control of opacity/transparency
-            of html element. opacity property can take value from 0 to 1
+            of HTML element. opacity property can take value from 0 to 1
             (includes 0.1,0.2,...,0.9)
           </p>
           <div className="css__code">
@@ -1269,7 +1268,7 @@ function Css() {
           </div>
           <p className="clickHere">
             As you can see, when we add <b>opacity : 0</b> to a div tag, it
-            disappeared, actually it's existed but not visual.
+            disappeared, actually it's existed but not clear.
             <br />
           </p>
         </div>
@@ -1575,7 +1574,7 @@ function Css() {
                 : <span className="cssValue">gray</span>; <br />
                 <span className="cssProperty">&nbsp;&nbsp;display</span>:{" "}
                 <span className="cssValue">flex</span>; <br />
-                <span className="cssProperty">&nbsp;&nbsp;justyfy-content</span>
+                <span className="cssProperty">&nbsp;&nbsp;justify-content</span>
                 : <span className="cssValue">space-between</span>; <br />
                 &nbsp;&#125; <br />
                 <span className="cssTag">h3</span>&#123; <br />{" "}
@@ -1657,7 +1656,7 @@ function Css() {
                 : <span className="cssValue">gray</span>; <br />
                 <span className="cssProperty">&nbsp;&nbsp;display</span>:{" "}
                 <span className="cssValue">flex</span>; <br />
-                <span className="cssProperty">&nbsp;&nbsp;justyfy-content</span>
+                <span className="cssProperty">&nbsp;&nbsp;justify-content</span>
                 : <span className="cssValue">space-between</span>; <br />
                 <span className="cssProperty">
                   &nbsp;&nbsp;align-items
@@ -1788,9 +1787,9 @@ function Css() {
         <div className="addPaddingToSection" id="animation">
           <h3 className="sectionTittle">animation</h3>
           <p className="clickHere">
-            You, as a web designer you must be aware of animation in css,
+            You, as a web designer you must be aware of animation in CSS,
             actually it makes your website looks beautiful. <br />
-            So, when we talk about animation in css, we also talk about{" "}
+            So, when we talk about animation in CSS, we also talk about{" "}
             <b>keyframes</b> <br /> don't worry, everything will be easy for you
             in this example.
           </p>

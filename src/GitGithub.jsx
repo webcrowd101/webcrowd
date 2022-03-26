@@ -14,7 +14,7 @@ function GitGithub() {
         you to save and track changes of your project on a platform called
         <b>github</b>. you can also work as a team so that every member works on
         its own part of project and save changes every time, so that others
-        members can track the whole changes of project. in this article we
+        members can track the whole changes of the project. in this article we
         are going to be discussing about the whole process, but we will consider
         that you as a self-worker (work on your own project). So, using git you
         can deploy your own project on github using push command and download
