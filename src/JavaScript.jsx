@@ -569,9 +569,9 @@ function JavaScript() {
             allowing users to make an action such as click, double click or
             something like that. <br />
             <b className="note">Note : </b> you can write JavaScript code in a
-            separated file or within html file. But it will be better if you
+            separated file or within HTML file. But it will be better if you
             create a separated JavaScript file. here is how to create a
-            JavaScript file, and how to link it with html file{" "}
+            JavaScript file, and how to link it with HTML file{" "}
             <a
               href="https://www.youtube.com/watch?v=N8SZLRqkhm4&list=PLBRc8och4vXULbcJY-o1LMBLS5s2gMmom&index=8"
               target="_blank"
@@ -646,7 +646,7 @@ function JavaScript() {
           <p className="clickHere">
             As we mentioned before, we use comments to prevent code from
             execution. So, we set JavaScript code as a comment by adding two
-            back slashes at the beginning of line.
+            back slashes at the beginning of the line.
           </p>
 
           <div className="codeSection">
@@ -1265,7 +1265,7 @@ function JavaScript() {
             </div>
           </div>
           <p className="clickHere">
-            As you can see, we don need to rewrite our code whenever we want to
+            As you can see, we don have to rewrite our code whenever we want to
             duplicate it, we can just write it inside a function and call this
             function whenever you want.
           </p>
@@ -1376,7 +1376,7 @@ function JavaScript() {
 
           <h4 className="subTittles">Global Scope :</h4>
           <p className="clickHere">
-            in global scope you can create a variables and access them anywhere
+            in global scope you can create variables and access them anywhere
             in your code. it's like a global variable.
           </p>
           <div className="codeSection">
@@ -1603,7 +1603,7 @@ function JavaScript() {
           <p className="clickHere">
             array functions help you to write less and do more, it's actually
             amazing. you can handle arrays values easily with this functions,
-            before we dive into this functions, we want to mention to a useful
+            before we dive into this functions, we want to mention a useful
             array property which is <b>length</b>. this property gives you the
             number of elements inside an array.
           </p>
@@ -1852,13 +1852,13 @@ function JavaScript() {
             </div>
           </div>
           <p className="clickHere">
-            if you didn't get it, don't worry, this is arrow function, we talked
+            if you didn't get it, don't worry, this is an arrow function, we talked
             about it at the end of <a href="#function">function</a> section.
           </p>
           <h4 className="subTittles">reduce()</h4>
           <p className="clickHere">
             if you have an array of numbers , So <b>reduce()</b> returns the sum
-            of those numbers.
+            of these numbers.
           </p>
           <div className="codeSection">
             <div className="inputSection">
@@ -1950,7 +1950,7 @@ function JavaScript() {
           <h4 className="subTittles">map()</h4>
           <p className="clickHere">
             allows you to loop through every element of the array. and do
-            whatever you want with those elements. <br />
+            whatever you want with these elements. <br />
             So, in this example we will loop through the elements and take every
             element and double it. <br />
             <b className="note">Note : </b> map() returns a new array.
@@ -2206,7 +2206,7 @@ function JavaScript() {
           <h4 className="subTittles">some()</h4>
           <p className="clickHere">
             checks weather the given value is existed or no, if exists then
-            return <b>true</b> , if not then return <b>false</b>.
+            return <b>true</b> , if not return <b>false</b>.
           </p>
           <div className="codeSection">
             <div className="inputSection">
@@ -2286,7 +2286,7 @@ function JavaScript() {
           </div>
           <p className="clickHere">
             So, when we passed one value inside slice(), this value represents
-            the number of the item you wanna slice till, so in this case the the
+            the number of the item you want to slice till, So in this case the
             numbers 1,2,3,4 will get removed. <br />
             when we passed two values inside slice(), we specify the items we
             want to remove, so that first value is the index of the beginning
@@ -2393,7 +2393,7 @@ function JavaScript() {
           <p className="clickHere">
             we can handle strings with a bunch of methods, there are many common
             methods among array and string we will discuss about in this
-            section, <b>but keep in mind that spaces are counted in string.</b>{" "}
+            section, <b>but keep in mind that spaces are considered as string.</b>{" "}
             <br />
             We can add <b>length</b> property to string as long as array.
           </p>
@@ -2705,7 +2705,7 @@ function JavaScript() {
             </div>
             <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
-              <div>WEB CROWD</div>
+              <div>web crowd</div>
             </div>
           </div>
 
@@ -2733,7 +2733,7 @@ function JavaScript() {
             </div>
             <ArrowRightAltIcon className="arrow" />
             <div className="outputSection">
-              <div>web crowd</div>
+              <div>Web Crowd</div>
             </div>
           </div>
 
@@ -2933,7 +2933,7 @@ function JavaScript() {
           </p>
           <h4 className="subTittles">Math.abs()</h4>
           <p className="clickHere">
-            this method adds the absolute value to a variable inside.
+            this method gives the absolute value to a variable inside.
           </p>
 
           <div className="codeSection">
@@ -3009,8 +3009,7 @@ function JavaScript() {
           </div>
           <h4 className="subTittles">Math.pow()</h4>
           <p className="clickHere">
-            this method accepts two values, it power the first value as many as
-            the second value. .
+            it returns num1 power num2.
           </p>
 
           <div className="codeSection">
@@ -3175,18 +3174,18 @@ function JavaScript() {
             browser once the page gets loaded. <br />
             programmatically, we can use JavaScript to read, add ,remove or
             update DOM elements using a bunch of methods. <br />
-            the first thing you must be aware of is how to select and get html
+            the first thing you must be aware of is how to select and get HTML
             elements using JavaScript. in this case we use <b>selectors</b>.
           </p>
           <h2 className=" subTittles">selectors :</h2>
 
           <p className="clickHere">
-            you can select html elements using a bunch of methods
+            you can select HTML elements using a bunch of methods
             (getElementById() , getElementByClassName() , getElementByTagName()
             , querySelector()...etc), but the best of them is{" "}
             <b>querySelector()</b>, So we will focus only on this method.
           </p>
-          <h2 className=" subTittles">Add styling to html elements :</h2>
+          <h2 className=" subTittles">Add styling to HTML elements :</h2>
 
           <div
             style={{ display: "flex", justifyContent: "space-around" }}
@@ -3281,7 +3280,7 @@ function JavaScript() {
           </div>
           <p className="clickHere">
             as you can see, we selected h2,div elements from HTML, then assigned
-            them to <b>h2Variable,divVariable</b>, then added styling to those
+            them to <b>h2Variable,divVariable</b>, then added styling to these
             elements. <br />
           </p>
 
@@ -3389,10 +3388,10 @@ function JavaScript() {
           </p>
 
           <p className="clickHere">
-            <b className="importants">Important!</b> you can override css style
-            using JavaScript. <br /> let's assume we added <b>color</b> to html
+            <b className="importants">Important!</b> you can override CSS style
+            using JavaScript. <br /> let's assume we added <b>color</b> to HTML
             element and we also set <b>color</b> in JavaScript file to the same
-            element, So in this case, the color in css will get{" "}
+            element, So in this case, the color in CSS will get{" "}
             <b>overridden</b>. then the JavaScript one will get <b>applied</b>.{" "}
             <br />
           </p>
@@ -3475,7 +3474,7 @@ function JavaScript() {
 
           <p className="clickHere">
             <b className="importants">Important!</b> : in this exercise, we
-            added the new paragraph in our body. you can also add any html
+            added the new paragraph in our body. you can also add any HTML
             element wherever you want, s let's make another example, in this
             example we will add new <b>li</b> to our <b>ul</b>.
           </p>
@@ -4235,10 +4234,10 @@ function JavaScript() {
           <h3 className="sectionTittle">Quiz</h3>
           <p className="clickHere">
             <b className="note">Note : </b> Make sure that you have read the
-            introduction of every Concept we discussed about above before you
+            introduction of every Concept we discussed above before you
             start this Quiz. <br />
-            So, when you complete all of those questions, click on{" "}
-            <b className="note">i'm Done</b> button to display the result
+            So, when you complete all of these questions, click on{" "}
+            <b className="note">i'm Done</b> button to display your score
             immediately.
           </p>
 

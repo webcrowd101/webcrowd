@@ -225,12 +225,19 @@ function Html() {
             anguage, it's a Design Language NOT a Programming Language, and it's
             considered as the Door of your Website. You can create a Website
             only Using this Language. but you can't control the Element's Colors
-            or Position. <br /> So, HTML consists of a list of Elements (Tags) which
-            can build the Structure of your Entire Website. Scroll down to
+            or Position. <br /> So, HTML consists of a list of Elements (Tags)
+            which can build the Structure of your Entire Website. Scroll down to
             figure out the most of these Elements. <br />
             <span className="instruction">Instruction :</span> Here is how to
             create HTML file, and how to use <i>"live server extension"</i>{" "}
-            <a style={{color:"blue"}} href="https://www.youtube.com/watch?v=tMsIfRjRctY" target="_blank">click here</a>.
+            <a
+              style={{ color: "blue" }}
+              href="https://www.youtube.com/watch?v=tMsIfRjRctY"
+              target="_blank"
+            >
+              click here
+            </a>
+            .
             <br />
             <span className="importants">Important : </span> Keep in mind that
             the whole HTML code should be written inside <b>body</b> Tag.
@@ -292,17 +299,18 @@ function Html() {
           <div className="codeSection">
             {" "}
             <div className="inputSection">
-              &lt;<span className="tag">b</span>&gt; this is bold &lt;
-              <span className="tag">/b</span>&gt; <br /> &lt;
-              <span className="tag">i</span>&gt; this is italic &lt;
+              this is &lt;<span className="tag">b</span>&gt;bold&lt;
+              <span className="tag">/b</span>&gt; <br />
+              this is &lt;
+              <span className="tag">i</span>&gt;italic&lt;
               <span className="tag">/i</span>&gt; <br />
-              &lt;
-              <span className="tag">sub</span>&gt; this is sub &lt;
+              this is &lt;
+              <span className="tag">sub</span>&gt;sub&lt;
               <span className="tag">/sub</span>&gt; <br />
-              &lt;
-              <span className="tag">strong</span>&gt; this is strong &lt;
-              <span className="tag">/strong</span>&gt; <br /> &lt;
-              <span className="tag">sup</span>&gt; this is sup &lt;
+              this is &lt;
+              <span className="tag">strong</span>&gt;strong&lt;
+              <span className="tag">/strong</span>&gt; <br /> this is &lt;
+              <span className="tag">sup</span>&gt;sup&lt;
               <span className="tag">/sup</span>&gt; <br />
             </div>
             <ArrowRightAltIcon className="arrow" />
@@ -982,9 +990,9 @@ function Html() {
           </div>
           <p className="clickHere">
             So, when you click on Sign up button, all of the information you
-            wrote will be displayed in the <b>URL</b>. that's because we add <b>name</b>{" "}
-            property to each input, So the value of this property Equals the
-            value you Enter. <br />
+            wrote will be displayed in the <b>URL</b>. that's because we add{" "}
+            <b>name</b> property to each input, So the value of this property
+            Equals the value you Enter. <br />
             <b className="note">Note : </b>we prevented that from happening in
             this page, but if you copied this code and pasted it, that will
             work.
@@ -995,9 +1003,9 @@ function Html() {
           <div style={{ width: "100%" }}>
             <h3 className="sectionTittle">Exercises</h3>
             <p className="clickHere">
-              before you start the following exercises, try to figure out the other
-              types of input such <b>radio,range,checkbox,number</b>. Don't be
-              limited to these Exercises, try out more, {" "}
+              before you start the following exercises, try to figure out the
+              other types of input such <b>radio,range,checkbox,number</b>.
+              Don't be limited to these Exercises, try out more,{" "}
               <b>Practice makes perfect</b>.
             </p>
           </div>
@@ -1196,10 +1204,10 @@ function Html() {
           <h3 className="sectionTittle">Quiz</h3>
           <p className="clickHere">
             <b className="note">Note : </b> Make sure that you have read the
-            introduction of every Concept we discussed above before you
-            start this Quiz. <br /> So, when you complete all of these questions, click
-            on <b className="note">I am done</b> button to display the result
-            immediately.
+            introduction of every Concept we discussed above before you start
+            this Quiz. <br /> So, when you complete all of these questions,
+            click on <b className="note">I am done</b> button to display the
+            result immediately.
           </p>
 
           <div className="htmlQuiz__content">
