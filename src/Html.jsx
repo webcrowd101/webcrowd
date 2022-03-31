@@ -32,6 +32,7 @@ function Html() {
       document.querySelector(".Content").style.opacity = "0.5";
       document.querySelector(".OpenSideBar").style.float = "right";
       document.querySelector(".OpenSideBar").style.margin = "3px";
+      $(".Modal").hide();
       hide(true);
     } else if (show) {
       document.querySelector(".Sidebar").style.width = "40px";
@@ -44,7 +45,10 @@ function Html() {
     }
   };
 
+
   window.addEventListener("resize", function () {
+    $(".header").css("height","40px");
+    $(".List").css("paddingTop", "40px");
     if (window.innerWidth > 871) {
       if (history.push(localStorage.getItem("current")) === "HTML5") {
         document.querySelector(".Sidebar").style.width = "250px";
@@ -118,7 +122,7 @@ function Html() {
       rightCancel.style.setProperty("display", "inline", "important");
     });
 
-    $(".htmlScore").text("your score is " + htmlQuizScore);
+    $(".htmlScore").text("Your score : " + htmlQuizScore);
     return $(".Modal").show();
   };
 

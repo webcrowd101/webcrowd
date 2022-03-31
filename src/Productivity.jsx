@@ -93,7 +93,7 @@ function Productivity() {
           anything.
         </p>
         <h3>
-          1: Fix your sleep (I started with sleep because I love sleep hihihi):
+          Fix your sleep ( I started with sleep because I love sleep hihihi ):
         </h3>
         <p>
           Having a consistent sleep schedule is the most important thing you
@@ -105,7 +105,7 @@ function Productivity() {
           recommend hitting the bed at 11:00 PM and waking up between 6:00 and 6:30
           AM.
         </p>
-        <h3>2: Prepare a To Do List:</h3>
+        <h3> Prepare a To Do List:</h3>
         <p>
           I'm sure you have heard about this tip, and its efficiency, but trust
           me, people don't know how to prepare it well, they get motivated and
@@ -118,7 +118,7 @@ function Productivity() {
           be easy, you are training and stressing your mind to get back in
           truck, you will be happy after a week, trust me.
         </p>
-        <h3>3: move your body (it's Sia Song I love it, xd) </h3>
+        <h3>move your body ( it's Sia Song I love it, xd ) </h3>
         <p>
           The mind is connected with the body, to have an active mind, you
           should certainly have an active body, and if you are not used to do
@@ -181,7 +181,7 @@ function Productivity() {
             get it now
           </a>
         </p>
-        <h3>4 : DIET, DIET, DIET </h3>
+        <h3> DIET, DIET, DIET </h3>
         <p>
           We are what we eat; anything you put in your body will surely
           contribute in your look, energy and even your mentality, eating junk
@@ -192,7 +192,7 @@ function Productivity() {
           Consider fixing your diet, start eating healthy, only this can change
           your life forever.
         </p>
-        <h3>5 : WATER, WATER, WATER</h3>
+        <h3> WATER, WATER, WATER</h3>
         <p>
           Again, these fake influencers say: You Should Drink 3 L of water,
           which is not scientifically proven, it depends on your " During the day
@@ -201,7 +201,7 @@ function Productivity() {
           not feel dry.
         </p>
         <h3>
-          5 : focus during the work, shut down the engines during the break.
+           focus during the work, shut down the engines during the break.
         </h3>
         <p className="lastParag">
           Science has proven that the adult brain can stay concentrated only for

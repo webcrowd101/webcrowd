@@ -20,10 +20,15 @@
    width:90vw !important;
    text-align: center;
    margin: 30px auto;
+   height:20px;
+   line-height: 20px;
+   
    color: #0a0453;
-  background: #0b045352;
+  background: #e9e9e9;
   font-family: 'a astro space';
-  padding: 5px;
+  padding-top: 10px;
+  padding-bottom:7px !important;
+  font-size: 14px;
 }
 .productivityContent>p>a {
  color: rgb(202, 38, 66);

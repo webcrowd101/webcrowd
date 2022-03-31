@@ -40,6 +40,7 @@ function Overview() {
   };
 
   window.addEventListener("resize", function () {
+    $(".header").css("height", "40px");
     if (window.innerWidth > 871) {
       if (history.push(localStorage.getItem("current")) === "overview") {
         document.querySelector(".overviewSidebar").style.width = "200px";
@@ -87,8 +88,8 @@ function Overview() {
       <p>
         {" "}
         To display the web pages which are created with HTML. There is a bunch
-        of web browsers such as Google Chrome , firefox and edge...etc, i recommend to
-        use Google Chrome.
+        of web browsers such as Google Chrome , firefox and edge...etc, i
+        recommend to use Google Chrome.
       </p>
       <b>2 - Text editor :</b>
       <p>
@@ -149,7 +150,7 @@ function Overview() {
         Here is the Explanation :{" "}
         <a
           className="content__links"
-          href="https://www.youtube.com/watch?v=8Q6irTUsuMY"
+          href="https://www.youtube.com/watch?v=_E7CGQvd7K0&t=1s"
           target="_blank"
         >
           How to install these Extensions ?

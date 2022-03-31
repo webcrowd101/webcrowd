@@ -31,6 +31,7 @@ function JavaScript() {
       document.querySelector(".Content").style.opacity = "0.5";
       document.querySelector(".OpenSideBar").style.float = "right";
       document.querySelector(".OpenSideBar").style.margin = "3px";
+      $(".Modal").hide();
       hide(true);
     } else if (show) {
       document.querySelector(".Sidebar").style.width = "40px";
@@ -47,6 +48,8 @@ function JavaScript() {
   };
 
   window.addEventListener("resize", function () {
+    $(".header").css("height", "40px");
+    $(".List").css("paddingTop", "40px");
     if (window.innerWidth > 871) {
       if (history.push(localStorage.getItem("current")) === "JAVASCRIPT") {
         document.querySelector(".Sidebar").style.width = "250px";
@@ -80,163 +83,9 @@ function JavaScript() {
     } else {
     }
   });
-  let javascriptQuizScore = 0;
-  const javascriptCompletedQuiz = () => {
-    if (document.querySelector(".javascriptQuestionOne").checked) {
-      javascriptQuizScore++;
-    }
-    if (document.querySelector(".javascriptwrongOne1").checked) {
-      document.querySelector(
-        ".javascriptWrongAnswerOne1"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javascriptAnswerOne").style.backgroundColor =
-        "green";
-    }
-    if (document.querySelector(".javascriptwrongOne2").checked) {
-      document.querySelector(
-        ".javascriptWrongAnswerOne2"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javascriptAnswerTwo").style.backgroundColor =
-        "green";
-    }
-    if (document.querySelector(".javascriptQuestionTwo").checked) {
-      javascriptQuizScore++;
-    }
-    if (document.querySelector(".javascriptwrongTwo1").checked) {
-      document.querySelector(
-        ".javascriptWrongAnswerTwo1"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javascriptAnswerTwo").style.backgroundColor =
-        "green";
-    }
-    if (document.querySelector(".javascriptwrongTwo2").checked) {
-      document.querySelector(
-        ".javascriptWrongAnswerTwo2"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javascriptAnswerTwo").style.backgroundColor =
-        "green";
-    }
-    if (document.querySelector(".javascriptQuestionThree").checked) {
-      javascriptQuizScore++;
-    }
-    if (document.querySelector(".javascriptwrongThree1").checked) {
-      document.querySelector(
-        ".javascriptWrongAnswerThree1"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javascriptAnswerThree").style.backgroundColor =
-        "green";
-    }
-    if (document.querySelector(".javascriptwrongThree2").checked) {
-      document.querySelector(
-        ".javascriptWrongAnswerThree2"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javascriptAnswerThree").style.backgroundColor =
-        "green";
-    }
-    if (document.querySelector(".javascriptQuestionFour").checked) {
-      javascriptQuizScore++;
-    }
-    if (document.querySelector(".javascriptwrongFour1").checked) {
-      document.querySelector(
-        ".javascriptWrongAnswerFour1"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javascriptAnswerFour").style.backgroundColor =
-        "green";
-    }
-    if (document.querySelector(".javascriptwrongFour2").checked) {
-      document.querySelector(
-        ".javascriptWrongAnswerFour2"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javascriptAnswerFour").style.backgroundColor =
-        "green";
-    }
-    if (document.querySelector(".javascriptQuestionFive").checked) {
-      javascriptQuizScore++;
-    }
-    if (document.querySelector(".javascriptwrongFive").checked) {
-      document.querySelector(
-        ".javascriptWrongAnswerFive"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javascriptAnswerFive").style.backgroundColor =
-        "green";
-    }
-    if (document.querySelector(".javascriptQuestionSix").checked) {
-      javascriptQuizScore++;
-    }
-    if (document.querySelector(".javascriptwrongSix").checked) {
-      document.querySelector(
-        ".javascriptWrongAnswerSix"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javascriptAnswerSix").style.backgroundColor =
-        "green";
-    }
+ 
 
-    if (document.querySelector(".javascriptQuestionSeven").checked) {
-      javascriptQuizScore++;
-    }
-    if (document.querySelector(".javascriptwrongSeven1").checked) {
-      document.querySelector(
-        ".javascriptWrongAnswerSeven1"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javascriptAnswerSeven").style.backgroundColor =
-        "green";
-    }
-    if (document.querySelector(".javascriptwrongSeven2").checked) {
-      document.querySelector(
-        ".javascriptWrongAnswerSeven2"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javascriptAnswerSeven").style.backgroundColor =
-        "green";
-    }
-    if (document.querySelector(".javascriptQuestionEight").checked) {
-      javascriptQuizScore++;
-    }
-    if (document.querySelector(".javascriptwrongEight").checked) {
-      document.querySelector(
-        ".javascriptWrongAnswerEight"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javascriptAnswerEight").style.backgroundColor =
-        "green";
-    }
-    if (document.querySelector(".javascriptQuestionNine").checked) {
-      javascriptQuizScore++;
-    }
-    if (document.querySelector(".javascriptwrongNine1").checked) {
-      document.querySelector(
-        ".javascriptWrongAnswerNine1"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javascriptAnswerNine").style.backgroundColor =
-        "green";
-    }
-    if (document.querySelector(".javascriptwrongNine2").checked) {
-      document.querySelector(
-        ".javascriptWrongAnswerNine2"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javascriptAnswerNine").style.backgroundColor =
-        "green";
-    }
-    if (document.querySelector(".javascriptQuestionTen").checked) {
-      javascriptQuizScore++;
-    }
-    if (document.querySelector(".javascriptwrongTen1").checked) {
-      document.querySelector(
-        ".javascriptWrongAnswerTen1"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javascriptAnswerTen").style.backgroundColor =
-        "green";
-    }
-    if (document.querySelector(".javascriptwrongTen2").checked) {
-      document.querySelector(
-        ".javascriptWrongAnswerTen2"
-      ).style.backgroundColor = "red";
-      document.querySelector(".javascriptAnswerTen").style.backgroundColor =
-        "green";
-    }
-    $(".javascriptScore").text("your score is " + javascriptQuizScore);
-    $(".javascriptQuiz__content input").prop("disabled", "false");
-    return $(".Modal").show();
-  };
-
+  let javascriptQuizScore;
   const hideModal = () => {
     $(".Modal").hide();
     javascriptQuizScore = 0;
@@ -462,7 +311,7 @@ function JavaScript() {
       rightCancel.style.setProperty("display", "inline", "important");
     });
 
-    $(".javaScriptScore").text("your score is " + javaScriptQuizScore);
+    $(".htmlScore").text("Your score : " + javaScriptQuizScore);
     return $(".Modal").show();
   };
 
@@ -475,7 +324,7 @@ function JavaScript() {
     <div className="javascript">
       <div className="Modal">
         <CloseIcon className="closeModal" onClick={JavaScriptHideModal} />
-        <p className="javaScriptScore"></p>
+        <p className="htmlScore"></p>
       </div>
       <div className="Sidebar">
         {/* <DehazeIcon onClick={ShowHide} className="showSideBar" /> */}
@@ -1047,15 +896,17 @@ function JavaScript() {
             So here are the steps of how <b>for</b> loop works : <br />
             <ol style={{ marginLeft: "50px", pointerEvents: "none" }}>
               <li>
-                check if <b>i &lt; 5</b>
+                checks if <b>i &lt; 5</b>
               </li>
               <li>
                 if yes, <b>console.log( str )</b> will get executed, if not...
                 the loop will stop.
               </li>
               <li>
-                if <b>console.log( str )</b> get executed, then loop will do the
-                same process.
+                if <b>console.log( str )</b> get executed, then the value of <b>i</b> will increase by one.
+              </li>
+               <li>
+                repeats the same process.
               </li>
             </ol>
           </p>
@@ -2921,7 +2772,7 @@ function JavaScript() {
 
           <p className="clickHere">
             {" "}
-            there is a bunch of methods like
+            there is a bunch of methods like{" "}
             <b>getMonth() , getFullYear() , getDate()</b>...etc.
           </p>
         </div>

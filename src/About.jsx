@@ -107,8 +107,8 @@ function About() {
               <div>Khalid Toustous</div>
               <i>Web & Motion Graphic designer </i>
               <p>
-                I am a Web and Motion Graphic designer, i have been working on
-                that for 3 years.
+                I am a web designer and Motion Graphic designer, I have been
+                working on them for 3 years. I can design application as well
               </p>
             </div>
           </div>
@@ -124,7 +124,7 @@ function About() {
                 <li>video motion graphics 60 seconds.</li>
               </ul>
             </div>
-            <a href="mailto:fatnikhalid@gmail.com" target="_top">
+            <a href="mailto:toustouskhan@gmail.com" target="_top">
               Apply now
             </a>
           </div>
@@ -137,11 +137,7 @@ function About() {
                 <li>Application Design.</li>
               </ul>
             </div>
-            <a
-              href="mailto:fatnikhalid@gmail.com"
-              target="_top"
-              
-            >
+            <a href="mailto:toustouskhan@gmail.com" target="_top">
               Apply now
             </a>
           </div>

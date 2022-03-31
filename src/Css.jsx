@@ -31,6 +31,7 @@ function Css() {
       document.querySelector(".Content").style.opacity = "0.5";
       document.querySelector(".OpenSideBar").style.float = "right";
       document.querySelector(".OpenSideBar").style.margin = "3px";
+      $(".Modal").hide();
       hide(true);
     } else if (show) {
       document.querySelector(".Sidebar").style.width = "40px";
@@ -44,6 +45,8 @@ function Css() {
   };
 
   window.addEventListener("resize", function () {
+    $(".header").css("height", "40px");
+    $(".List").css("paddingTop", "40px");
     if (window.innerWidth > 871) {
       if (history.push(localStorage.getItem("current")) === "CSS3") {
         document.querySelector(".Sidebar").style.width = "250px";
@@ -118,7 +121,7 @@ function Css() {
       rightCancel.style.setProperty("display", "inline", "important");
     });
 
-    $(".cssScore").text("your score is " + cssQuizScore);
+    $(".htmlScore").text("Your score : " + cssQuizScore);
     return $(".Modal").show();
   };
 
@@ -161,7 +164,7 @@ function Css() {
     <div className="css">
       <div className="Modal">
         <CloseIcon className="closeModal" onClick={hideModal} />
-        <p className="cssScore"></p>
+        <p className="htmlScore"></p>
       </div>
       <div className="Sidebar">
         {/* <DehazeIcon onClick={ShowHide} className="showSideBar" /> */}

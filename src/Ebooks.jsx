@@ -71,105 +71,32 @@ function Ebooks() {
 
       <div className="Content ebooksContent">
         <p className="introToBooks">
-          Recently, most of us give a lot of illogical excuses to not read books
-          and get educated, they give excuses such I do not have enough time, my
-          9 to 5 job cannot allow me to do so, I have to take care of my
-          children, I do not feel comfortable carrying a bulky book with me in
-          public places, or basically I do not see myself into it.{" "}
+          Audio books are pre-recorded audio files that can be downloaded and
+          played on your computer or smartphone. They come in many different
+          formats, but most are available as MP3s. Audio books are usually much
+          longer than text-based eBooks, so they're perfect for long car trips
+          or flights. Plus, unlike reading an eBook, you can listen to them
+          while multitasking! The convenience and low cost of audiobooks make
+          them a valuable learning tool for those with limited time on their
+          hands.
         </p>
-        <h1>Why you should give it a shot?</h1>
-        <h3>Reason 1 :</h3>
+        <h1>Why it is better than reading a book ?</h1>
         <p>
-          This first reason is so personal, when you are listening to an
-          audiobook, it feels like you are having a conversation with yourself,
-          like a meditation, that you can do without controlling your breath,
-          maintaining good posture, or that kind of things, it just letting your
-          mind go and imagine every moment with the author, which make your
-          imagination power hit the floor and become a person who think outside
-          the box, you might find this reason exaggerated, but once you try, you
-          will know what Iam talking about mate.{" "}
+          First and foremost, audio books make it easy for people who do not
+          have time to read an entire book but still want valuable information.
+          Audio books can be listened to, while driving or working out at a gym.
+          Some audio books can be as short as 30 minutes in length which allows
+          them to fit into busy schedules. Second, audio books are also
+          educational and entertaining.
         </p>
-        <h3>Reason 2 : </h3>
+        <h1>How do Audio Books impact on our Life ?</h1>
         <p>
-          E-books are super flexible, now, I'm a real fan of hardcopy books
-          sitting on in the moment just pure concentration in one task on one
-          task reading a hardcopy book for working student that is pure bliss
-          like I will take that anytime I can get it, but the reality is often
-          we are busy our lives are full we've got lots on the go and you can
-          listen to podcasts and audio books while doing other things, now, I'm
-          thinking specifically, chores, routines task, things like tidying the
-          house cooking cleaning maybe you are commuting or doing a long drive
-          and exercising you can pop that on you know it is similar to what we
-          do when we have the radio on in the background or the television on
-          the background, if you do the same with podcasts and audiobooks, I
-          really recommend to give it z try because it does take them a not any
-          out of some of these tasks and if you get a really audio book, man,
-          you are going to have clean house or really tiny house, so give it a
-          go you can fold this in to everyday tasks,{" "}
-        </p>
-        <h3>Reason 3 :</h3>
-        <p>
-          You get a lot of reading done really quickly if you fold it in with
-          other tasks, like I said you are multitasking while you are listening
-          to a book, you are going to turn through audio books like you have not
-          really imagine, because you are doing two things at once, and even if
-          you are super busy you can read a book week like it is possible and
-          the interesting features of audio and podcasts is the different
-          listening apps or programs that you can use often they will let you
-          speed up the audio so it could be a tiny smidge faster like 1.1 times
-          faster or it can all the way up to 2, 3, 4, 5 times speed of normal
-          narration, now, I have tried this, I recommend if you have got a book
-          that is not particularly complex, it is not really heavy and in-depth,
-          it can be really handy to speed it up just to get through it, I just
-          think ,it is just another reason you can give it a go make it a fun
-          experiment,
-        </p>
-        <h1>HOW DO WE GO ABOUT GETTING HANDS ON THEM?</h1>
-        <p>
-          Then interesting things that most of them are actually free, and
-          that's good news, isn't it?, we all like to read and improve our
-          writing by reading other people's work, getting some inspiration, if
-          you are a member of your local library, if you aren't not, I highly
-          recommend you do, you're probably interested to find that the library
-          has signed up to different online platforms that offer not only
-          eBooks, but audiobooks ,and they're free, because the library is
-          paying for this service for its own members, so all you need to do is
-          just enquire with your local library and don't forget you can also
-          apply to become a member of your state region library or even your
-          national library they all have these different platforms so tat's
-          three levels that you can get access to, probably of free audiobooks
-          so check it out for example at my library they use the platform borrow
-          box. Now, for podcasts, podcasts is a whole another universe there ‘s
-          lots of free shows from short shows to long shows to serial shows,
-          it's a whole another world to explore and most if these are free, all
-          you need to do is to download an app so you can start listening
-          subscribing and enjoying. Now depending on your type of phone like
-          whether it's Android or Mac you are going to look for you have got
-          Apple podcasts and you have also google podcast and there's other lots
-          of different listening platforms including Spotify, but I would
-          suggest to start there and see how you go. Now, come to the paid
-          options, this is mostly for eBooks there are some paid podcasts out
-          there but probably for your most relevant for you guys is the audio
-          books and again you are going to go to different platforms to get
-          these and you will pay for set books or you will probably pay per
-          month of membership on these platforms, Apple include the plat books,
-          which is google platform or you're going to have Apple books, then
-          there's the amazon company Audible, which is all about audiobooks and
-          amazon also has Kindle and if you buy a kindle books sometimes when
-          you look in the purchasing options there's a box where you can tick
-          purchase the audible version of the box xo you can do it in a
-          back-back way through kindle if you've already got a kindle so there
-          you go that's everything you need to know about listening to podcasts
-          and audiobooks . So there you go that's everything you need to know
-          about audiobooks and podcasts and just to recap, the main reason why I
-          think these you are going to love it is because number one is so
-          personal, it's having a direct conversation, they are also very
-          flexible to do with other things in your life and thirdly it can be
-          really fast you can turn through the book and there's different ways
-          to get your hands on them mostly free but they are some paid options
-          too, so I really hope that this gets you inspired and excited ti try
-          these wonderful different listening ways of getting into life stories
-          and getting into more reading and books.
+          Audio books are really important in our life because it helps you in
+          many different ways which I'm gonna tell you later. But first let me
+          tell you what an audio book is and how can we listen it? Well, an
+          audio book is simply a text or anything else written with words, has
+          been recorded as an audio file that can be played on a computer or
+          mobile phone or tablet for easy listening and better understanding.
         </p>
         <h1>EBooks I highly recommend:</h1>
         <b>Neverwhere, by Neil Gaiman: </b>

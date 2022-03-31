@@ -31,6 +31,7 @@ function Jquery() {
       document.querySelector(".Content").style.opacity = "0.5";
       document.querySelector(".OpenSideBar").style.float = "right";
       document.querySelector(".OpenSideBar").style.margin = "3px";
+      $(".Modal").hide();
       hide(true);
     } else if (show) {
       document.querySelector(".Sidebar").style.width = "40px";
@@ -43,6 +44,8 @@ function Jquery() {
     }
   };
   window.addEventListener("resize", function () {
+    $(".header").css("height", "40px");
+    $(".List").css("paddingTop", "40px");
     if (window.innerWidth > 871) {
       if (history.push(localStorage.getItem("current")) === "JQUERY") {
         document.querySelector(".Sidebar").style.width = "200px";
@@ -127,7 +130,7 @@ function Jquery() {
       rightCancel.style.setProperty("display", "inline", "important");
     });
 
-    $(".jqueryScore").text("your score is " + jqueryQuizScore);
+    $(".htmlScore").text("Your score : " + jqueryQuizScore);
     return $(".Modal").show();
   };
 
@@ -298,7 +301,7 @@ function Jquery() {
     <div className="jquery">
       <div className="Modal">
         <CloseIcon className="closeModal" onClick={jqueryHideModal} />
-        <p className="jqueryScore"></p>
+        <p className="htmlScore"></p>
       </div>
       <div className="Sidebar">
         <DehazeIcon onClick={ShowHide} className="OpenSideBar" />

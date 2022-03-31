@@ -190,9 +190,8 @@ function Earn() {
         </div>
         <p className="conclusion">
           <b className="note">Conclusion :</b> there are other ways to make a
-          Passive Income but those are the most popular. we can't deny that they
-          take time, but after a few dedicated months, you will make money{" "}
-          <b>while you SLEEP</b>.{" "}
+          Passive Income but those are the most popular. no one can deny that will take time, but after a few dedicated months, you will make money{" "}
+          <b>while you ASLEEP</b>.{" "}
         </p>
         <Footer />
       </div>

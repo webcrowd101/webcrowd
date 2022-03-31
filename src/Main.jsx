@@ -26,6 +26,15 @@ function Main() {
     window.history.pushState(null, "", window.location.href);
   };
 
+  
+// window.addEventListener("resize", function () {
+  
+//   $(".main__top").css("paddingTop", "40px");
+  
+// });
+
+
+
   useEffect((e) => {
     localStorage.setItem(
       "current",
