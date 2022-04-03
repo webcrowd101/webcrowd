@@ -95,7 +95,7 @@ function About() {
               <p>
                 I am a web developer, i've made a bunch of clones of social
                 media such as facebook, twitter, youtube ,whatsapp...etc. I am
-                looking forward to build a big App such whatsapp.
+                looking forward to building a big App such whatsapp.
               </p>
             </div>
           </div>
